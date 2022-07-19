@@ -1,6 +1,6 @@
 # Alces-Retype-Documentation
 
-An overhaul and update of the documentation using Retype. 
+An overhaul and update of Alces Flight documentation using Retype. 
 
 ## Overview
 
