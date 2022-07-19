@@ -1,6 +1,7 @@
 ---
 order: 0
 label: Slurm Scheduler
+icon: list-ordered
 ---
 # Slurm Scheduler
 

@@ -1,6 +1,7 @@
 ---
 order: 100
-
+label: Basic Research Environment Operations
+icon: telescope
 ---
 
 Basic research environment Operations.
