@@ -35,5 +35,5 @@ Including job scheduler instructions in your job-scripts is often the most conve
 - You can put multiple instructions separated by a space on a single line starting with `#SBATCH`
 - The scheduler will parse the script from top to bottom and set instructions in order; if you set the same parameter twice, the second value will be used.
 - Instructions are parsed at job submission time, before the job itself has actually run. This means you can’t, for example, tell the scheduler to put your job output in a directory that you create in the job-script itself - the directory will not exist when the job starts running, and your job will fail with an error.
-- You can use dynamic variables in your instructions (see below)
+- You can use dynamic variables in your instructions (see next)
 

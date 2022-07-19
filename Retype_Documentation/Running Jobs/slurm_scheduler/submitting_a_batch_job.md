@@ -15,7 +15,7 @@ echo "Finished running - goodbye from $HOSTNAME"
 ```
 
 !!!
-We use the -l option to bash on the first line of the script to request a login session. This ensures that environment modules can be loaded as required as part of your script.
+We use the `-l` option to bash on the first line of the script to request a login session. This ensures that environment modules can be loaded as required as part of your script.
 !!!
 
 We can execute that script directly on the login node by using the command `bash simplejobscript.sh` - after a couple of minutes, we get the following output:
