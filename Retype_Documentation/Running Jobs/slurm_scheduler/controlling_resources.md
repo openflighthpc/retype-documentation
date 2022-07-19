@@ -3,7 +3,7 @@ order: 50
 label: Controlling resources
 ---
 
-In order to promote efficient usage of the research environment - the job-scheduler is automatically configured with default run-time limits for jobs. These defaults can be overridden by users to help the scheduler understand how you want it to run your job. If we don’t include any instructions to the scheduler then the default limits are applied to a job.
+In order to promote efficient usage of the research environment - the job-scheduler is automatically configured with default run-time limits for jobs. These defaults can be overridden by users to help the scheduler understand how you want it to run your job. 
 
 Job instructions can be provided in two ways; they are:
 
