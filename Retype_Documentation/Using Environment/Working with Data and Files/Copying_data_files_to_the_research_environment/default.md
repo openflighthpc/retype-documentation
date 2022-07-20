@@ -1,7 +1,0 @@
----
-order: 0
-label: Copying data files to the research environment
----
-
-
-
