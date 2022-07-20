@@ -4,7 +4,7 @@ label: Viewing and controlling queued jobs
 ---
 
 
-Once your job has been submitted, use the `squeue` command to view the status of the job queue. If you have available compute nodes, your job should be shown in the `R` (running) state; if your compute nodes are busy, or you’ve launched an auto-scaling research environment and currently have no running nodes, your job may be shown in the `PD` (pending) state until compute nodes are available to run it. If a job is in `PD` state - the reason for being unable to run will be displayed in the `NODELIST(REASON)` column of the `squeue` output.
+Once your job has been submitted, use the `squeue` command to view the status of the job queue. If you have available compute nodes, your job should be shown in the `R` (running) state; if your compute nodes are busy your job may be shown in the `PD` (pending) state until compute nodes are available to run it. If a job is in `PD` state - the reason for being unable to run will be displayed in the `NODELIST(REASON)` column of the `squeue` output.
 
 ```bash
 [centos@gateway1 (scooby) ~]$ squeue
