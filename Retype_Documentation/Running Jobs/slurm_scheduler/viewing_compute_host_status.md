@@ -19,7 +19,7 @@ node06      1      all*        idle    2    2:1:1   3602    20462      1   (null
 node07      1      all*        idle    2    2:1:1   3602    20462      1   (null) none
 ```
 
-The `sinfo` output will show (from left-to-right):
+The `sinfo -Nl` output will show (from left-to-right):
 
 - The hostname of your compute nodes
 - The number of nodes in the list
@@ -31,3 +31,11 @@ The `sinfo` output will show (from left-to-right):
 - The amount of disk space in MB available to the /tmp partition per node
 - The scheduler weighting
 
+Using the command `sinfo` without ` -Nl` will display only some information and in a different order.
+
+```bash
+[flight@chead1 (ivan1) ~]$ sinfo
+PARTITION AVAIL  TIMELIMIT  NODES  STATE NODELIST
+all*         up   infinite      2   idle cnode[01-02]
+
+```
