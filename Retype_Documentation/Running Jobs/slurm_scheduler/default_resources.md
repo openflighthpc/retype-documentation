@@ -1,6 +1,7 @@
 ---
 order: 60
 label: Default resources
+icon: dot-fill
 ---
 
 In order to promote efficient usage of your research environment, the job-scheduler automatically sets a number of default resources for your jobs when you submit them. These defaults must be overridden by users to help the scheduler understand how you want it to run your job - if we don’t include any instructions to the scheduler, then our job will take the defaults shown below:

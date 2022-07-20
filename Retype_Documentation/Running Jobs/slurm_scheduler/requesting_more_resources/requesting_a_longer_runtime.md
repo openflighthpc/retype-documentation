@@ -1,6 +1,7 @@
 ---
 order: 70
 label: Requesting a longer runtime
+icon: dot
 ---
 
 In order to promote best-use of the research environment scheduler, particularly in a shared environment, it is recommend to inform the scheduler the amount of time the submitted job is expected to take. You can inform the research environment scheduler of the expected runtime using the `-t, --time=<time>` option. For example - to submit a job that runs for 2 hours, the following example job script could be used:

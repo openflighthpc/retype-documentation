@@ -1,6 +1,7 @@
 ---
 order: 80
 label: Object storage for archiving data
+icon: dot
 ---
 
 As an alternative to copying data back to your client machine, users may prefer to upload their data to a cloud-based object storage service instead. Cloud storage solutions such as AWS S3, Dropbox and SWIFT have command-line tools which can be used to connect existing cloud storage to your research environment. Benefits of using an object-based storage service include:

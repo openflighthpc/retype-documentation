@@ -1,6 +1,7 @@
 ---
 order: 100
 label: Installing nodeattr and pdsh
+icon: dot-fill
 ---
 
 Nodeattr and pdsh can be installed using the yum package manager, simply:

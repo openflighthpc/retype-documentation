@@ -1,6 +1,7 @@
 ---
 order: 100
 label: Shared filesystem
+icon: dot
 ---
 
 Your OpenFlight Compute research environment includes a shared home filesystem which is mounted across the login and all compute nodes. Files copied to this area are available via the same absolute path on all research environment nodes. The shared filesystem is typically used for job-scripts, input and output data for the jobs you run.

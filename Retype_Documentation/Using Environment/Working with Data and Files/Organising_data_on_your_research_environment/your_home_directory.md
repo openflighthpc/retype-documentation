@@ -1,6 +1,7 @@
 ---
 order: 90
 label: Your home directory
+icon: dot
 ---
 
 The shared filesystem includes the home-directory area for the `flight` user which is created when your research environment is launched. Linux automatically places users in their home-directory when they login to a node. By default, Flight Compute will create your home-directory under the `/users/` directory, named `flight` (`/users/flight`).

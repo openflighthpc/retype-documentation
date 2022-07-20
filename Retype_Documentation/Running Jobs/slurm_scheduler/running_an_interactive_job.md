@@ -1,6 +1,7 @@
 ---
 order: 100
 label: Running an interactive job
+icon: dot-fill
 ---
 
 

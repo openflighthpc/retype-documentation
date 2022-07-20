@@ -1,6 +1,7 @@
 ---
 order: 90
 label: Types of compute job
+icon: dot-fill
 ---
 
 Users can run a number of different types of job via the research environment scheduler, including:

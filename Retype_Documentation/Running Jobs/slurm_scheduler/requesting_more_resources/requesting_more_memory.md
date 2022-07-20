@@ -1,6 +1,7 @@
 ---
 order: 80
 label: Requesting more memory
+icon: dot
 ---
 
 In order to promote best use of the research environment scheduler - particularly in a shared environment, it is recommended to inform the scheduler the maximum required memory per submitted job. This helps the scheduler appropriately place jobs on the available nodes in the research environment.

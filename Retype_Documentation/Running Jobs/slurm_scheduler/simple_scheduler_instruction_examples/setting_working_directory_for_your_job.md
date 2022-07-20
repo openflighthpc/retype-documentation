@@ -1,6 +1,7 @@
 ---
 order: 90
 label: Setting working directory for your job
+icon: dot
 ---
 
 By default, jobs are executed from your home-directory on the research environment (i.e. `/home/<your-user-name>`, `$HOME` or `~`). You can include `cd` commands in your job-script to change to different directories; alternatively, you can provide an instruction to the scheduler to change to a different directory to run your job. The available options are:
