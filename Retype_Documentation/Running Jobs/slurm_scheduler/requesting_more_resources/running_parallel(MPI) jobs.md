@@ -85,7 +85,7 @@ Submitted batch job 1162
 ```
 
 !!!
-If you request more CPU cores than your research environment can accommodate, your job will wait in the queue. If you are using the Flight Compute auto-scaling feature, your job will start to run once enough new nodes have been launched.
+If you request more CPU cores than your research environment can accommodate, your job will wait in the queue.
 !!!
 
 
