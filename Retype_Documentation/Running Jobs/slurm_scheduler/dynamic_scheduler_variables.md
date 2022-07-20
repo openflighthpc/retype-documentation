@@ -10,6 +10,8 @@ Your research environment job scheduler automatically creates a number of pseudo
 - `$HOME` The location of your home-directory
 - `$USER` The Linux username of the submitting user
 - `$HOSTNAME` The Linux hostname of the compute node running the job
-- `%a / $SLURM_ARRAY_TASK_ID` Job array ID (index) number. The `%a` substitution should only be used in your job scheduler directives
-- `%A / $SLURM_ARRAY_JOB_ID` Job allocation number for an array job. The `%A` substitution should only be used in your job scheduler directives
+- `%a / $SLURM_ARRAY_TASK_ID` Job array ID (index) number. The `%a` substitution should only be used in your job scheduler directives[^1]
+- `%A / $SLURM_ARRAY_JOB_ID` Job allocation number for an array job. The `%A` substitution should only be used in your job scheduler directives[^1]
 - `%j / $SLURM_JOBID` Job allocation number. The `%j` substitution should only be used in your job scheduler directives
+
+[^1]: These relate to task array jobs, which are covered in a later section.
