@@ -21,7 +21,8 @@ Local jobs also have the benefit over schedulers by launching immediately and pr
 
 Local job scripts can be written in any language supported within the research environment. In most cases this is likely to be bash as it’s a flexible and functional shell scripting language which enables users to intuitely navigate the filesystem, launch applications and manage data output.
 
-In the event that a job script is executable, contains a shebang specifying the launch language, and is in the current directory, it’s as simple to run as:
+In the event that a job script is executable, contains a shebang[^1] specifying the launch language, and is in the current directory, it’s as simple to run as:
 
 `[flight@gateway1 ~]$ ./myjob.sh`
 
+[^1]: a shebang is a "#!"     
