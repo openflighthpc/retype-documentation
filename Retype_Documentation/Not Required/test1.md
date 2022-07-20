@@ -2,6 +2,9 @@
 icon: comment
 order: -100
 ---
+
+![text in the header?](https://upload.wikimedia.org/wikipedia/commons/8/8b/Moose_superior.jpg)
+
 # Test Document
 
 
