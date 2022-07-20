@@ -16,6 +16,9 @@ A convenient way to run such jobs on a research environment is to use a task arr
 #SBATCH --array=1-1000
 echo "I am $SLURM_ARRAY_TASK_ID from job $SLURM_ARRAY_JOB_ID"
 ```
+!!!warning
+`-D $HOME` does not function properly in a batch script as it isn't expanded upon by Slurm. Only use file paths when setting a directory. 
+!!!
 
 ```bash
 [centos@gateway1 (scooby) ~]$ sbatch arrayjob.sh
