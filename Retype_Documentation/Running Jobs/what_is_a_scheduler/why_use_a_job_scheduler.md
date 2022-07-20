@@ -13,7 +13,6 @@ However - there are a number of reasons why your own job-scheduler can still be 
 2. It can automate launching of MPI jobs, finding available nodes to run applications on.
 3. It can help prevent accidentally over-allocating CPUs or memory, which could lead to nodes failing.
 4. It can help bring discipline to the environment, providing a consistent method to replicate the running of jobs in different environments.
-5. Jobs queued in the scheduler can be used to trigger scaling-up the size of your research environment, with compute nodes released from the research environment when there are no jobs to run, saving you money.
 
 Your OpenFlight Flight Compute research environment comes with a job-scheduler pre-installed, ready for you to start using. The scheduler uses very few resources when idle, so you can choose to use it if you find it useful, or run jobs manually across your research environment if you prefer.
 
