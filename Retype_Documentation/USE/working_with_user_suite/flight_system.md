@@ -21,7 +21,7 @@ To load the system, simply run `flight start` (which, when first run, will gener
 
 ![](https://use.openflighthpc.org/_images/flightenv.png)
 
-!!!success
+!!!
 The flight system can be set to automatically start on login for the user by running `flight set always on`
 !!!
 
@@ -33,7 +33,7 @@ The flight system can be set to automatically start on login for the user by run
 
 To identify the research environment that's being worked on, a cluster name can be specified and displayed in the prompt when the Flight System is active. 
 
-A cluster name can be specified as follows::
+A cluster name can be specified as follows:
 
 ```bash
 [flight@gateway1 ~]$ flight config set cluster.name scooby
