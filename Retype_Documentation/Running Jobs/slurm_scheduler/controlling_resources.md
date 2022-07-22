@@ -31,10 +31,15 @@ echo "Finished running - goodbye from $HOSTNAME"
 
 Including job scheduler instructions in your job-scripts is often the most convenient method of working for batch jobs - follow the guidelines below for the best experience:
 
-- Lines in your script that include job-scheduler directives must start with `#SBATCH` at the beginning of the line
-- You can have multiple lines starting with `#SBATCH` in your job-script, with normal script lines in-between
+- Lines in your script that include job-scheduler directives must start with `#SBATCH` at the beginning of the line.
 - You can put multiple instructions separated by a space on a single line starting with `#SBATCH`
 - The scheduler will parse the script from top to bottom and set instructions in order; if you set the same parameter twice, the second value will be used.
 - Instructions are parsed at job submission time, before the job itself has actually run. This means you can’t, for example, tell the scheduler to put your job output in a directory that you create in the job-script itself - the directory will not exist when the job starts running, and your job will fail with an error.
 - You can use dynamic variables in your instructions (see next)
 
+
+!!!warning
+After `#!/bin/bash -l` write all of your `#SBATCH` lines. As soon as the interpreter reads a normal script line it will stop looking for `#SBATCH` lines.
+!!!
+
+[More information on this](https://slurm.schedmd.com/sbatch.html#SECTION_DESCRIPTION)
