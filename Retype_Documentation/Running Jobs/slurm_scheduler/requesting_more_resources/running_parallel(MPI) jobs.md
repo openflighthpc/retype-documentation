@@ -4,7 +4,11 @@ label: Running Parallel (MPI) jobs
 icon: dot
 ---
 
-If users want to run parallel jobs via a messaging passing interface (MPI), they need to inform the scheduler - this allows jobs to be efficiently spread over compute nodes to get the best possible performance. Using multiple CPU cores across multiple nodes is achieved by specifying the `-N, --nodes=<minnodes[-maxnodes]>` option - which requests a minimum (and optional maximum) number of nodes to allocate to the submitted job. If _only_ the `minnodes` count is specified - then this is used for both the minimum _and_ maximum node count for the job.
+If users want to run parallel jobs via a messaging passing interface (MPI), they need to inform the scheduler - this allows jobs to be efficiently spread over compute nodes to get the best possible performance. Using multiple CPU cores across multiple nodes is achieved by specifying the `-N` or `--nodes=<minnodes[-maxnodes]>` option - which requests a minimum (and optional maximum) number of nodes to allocate to the submitted job. If _only_ the `minnodes` count is specified - then this is used for both the minimum _and_ maximum node count for the job.
+
+`--nodes=1-4`
+
+Example of how to request a minimum of 1 node and maximum of 4.
 
 You can request multiple cores over multiple nodes using a combination of scheduler directives either in your job submission command or within your job script. Some of the following examples demonstrate how you can obtain cores across different resources;
 
