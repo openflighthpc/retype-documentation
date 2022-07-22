@@ -52,8 +52,8 @@ Flight Env provides quick setup methods to create a conda software ecosystem.
 
 To install and use conda:
 
-- :ref:`Activate the flight system <activate-flight-system>`
-- Create the conda installation for the user::
+- [Activate the flight system.](/USE/working_with_user_suite/flight_system.md)
+- Create the conda installation for the user:
 
 ```bash
 [flight@gateway1 ~]$ flight env create conda
@@ -64,14 +64,14 @@ Creating environment conda@default
 Environment conda@default has been created
 ```
 
-- Activate the conda ecosystem::
+- Activate the conda ecosystem:
 
 ```bash
 [flight@gateway1 ~]$ flight env activate conda
 (base) <conda> [flight@gateway1 ~]$
 ```
 
-- Check that conda can be run::
+- Check that conda can be run:
 ```bash
 (base) <conda> [flight@gateway1 ~]$ conda --version
 conda 4.7.10
@@ -173,19 +173,18 @@ EasyBuild is a software build and installation framework that allows you to mana
 
 ### Usage Example
 
-.. _easybuild-usage-example:
 
-Easybuild: Usage Example
-========================
 
-Creating and Using Ecosystem
-----------------------------
+# Easybuild: Usage Example
+
+
+## Creating and Using Ecosystem
 
 Flight Env provides quick setup methods to create an easybuild software ecosystem. 
 
 To install and use easybuild:
 
-- :ref:`Activate the flight system <activate-flight-system>`
+- [Activate the flight system.](/USE/working_with_user_suite/flight_system.md)
 - Create the easybuild installation for the user::
 
     [flight@gateway1 ~]$ flight env create easybuild
@@ -219,8 +218,7 @@ To install and use easybuild:
     This is EasyBuild 3.9.4 (framework: 3.9.4, easyblocks: 3.9.4) on host gateway1.pri.basic.cluster.local.
 
 
-Installing and Running Perl
----------------------------
+## Installing and Running Perl
 
 An example workflow using perl is demonstrated below.
 
@@ -302,7 +300,7 @@ Flight Env provides quick setup methods to create a gridware software ecosystem.
 
 To install and use gridware:
 
-- :ref:`Activate the flight system <activate-flight-system>`
+- [Activate the flight system.](/USE/working_with_user_suite/flight_system.md)
 - Create the gridware installation for the user::
 
     [flight@gateway1 ~]$ flight env create gridware
@@ -414,8 +412,6 @@ Modules provides simple environment management. Tools and software to be used wi
 
 ### Usage Example
 
-.. _modules-usage-example:
-
 Modules: Usage Example
 ======================
 
@@ -426,7 +422,7 @@ Flight Env provides quick setup methods to create a modules software ecosystem.
 
 To install and use modules:
 
-- :ref:`Activate the flight system <activate-flight-system>`
+- [Activate the flight system.](/USE/working_with_user_suite/flight_system.md)
 - Create the modules installation for the user::
 
     [flight@gateway1 ~]$ flight env create modules
@@ -513,7 +509,7 @@ Create Modulefile and Test
     <modules> [flight@gateway1 ~]$ which perl
     ~/localperl/bin/perl
 
-- Install perl library (this may prompt for initial ``cpan`` configuration, once configuration is complete then the library will be installed)::
+- Install perl library (this may prompt for initial ``cpan`` configuration, once configuration is complete then the library will be installed):
 
     <modules> [flight@gateway1 ~]$ cpan File::Slurp
     Loading internal logger. Log::Log4perl recommended for better logging
@@ -524,7 +520,7 @@ Create Modulefile and Test
       CAPOEIRAB/File-Slurp-9999.30.tar.gz
       /usr/bin/make install  -- OK
 
-- Check installation worked::
+- Check installation worked:
 
     <modules> [flight@gateway1 ~]$ cpan File::Slurp
     Loading internal logger. Log::Log4perl recommended for better logging
@@ -540,8 +536,6 @@ Singularity is high-performance container technology specifically designed to en
 
 ### Usage Example
 
-.. _singularity-usage-example:
-
 Singularity: Usage Example
 ==========================
 
@@ -554,7 +548,7 @@ To install and use singularity:
 
 .. note:: If installing singularity for a user then there are a number of restrictions and additional steps to consider in configuring the environment. See the ``Personal Environment`` section of ``flight env info singularity``. 
 
-- :ref:`Activate the flight system <activate-flight-system>`
+- [Activate the flight system.](/USE/working_with_user_suite/flight_system.md)
 - Create the singularity installation for the user::
 
     [flight@gateway1 ~]$ flight env create singularity
