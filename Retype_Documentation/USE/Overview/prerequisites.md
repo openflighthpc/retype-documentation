@@ -16,7 +16,7 @@ You'll need a client device as well - something to log into your research enviro
  - **A relatively modern web-browser**; Apple Safari, Google Chrome, Microsoft Edge, Mozilla Firefox, and pretty much anything else that was written/updated in the last couple of years should all be fine.
  - **An SSH client**; this comes built-in for Linux and Mac based machines, but you'll need to install one for Windows clients and some tablets.
  - **Internet access**; it seems dumb to list this as a requirement for running HPC on cloud resources, but a surprising number of sites actually limit outbound connectivity to the Internet. You'll need to be able to access the Internet from your client device.
- - *Optionally*; **A graphical data transfer tool**; you don't actually need one of these, but they can really help new users get started more quickly. 
+ - *Optionally;* **A graphical data transfer tool**; you don't actually need one of these, but they can really help new users get started more quickly. 
  
 
 It's worth checking for centrally-managed client systems that you can install the software that you need - some research sites don't allow users to install new software. Here are some recommendations of software that you can use on client machines; this is far from a complete list, but should help you get started:
