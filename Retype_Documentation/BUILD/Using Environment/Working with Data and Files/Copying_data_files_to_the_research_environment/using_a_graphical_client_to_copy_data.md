@@ -12,7 +12,7 @@ There are also a number of graphical file-management interfaces available that s
 - Click on the `Advanced` box and navigate to the `SSH` sub-menu, and the `Authentication` item
 - In the `Private key file` box, select your research environment access private key, and click the `OK` box.
 
-![](https://build.openflighthpc.org/_images/winscpconfig.png)
+![](/images/winscpconfig.png)
 
 - Optionally click the `Save` button and give this session a name
 - Click the `Login` button to connect to your research environment
@@ -22,7 +22,7 @@ There are also a number of graphical file-management interfaces available that s
 - To copy files from the research environment to your client, click and drag them from the right-hand window and drop them on the left-hand window
 
 
-![](https://build.openflighthpc.org/_images/winscpcopyfiles.png)
+![](/images/winscpcopyfiles.png)
 
 The amount of time taken to copy data to and from your research environment will depend on a number of factors, including:
 

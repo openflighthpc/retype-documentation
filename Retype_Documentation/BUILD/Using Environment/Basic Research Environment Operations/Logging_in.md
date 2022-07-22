@@ -41,14 +41,14 @@ If you are accessing from a Windows client using the Putty utility, the private 
 
 To load the key in Putty, select Connection -> SSH -> Auth, click Browse and select the ppk that was generated from the above steps.
 
-![](https://build.openflighthpc.org/_images/PuttyKey.png)
+![](/images/PuttyKey.png)
 
 Next, enter the username and IP address of the research environment login node in the “Host Name” box provided (in the Session section):
 
-![](https://build.openflighthpc.org/_images/putty.png)
+![](/images/putty.png)
 
 The first time you connect to your research environment, you will be prompted to accept a new server SSH hostkey. This happens because you’ve never logged in to your research environment before - it should only happen the first time you login; click **OK** to accept the warning. Once connected to the research environment, you should be logged in to the research environment login node as your user.
 
-![](https://build.openflighthpc.org/_images/firstlogin.png)
+![](/images/firstlogin.png)
 
 +++

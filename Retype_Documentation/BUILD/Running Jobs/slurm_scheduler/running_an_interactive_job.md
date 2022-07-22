@@ -25,7 +25,7 @@ In the above example, the `srun` command is used together with two options: `--p
 
 Alternatively, the `srun` command can also be executed from an interactive desktop session; the job-scheduler will automatically find an available compute node to launch the job on. Applications launched from within the `srun` session are executed on the assigned research environment compute node.
 
-![](https://build.openflighthpc.org/_images/interactivejob.png)
+![](/images/interactivejob.png)
 
 
 !!!

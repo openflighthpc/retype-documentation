@@ -13,5 +13,5 @@ Users can run a number of different types of job via the research environment sc
 
 The research environment job-scheduler is responsible for finding compute nodes in your research environment to run all these different types of jobs on. It keeps track of the available resources and allocates jobs to individual groups of nodes, making sure not to over-commit CPU and memory. The example below shows how a job-scheduler might allocate jobs of different types to a group of 8-CPU-core compute nodes:
 
-![](https://build.openflighthpc.org/_images/tetris.jpg)
+![](/images/tetris.jpg)
 
