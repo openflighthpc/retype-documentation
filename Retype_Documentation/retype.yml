@@ -2,7 +2,7 @@ input: .
 output: .retype
 url: # Add your website address here
 branding:
-  title: BUILD Knowledgebase
+  title: OpenFlightHPC Knowledgebase
   label: Docs
 links:
 - text: Welcome to the OpenFlightHPC Build Knowledgebase!
