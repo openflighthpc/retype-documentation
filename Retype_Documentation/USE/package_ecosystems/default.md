@@ -1,32 +1,32 @@
 ---
-order:
-label:
+order: 60
+label: Package Ecosystems
 icon:
 ---
 
-
-# Package Ecosystems
-
-
 The Flight Env command provides streamlined installation of many popular software management ecosystems. These can be seen below along with the features they provide.
 
-.. tabularcolumns:: |C|C|C|C|C|C|C|
 
-+---------------+-------+-----------+----------+---------+-------------+-------+
-|               | conda | easybuild | gridware | modules | singularity | spack |
-|               |       |           |          |         |             |       |
-+===============+=======+===========+==========+=========+=============+=======+
-| Dependency    | ``y`` |   ``y``   |  ``y``   |  ``n``  |   ``y``     | ``y`` |
-| Management    |       |           |          |         |             |       |
-+---------------+-------+-----------+----------+---------+-------------+-------+
-| Compilation   | ``y`` |   ``y``   |  ``n``   |  ``n``  |   ``n``     | ``y`` |
-+---------------+-------+-----------+----------+---------+-------------+-------+
-| Preconfigured | ``n`` |   ``y``   |  ``y``   |  ``n``  |   ``y``     | ``*`` |
-| Binaries      |       |           |          |         |             |       |
-+---------------+-------+-----------+----------+---------+-------------+-------+
-| Multiple      | ``*`` |   ``y``   |  ``y``   |  ``y``  |   ``y``     | ``y`` |
-| Versions      |       |           |          |         |             |       |
-+---------------+-------+-----------+----------+---------+-------------+-------+
+|    &nbsp;              | Conda             | Easybuild    | Gridware     | Modules      | Singularity  | Spack             |
+|------------------------|-------------------|--------------|--------------|--------------|--------------|-------------------|
+| Dependency Management  | :icon-check:      | :icon-check: | :icon-check: | :icon-x:     | :icon-check: | :icon-check:      |
+| Compilation            | :icon-check:      | :icon-check: | :icon-x:     | :icon-x:     | :icon-x:     | :icon-check:      |
+| Preconfigured Binaries | :icon-x:          | :icon-check: | :icon-check: | :icon-x:     | :icon-check: | :icon-north-star: |
+| Multiple Versions      | :icon-north-star: | :icon-check: | :icon-check: | :icon-check: | :icon-check: | :icon-check:      |
+
+|      &nbsp;            | Conda              | Easybuild          | Gridware           | Modules            | Singularity        | Spack              |
+|------------------------|--------------------|--------------------|--------------------|--------------------|--------------------|--------------------|
+| Dependency Management  | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :x:                | :heavy_check_mark: | :heavy_check_mark: |
+| Compilation            | :heavy_check_mark: | :heavy_check_mark: | :x:                | :x:                | :x:                | :heavy_check_mark: |
+| Preconfigured Binaries | :x:                | :heavy_check_mark: | :heavy_check_mark: | :x:                | :heavy_check_mark: | :keycap_star:      |
+| Multiple Versions      | :keycap_star:      | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+
+|     &nbsp;             | Conda              | Easybuild          | Gridware           | Modules            | Singularity        | Spack              |
+|------------------------|--------------------|--------------------|--------------------|--------------------|--------------------|--------------------|
+| Dependency Management  | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :x:                | :heavy_check_mark: | :heavy_check_mark: |
+| Compilation            | :heavy_check_mark: | :heavy_check_mark: | :x:                | :x:                | :x:                | :heavy_check_mark: |
+| Preconfigured Binaries | :x:                | :heavy_check_mark: | :heavy_check_mark: | :x:                | :heavy_check_mark: | :icon-north-star:  |
+| Multiple Versions      | :icon-north-star:  | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
 
 More information on the features:
 
@@ -35,7 +35,7 @@ More information on the features:
   - **Preconfigured Binaries** - The ecosystem provides binaries of the available software for quicker installation to get applications installed quickly
   - **Multiple Versions** - The ecosystem allows for installation of multiple versions of software which can be toggled between
 
-`*` is for partial support. Technically these features are supported in certain use cases and with additional work. This is not considered full support as multiple versions may require undocumented or uncommon use-cases of the tool. 
+:keycap_star: is for partial support. Technically these features are supported in certain use cases and with additional work. This is not considered full support as multiple versions may require undocumented or uncommon use-cases of the tool. 
 
 
 
@@ -43,10 +43,10 @@ More information on the features:
 
 Conda is an open source package management system and environment management system that runs on Windows, macOS and Linux. Conda quickly installs, runs and updates packages and their dependencies. Conda easily creates, saves, loads and switches between environments on your local computer. It was created for Python programs, but it can package and distribute software for any language.
 
-### Usage Example
+# Conda Usage Example
 
-Creating and Using Ecosystem
-----------------------------
+## Creating and Using Ecosystem
+
 
 Flight Env provides quick setup methods to create a conda software ecosystem. 
 
@@ -55,107 +55,117 @@ To install and use conda:
 - :ref:`Activate the flight system <activate-flight-system>`
 - Create the conda installation for the user::
 
-    [flight@gateway1 ~]$ flight env create conda
-    Creating environment conda@default
-       > âœ… Verifying prerequisites
-       > âœ… Fetching prerequisite (miniconda)
-       > âœ… Creating environment (conda@default)
-    Environment conda@default has been created
+```bash
+[flight@gateway1 ~]$ flight env create conda
+Creating environment conda@default
+   > ✅ Verifying prerequisites
+   > ✅ Fetching prerequisite (miniconda)
+   > ✅ Creating environment (conda@default)
+Environment conda@default has been created
+```
 
 - Activate the conda ecosystem::
 
-    [flight@gateway1 ~]$ flight env activate conda
-    (base) <conda> [flight@gateway1 ~]$
+```bash
+[flight@gateway1 ~]$ flight env activate conda
+(base) <conda> [flight@gateway1 ~]$
+```
 
 - Check that conda can be run::
+```bash
+(base) <conda> [flight@gateway1 ~]$ conda --version
+conda 4.7.10
+```
 
-    (base) <conda> [flight@gateway1 ~]$ conda --version
-    conda 4.7.10
-
-
-Installing and Running Perl
----------------------------
+## Installing and Running Perl
 
 An example workflow using perl is demonstrated below.
 
-- View available versions::
+- View available versions:
 
-    (base) <conda> [flight@gateway1 ~]$ conda search perl
-    Loading channels: done
-    # Name                       Version           Build  Channel
-    perl                          5.26.0      hae598fd_0  pkgs/main
-    perl                          5.26.2      h14c3975_0  pkgs/main
+```bash
+(base) <conda> [flight@gateway1 ~]$ conda search perl
+Loading channels: done
+# Name                       Version           Build  Channel
+perl                          5.26.0      hae598fd_0  pkgs/main
+perl                          5.26.2      h14c3975_0  pkgs/main
+```
 
-- Install specific version::
+- Install specific version:
+```bash
+(base) <conda> [flight@gateway1 ~]$ conda install perl=5.26.2
+Collecting package metadata (current_repodata.json): done
+Solving environment: done
 
-    (base) <conda> [flight@gateway1 ~]$ conda install perl=5.26.2
-    Collecting package metadata (current_repodata.json): done
-    Solving environment: done
+## Package Plan ##
 
-    ## Package Plan ##
+  environment location: /home/flight/.local/share/flight/env/conda+default
 
-      environment location: /home/flight/.local/share/flight/env/conda+default
-
-      added / updated specs:
-        - perl=5.26.2
-
-
-    The following packages will be downloaded:
-
-        package                    |            build
-        ---------------------------|-----------------
-        ca-certificates-2019.5.15  |                1         134 KB
-        certifi-2019.6.16          |           py37_1         156 KB
-        conda-4.7.11               |           py37_0         3.0 MB
-        perl-5.26.2                |       h14c3975_0        10.5 MB
-        ------------------------------------------------------------
-                                               Total:        13.7 MB
-
-    The following NEW packages will be INSTALLED:
-
-      perl               pkgs/main/linux-64::perl-5.26.2-h14c3975_0
-
-    The following packages will be UPDATED:
-
-      ca-certificates                               2019.5.15-0 --> 2019.5.15-1
-      certifi                                  2019.6.16-py37_0 --> 2019.6.16-py37_1
-      conda                                       4.7.10-py37_0 --> 4.7.11-py37_0
+  added / updated specs:
+    - perl=5.26.2
 
 
-    Proceed ([y]/n)? y
+The following packages will be downloaded:
+
+    package                    |            build
+    ---------------------------|-----------------
+    ca-certificates-2019.5.15  |                1         134 KB
+    certifi-2019.6.16          |           py37_1         156 KB
+    conda-4.7.11               |           py37_0         3.0 MB
+    perl-5.26.2                |       h14c3975_0        10.5 MB
+    ------------------------------------------------------------
+                                           Total:        13.7 MB
+
+The following NEW packages will be INSTALLED:
+
+  perl               pkgs/main/linux-64::perl-5.26.2-h14c3975_0
+
+The following packages will be UPDATED:
+
+  ca-certificates                               2019.5.15-0 --> 2019.5.15-1
+  certifi                                  2019.6.16-py37_0 --> 2019.6.16-py37_1
+  conda                                       4.7.10-py37_0 --> 4.7.11-py37_0
 
 
-    Downloading and Extracting Packages
-    conda-4.7.11         | 3.0 MB    | ############################################################################################ | 100%
-    certifi-2019.6.16    | 156 KB    | ############################################################################################ | 100%
-    perl-5.26.2          | 10.5 MB   | ############################################################################################ | 100%
-    ca-certificates-2019 | 134 KB    | ############################################################################################ | 100%
-    Preparing transaction: done
-    Verifying transaction: done
+Proceed ([y]/n)? y
+
+
+Downloading and Extracting Packages
+conda-4.7.11         | 3.0 MB    | ############################################################################################ | 100%
+certifi-2019.6.16    | 156 KB    | ############################################################################################ | 100%
+perl-5.26.2          | 10.5 MB   | ############################################################################################ | 100%
+ca-certificates-2019 | 134 KB    | ############################################################################################ | 100%
+Preparing transaction: done
+Verifying transaction: done
     Executing transaction: done
+```
 
-- Check installation location::
+- Check installation location:
+```bash
+(base) <conda> [flight@gateway1 ~]$ which perl
+~/.local/share/flight/env/conda+default/bin/perl
+```
 
-    (base) <conda> [flight@gateway1 ~]$ which perl
-    ~/.local/share/flight/env/conda+default/bin/perl
+- Install perl library (this may prompt for initial `cpan` configuration, once configuration is complete then the library will be installed):
 
-- Install perl library (this may prompt for initial ``cpan`` configuration, once configuration is complete then the library will be installed)::
-
+```bash
     (base) <conda> [flight@gateway1 ~]$ cpan File::Slurp
     Loading internal null logger. Install Log::Log4perl for logging messages
     Reading '/home/flight/.cpan/Metadata'
       Database was generated on Mon, 09 Sep 2019 15:17:03 GMT
     Running install for module 'File::Slurp'
     <-- snip -->
+```
 
-- Check installation worked::
+- Check installation worked:
+```bash
 
     (base) <conda> [flight@gateway1 ~]$ cpan File::Slurp
     Loading internal null logger. Install Log::Log4perl for logging messages
     Reading '/home/flight/.cpan/Metadata'
       Database was generated on Mon, 09 Sep 2019 15:17:03 GMT
     File::Slurp is up to date (9999.27).
-
+```
 
 +++ [Easybuild](https://easybuilders.github.io/easybuild/)
 
