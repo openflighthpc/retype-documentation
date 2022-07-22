@@ -1,7 +1,7 @@
 ---
-order: 100
-icon: home
-image: C:\Users\ivank\Documents\retype_test\Moose_superior.jpg
+order: 90
+icon: file-directory
+label: BUILD
 
 ---
 # Welcome to the OpenFlightHPC Build Knowledgebase!
