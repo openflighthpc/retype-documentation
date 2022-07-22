@@ -14,6 +14,6 @@ Your research environment job scheduler automatically creates a number of pseudo
 - `%A` / `$SLURM_ARRAY_JOB_ID` Job allocation number for an array job. The `%A` substitution should only be used in your job scheduler directives[^1]
 - `%j` / `$SLURM_JOBID` Job allocation number. The `%j` substitution should only be used in your job scheduler directives
 
-For more information on these, visit https://slurm.schedmd.com/sbatch.html#SECTION_%3CB%3Efilename-pattern%3C/B%3E
+[More information on this.](https://slurm.schedmd.com/sbatch.html#SECTION_%3CB%3Efilename-pattern%3C/B%3E)
 
 [^1]: These relate to task array jobs, which are covered in a later section.
