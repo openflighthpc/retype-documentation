@@ -13,117 +13,114 @@ Flight User Suite is made up of the following tools:
 - Env: Flight Env provides access to, and management of, various software managers to ensure access to a wide variety of HPC applications
 - Desktop: Flight Desktop provides an intuitive tool for launching VNC-ready virtual desktops of many different desktop environments (gnome, xterm, kde, etc)
 - Starter: Flight Starter provides profile scripts for integrating the user suite into the shell environment
+- Job: Flight Job Manager allows you to create and manage customized job scripts from predefined templates, launch jobs and monitor their activity.
 
 ## Installing Flight User Suite
 
 
 The OpenFlight project packages tools as both RPMs and debs that are hosted in package repositories which can be quickly installed with a couple of commands. 
 
-.. _add_package_repos:
 
-Adding the OpenFlight Package Repositories
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. tabs:: 
+### Adding the OpenFlight Package Repositories
 
-    .. group-tab:: CentOS 7
 
-        - Install the OpenFlight release RPM::
++++ CentOS 7
 
-            [flight@gateway1 ~]$ sudo yum install https://repo.openflighthpc.org/pub/centos/7/openflighthpc-release-latest.noarch.rpm
+- Install the OpenFlight release RPM:
 
-        - Rebuild the yum cache::
+`[flight@gateway1 ~]$ sudo yum install https://repo.openflighthpc.org/pub/centos/7/openflighthpc-release-latest.noarch.rpm`
 
-            [flight@gateway1 ~]$ sudo yum makecache
+- Rebuild the yum cache:
 
-        .. note:: Some tools require packages available in the EPEL repository, this can be installed with ``yum install epel-release``
+`[flight@gateway1 ~]$ sudo yum makecache`
 
-    .. group-tab:: CentOS 8
+!!!
+Some tools require packages available in the EPEL repository, this can be installed with `yum install epel-release`
+!!!
 
-        - Install the OpenFlight release RPM::
++++ CentOS 8
 
-            [flight@gateway1 ~]$ sudo dnf install https://repo.openflighthpc.org/openflight/centos/8/x86_64/openflighthpc-release-3-1.noarch.rpm
+- Install the OpenFlight release RPM:
 
-        - Rebuild the yum cache::
+`[flight@gateway1 ~]$ sudo dnf install https://repo.openflighthpc.org/openflight/centos/8/x86_64/openflighthpc-release-3-1.noarch.rpm`
 
-            [flight@gateway1 ~]$ sudo dnf makecache
+- Rebuild the yum cache:
 
-        .. note:: Some tools require packages available in the EPEL repository, this can be installed with ``yum install epel-release``. Additionally the PowerTools repository is needed, this can be enabled with ``yum config-manager --set-enabled PowerTools``
+`[flight@gateway1 ~]$ sudo dnf makecache`
 
-    .. group-tab:: Ubuntu 18.04
+!!!
+Some tools require packages available in the EPEL repository, this can be installed with ``yum install epel-release``. Additionally the PowerTools repository is needed, this can be enabled with ``yum config-manager --set-enabled PowerTools``
+!!!
 
-        - Import the public signature for OpenFlight::
++++ Ubuntu 18.04
 
-            flight@gateway1:~$ sudo apt-key adv --fetch-keys https://repo.openflighthpc.org/openflighthpc-archive-key.asc
+- Import the public signature for OpenFlight:
 
-        - Install the OpenFlight repository::
+`flight@gateway1:~$ sudo apt-key adv --fetch-keys https://repo.openflighthpc.org/openflighthpc-archive-key.asc`
 
-            flight@gateway1:~$ sudo apt-add-repository "deb https://repo.openflighthpc.org/openflight/ubuntu stable main"
+- Install the OpenFlight repository:
 
-        - Update the apt cache::
+`flight@gateway1:~$ sudo apt-add-repository "deb https://repo.openflighthpc.org/openflight/ubuntu stable main"`
 
-            flight@gateway1:~$ sudo apt-get update
+- Update the apt cache:
 
-    .. group-tab:: Ubuntu 20.04
+`flight@gateway1:~$ sudo apt-get update`
 
-        - Import the public signature for OpenFlight::
++++ Ubuntu 20.04
 
-            flight@gateway1:~$ sudo apt-key adv --fetch-keys https://repo.openflighthpc.org/openflighthpc-archive-key.asc
+- Import the public signature for OpenFlight:
 
-        - Install the OpenFlight repository::
+`flight@gateway1:~$ sudo apt-key adv --fetch-keys https://repo.openflighthpc.org/openflighthpc-archive-key.asc`
 
-            flight@gateway1:~$ sudo apt-add-repository "deb https://repo.openflighthpc.org/openflight/ubuntu stable main"
+- Install the OpenFlight repository:
 
-        - Update the apt cache::
+`flight@gateway1:~$ sudo apt-add-repository "deb https://repo.openflighthpc.org/openflight/ubuntu stable main"`
 
-            flight@gateway1:~$ sudo apt-get update
+- Update the apt cache:
+
+`flight@gateway1:~$ sudo apt-get update`
+
++++
+
 
 Now the OpenFlight repositories are installed. There are 3 repositories available - production (enabled by default), dev (providing development releases of tools) and vault (access to old, unsupported versions and retired tools).
 
 
-Installation Method 1: Quick
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+## Installation Method 1: Quick
+
 
 The quickest and simplest way to get up and running with the user suite is to simply install the group package for the tools. This will ensure that compatible versions of all the tools are installed.
 
-.. tabs::
++++ CentOS 7
+- Install the user suite RPM::
+`[flight@gateway1 ~]$ sudo yum install flight-user-suite`
 
-    .. group-tab:: CentOS 7
++++ CentOS 8
+- Install the user suite RPM::
+`[flight@gateway1 ~]$ sudo dnf install flight-user-suite`
 
-        - Install the user suite RPM::
++++ Ubuntu 18.04
+- Install the user suite deb::
+`flight@gateway1:~$ sudo apt-get install flight-user-suite`
 
-            [flight@gateway1 ~]$ sudo yum install flight-user-suite
++++ Ubuntu 20.04
+- Install the user suite deb::
+`flight@gateway1:~$ sudo apt-get install flight-user-suite`
 
-    .. group-tab:: CentOS 8
-
-        - Install the user suite RPM::
-
-            [flight@gateway1 ~]$ sudo dnf install flight-user-suite
-
-    .. group-tab:: Ubuntu 18.04
-
-        - Install the user suite deb::
-
-            flight@gateway1:~$ sudo apt-get install flight-user-suite
-
-    .. group-tab:: Ubuntu 20.04
-
-        - Install the user suite deb::
-
-            flight@gateway1:~$ sudo apt-get install flight-user-suite
++++
 
 
-.. note:: After installation, either reboot your system or logout and back in again to expose the ``flight`` command to the shell
+!!!
+After installation, either reboot your system or logout and back in again to expose the ``flight`` command to the shell
+!!!
 
-Installation Method 2: Slightly Less Quick
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+## Installation Method 2: Slightly Less Quick
+
 
 Each tool in the user suite is also available through the repositories and can be installed one at a time.
 
-.. tabs::
-
-    .. group-tab:: CentOS 7
-
++++ CentOS 7
         - Install the Flight Runway RPM::
 
             [flight@gateway1 ~]$ sudo yum install flight-runway
@@ -139,9 +136,7 @@ Each tool in the user suite is also available through the repositories and can b
         - Install Flight Starter RPM::
 
             [flight@gateway1 ~]$ sudo yum install flight-starter
-
-    .. group-tab:: CentOS 8
-
++++ CentOS 8
         - Install the Flight Runway RPM::
 
             [flight@gateway1 ~]$ sudo dnf install flight-runway
@@ -157,9 +152,7 @@ Each tool in the user suite is also available through the repositories and can b
         - Install Flight Starter RPM::
 
             [flight@gateway1 ~]$ sudo dnf install flight-starter
-
-    .. group-tab:: Ubuntu 18.04
-
++++ Ubuntu 18.04
         - Install Flight Runway deb::
 
             flight@gatewat1:~$ sudo apt-get install flight-runway
@@ -175,9 +168,7 @@ Each tool in the user suite is also available through the repositories and can b
         - Install Flight Starter deb::
 
             flight@gatewat1:~$ sudo apt-get install flight-starter
-
-    .. group-tab:: Ubuntu 20.04
-
++++ Ubuntu 20.04
         - Install Flight Runway deb::
 
             flight@gatewat1:~$ sudo apt-get install flight-runway
@@ -193,12 +184,15 @@ Each tool in the user suite is also available through the repositories and can b
         - Install Flight Starter deb::
 
             flight@gatewat1:~$ sudo apt-get install flight-starter
++++
 
 
-.. note:: After installation, either reboot your system or logout and back in again to expose the ``flight`` command to the shell
 
-Installation Method 3: Manual
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+!!!
+After installation, either reboot your system or logout and back in again to expose the `flight` command to the shell.
+!!!
+
+## Installation Method 3: Manual
 
 For those who wish to have more control over their installation, all of the Flight User Suite tools have manual installation instructions in the READMEs on GitHub.
 
