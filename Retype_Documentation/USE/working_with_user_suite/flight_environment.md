@@ -10,7 +10,9 @@ icon:
 
 ## Viewing Available Ecosystems
 
-Various :ref:`package-ecosystems` are available for managing software on your Flight research environment. These can be viewed by using the `env` subcommand:
+Various [package-ecosystems](/USE/package_ecosystems) are available for managing software on your Flight research environment. These can be viewed by using the `env` subcommand:
+
+
 
 ```bash
 [flight@gateway1 (scooby) ~]$ flight env avail
@@ -20,13 +22,13 @@ Various :ref:`package-ecosystems` are available for managing software on your Fl
 
 A local ecosystem is only available to the user that creates it. All of the packages and libraries are installed to the users home directory.
 
-To install a package ecosystem, use the create command as follows (replacing gridware with your desired package ecosystem)::
+To install a package ecosystem, use the create command as follows (replacing gridware with your desired package ecosystem):
 
 ```bash
 [flight@gateway1 (scooby) ~]$ flight env create gridware
 ```
 
-Once a package ecosystem has been installed, it needs to be activated for the session to be able to manage software with it::
+Once a package ecosystem has been installed, it needs to be activated for the session to be able to manage software with it:
 
 ```bash
 [flight@gateway1 (scooby) ~]$ flight env activate gridware
@@ -38,19 +40,19 @@ Your preferred software ecosystem can be set to automatically activate for your 
 
 ## Creating a Global Ecosystem
 
-A global ecosystem is available to all users on the system. All of the packages and libraries are installed to a shared storage directory. The global directories can be configured in ``/opt/flight/opt/flight-env/etc/config.yml`` with the `global_depot_path:` and ``global_build_cache_path`` keys.
+A global ecosystem is available to all users on the system. All of the packages and libraries are installed to a shared storage directory. The global directories can be configured in ``/opt/flight/opt/env/etc/config.yml`` with the `global_depot_path:` and ``global_build_cache_path`` keys.
 
 !!!
 The user requires suitable write permissions to the configured global depot paths in order to be able to create a global ecosystem
 !!!
 
-To install a global package ecosystem, use the create command with the global option flag::
+To install a global package ecosystem, use the create command with the global option flag:
 
 ```bash
 [root@gateway1 (scooby) ~]$ flight env create -g gridware
 ```
 
-Once the global ecosystem has been installed, it needs to be activated for the session to be able to monitor software with it::
+Once the global ecosystem has been installed, it needs to be activated for the session to be able to monitor software with it:
 
 ```bash
 [root@gateway1 (scooby) ~]$ flight env activate gridware@global
@@ -66,7 +68,7 @@ When installing an ecosystem, an custom alias can be added by appending ``@mycus
 [flight@gateway1 (scooby) ~]$ flight env create gridware@test
 ```
 
-To activate this environment, the alias will need to be specified in the activation command::
+To activate this environment, the alias will need to be specified in the activation command:
 
 ```bash
 [flight@gateway1 (scooby) ~]$ flight env activate gridware@test
