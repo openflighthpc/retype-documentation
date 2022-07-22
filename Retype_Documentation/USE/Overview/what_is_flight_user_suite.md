@@ -13,7 +13,7 @@ The Flight User Suite is a software environment designed to help researchers and
  - A batch job scheduler
  - Access to various libraries of software applications
 
-The Flight User Suite is designed to get researchers started with HPC as quickly as possible, providing a pre-configured environment which is ready for work immediately. The research environment you build is personal to you - users have root-access to the environment, and can setup and configure the system to their needs. 
+The Flight User Suite is designed to get researchers to make the most of their HPC. The research environment you build is personal to you - users have root-access to the environment, and can setup and configure the system to their needs. 
 
 Your research environment is designed to be **ephemeral** - i.e. you run it for as long as you need it, then shut it down. Although there is no built-in time limit for OpenFlight Compute research environments, the most effective way of sharing compute resources in the cloud is to book them out only when you need them. Contrary to popular belief, you can achieve huge cost savings over purchasing server hardware if you learn to work effectively in this way.
 
