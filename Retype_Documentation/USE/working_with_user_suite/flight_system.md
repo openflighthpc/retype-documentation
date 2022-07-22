@@ -19,7 +19,8 @@ This provides some quick tips to activating the system and finding out more abou
 
 To load the system, simply run `flight start` (which, when first run, will generate some login keys for allowing passwordless login to compute nodes)
 
-![](https://use.openflighthpc.org/_images/flightenv.png)
+
+![](/images/flight_start.png)
 
 !!!
 The flight system can be set to automatically start on login for the user by running `flight set always on`
@@ -27,9 +28,7 @@ The flight system can be set to automatically start on login for the user by run
 
 ## Customising the Environment
 
-
 ### Setting the Research Environment Name
-
 
 To identify the research environment that's being worked on, a cluster name can be specified and displayed in the prompt when the Flight System is active. 
 
@@ -38,3 +37,5 @@ A cluster name can be specified as follows:
 ```bash
 [flight@gateway1 ~]$ flight config set cluster.name scooby
 ```
+
+Note that for the name change to take effect you must start a new terminal session or stop/start Flight.
