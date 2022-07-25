@@ -10,6 +10,7 @@ After selecting the console service, a page with the cluster name, description a
 
 ![](/images/flight_web_console_login.png)
 
+![](/images/flight_web_login.png)
 
 ## Connecting to the Terminal
 
