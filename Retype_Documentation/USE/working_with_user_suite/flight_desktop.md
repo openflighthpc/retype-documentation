@@ -95,7 +95,7 @@ If prompted, you should supply the following password: mkO3Zxjl
 
 ```
 
-Users need a VNC client to connect to the graphical desktop session - for a list of tested clients, see :ref:`clientprereqs`.
+Users need a VNC client to connect to the graphical desktop session - for a list of tested clients, see [prerequisites](/USE/overview/prerequisites).
 
 Users with Mac clients can use the URL provided in the command output to connect to the session; e.g. from the above example, simply enter `vnc://flight:L9Uysvi3@52.151.119.86:5902` into the Safari address bar. Linux and Windows users should enter the IP address and port number shown into their VNC client in the format `IP:port`. For example - for the output above, Linux and Windows client users would enter `52.151.119.86:5902` into their VNC client:
 
