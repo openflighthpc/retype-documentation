@@ -95,7 +95,7 @@ If prompted, you should supply the following password: mkO3Zxjl
 
 ```
 
-Users need a VNC client to connect to the graphical desktop session - for a list of tested clients, see [prerequisites](/USE/overview/prerequisites).
+Users need a VNC client to connect to the graphical desktop session - for a list of tested clients, see [Prerequisites](/USE/overview/prerequisites).
 
 Users with Mac clients can use the URL provided in the command output to connect to the session; e.g. from the above example, simply enter `vnc://flight:L9Uysvi3@52.151.119.86:5902` into the Safari address bar. Linux and Windows users should enter the IP address and port number shown into their VNC client in the format `IP:port`. For example - for the output above, Linux and Windows client users would enter `52.151.119.86:5902` into their VNC client:
 
@@ -156,45 +156,43 @@ Your graphical desktop session will automatically resize to the new resolution r
 Users can view a list of the currently running sessions by using the command `flight desktop list`. One standard Flight Compute login node supports up to 10 sessions running at the same time.
 
 ```bash
-[flight@gateway1 (scooby) ~]$ flight desktop list
-â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¬â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¬â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¬â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¬â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¬â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¬â”€â”€â”€â”€â”€â”€â”€â”€â”
-â”‚ Identity â”‚ Type     â”‚ Host name â”‚ IP address    â”‚ Display (Port) â”‚ Password â”‚ State  â”‚
-â”œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¼â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¼â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¼â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¼â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¼â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¼â”€â”€â”€â”€â”€â”€â”€â”€â”¤
-â”‚ 6200f57c â”‚ terminal â”‚ gateway1  â”‚ 51.104.217.65 â”‚ :2 (5902)      â”‚ KbnGqk0L â”‚ Active â”‚
-â”‚ 70e75a99 â”‚ chrome   â”‚ gateway1  â”‚ 51.104.217.65 â”‚ :4 (5904)      â”‚ UjlrnN9f â”‚ Active â”‚
-â”‚ 809b9466 â”‚ gnome    â”‚ gateway1  â”‚ 51.104.217.65 â”‚ :1 (5901)      â”‚ uxAMZfB7 â”‚ Active â”‚
-â”‚ a43059c5 â”‚ gnome    â”‚ gateway1  â”‚ 51.104.217.65 â”‚ :3 (5903)      â”‚ Ofd1qVdN â”‚ Active â”‚
-â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”´â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”´â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”´â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”´â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”´â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”´â”€â”€â”€â”€â”€â”€â”€â”€â”˜
+[flight@chead1 (your_cluster) ~]$ flight desktop list
+┌──────┬──────────┬───────┬───────────┬───────────────┬────────────────┬──────────┬────────┐
+│ Name │ Identity │ Type  │ Host name │ IP address    │ Display (Port) │ Password │ State  │
+├──────┼──────────┼───────┼───────────┼───────────────┼────────────────┼──────────┼────────┤
+│      │ 4549eae1 │ gnome │ chead1    │ 20.68.202.163 │ :1 (5901)      │ mkO3Zxjl │ Active │
+│      │ 52e44bdd │ gnome │ chead1    │ 20.68.202.163 │ :3 (5903)      │ 5eAlaST0 │ Active │
+│      │ abbbe30b │ gnome │ chead1    │ 20.68.202.163 │ :2 (5902)      │ XLH7bV30 │ Active │
+└──────┴──────────┴───────┴───────────┴───────────────┴────────────────┴──────────┴────────┘
 ```
 
 To display connection information for an existing session, use the command `flight desktop show <session-ID>`. This command allows users to review the IP-address, port number and one-time password settings for an existing session.
 
 ```bash
-[flight@gateway1 (scooby) ~]$ flight desktop show 6200f57c
+[flight@chead1 (your_cluster) ~]$ flight desktop show 4549eae1
 
 == Session details ==
+      Name:
+  Identity: 4549eae1-6f8b-4983-8057-99b378afcdd3
+      Type: gnome
+   Host IP: 20.68.202.163
+  Hostname: chead1
+      Port: 5901
+   Display: :1
+  Password: mkO3Zxjl
+  Geometry: 1024x768
 
-  Identity: 6200f57c-ead7-45d5-901d-0b1f9a1d2dad
-      Type: terminal
-   Host IP: 51.104.217.65
-  Hostname: gateway1
-      Port: 5902
-   Display: :2
-  Password: KbnGqk0L
+This desktop session is not directly accessible from outside of your
+cluster as it is running on a machine that only provides internal
+cluster access.  In order to access your desktop session you will need
+to perform port forwarding using 'ssh':
 
-This desktop session is accessible from the public internet. However,
-please be aware that desktop sessions accessed over the public
-internet are not secure and steps should be taken to secure the link.
-
-We highly recommend that you access your desktop session using 'ssh'
-port forwarding:
-
-  ssh -L 5901:localhost:5902 flight@51.104.217.65
+  ssh -L 5901:20.68.202.163:5901 flight@
 
 Once the ssh connection has been established, depending on your
 client, you can connect to the session using one of:
 
-  vnc://flight:KbnGqk0L@localhost:5901
+  vnc://flight:mkO3Zxjl@localhost:5901
   localhost:5901
   localhost:1
 
@@ -203,7 +201,8 @@ a different port number, e.g. 5902, 5903 etc.:
 
   channel_setup_fwd_listener_tcpip: cannot listen to port: 5901
 
-If prompted, you should supply the following password: KbnGqk0L
+If prompted, you should supply the following password: mkO3Zxjl
+
 ```
 
 Users can terminate a running session by ending their graphical application (e.g. by logging out of a Gnome session, or exiting a terminal session), or by using the `flight desktop kill <session-ID>` command. A terminated session will be immediately stopped, disconnecting any users.
