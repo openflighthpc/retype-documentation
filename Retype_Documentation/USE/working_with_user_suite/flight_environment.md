@@ -62,7 +62,7 @@ Once the global ecosystem has been installed, it needs to be activated for the s
 ## Custom Ecosystem Names
 
 
-When installing an ecosystem, an custom alias can be added by appending ``@mycustomname`` to the end of creation command. For example, to create a local gridware installation with the alias `test`:
+When installing an ecosystem, a custom alias can be added by appending ``@mycustomname`` to the end of creation command. For example, to create a local gridware installation with the alias `test`:
 
 ```bash
 [flight@gateway1 (scooby) ~]$ flight env create gridware@test
