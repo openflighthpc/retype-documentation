@@ -51,4 +51,4 @@ Your OpenFlight Compute research environment supports many types of graphical se
 └──────────┴──────────────────────────────────────────────────┴────────────┘
 ```
 
-Application types that are `unverified` need to be prepared before they can be started.
+Application types that are `unverified` need to be prepared before they can be started. This is covered in greater detail on the next page.
