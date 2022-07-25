@@ -207,6 +207,8 @@ If prompted, you should supply the following password: mkO3Zxjl
 
 Users can terminate a running session by ending their graphical application (e.g. by logging out of a Gnome session, or exiting a terminal session), or by using the `flight desktop kill <session-ID>` command. A terminated session will be immediately stopped, disconnecting any users.
 
+e.g. `flight desktop kill 4549eae1`
+
 ## Securing your graphical desktop session
 
 
