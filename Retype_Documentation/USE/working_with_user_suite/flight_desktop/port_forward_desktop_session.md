@@ -80,6 +80,7 @@ a different port number, e.g. 5904, 5905 etc.:
 
 If prompted, you should supply the following password: WB3gUQMW
 ```
++++Windows
 
 On Windows, the desktop environment can still be connected like so:
 
@@ -120,3 +121,14 @@ On Windows, the desktop environment can still be connected like so:
 ![](/images/vnc_client_local.png)
 
 12. Click "Connect", and if prompted enter the password you noted down.
++++ Linux/Mac
+
+On Linux or Mac remotely connecting to the desktop environment is easier than on Windows.
+
+Note that in the above code block there is mentioned a command.
+
+`ssh -L 5903:20.68.202.163:5903 flight@`
+
+By running `flight desktop show <name>` the flight environment will also give you a command to use for port forwarding. After running the command continue with your VNC client as normal.
+
++++
