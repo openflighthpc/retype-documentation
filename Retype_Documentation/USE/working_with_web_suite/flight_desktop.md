@@ -8,21 +8,21 @@ icon:
 
 After selecting the desktop service, a page with the cluster name, description and a login box will be presented. The same user details used for accessing the cluster from a CLI are used to authenticate the session.
 
-![](https://use.openflighthpc.org/_images/flightweb-desktop-login.png)
+![](/images/flight_web_desktop_login.png)
 
 On successful login, the desktop manager will be ready to be used.
 
-![](https://use.openflighthpc.org/_images/flightweb-desktop-manager.png)
+![](/images/flight_web_desktop_manager.png)
 
 ## Creating Desktop Session
 
 To launch a desktop session for the cluster, select "Launch" from the management page then select the desired desktop environment to launch 
 
-![](https://use.openflighthpc.org/_images/flightweb-desktop-launch.png)
+![](/images/flight_web_desktop_launch.png)
 
 The system will begin to setup the vnc session before automatically connecting to the desktop session.
 
-![](https://use.openflighthpc.org/_images/flightweb-desktop-vnc.png)
+![](/images/flight_web_desktop_vnc.png)
 
 There are a few options for the desktop view, such as, making it Full Screen, changing to Zen Mode (terminal focussed with less widgets and buttons polluting the screen), disconnecting from the desktop session and terminating the session completely.
 
@@ -39,4 +39,4 @@ For copying local data to the remote session a little bit of a workaround is nee
 
 Selecting the "My Sessions" link in the header will present all existing desktop sessions for the user, from here sessions can be connected to or terminated through the corresponding buttons. Additionally, this session manager will generate previews of the various desktop sessions to make it easier to identify the different active sessions.
 
-![](https://use.openflighthpc.org/_images/flightweb-desktop-sessions.png)
+![](/images/flight_web_desktop_sessions.png)
