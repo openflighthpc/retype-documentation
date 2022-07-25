@@ -10,13 +10,15 @@ After selecting the desktop service, a page with the cluster name, description a
 
 ![](/images/flight_web_desktop_login.png)
 
+![](/images/flight_web_login.png)
+
 On successful login, the desktop manager will be ready to be used.
 
 ![](/images/flight_web_desktop_manager.png)
 
 ## Creating Desktop Session
 
-To launch a desktop session for the cluster, select "Launch" from the management page then select the desired desktop environment to launch 
+To launch a desktop session for the cluster, select "Launch" from the management page then select the desired desktop environment to launch.
 
 ![](/images/flight_web_desktop_launch.png)
 
@@ -24,7 +26,7 @@ The system will begin to setup the vnc session before automatically connecting t
 
 ![](/images/flight_web_desktop_vnc.png)
 
-There are a few options for the desktop view, such as, making it Full Screen, changing to Zen Mode (terminal focussed with less widgets and buttons polluting the screen), disconnecting from the desktop session and terminating the session completely.
+There are a few options for the desktop view, such as, making it Full Screen, changing to Zen Mode (terminal focused with less widgets and buttons polluting the screen), disconnecting from the desktop session and terminating the session completely.
 
 ### A Note on Pasting
 
@@ -32,8 +34,12 @@ The desktop web suite does allow for remote & local clipboard integration. If te
 
 For copying local data to the remote session a little bit of a workaround is needed:
 - Copy text
-- Click "Prepare Paste" in the desktop webapp
+- Click "Prepare Paste" in the desktop webapp (located in the top right of the screen)
+![](/images/flight_web_desktop_prepare_paste.png)
+- Paste text into the pop up box, and click "ok"
 - Paste text in the remote session
+
+
 
 ## Managing Desktop Sessions
 
