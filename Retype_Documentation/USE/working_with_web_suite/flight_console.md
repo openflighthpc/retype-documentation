@@ -4,12 +4,6 @@ label: Flight Console
 icon:
 ---
 
-# Flight Console
-
-A landing page is presented when navigating to the external IP or hostname for the gateway. This page will show the available web suite tools and allow for launching of the chosen tool.
-
-![](https://use.openflighthpc.org/_images/flightweblanding-console.png)
-
 ## Logging In
 
 After selecting the console service, a page with the cluster name, description and a login box will be presented. The same user details used for accessing the cluster from a CLI are used to authenticate the session.

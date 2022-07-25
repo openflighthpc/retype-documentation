@@ -1,14 +1,8 @@
 ---
-order: 0
+order: 90
 label: Flight Desktop
 icon:
 ---
-
-# Flight Desktop
-
-A landing page is presented when navigating to the external IP or hostname for the gateway. This page will show the available web suite tools and allow for launching of the chosen tool.
-
-![](https://use.openflighthpc.org/_images/flightweblanding-desktop.png)
 
 ## Logging In
 
