@@ -1,5 +1,5 @@
 ---
 order: 80
-label:
+label: Flight File Manager
 icon:
 ---

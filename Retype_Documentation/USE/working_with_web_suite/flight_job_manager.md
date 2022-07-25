@@ -1,5 +1,5 @@
 ---
 order: 70
-label:
+label: Flight Job Manager
 icon:
 ---
