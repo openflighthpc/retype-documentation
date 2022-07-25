@@ -34,7 +34,7 @@ Once a package ecosystem has been installed, it needs to be activated for the se
 [flight@gateway1 (scooby) ~]$ flight env activate gridware
 <gridware> [flight@gateway1 (scooby) ~]$
 ```
-!!!success
+!!!
 Your preferred software ecosystem can be set to automatically activate for your user within the flight system by running `flight env set-default gridware`, replacing gridware with your chosen software ecosystem
 !!!
 
