@@ -64,34 +64,35 @@ Preparing a new session type only enables it for the machine that you run the co
 
 ## Launch a Desktop Session
 
-Users can launch a new session by using the `flight desktop start gnome` command. After launching the desktop, a message will be pri
-nted with connection details to access the new session:
+Users can launch a new session by using the `flight desktop start gnome` command. After launching the desktop, a message will be printed with connection details to access the new session:
 
 ```bash
 Starting a 'gnome' desktop session:
 
-   > âœ… Starting session
+   > ✅ Starting session
 
 A 'gnome' desktop session has been started.
 
 == Session details ==
-
-  Identity: d33096d5-b50c-49dd-a59e-d5aebc7940ac
+      Name:
+  Identity: 4549eae1-6f8b-4983-8057-99b378afcdd3
       Type: gnome
-   Host IP: 51.104.217.65
-  Hostname: gateway1
-      Port: 5902
-   Display: :2
-  Password: L9Uysvi3
+   Host IP: 20.68.202.163
+  Hostname: chead1
+      Port: 5901
+   Display: :1
+  Password: mkO3Zxjl
+  Geometry: 1024x768
 
 This desktop session is not directly accessible from outside of your
 cluster as it is running on a machine that only provides internal
 cluster access.  In order to access your desktop session you will need
 to perform port forwarding using 'ssh'.
 
-Refer to 'flight desktop show d33096d5' for more details.
+Refer to 'flight desktop show 4549eae1' for more details.
 
-If prompted, you should supply the following password: L9Uysvi3
+If prompted, you should supply the following password: mkO3Zxjl
+
 ```
 
 Users need a VNC client to connect to the graphical desktop session - for a list of tested clients, see :ref:`clientprereqs`.
