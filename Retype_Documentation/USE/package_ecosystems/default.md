@@ -436,7 +436,7 @@ To install and use modules:
 ## Installing Software - General Overview
 
 
-Unlike the other :ref:`package ecosystems <package-ecosystems>`, modules provides the ecosystem management tool but not any package management tools. Therefore, with the modules ecosystem, you are free to compile and install software in a module compatible manner.
+Unlike the other [package ecosystems](/USE/package_ecosystems/#package-ecosystems), modules provides the ecosystem management tool but not any package management tools. Therefore, with the modules ecosystem, you are free to compile and install software in a module compatible manner.
 
 Module files can be installed to `~/.local/share/flight/env/modules+default/modulefiles` (for local modules ecosystems) or to `/opt/apps/flight/env/modules+global/modulefiles` (for global modules ecosystems).
 
@@ -521,7 +521,7 @@ For more information on building software for modules, see the `modulefile refer
 
 +++ [Singularity](https://www.sylabs.io/)
 
-Singularity is high-performance container technology specifically designed to enhance Enterprise Performance Computing by building containers that support HPC, analytics, artificial intelligence, machine learning, and deep learning to provide â€œintelligence anywhere.â€
+Singularity is high-performance container technology specifically designed to enhance Enterprise Performance Computing by building containers that support HPC, analytics, artificial intelligence, machine learning, and deep learning to provide "intelligence anywhere".
 
 ### Usage Example
 
@@ -650,7 +650,7 @@ Flight Env provides quick setup methods to create a spack software ecosystem.
 
 To install and use spack:
 
-- :ref:`Activate the flight system <activate-flight-system>`
+- [Activate the flight system.](/USE/working_with_user_suite/flight_system.md)
 - Create the spack installation for the user:
 ```bash
     [flight@gateway1 ~]$ flight env create spack
@@ -726,7 +726,7 @@ An example workflow using perl is demonstrated below.
     <spack> [flight@gateway1 ~]$ which perl
     ~/.local/share/flight/env/spack+default/opt/spack/linux-centos7-x86_64/gcc-4.8.5/perl-5.26.2-wavwojlef7lshvx2awf4zze2lrx5l7l4/bin/perl
 ```
-- Install perl library (this may prompt for initial ``cpan`` configuration, once configuration is complete then the library will be installed)::
+- Install perl library (this may prompt for initial ``cpan`` configuration, once configuration is complete then the library will be installed):
 ```bash
     <spack> [flight@gateway1 ~]$ cpan File::Slurp
     Loading internal null logger. Install Log::Log4perl for logging messages
