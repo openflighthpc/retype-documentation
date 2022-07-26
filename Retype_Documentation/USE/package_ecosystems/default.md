@@ -6,8 +6,6 @@ icon:
 
 The Flight Env command provides streamlined installation of many popular software management ecosystems. These can be seen below along with the features they provide.
 
-
-
 |     &nbsp;             | Conda              | Easybuild          | Gridware           | Modules            | Singularity        | Spack              |
 |------------------------|--------------------|--------------------|--------------------|--------------------|--------------------|--------------------|
 | Dependency Management  | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :x:                | :heavy_check_mark: | :heavy_check_mark: |
@@ -178,30 +176,30 @@ To install and use easybuild:
 ```bash
 [flight@gateway1 ~]$ flight env create easybuild
 Creating environment easybuild@default
-   > âœ… Verifying prerequisites
-   > âœ… Fetching prerequisite (lua)
-   > âœ… Extracting prerequisite (lua)
-   > âœ… Building prerequisite (lua)
-   > âœ… Installing prerequisite (lua)
-   > âœ… Fetching prerequisite (tcl)
-   > âœ… Extracting prerequisite (tcl)
-   > âœ… Building prerequisite (tcl)
-   > âœ… Installing prerequisite (tcl)
-   > âœ… Fetching prerequisite (lmod)
-   > âœ… Extracting prerequisite (lmod)
-   > âœ… Configuring prerequisite (lmod)
-   > âœ… Installing prerequisite (lmod)
-   > âœ… Fetching prerequisite (easybuild)
-   > âœ… Bootstrapping EasyBuild environment (easybuild@default)
+   > ✅ Verifying prerequisites
+   > ✅ Fetching prerequisite (lua)
+   > ✅ Extracting prerequisite (lua)
+   > ✅ Building prerequisite (lua)
+   > ✅ Installing prerequisite (lua)
+   > ✅ Fetching prerequisite (tcl)
+   > ✅ Extracting prerequisite (tcl)
+   > ✅ Building prerequisite (tcl)
+   > ✅ Installing prerequisite (tcl)
+   > ✅ Fetching prerequisite (lmod)
+   > ✅ Extracting prerequisite (lmod)
+   > ✅ Configuring prerequisite (lmod)
+   > ✅ Installing prerequisite (lmod)
+   > ✅ Fetching prerequisite (easybuild)
+   > ✅ Bootstrapping EasyBuild environment (easybuild@default)
 Environment easybuild@default has been created
 ```
 
-- Activate the easybuild ecosystem::
+- Activate the easybuild ecosystem:
 ```bash
     [flight@gateway1 ~]$ flight env activate easybuild
     <easybuild> [flight@gateway1 ~]$
 ```
-- Check that easybuild can be run::
+- Check that easybuild can be run:
 ```bash
     <easybuild> [flight@gateway1 ~]$ module load EasyBuild
     <easybuild> [flight@gateway1 ~]$ eb --version
@@ -212,7 +210,7 @@ Environment easybuild@default has been created
 
 An example workflow using perl is demonstrated below.
 
-- View available versions::
+- View available versions:
 ```bash
     <easybuild> [flight@gateway1 ~]$ eb -S perl
     CFGS1=/home/flight/.local/share/flight/env/easybuild+default/software/EasyBuild/3.9.4/lib/python2.7/site-packages/easybuild_easyconfigs-3.9.4-py2.7.egg/easybuild/easyconfigs
@@ -232,7 +230,7 @@ An example workflow using perl is demonstrated below.
 
     Note: 9 matching archived easyconfig(s) found, use --consider-archived-easyconfigs to see them
 ```
-- Install specific version::
+- Install specific version:
 ```bash
     <easybuild> [flight@gateway1 ~]$ eb Perl-5.28.1-GCCcore-8.2.0.eb --robot
     == temporary log file in case of crash /tmp/eb-MdohD2/easybuild-J6tjhZ.log
@@ -249,11 +247,11 @@ An example workflow using perl is demonstrated below.
     <-- snip -->
 ```
 
-- Check installation location::
+- Check installation location:
 ```bash
     <easybuild> [flight@gateway1 ~]$ which perl
 ```
-- Install perl library (this may prompt for initial ``cpan`` configuration, once configuration is complete then the library will be installed)::
+- Install perl library (this may prompt for initial ``cpan`` configuration, once configuration is complete then the library will be installed):
 ```bash
     <easybuild> [flight@gateway1 ~]$ cpan File::Slurp
     Loading internal null logger. Install Log::Log4perl for logging messages
@@ -262,7 +260,7 @@ An example workflow using perl is demonstrated below.
     Running install for module 'File::Slurp'
     <-- snip -->
 ```
-- Check installation worked::
+- Check installation worked:
 ```bash
     <easybuild> [flight@gateway1 ~]$ cpan File::Slurp
     Loading internal null logger. Install Log::Log4perl for logging messages
@@ -279,40 +277,40 @@ Gridware provides pre-compiled binaries for many different scientific computing 
 ### Usage Example
 
 
-Gridware: Usage Example
-=======================
+# Gridware: Usage Example
 
-Creating and Using Ecosystem
-----------------------------
+
+## Creating and Using Ecosystem
+
 
 Flight Env provides quick setup methods to create a gridware software ecosystem. 
 
 To install and use gridware:
 
 - [Activate the flight system.](/USE/working_with_user_suite/flight_system.md)
-- Create the gridware installation for the user::
+- Create the gridware installation for the user:
 ```bash
     [flight@gateway1 ~]$ flight env create gridware
     Creating environment gridware@default
-       > âœ… Verifying prerequisites
-       > âœ… Fetching prerequisite (modules)
-       > âœ… Extracting prerequisite (modules)
-       > âœ… Building prerequisite (modules)
-       > âœ… Installing prerequisite (modules)
-       > âœ… Fetching prerequisite (gridware)
-       > âœ… Extracting prerequisite (gridware)
-       > âœ… Installing prerequisite (gridware)
-       > âœ… Configuring repo: main
-       > âœ… Configuring repo: volatile
-       > âœ… Creating environment (gridware@default)
+       > ✅ Verifying prerequisites
+       > ✅ Fetching prerequisite (modules)
+       > ✅ Extracting prerequisite (modules)
+       > ✅ Building prerequisite (modules)
+       > ✅ Installing prerequisite (modules)
+       > ✅ Fetching prerequisite (gridware)
+       > ✅ Extracting prerequisite (gridware)
+       > ✅ Installing prerequisite (gridware)
+       > ✅ Configuring repo: main
+       > ✅ Configuring repo: volatile
+       > ✅ Creating environment (gridware@default)
     Environment gridware@default has been created
 ```
-- Activate the gridware ecosystem::
+- Activate the gridware ecosystem:
 ```bash
     [flight@gateway1 ~]$ flight env activate gridware
     <gridware> [flight@gateway1 ~]$
 ```
-- Check that gridware can be run::
+- Check that gridware can be run:
 ```bash
     <gridware> [flight@gateway1 ~]$ gridware --version
     gridware 1.5.1
@@ -323,7 +321,7 @@ Installing and Running Perl
 
 An example workflow using perl is demonstrated below.
 
-- View available versions::
+- View available versions:
 ```bash
     <gridware> [flight@gateway1 ~]$ gridware search perl
     2 repositories need to update ...
@@ -339,7 +337,7 @@ An example workflow using perl is demonstrated below.
     volatile/apps/perl/5.20.2                 volatile/apps/python/2.7.3                volatile/apps/python/2.7.5
     <-- snip -->
 ```
-- Install specific version::
+- Install specific version:
 ```bash
     <gridware> [flight@gateway1 ~]$ gridware install main/apps/perl/5.20.2
     Preparing to install main/apps/perl/5.20.2
@@ -364,7 +362,7 @@ An example workflow using perl is demonstrated below.
     Installation complete.
 ```
 
-- Check installation location::
+- Check installation location:
 ```bash
     <gridware> [flight@gateway1 ~]$ module load apps/perl
     apps/perl/5.20.2/gcc-4.8.5
@@ -375,7 +373,7 @@ An example workflow using perl is demonstrated below.
     <gridware> [flight@gateway1 ~]$ which perl
     ~/.local/share/flight/env/gridware+default/depots/23cd1570/el7/pkg/apps/perl/5.20.2/gcc-4.8.5/bin/perl
 ```
-- Install perl library (this may prompt for initial ``cpan`` configuration, once configuration is complete then the library will be installed)::
+- Install perl library (this may prompt for initial ``cpan`` configuration, once configuration is complete then the library will be installed):
 ```bash
     <gridware> [flight@gateway1 ~]$ cpan File::Slurp
     Reading '/home/flight/gridware/share/perl/5.20.2/cpan/Metadata'
@@ -386,7 +384,7 @@ An example workflow using perl is demonstrated below.
       CAPOEIRAB/File-Slurp-9999.27.tar.gz
       /usr/bin/make install INSTALLMAN3DIR=/home/flight/gridware/share/perl/5.20.2/man/man3 INSTALLMAN1DIR=/home/flight/gridware/share/perl/5.20.2/man/man1 -- O
 ```
-- Check installation worked::
+- Check installation worked:
 ```bash
     <gridware> [flight@gateway1 ~]$ cpan File::Slurp
     Reading '/home/flight/gridware/share/perl/5.20.2/cpan/Metadata'
@@ -401,35 +399,35 @@ Modules provides simple environment management. Tools and software to be used wi
 
 ### Usage Example
 
-Modules: Usage Example
-======================
+# Modules: Usage Example
 
-Creating and Using Ecosystem
-----------------------------
+
+## Creating and Using Ecosystem
+
 
 Flight Env provides quick setup methods to create a modules software ecosystem. 
 
 To install and use modules:
 
 - [Activate the flight system.](/USE/working_with_user_suite/flight_system.md)
-- Create the modules installation for the user::
+- Create the modules installation for the user:
 ```bash
     [flight@gateway1 ~]$ flight env create modules
     Creating environment modules@default
-       > âœ… Verifying prerequisites
-       > âœ… Fetching prerequisite (modules)
-       > âœ… Extracting prerequisite (modules)
-       > âœ… Building prerequisite (modules)
-       > âœ… Installing prerequisite (modules)
-       > âœ… Creating environment (modules@default)
+       > ✅ Verifying prerequisites
+       > ✅ Fetching prerequisite (modules)
+       > ✅ Extracting prerequisite (modules)
+       > ✅ Building prerequisite (modules)
+       > ✅ Installing prerequisite (modules)
+       > ✅ Creating environment (modules@default)
     Environment modules@default has been created
 ```
-- Activate the modules ecosystem::
+- Activate the modules ecosystem:
 ```bash
     [flight@gateway1 ~]$ flight env activate modules
     <modules> [flight@gateway1 ~]$
 ```
-- Check that modules can be run::
+- Check that modules can be run:
 ```bash
     <modules> [flight@gateway1 ~]$ module --version
     Modules Release 4.3.0 (2019-07-26)
@@ -440,9 +438,11 @@ Installing Software - General Overview
 
 Unlike the other :ref:`package ecosystems <package-ecosystems>`, modules provides the ecosystem management tool but not any package management tools. Therefore, with the modules ecosystem, you are free to compile and install software in a module compatible manner.
 
-Module files can be installed to ``~/.local/share/flight/env/modules+default/modulefiles`` (for local modules ecosystems) or to ``/opt/apps/flight/env/modules+global/modulefiles`` (for global modules ecosystems).
+Module files can be installed to `~/.local/share/flight/env/modules+default/modulefiles` (for local modules ecosystems) or to `/opt/apps/flight/env/modules+global/modulefiles` (for global modules ecosystems).
 
-.. note:: If the modules ecosystem has been installed with a [custom ecosystem name](/USE/working_with_user_suite/flight_environment/#custom-ecosystem-names) then the path will not be ``modules+default``/``modules+global`` but instead ``modules+mycustomname``
+!!!
+If the modules ecosystem has been installed with a [custom ecosystem name](/USE/working_with_user_suite/flight_environment/#custom-ecosystem-names) then the path will not be `modules+default`/`modules+global` but instead `modules+mycustomname`
+!!!
 
 For more information on building software for modules, see the `modulefile reference <https://modules.readthedocs.io/en/latest/modulefile.html>`_ and build documentation for the chosen software.
 
@@ -453,20 +453,20 @@ Installing and Running Perl
 Compile Perl from Source
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
-- Download perl 5.30.1 source::
+- Download perl 5.30.1 source:
 ```bash
     <modules> [flight@gateway1 ~]$ wget https://www.cpan.org/src/5.0/perl-5.30.1.tar.gz
 ```
-- Decompress the source files::
+- Decompress the source files:
 ```bash
     <modules> [flight@gateway1 ~]$ tar -xzf perl-5.30.1.tar.gz
 ```
-- Configure the software to install to a localperl directory::
+- Configure the software to install to a localperl directory:
 ```bash
     <modules> [flight@gateway1 ~]$ cd perl-5.30.1
     <modules> [flight@gateway1 ~]$ ./Configure -des -Dprefix=$HOME/localperl
 ```
-- Compile and install perl::
+- Compile and install perl:
 ```bash
     <modules> [flight@gateway1 ~]$ make
     <modules> [flight@gateway1 ~]$ make install
@@ -474,7 +474,7 @@ Compile Perl from Source
 Create Modulefile and Test
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-- Create the perl modulefile::
+- Create the perl modulefile:
 ```bash
     <modules> [flight@gateway1 ~]$ cat << EOF > ~/.local/share/flight/env/modules+default/modulefiles/perl-5.30.1
     #%Module1.0
@@ -492,13 +492,13 @@ Create Modulefile and Test
     prepend-path MANPATH ~/localperl/man
     EOF
 ```
-- Check install location::
+- Check install location:
 ```bash
     <modules> [flight@gateway1 ~]$ module load perl-5.30.1
     <modules> [flight@gateway1 ~]$ which perl
     ~/localperl/bin/perl
 ```
-- Install perl library (this may prompt for initial ``cpan`` configuration, once configuration is complete then the library will be installed):
+- Install perl library (this may prompt for initial `cpan` configuration, once configuration is complete then the library will be installed):
 ```bash
     <modules> [flight@gateway1 ~]$ cpan File::Slurp
     Loading internal logger. Log::Log4perl recommended for better logging
@@ -525,56 +525,60 @@ Singularity is high-performance container technology specifically designed to en
 
 ### Usage Example
 
-Singularity: Usage Example
-==========================
+# Singularity: Usage Example
 
-Creating and Using Ecosystem
-----------------------------
+
+## Creating and Using Ecosystem
+
 
 Flight Env provides quick setup methods to create a singularity software ecosystem. 
 
 To install and use singularity:
 
-.. note:: If installing singularity for a user then there are a number of restrictions and additional steps to consider in configuring the environment. See the ``Personal Environment`` section of ``flight env info singularity``. 
+!!! 
+If installing singularity for a user then there are a number of restrictions and additional steps to consider in configuring the environment. See the `Personal Environment` section of `flight env info singularity`. 
+!!!
 
 - [Activate the flight system.](/USE/working_with_user_suite/flight_system.md)
-- Create the singularity installation for the user::
+- Create the singularity installation for the user:
 ```bash
     [flight@gateway1 ~]$ flight env create singularity
     Creating environment singularity@default
-       > âœ… Verifying prerequisites
-       > âœ… Fetching prerequisite (squashfs)
-       > âœ… Extracting prerequisite (squashfs)
-       > âœ… Building prerequisite (squashfs)
-       > âœ… Installing prerequisite (squashfs)
-       > âœ… Fetching prerequisite (go)
-       > âœ… Extracting prerequisite (go)
-       > âœ… Fetching prerequisite (singularity)
-       > âœ… Extracting prerequisite (singularity)
-       > âœ… Building prerequisite (singularity)
-       > âœ… Installing prerequisite (singularity)
-       > âœ… Creating environment (singularity@default)
+       > ✅ Verifying prerequisites
+       > ✅ Fetching prerequisite (squashfs)
+       > ✅ Extracting prerequisite (squashfs)
+       > ✅ Building prerequisite (squashfs)
+       > ✅ Installing prerequisite (squashfs)
+       > ✅ Fetching prerequisite (go)
+       > ✅ Extracting prerequisite (go)
+       > ✅ Fetching prerequisite (singularity)
+       > ✅ Extracting prerequisite (singularity)
+       > ✅ Building prerequisite (singularity)
+       > ✅ Installing prerequisite (singularity)
+       > ✅ Creating environment (singularity@default)
     Environment singularity@default has been created
 ```
-- Activate the singularity ecosystem::
+- Activate the singularity ecosystem:
 ```bash
     [flight@gateway1 ~]$ flight env activate singularity
     <singularity> [flight@gateway1 ~]$
 ```
-- Check that singularity can be run::
+- Check that singularity can be run:
 ```bash
     <singularity> [flight@gateway1 ~]$ singularity --version
     singularity version 3.2.1
 ```
 
-Installing and Running Perl
----------------------------
+## Installing and Running Perl
+
 
 An example workflow using perl is demonstrated below.
 
-.. note:: The perl container is built from a docker container which can be searched for in the `docker hub <https://hub.docker.com/>`_. To search the singularity container library, use ``singularity search SEARCHTERM``.
+!!!
+The perl container is built from a docker container which can be searched for in the [docker hub](https://hub.docker.com/). To search the singularity container library, use `singularity search SEARCHTERM`.
+!!!
 
-- Install specific version::
+- Install specific version:
 ```bash
     <singularity> [flight@gateway1 ~]$ singularity build --sandbox perl_5.30.simg docker://perl:5.30
     INFO:    Starting build...
@@ -589,12 +593,12 @@ An example workflow using perl is demonstrated below.
     INFO:    Creating sandbox directory...
     INFO:    Build complete: perl_5.30.simg
 ```
-- Check installation location::
+- Check installation location:
 ```bash
     <singularity> [flight@gateway1 ~]$ singularity exec perl_5.30.simg which perl
     /usr/local/bin/perl
 ```
-- Install perl library (this may prompt for initial ``cpan`` configuration, once configuration is complete then the library will be installed)::
+- Install perl library (this may prompt for initial ``cpan`` configuration, once configuration is complete then the library will be installed):
 ```bash
     <singularity> [flight@gateway1 ~]$ singularity exec -w perl_5.30.simg cpan File::Slurp
     INFO:    Convert SIF file to sandbox...
@@ -612,7 +616,7 @@ An example workflow using perl is demonstrated below.
     Running install for module 'File::Slurp'
     <-- snip -->
 ```
-- Check installation worked::
+- Check installation worked:
 ```bash
     <singularity> [flight@gateway1 ~]$ singularity exec perl_5.30.simg cpan File::Slurp
     perl: warning: Setting locale failed.
@@ -636,46 +640,44 @@ Spack is a package manager for supercomputers, Linux, and macOS. It makes instal
 
 ### Usage Example
 
-.. _spack-usage-example:
+# Spack: Usage Example
 
-Spack: Usage Example
-====================
 
-Creating and Using Ecosystem
-----------------------------
+## Creating and Using Ecosystem
+
 
 Flight Env provides quick setup methods to create a spack software ecosystem. 
 
 To install and use spack:
 
 - :ref:`Activate the flight system <activate-flight-system>`
-- Create the spack installation for the user::
+- Create the spack installation for the user:
 ```bash
     [flight@gateway1 ~]$ flight env create spack
     Creating environment spack@default
-       > âœ… Verifying prerequisites
-       > âœ… Fetching prerequisite (spack)
-       > âœ… Extracting Spack hierarchy (spack@default)
-       > âœ… Bootstrapping Spack environment (spack@default)
+       > ✅ Verifying prerequisites
+       > ✅ Fetching prerequisite (spack)
+       > ✅ Extracting Spack hierarchy (spack@default)
+       > ✅ Bootstrapping Spack environment (spack@default)
     Environment spack@default has been created
 ```
-- Activate the spack ecosystem::
+- Activate the spack ecosystem:
 ```bash
     [flight@gateway1 ~]$ flight env activate spack
     <spack> [flight@gateway1 ~]$
 ```
-- Check that spack can be run::
+- Check that spack can be run:
 ```bash
     <spack> [flight@gateway1 ~]$ spack --version
     spack 0.12.1
 ```
 
-Installing and Running Perl
----------------------------
+## Installing and Running Perl
+
 
 An example workflow using perl is demonstrated below.
 
-- View available versions::
+- View available versions:
 ```bash
     <spack> [flight@gateway1 ~]$ spack list perl
     ==> 148 packages.
@@ -705,7 +707,7 @@ An example workflow using perl is demonstrated below.
         5.28.0     http://www.cpan.org/src/5.0/perl-5.28.0.tar.gz
         5.26.2     http://www.cpan.org/src/5.0/perl-5.26.2.tar.gz
 ```
-- Install specific version::
+- Install specific version:
 ```bash
     <spack> [flight@gateway1 ~]$ spack install perl@5.26.2
     ==> Installing pkgconf
@@ -718,7 +720,7 @@ An example workflow using perl is demonstrated below.
       Fetch: 0.83s.  Build: 2m 31.21s.  Total: 2m 32.04s.
     [+] /home/flight/.local/share/flight/env/spack+default/opt/spack/linux-centos7-x86_64/gcc-4.8.5/perl-5.26.2-wavwojlef7lshvx2awf4zze2lrx5l7l4
 ```
-- Check installation location::
+- Check installation location:
 ```bash
     <spack> [flight@gateway1 ~]$ module load perl-5.26.2-gcc-4.8.5-wavwojl
     <spack> [flight@gateway1 ~]$ which perl
@@ -733,7 +735,7 @@ An example workflow using perl is demonstrated below.
     Running install for module 'File::Slurp'
     <-- snip -->
 ```
-- Check installation worked::
+- Check installation worked:
 ```bash
     <spack> [flight@gateway1 ~]$ cpan File::Slurp
     Loading internal null logger. Install Log::Log4perl for logging messages
@@ -741,6 +743,4 @@ An example workflow using perl is demonstrated below.
       Database was generated on Wed, 11 Sep 2019 14:41:02 GMT
     File::Slurp is up to date (9999.27).
 ```
-
-
 +++
