@@ -75,6 +75,7 @@ Here the job can be cancelled, and when it is complete the output can be viewed 
 
 ### Deleting a Job Script
 
+Press the "Delete" button to delete the job script. A window will ask the user to confirm, after which it will be deleted.
 
 
 ## Monitoring a Job
