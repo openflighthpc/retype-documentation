@@ -27,12 +27,11 @@ More information on the features:
 
 +++ [Conda](https://conda.io/)
 
+## Conda Usage Example
+
 Conda is an open source package management system and environment management system that runs on Windows, macOS and Linux. Conda quickly installs, runs and updates packages and their dependencies. Conda easily creates, saves, loads and switches between environments on your local computer. It was created for Python programs, but it can package and distribute software for any language.
 
-# Conda Usage Example
-
 ## Creating and Using Ecosystem
-
 
 Flight Env provides quick setup methods to create a conda software ecosystem. 
 
@@ -155,14 +154,10 @@ Verifying transaction: done
 
 +++ [Easybuild](https://easybuilders.github.io/easybuild/)
 
+
+## Easybuild: Usage Example
+
 EasyBuild is a software build and installation framework that allows you to manage (scientific) software on High Performance Computing (HPC) systems in an efficient way.
-
-### Usage Example
-
-
-
-# Easybuild: Usage Example
-
 
 ## Creating and Using Ecosystem
 
@@ -272,13 +267,9 @@ An example workflow using perl is demonstrated below.
 
 +++ [Gridware](https://gridware.alces-flight.com/)
 
+## Gridware: Usage Example
+
 Gridware provides pre-compiled binaries for many different scientific computing programs which can be installed quickly and loaded into the environment via modules.
-
-### Usage Example
-
-
-# Gridware: Usage Example
-
 
 ## Creating and Using Ecosystem
 
@@ -395,15 +386,11 @@ An example workflow using perl is demonstrated below.
 
 +++ [Modules](http://modules.sourceforge.net/)
 
+## Modules: Usage Example
+
 Modules provides simple environment management. Tools and software to be used with modules will be compiled or installed outside of the modules environment.
 
-### Usage Example
-
-# Modules: Usage Example
-
-
 ## Creating and Using Ecosystem
-
 
 Flight Env provides quick setup methods to create a modules software ecosystem. 
 
@@ -521,15 +508,11 @@ For more information on building software for modules, see the `modulefile refer
 
 +++ [Singularity](https://www.sylabs.io/)
 
+## Singularity: Usage Example
+
 Singularity is high-performance container technology specifically designed to enhance Enterprise Performance Computing by building containers that support HPC, analytics, artificial intelligence, machine learning, and deep learning to provide "intelligence anywhere".
 
-### Usage Example
-
-# Singularity: Usage Example
-
-
 ## Creating and Using Ecosystem
-
 
 Flight Env provides quick setup methods to create a singularity software ecosystem. 
 
@@ -636,15 +619,11 @@ The perl container is built from a docker container which can be searched for in
 
 +++ [Spack](https://spack.io/)
 
+## Spack: Usage Example
+
 Spack is a package manager for supercomputers, Linux, and macOS. It makes installing scientific software easy. With Spack, you can build a package with multiple versions, configurations, platforms, and compilers, and all of these builds can coexist on the same machine.
 
-### Usage Example
-
-# Spack: Usage Example
-
-
 ## Creating and Using Ecosystem
-
 
 Flight Env provides quick setup methods to create a spack software ecosystem. 
 
