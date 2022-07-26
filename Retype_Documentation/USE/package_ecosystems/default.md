@@ -316,8 +316,8 @@ To install and use gridware:
     gridware 1.5.1
 ```
 
-Installing and Running Perl
----------------------------
+## Installing and Running Perl
+
 
 An example workflow using perl is demonstrated below.
 
@@ -433,8 +433,8 @@ To install and use modules:
     Modules Release 4.3.0 (2019-07-26)
 ```
 
-Installing Software - General Overview
---------------------------------------
+## Installing Software - General Overview
+
 
 Unlike the other :ref:`package ecosystems <package-ecosystems>`, modules provides the ecosystem management tool but not any package management tools. Therefore, with the modules ecosystem, you are free to compile and install software in a module compatible manner.
 
@@ -447,11 +447,11 @@ If the modules ecosystem has been installed with a [custom ecosystem name](/USE/
 For more information on building software for modules, see the `modulefile reference <https://modules.readthedocs.io/en/latest/modulefile.html>`_ and build documentation for the chosen software.
 
 
-Installing and Running Perl
----------------------------
+## Installing and Running Perl
 
-Compile Perl from Source
-^^^^^^^^^^^^^^^^^^^^^^^^
+
+### Compile Perl from Source
+
 
 - Download perl 5.30.1 source:
 ```bash
@@ -471,8 +471,8 @@ Compile Perl from Source
     <modules> [flight@gateway1 ~]$ make
     <modules> [flight@gateway1 ~]$ make install
 ```
-Create Modulefile and Test
-^^^^^^^^^^^^^^^^^^^^^^^^^^
+### Create Modulefile and Test
+
 
 - Create the perl modulefile:
 ```bash
