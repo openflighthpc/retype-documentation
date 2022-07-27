@@ -10,7 +10,7 @@ The Flight User Suite comes with built-in guides to assist with usage of the res
 
 ## Showing Available Guides
 
-To show the available guides, list them with::
+To show the available guides, list them with:
 ```bash 
 [flight@chead1 (ivan1) ~]$ flight howto ls
 ┌───────┬──────────────────────────────────┐
@@ -32,13 +32,13 @@ To show the available guides, list them with::
 
 A guide can be viewed by requesting either the index or name of the desired guide. When viewing a guide, the content will open inside a ``less`` session. 
 
-To view the get started guide by name::
+To view the get started guide by name:
 
 ```bash
 [flight@gateway1 (scooby) ~]$ flight howto show 'Get Started'
 ```
 
-To view the get started guide by index::
+To view the get started guide by index:
 
 ```bash
     [flight@gateway1 (scooby) ~]$ flight howto show 1

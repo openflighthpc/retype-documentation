@@ -1,5 +1,5 @@
 ---
-label: Understanding the Linux command line
+label: Understanding the Command Line Interface
 order: 95
 icon: 
 ---
