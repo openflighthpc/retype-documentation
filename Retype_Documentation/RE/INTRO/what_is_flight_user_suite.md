@@ -5,6 +5,21 @@ label:
 
 # What is the Flight User Suite?
 
+The Flight User Suite is a collection of environment tools that provide users with easy and intuitive ways to manage the software and desktop sessions in a research environment. The purpose of these tools is to get researchers started with HPC as quickly as possible without needing to worry about their environment, leaving them to do what they do best - research!
+
+The tools are non-intrusive to the research environment, defaulting to a "deactivated" state. Leaving admins and users free to configure and utilise their systems how they want.
+
+Flight User Suite is made up of the following tools:
+
+- Runway: Flight Runway provides a self-contained Ruby environment and an entrypoint for accessing the other flight tools
+- Env: Flight Env provides access to, and management of, various software managers to ensure access to a wide variety of HPC applications
+- Desktop: Flight Desktop provides an intuitive tool for launching VNC-ready virtual desktops of many different desktop environments (gnome, xterm, kde, etc)
+- Starter: Flight Starter provides profile scripts for integrating the user suite into the shell environment
+- Job: Flight Job Manager allows you to create and manage customized job scripts from predefined templates, launch jobs and monitor their activity.
+
+
+# What is the Flight User Suite?
+
 The Flight User Suite is a software environment designed to help researchers and scientists run their own high-performance compute research environment quickly and easily. The basic structure provided for users is as follows:
 
  - One gateway node, plus a configurable number of compute nodes
