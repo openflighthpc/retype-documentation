@@ -1,7 +1,7 @@
 ---
 order: 80
 label: Flight File Manager
-icon:
+icon: dot-fill
 ---
 
 ## Logging In

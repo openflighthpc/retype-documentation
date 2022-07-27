@@ -1,11 +1,8 @@
 ---
 order: 60
-label:
-icon:
+label: Monitoring a Job
+icon: dot
 ---
-
-
-## Monitoring a Job
 
 To monitor a job, select "Monitor jobs" from the management page. This page displays all the jobs that either have run or are running.
 

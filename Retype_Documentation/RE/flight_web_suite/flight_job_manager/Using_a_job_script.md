@@ -1,7 +1,7 @@
 ---
 order: 70
 label: Using a Job Script
-icon:
+icon: dot
 ---
 
 To use a job script, select "Browse scripts" from the management page. If the user currently has no created job scripts, they will be given the option to go to [Create a Job Script](/USE/working_with_web_suite/flight_job_manager/#creating-a-job-script). 

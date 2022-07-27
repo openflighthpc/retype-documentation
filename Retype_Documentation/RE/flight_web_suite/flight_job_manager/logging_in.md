@@ -1,7 +1,7 @@
 ---
 order: 100
-label:
-icon:
+label: Logging in
+icon: dot
 ---
 
 After selecting the file manager service, a page with the description and a login box will be presented. The same user details used for accessing the cluster from a CLI are used to authenticate the session.

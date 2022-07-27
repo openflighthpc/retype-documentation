@@ -1,7 +1,7 @@
 ---
 order: 90
-label:
-icon:
+label: Creating a Job Script
+icon: dot
 ---
 
 To create a job script, select "Browse script templates" from the management page. There are instructions at the top of the page, but job script creation shall be described here as well.

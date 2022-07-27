@@ -1,6 +1,7 @@
 ---
 order: 110
 label: Landing Page
+icon: dot-fill
 ---
 
 A landing page is presented when navigating to the external IP or hostname for the gateway. This page gives a brief description of Flight Direct and Flight User Suite. 

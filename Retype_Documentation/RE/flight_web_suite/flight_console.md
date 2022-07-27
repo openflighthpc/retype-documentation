@@ -1,7 +1,7 @@
 ---
 order: 100
 label: Flight Console
-icon:
+icon: dot-fill
 ---
 
 ## Logging In

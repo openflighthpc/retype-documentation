@@ -1,7 +1,7 @@
 ---
 order: 90
 label: Flight Desktop
-icon:
+icon: dot-fill
 ---
 
 ## Logging In
