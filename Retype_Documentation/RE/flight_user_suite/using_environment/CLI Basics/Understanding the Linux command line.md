@@ -1,7 +1,7 @@
 ---
 label: Understanding the Linux command line
-order: 80
-icon: dot-fill
+order: 95
+icon: 
 ---
 
 Almost all usage of the Alces Flight system takes place via the Linux command line. For unfamiliar users here is a brief description of it.

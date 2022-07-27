@@ -1,10 +1,10 @@
 ---
 order: 100
 label: Logging in
-icon: dot-fill
+icon: 
 ---
 
-You can access the login node for your private Flight Compute research environment using SSH to connect to the externally facing IP address of the login node. You will need to use the SSH keypair configured for the research environment in order to access it.
+You can access the login node for your private Flight User Suite research environment using SSH to connect to the externally facing IP address of the login node. You will need to use the SSH keypair configured for the research environment in order to access it.
 
 When you login to the research environment via SSH, you are automatically placed in your home-directory. This area is shared across all compute nodes in the research environment, and is mounted in the same place on every compute node. Data copied to the research environment or created in your home-directory on the login node is also accessible from all compute nodes.
 

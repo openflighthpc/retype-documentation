@@ -1,7 +1,7 @@
 ---
 label: Activating Flight
-order: 70
-icon: dot-fill
+order: 89
+icon: 
 ---
 
 When connecting to a new session you may be shown this:
