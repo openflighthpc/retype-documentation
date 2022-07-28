@@ -17,6 +17,7 @@ Flight User Suite is made up of the following tools:
 - Desktop: Flight Desktop provides an intuitive tool for launching VNC-ready virtual desktops of many different desktop environments (gnome, xterm, kde, etc)
 - Starter: Flight Starter provides profile scripts for integrating the user suite into the shell environment
 - Job: Flight Job Manager allows you to create and manage customized job scripts from predefined templates, launch jobs and monitor their activity.
+- Web: Flight Web Suite allows you to everything from a more graphical user environment.
 
 
 ## Who is it for?
