@@ -1,7 +1,7 @@
 ---
 order: 80
 label: Jupyter Notebook
-icon: 
+icon: dot
 ---
 
 Jupyter Notebooks are a web-based development and visualisation environment. It provides flexible integration of notebooks, code and data in a portable and secure manner.

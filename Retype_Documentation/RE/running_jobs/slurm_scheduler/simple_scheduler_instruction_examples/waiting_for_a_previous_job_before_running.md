@@ -1,7 +1,7 @@
 ---
 order: 80
 label: Waiting for a previous job before running
-icon: dot
+icon: dot-fill
 --- 
 
 You can instruct the scheduler to wait for an existing job to finish before starting to run the job you are submitting with the `-d [state:job_id] | --depend=[state:job_id]` option. For example, to wait until the job with ID 75 has finished before starting the job, you could use the following syntax:

@@ -1,7 +1,7 @@
 ---
 order: 0
 label: Further documentation
-icon: dot-fill
+icon: dot
 ---
 
 This guide is a quick overview of some of the many available options of the SLURM research environment scheduler. For more information on the available options, you may wish to reference some of the following available documentation for the demonstrated SLURM commands;

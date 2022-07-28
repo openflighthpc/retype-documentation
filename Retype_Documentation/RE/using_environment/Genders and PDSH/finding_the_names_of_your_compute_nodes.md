@@ -1,7 +1,7 @@
 ---
 order: 50
 label: Finding the names of your compute nodes
-icon: dot-fill
+icon: dot
 ---
 
 An OpenFlight Compute research environment may contain any number of compute nodes depending on your research environment size. The hostnames of compute nodes usually follow a sequential order (e.g. node01, node02, node03… node10). OpenFlight Compute automatically creates a list of compute node names and uses them to populate a genders group called nodes. This genders file can be found at `/opt/flight/etc/genders`.

@@ -1,7 +1,7 @@
 ---
 order: 100
 label: Local Jobs
-icon: dot
+icon: dot-fill
 ---
 
 

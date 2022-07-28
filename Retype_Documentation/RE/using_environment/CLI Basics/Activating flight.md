@@ -1,7 +1,7 @@
 ---
 label: Activating Flight
 order: 89
-icon: 
+icon: dot
 ---
 
 When connecting to a new session you may be shown this:

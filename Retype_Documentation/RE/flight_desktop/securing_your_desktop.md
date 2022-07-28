@@ -1,13 +1,8 @@
 ---
 order: 60
-label:
-icon:
+label: Securing your graphical desktop session
+icon: dot-fill
 ---
-
-
-
-## Securing your graphical desktop session
-
 
 As the VNC protocol does not natively provide support for security protocols such as SSL, you may wish to take steps to secure access to your VNC sessions.
 

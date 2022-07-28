@@ -1,7 +1,7 @@
 ---
 order: 80
 label: Flight HowTo
-icon: 
+icon: dot
 ---
 
 # Flight HowTo

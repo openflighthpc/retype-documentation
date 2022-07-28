@@ -1,7 +1,7 @@
 ---
 order: 40
 label: Dynamic scheduler variables
-icon: dot-fill
+icon: dot
 ---
 
 

@@ -1,7 +1,7 @@
 ---
 order: 60
 label: Tensorflow
-icon: 
+icon: dot
 ---
 
 Tensorflow is an open-source machine learning platform. It provides an ecosystem of tools and libraries that allow researchers to build and deploy machine learning applications.

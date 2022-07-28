@@ -1,7 +1,7 @@
 ---
 order: -10
 label: Flight Job
-icon: dot
+icon: dot-fill
 ---
 
 

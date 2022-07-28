@@ -1,7 +1,7 @@
 ---
 order: 110
 label: Install Flight Desktop Types
-icon:
+icon: dot-fill
 ---
 
 

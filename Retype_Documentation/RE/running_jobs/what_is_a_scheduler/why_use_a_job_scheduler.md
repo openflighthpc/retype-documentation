@@ -1,7 +1,7 @@
 ---
 order: 70
 label: Why use a job-scheduler on a personal research environment?
-icon: dot-fill
+icon: dot
 ---
 
 Good question. On shared multi-user research environments, a job-scheduler is often used as a control mechanism to make sure that users don’t unfairly monopolise the valuable compute resources. In extreme cases, the scheduler may be wielded by system administrators to force “good behaviour” in a shared environment, and can feel like an imposition to research environment users.

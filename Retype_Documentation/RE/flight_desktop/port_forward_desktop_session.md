@@ -1,6 +1,7 @@
 ---
 order: 85
 label: Port Forwarding with a Desktop Session
+icon: dot-fill
 ---
 
 Depending on your connection to the HPC you may see this message when starting a desktop session:

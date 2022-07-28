@@ -1,7 +1,7 @@
 ---
 order: 0
 label: Becoming the root user
-icon: 
+icon: dot
 ---
 
 Most research environment operations, including starting applications and running jobs, should be performed as the user created when the Flight User Suite research environment was launched from the launch template. However - for some privileged operations, users may need to change to being the root user. Users can prefix any command they want to run as the root user with the `sudo` command; e.g.

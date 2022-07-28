@@ -1,7 +1,7 @@
 ---
 order: 90
 label: Hadoop
-icon: 
+icon: dot
 ---
 
 Hadoop is a scalable, distributed computing solution provided by Apache. Similar to queuing systems, Hadoop allows for distributed processing of large data sets.

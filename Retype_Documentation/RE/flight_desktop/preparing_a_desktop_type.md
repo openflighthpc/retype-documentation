@@ -1,6 +1,7 @@
 ---
 order: 100
 label: Preparing a Desktop Type
+icon: dot-fill
 ---
 
 On the previous page, some application types were `unverified`, these need to be prepared before they can be verified.

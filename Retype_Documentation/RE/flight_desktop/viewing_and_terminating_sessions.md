@@ -1,11 +1,8 @@
 ---
 order: 70
-label:
-icon:
+label: Viewing and terminating running sessions
+icon: dot-fill
 ---
-
-## Viewing and terminating running sessions
-
 
 Users can view a list of the currently running sessions by using the command `flight desktop list`. One standard Flight Compute login node supports up to 10 sessions running at the same time.
 

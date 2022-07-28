@@ -1,7 +1,7 @@
 ---
 order: 90
 label: Launch a Desktop Session
-icon:
+icon: dot-fill
 ---
 
 

@@ -1,7 +1,7 @@
 ---
 order: 80
 label: Viewing and controlling queued jobs
-icon: dot-fill
+icon: dot
 ---
 
 

@@ -1,4 +1,8 @@
-
+---
+order: 90
+label: "Installation Method 1: Quick"
+icon: dot
+---
 Installation Method 1: Quick
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 

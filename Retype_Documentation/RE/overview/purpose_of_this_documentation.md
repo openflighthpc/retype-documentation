@@ -1,7 +1,7 @@
 ---
 order: 100
 label: Purpose of this Documentation
-icon: 
+icon: dot-fill
 ---
 
 The breadth of application of HPC environments can be intimidating. There are many different users and workflows for every application. 

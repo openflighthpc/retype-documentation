@@ -1,11 +1,9 @@
 ---
 order: 80
-label:
-icon:
+label: Resizing the desktop to fit your screen
+icon: dot-fill
 ---
 
-
-## Resizing the desktop to fit your screen
 
 
 ### Specifying a size with the flight desktop tool

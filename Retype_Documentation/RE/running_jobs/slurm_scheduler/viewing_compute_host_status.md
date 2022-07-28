@@ -1,7 +1,7 @@
 ---
 order: 70
 label: Viewing compute host status
-icon: dot-fill
+icon: dot
 ---
 
 Users can use the `sinfo -Nl` command to view the status of compute node hosts in your Flight Compute research environment.

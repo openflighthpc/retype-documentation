@@ -1,3 +1,8 @@
+---
+order: 80
+label: "Installation Method 3: Manual"
+icon: dot
+---
 
 Installation Method 3: Manual
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

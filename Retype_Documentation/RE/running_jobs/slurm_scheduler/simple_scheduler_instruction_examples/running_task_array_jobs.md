@@ -1,7 +1,7 @@
 ---
 order: 70
 label: Running task array jobs
-icon: dot
+icon: dot-fill
 ---
 
 A common workload is having a large number of jobs to run which basically do the same thing, aside perhaps from having different input data. You could generate a job-script for each of them and submit it, but that’s not very convenient - especially if you have many hundreds or thousands of tasks to complete. Such jobs are known as **task arrays** - an [embarrassingly parallel](https://en.wikipedia.org/wiki/Embarrassingly_parallel) job will often fit into this category.

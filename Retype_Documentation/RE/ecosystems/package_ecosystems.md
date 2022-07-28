@@ -1,7 +1,7 @@
 ---
 order: 60
 label: Package Ecosystems
-icon:
+icon: dot-fill
 ---
 
 The Flight Env command provides streamlined installation of many popular software management ecosystems. These can be seen below along with the features they provide.

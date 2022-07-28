@@ -1,7 +1,7 @@
 ---
 order: 0
 label: Using PDSH
-icon: dot-fill
+icon: dot
 ---
 
 Users can run a command across all compute nodes at once using the pdsh command. This can be useful if users want to make a change to all nodes in the research environment - for example, installing a new software package. The `pdsh` command can take a number of parameters that control how commands are processed; for example:

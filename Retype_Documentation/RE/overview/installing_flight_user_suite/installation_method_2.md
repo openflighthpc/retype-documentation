@@ -1,4 +1,8 @@
-
+---
+order: 80
+label: "Installation Method 2: Slightly Less Quick"
+icon: dot
+---
 Installation Method 2: Slightly Less Quick
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 

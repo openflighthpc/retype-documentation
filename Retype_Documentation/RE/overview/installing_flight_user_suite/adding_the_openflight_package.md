@@ -1,5 +1,7 @@
 ---
-
+order: 100
+label: Adding the Openflight Package
+icon: dot
 ---
 ## Installing Flight User Suite
 

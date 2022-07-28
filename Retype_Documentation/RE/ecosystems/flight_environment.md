@@ -1,7 +1,7 @@
 ---
 order: 100
 label: Flight Environment
-icon: 
+icon: dot-fill
 ---
 
 

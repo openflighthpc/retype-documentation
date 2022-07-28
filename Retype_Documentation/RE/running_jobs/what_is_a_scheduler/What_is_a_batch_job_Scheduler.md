@@ -1,7 +1,7 @@
 ---
 order: 100
 label: What is a batch job scheduler?
-icon: dot-fill
+icon: dot
 ---
 
 Most existing High-performance Compute Research Environments are managed by a job scheduler; also known as the batch scheduler, workload manager, queuing system, or load-balancer. The scheduler allows multiple users to fairly share compute nodes, allowing system administrators to control how resources are made available to different groups of users. All schedulers are designed to perform the following functions:

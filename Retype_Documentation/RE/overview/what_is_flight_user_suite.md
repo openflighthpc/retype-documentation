@@ -1,6 +1,7 @@
 ---
 order: 100
-label: 
+label: What is the Flight User Suite?
+icon: dot-fill
 ---
 
 # What is the Flight User Suite?

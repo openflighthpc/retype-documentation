@@ -1,7 +1,7 @@
 ---
 order: 90
 label: Using a graphical client to copy data
-icon: dot
+icon: dot-fill
 ---
 
 There are also a number of graphical file-management interfaces available that support the SSH/SCP/SFTP protocols. A graphical interface can make it easier for new users to manage their data, as they provide a simple drag-and-drop interface that helps to visualise where data is being stored. The example below shows how to configure the [WinSCP](https://winscp.net/eng/download.php) utility on a Windows client to allow data to be moved to and from a research environment.

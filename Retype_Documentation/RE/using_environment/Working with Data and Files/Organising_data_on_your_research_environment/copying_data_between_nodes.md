@@ -1,7 +1,7 @@
 ---
 order: 70
 label: Copying data between nodes
-icon: dot
+icon: dot-fill
 ---
 
 

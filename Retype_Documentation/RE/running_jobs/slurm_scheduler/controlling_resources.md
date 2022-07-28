@@ -1,7 +1,7 @@
 ---
 order: 50
 label: Controlling resources
-icon: dot-fill
+icon: dot
 ---
 
 In order to promote efficient usage of the research environment - the job-scheduler is automatically configured with default run-time limits for jobs. These defaults can be overridden by users to help the scheduler understand how you want it to run your job. 

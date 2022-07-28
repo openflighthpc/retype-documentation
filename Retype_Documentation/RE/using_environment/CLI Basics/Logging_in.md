@@ -1,7 +1,7 @@
 ---
 order: 100
 label: Logging in
-icon: 
+icon: dot
 ---
 
 You can access the login node for your private Flight User Suite research environment using SSH to connect to the externally facing IP address of the login node. You will need to use the SSH keypair configured for the research environment in order to access it.

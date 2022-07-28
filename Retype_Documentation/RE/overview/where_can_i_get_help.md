@@ -1,6 +1,7 @@
 ---
 order: 40
 label: Where can I get help?
+icon: dot-fill
 ---
 
 # Where can I get help?

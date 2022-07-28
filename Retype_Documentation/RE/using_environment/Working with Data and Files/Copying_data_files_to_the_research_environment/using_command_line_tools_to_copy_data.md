@@ -1,7 +1,7 @@
 ---
 order: 100
 label: Using command-line tools to copy data
-icon: dot
+icon: dot-fill
 ---
 
 The research environment login node is accessible via SSH, allowing use of the `scp` and `sftp` commands to transfer data from your local client machine.

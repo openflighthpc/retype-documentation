@@ -1,7 +1,7 @@
 ---
 order: 0
 label: Genders and PDSH
-icon:
+icon: dot-fill
 ---
 
 !!!

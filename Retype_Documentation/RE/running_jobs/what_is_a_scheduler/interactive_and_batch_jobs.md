@@ -1,7 +1,7 @@
 ---
 order: 80
 label: Interactive and batch jobs
-icon: dot-fill
+icon: dot
 ---
 
 Users typically interact with compute research environments by running either interactive or batch (also known as non-interactive) jobs.
