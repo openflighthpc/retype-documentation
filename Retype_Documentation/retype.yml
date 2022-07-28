@@ -5,7 +5,7 @@ branding:
   title: OpenFlightHPC Knowledgebase
 #  label: Docs
   logo: /images/logo6.png
-  logoDark: /images/logo6.png
+#  logoDark: /images/logo6.png
   logoAlign: left
 links:
 - text: Welcome to the OpenFlightHPC Knowledgebase!
