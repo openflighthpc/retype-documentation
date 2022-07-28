@@ -19,18 +19,6 @@ Flight User Suite is made up of the following tools:
 - Job: Flight Job Manager allows you to create and manage customized job scripts from predefined templates, launch jobs and monitor their activity.
 
 
-# What is the Flight User Suite?
-
-The Flight User Suite is a software environment designed to help researchers and scientists run their own high-performance compute research environment quickly and easily. The basic structure provided for users is as follows:
-
- - One gateway node, plus a configurable number of compute nodes
- - An Enterprise Linux operating system
- - A shared filesystem, mounted across all nodes
- - A batch job scheduler
- - Access to various libraries of software applications
-
-The Flight User Suite is designed to get researchers to make the most of their HPC. The research environment you build is personal to you - users have root-access to the environment, and can setup and configure the system to their needs. 
-
 ## Who is it for?
 
 
