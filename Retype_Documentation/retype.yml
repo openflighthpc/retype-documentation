@@ -2,16 +2,16 @@ input: .
 output: .retype
 url: # Add your website address here
 branding:
-  title: Flight User Suite Knowledgebase
-  label: Docs
-  logo: /images/logo.png
-  logoDark: /images/logo.png
+  title: OpenFlightHPC Knowledgebase
+#  label: Docs
+  logo: /images/logo6.png
+  logoDark: /images/logo6.png
   logoAlign: left
 links:
 - text: Welcome to the OpenFlightHPC Knowledgebase!
-  link: https://retype.com/guides/getting-started/
+  link: https://openflighthpc.org/docs/
 footer:
-  copyright: "&copy; Copyright Alces Flight Ltd {{ year }}. All rights reserved."
+  copyright: "&copy; Copyright OpenFlightHPC {{ year }}. All rights reserved."
   links:
     - text: License
       link: https://creativecommons.org/licenses/by-sa/4.0/
