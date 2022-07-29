@@ -10,7 +10,7 @@ icon: dot-fill
 
 ## Viewing Available Ecosystems
 
-Various [package-ecosystems](/re/flight_user_suite/ecosystems/package_ecosystems/#package-ecosystems) are available for managing software on your Flight research environment. These can be viewed by using the `env` subcommand:
+Various [package-ecosystems](/ecosystems/package_ecosystems/#package-ecosystems) are available for managing software on your Flight research environment. These can be viewed by using the `env` subcommand:
 
 
 
