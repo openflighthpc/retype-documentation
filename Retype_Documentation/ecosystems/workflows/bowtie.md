@@ -11,7 +11,7 @@ Bowtie is a sequencing toolset for aligning sets of DNA into large genomes.
 ### Installing Bowtie with Spack
 
 !!!
-The flight environment will need to be activated before the environments can be created so be sure to run `flight start` or [setup your environment to automatically activate the flight environment](https://use.openflighthpc.org/en/latest/working-with-user-suite/flight-environment.html#activating-the-flight-environment).
+The flight environment will need to be activated before the environments can be created so be sure to run `flight start` or [setup your environment to automatically activate the flight environment](/using_environment/cli-basics/flight_system/#activating-the-flight-system).
 !!!
 
 - Create a spack software environment:
@@ -38,7 +38,7 @@ The flight environment will need to be activated before the environments can be 
 <spack> [flight@gateway1 (scooby) ~]$ wget -O ecoli.fq http://tiny.cc/ecoli
 ```
 
-- Create a job script in the current working directory::
+- Create a job script in the current working directory:
 
 ```bash
 <spack> [flight@gateway1 (scooby) ~]$ cat << EOF > mybowtiejob.sh
