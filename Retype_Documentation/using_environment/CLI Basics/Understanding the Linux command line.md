@@ -4,7 +4,7 @@ order: 95
 icon: dot
 ---
 
-Almost all usage of the Alces Flight system takes place via the Linux command line. For unfamiliar users here is a brief description of it.
+Almost all usage of the Flight system takes place via the Linux command line. For unfamiliar users here is a brief description of it.
 
 ```bash
 [flight@chead1 (ivan1) folder]$ echo Hello World!
