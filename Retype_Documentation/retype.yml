@@ -3,9 +3,15 @@ output: .retype
 url: # Add your website address here
 branding:
   title: OpenFlightHPC Knowledgebase
-  label: Docs
+#  label: Docs
+  logo: /images/logo6.png
+#  logoDark: /images/logo6.png
+  logoAlign: left
 links:
 - text: Welcome to the OpenFlightHPC Knowledgebase!
-  link: https://retype.com/guides/getting-started/
+  link: https://openflighthpc.org/docs/
 footer:
-  copyright: "&copy; Copyright {{ year }}. All rights reserved."
+  copyright: "&copy; Copyright OpenFlightHPC {{ year }}. All rights reserved."
+  links:
+    - text: License
+      link: https://creativecommons.org/licenses/by-sa/4.0/
