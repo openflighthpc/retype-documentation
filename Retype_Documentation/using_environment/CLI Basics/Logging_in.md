@@ -27,7 +27,7 @@ Where:
 +++ Windows
 If you are accessing from a Windows client using the Putty utility, the private key associated with the account will need to be converted to ppk format from pem to be compatible with Putty. This can be done as follows:
 
-- Open PuTTYgen (this will already be installed on your system if Putty was installed using .msi and not launched from the .exe - if you do not think you have this, download putty-installer from here (http://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)
+- Open PuTTYgen (this will already be installed on your system if Putty was installed using .msi and not launched from the .exe - if you do not think you have this, download putty-installer from [here](http://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)
 
 - Select Conversions -> Import Key
 
