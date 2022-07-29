@@ -12,8 +12,8 @@ OpenFOAM is a popular engineering application toolbox. It's open source and is u
 
 ### Installing OpenFOAM with Gridware
 
-!!! 
-The flight environment will need to be activated before the environments can be created so be sure to run `flight start` or [setup your environment to automatically activate the flight environment](https://use.openflighthpc.org/en/latest/working-with-user-suite/flight-environment.html#activating-the-flight-environment).
+!!!
+The flight environment will need to be activated before the environments can be created so be sure to run `flight start` or [setup your environment to automatically activate the flight environment](/using_environment/cli-basics/flight_system/#activating-the-flight-system).
 !!!
 
 - Create a gridware software environment:
@@ -97,7 +97,7 @@ EOF
 ### Viewing the Results
 
 Once the cavity job has finished running, the results can be visualised through a desktop session.
-- Connect to VNC desktop (this is out of scope for this documentation, for more information on launching desktops, see the [use documentation](https://use.openflighthpc.org/en/latest/working-with-user-suite/flight-desktop.html#launch-a-desktop-session)).
+- Connect to VNC desktop (For more information on launching desktops, see the [Flight Desktop section](/flight_desktop/install_flight_desktop_types/#install-flight-desktop-types)).
 - In a terminal on the desktop session, ensure that the OpenFOAM module is loaded:
 
 ```bash
