@@ -89,7 +89,7 @@ On Windows, the desktop environment can still be connected like so:
 
 2. Note down the IP address, port number and password.
 
-3. Open PuTTy, or get it from the [Prerequisites](/USE/overview/prerequisites) page and then open it.
+3. Open PuTTy, or get it from the [Prerequisites](/overview/prerequisites/#prerequisites) page and then open it.
 
 4. Load one of your saved sessions or save a new session with your log in details.
 
