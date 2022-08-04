@@ -3,7 +3,7 @@ order: 90
 label: "Installation Method 1: Quick"
 icon: dot
 ---
-### Installation Method 1: Quick
+
 
 The quickest and simplest way to get up and running with the user suite is to simply install the group package for the tools. This will ensure that compatible versions of all the tools are installed.
 

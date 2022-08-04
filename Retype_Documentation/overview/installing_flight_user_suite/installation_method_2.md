@@ -3,7 +3,7 @@ order: 80
 label: "Installation Method 2: Slightly Less Quick"
 icon: dot
 ---
-### Installation Method 2: Slightly Less Quick
+
 
 Each tool in the user suite is also available through the repositories and can be installed one at a time.
 
