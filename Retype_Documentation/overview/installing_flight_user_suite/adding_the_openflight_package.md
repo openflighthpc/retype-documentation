@@ -34,7 +34,7 @@ Some tools require packages available in the EPEL repository, this can be instal
 [flight@gateway1 ~]$ sudo dnf makecache
 ```
 !!!
-Some tools require packages available in the EPEL repository, this can be installed with `yum install epel-release`. Additionally the PowerTools repository is needed, this can be enabled with ``yum config-manager --set-enabled PowerTools``
+Some tools require packages available in the EPEL repository, this can be installed with `yum install epel-release`. Additionally the PowerTools repository is needed, this can be enabled with ``yum config-manager --set-enabled powertools``
 !!!
 
 +++ Ubuntu 18.04
