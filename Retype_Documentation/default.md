@@ -4,9 +4,9 @@ label: Welcome
 icon: home
 ---
 
-# Welcome to the Flight User Suite documentation!
+# Welcome to the OpenFlightHPC Knowledgebase
 
-This site contains the documentation to get you started with using a Flight User Suite research environment. It provides details for accessing the research environment, exploring the various features of the research environment and examples of common workflows with the research environment.
+It provides details for accessing the research environment, exploring the various features of the research environment and examples of common workflows with the research environment.
 
 ## Acknowledgements
 
