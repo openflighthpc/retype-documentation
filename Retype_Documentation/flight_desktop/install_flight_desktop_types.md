@@ -13,7 +13,7 @@ Your Flight User Suite gateway node can run graphical desktop sessions to suppor
 Your Flight User Suite research environment supports many types of graphical session designed to provide interactive applications directly to users. To view the available types of session, use the command `flight desktop avail`:
 
 ```bash
-[flight@chead1 (ivan1) ~]$ flight desktop avail
+[flight@chead1 (mycluster1) ~]$ flight desktop avail
 ┌──────────┬──────────────────────────────────────────────────┬────────────┐
 │ Name     │ Summary                                          │ State      │
 ├──────────┼──────────────────────────────────────────────────┼────────────┤

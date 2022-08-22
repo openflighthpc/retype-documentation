@@ -14,9 +14,9 @@ If using a single node research environment with a scheduler then interactive jo
 You can start a new interactive job on your Flight Compute research environment by using the `srun` command; the scheduler will search for an available compute node, and provide you with an interactive login shell on the node if one is available.
 
 ```bash
-[centos@gateway1 (scooby) ~]$ srun --pty /bin/bash
-[centos@node01 (scooby) ~]$
-[centos@node01 (scooby) ~]$ squeue
+[centos@gateway1 (mycluster1) ~]$ srun --pty /bin/bash
+[centos@node01 (mycluster1) ~]$
+[centos@node01 (mycluster1) ~]$ squeue
            JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
                3       all     bash    centos R       0:39      1 node01
 ```
@@ -41,7 +41,7 @@ When you’ve finished running your application in your interactive session, sim
 If the job-scheduler could not satisfy the resource you’ve requested for your interactive job (e.g. all your available compute nodes are busy running other jobs), it will report back after a few seconds with an error:
 
 ```bash
-[centos@gateway1 (scooby) ~]$ srun --pty /bin/bash
+[centos@gateway1 (mycluster1) ~]$ srun --pty /bin/bash
 srun: job 20 queued and waiting for resources
 ```
 

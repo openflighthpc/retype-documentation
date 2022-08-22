@@ -17,31 +17,31 @@ The flight environment will need to be activated before the environments can be 
 - Create a spack software environment:
 
 ```bash
-[flight@gateway1 (scooby) ~]$ flight env create spack
+[flight@gateway1 (mycluster1) ~]$ flight env create spack
 ```
 
 - Activate the environment:
 
 ```bash
-[flight@gateway1 (scooby) ~]$ flight env activate spack
+[flight@gateway1 (mycluster1) ~]$ flight env activate spack
 ```
 - Install bowtie:
 
 ```bash
-<spack> [flight@gateway1 (scooby) ~]$ spack install bowtie
+<spack> [flight@gateway1 (mycluster1) ~]$ spack install bowtie
 ```
 ### Running a Bowtie Job
 
 - Download example ecoli data:
 
 ```bash
-<spack> [flight@gateway1 (scooby) ~]$ wget -O ecoli.fq http://tiny.cc/ecoli
+<spack> [flight@gateway1 (mycluster1) ~]$ wget -O ecoli.fq http://tiny.cc/ecoli
 ```
 
 - Create a job script in the current working directory:
 
 ```bash
-<spack> [flight@gateway1 (scooby) ~]$ cat << EOF > mybowtiejob.sh
+<spack> [flight@gateway1 (mycluster1) ~]$ cat << EOF > mybowtiejob.sh
 #!/bin/bash -l
 #SBATCH -N 1
 flight env activate spack
@@ -53,7 +53,7 @@ EOF
 - Submit the job to the queue:
 
 ```bash
-<spack> [flight@gateway1 (scooby) ~]$ sbatch mybowtiejob.sh
+<spack> [flight@gateway1 (mycluster1) ~]$ sbatch mybowtiejob.sh
 ```
 
 The results can then be reviewed from the slurm output file for the job in the current working directory. 

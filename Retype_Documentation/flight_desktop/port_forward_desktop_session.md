@@ -16,7 +16,7 @@ to perform port forwarding using 'ssh'.
 For example in the following:
 
 ```bash
-[flight@chead1 (your_cluster) ~]$ flight desktop start gnome
+[flight@chead1 (mycluster1) ~]$ flight desktop start gnome
 Starting a 'gnome' desktop session:
 
    > ✅ Starting session
@@ -47,7 +47,7 @@ If prompted, you should supply the following password: WB3gUQMW
 By running the command `flight desktop show <name>` we can see more information
 
 ```bash
-[flight@chead1 (your_cluster) ~]$ flight desktop show dd8acf76
+[flight@chead1 (mycluster1) ~]$ flight desktop show dd8acf76
 
 == Session details ==
       Name:

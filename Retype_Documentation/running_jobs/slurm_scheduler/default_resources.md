@@ -13,7 +13,7 @@ In order to promote efficient usage of your research environment, the job-schedu
 You can view all default resource limits by running the following command:
 
 ```bash
-[root@gateway1(slurm) ~]# scontrol show config | grep Def
+[root@gateway1(mycluster1) ~]# scontrol show config | grep Def
 CpuFreqDef              = Unknown
 DefMemPerNode           = UNLIMITED
 MpiDefault              = none

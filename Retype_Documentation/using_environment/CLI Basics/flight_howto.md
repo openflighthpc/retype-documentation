@@ -12,7 +12,7 @@ The Flight User Suite comes with built-in guides to assist with usage of the res
 
 To show the available guides, list them with:
 ```bash 
-[flight@chead1 (ivan1) ~]$ flight howto ls
+[flight@chead1 (mycluster1) ~]$ flight howto ls
 ┌───────┬──────────────────────────────────┐
 │ Index │ Name                             │
 ├───────┼──────────────────────────────────┤
@@ -35,13 +35,13 @@ A guide can be viewed by requesting either the index or name of the desired guid
 To view the get started guide by name:
 
 ```bash
-[flight@gateway1 (scooby) ~]$ flight howto show 'Get Started'
+[flight@gateway1 (mycluster1) ~]$ flight howto show 'Get Started'
 ```
 
 To view the get started guide by index:
 
 ```bash
-    [flight@gateway1 (scooby) ~]$ flight howto show 1
+    [flight@gateway1 (mycluster1) ~]$ flight howto show 1
 ```
 
 When finished with the guide, simply escape the `less` session with `q`. Alternatively, the optional argument `--no-pager` will prevent any sort of view manager, instead the contents of the guide will be output straight to the terminal.

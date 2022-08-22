@@ -15,7 +15,7 @@ The Flight User Suite comes with a utility to jumpstart running jobs on the rese
 To show the available guides, list them with:
 
 ```bash
-[flight@chead1 (your_cluster) ~]$ flight job list-templates
+[flight@chead1 (mycluster1) ~]$ flight job list-templates
 
 ┌───────┬─────────────────────────┬─────────────────────────────────────────────┐
 │ Index │ ID                      │ Name                                        │
@@ -38,7 +38,7 @@ The various job scripts have descriptions that explain the purpose of the templa
 To view the description of a job script:
 
 ```bash
-[flight@chead1 (your_cluster) ~]$ flight job info-template 1
+[flight@chead1 (mycluster1) ~]$ flight job info-template 1
       ID: desktop-on-login-node
     Name: Interactive desktop session on login node
 Synopsis: Start an interactive desktop session on a login node and submit a job to run on a compute node.
@@ -60,7 +60,7 @@ The script can be referred to by its name or index
 The job utility provides helpers to create copies of the various scripts. To copy a script to the current directory:
 
 ```bash
-[flight@chead1 (your_cluster) ~]$ flight job copy-template 1
+[flight@chead1 (mycluster1) ~]$ flight job copy-template 1
 Successfully copied the template to: /home/flight/interactive-desktop.sh.1
 ```
 
@@ -71,7 +71,7 @@ The script can be referred to by its name or index
 Further control over the copying & naming of the file, following the cp command with a path/name will copy the script as such:
 
 ```bash
-[flight@chead1 (your_cluster) ~]$ flight job copy-template 1 $HOME/spam
+[flight@chead1 (mycluster1) ~]$ flight job copy-template 1 $HOME/spam
 Successfully copied the template to: /home/flight/spam/interactive-desktop.sh
 ```
 

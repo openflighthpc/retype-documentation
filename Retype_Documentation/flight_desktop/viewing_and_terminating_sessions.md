@@ -7,7 +7,7 @@ icon: dot-fill
 Users can view a list of the currently running sessions by using the command `flight desktop list`. One standard Flight Compute login node supports up to 10 sessions running at the same time.
 
 ```bash
-[flight@chead1 (your_cluster) ~]$ flight desktop list
+[flight@chead1 (mycluster1) ~]$ flight desktop list
 ┌──────┬──────────┬───────┬───────────┬───────────────┬────────────────┬──────────┬────────┐
 │ Name │ Identity │ Type  │ Host name │ IP address    │ Display (Port) │ Password │ State  │
 ├──────┼──────────┼───────┼───────────┼───────────────┼────────────────┼──────────┼────────┤
@@ -20,7 +20,7 @@ Users can view a list of the currently running sessions by using the command `fl
 To display connection information for an existing session, use the command `flight desktop show <session-ID>`. This command allows users to review the IP-address, port number and one-time password settings for an existing session.
 
 ```bash
-[flight@chead1 (your_cluster) ~]$ flight desktop show 4549eae1
+[flight@chead1 (mycluster1) ~]$ flight desktop show 4549eae1
 
 == Session details ==
       Name:

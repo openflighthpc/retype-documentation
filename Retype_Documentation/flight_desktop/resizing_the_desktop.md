@@ -11,7 +11,7 @@ icon: dot-fill
 When launching a graphical desktop session using the ``flight desktop`` utility, a session resolution can be specified using the ``--geometry <size>`` option. For example, to launch a ``gnome`` desktop session with a resolution of 1920x1080 pixels, use the command:
 
 ```bash
-[flight@gateway1(scooby) ~]$ flight desktop start --geometry 1920x1080 gnome
+[flight@gateway1(mycluster1) ~]$ flight desktop start --geometry 1920x1080 gnome
 ```
 
 By default, your graphical desktop session will launch with a compatibility resolution of 1024x768. Users can resize the desktop to fit their screens using the Linux ``xrandr`` command, run from within the graphical desktop session.
@@ -23,7 +23,7 @@ To view the available screen resolutions, start a terminal session on your graph
 The ``xrandr`` command will display a list of available resolutions supported by your desktop:
 
 ```bash
-[flight@gateway1(scooby) ~]$ xrandr
+[flight@gateway1(mycluster1) ~]$ xrandr
 Screen 0: minimum 32 x 32, current 1024 x 768, maximum 32768 x 32768
 VNC-0 connected primary 1024x768+0+0 0mm x 0mm
    1920x1200     60.00

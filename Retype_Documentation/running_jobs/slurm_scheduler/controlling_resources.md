@@ -11,10 +11,10 @@ Job instructions can be provided in two ways; they are:
 1. **On the command line**, as parameters to your `sbatch` or `srun` command. For example, you can set the name of your job using the `--job-name=[name] | -J [name]` option:
 
 ```bash
-[centos@gateway1 (scooby) ~]$ sbatch --job-name=mytestjob simplejobscript.sh
+[centos@gateway1 (mycluster1) ~]$ sbatch --job-name=mytestjob simplejobscript.sh
 Submitted batch job 51
 
-[centos@gateway1 (scooby) ~]$ squeue
+[centos@gateway1 (mycluster1) ~]$ squeue
              JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
                 51       all mytestjo    centos  R       0:02      1 node01
 ```

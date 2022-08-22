@@ -18,24 +18,24 @@ The flight environment will need to be activated before the environments can be 
 - Create a conda software environment:
 
 ```bash
-[flight@gateway1 (scooby) ~]$ flight env create conda
+[flight@gateway1 (mycluster1) ~]$ flight env create conda
 ```
 - Activate the environment:
 ```bash
-[flight@gateway1 (scooby) ~]$ flight env activate conda
+[flight@gateway1 (mycluster1) ~]$ flight env activate conda
 ```
 
 - Install Jupyter:
 
 ```bash
-<conda> [flight@gateway1 (scooby) ~]$ conda install jupyter
+<conda> [flight@gateway1 (mycluster1) ~]$ conda install jupyter
 ```
 
 - Install Notebook dependencies:
 
 ```bash
-<conda> [flight@gateway1 (scooby) ~]$ conda install matplotlib
-<conda> [flight@gateway1 (scooby) ~]$ conda install folium -c conda-forge
+<conda> [flight@gateway1 (mycluster1) ~]$ conda install matplotlib
+<conda> [flight@gateway1 (mycluster1) ~]$ conda install folium -c conda-forge
 ```
 
 ### Launch a Jupyter Notebook
@@ -47,13 +47,13 @@ These commands will need to be run from a graphical desktop session as it will l
 - Download the example notebook:
 
 ```bash
-<conda> [flight@gateway1 (scooby) ~]$ curl -L https://jupyterbook.org/en/stable/_downloads/12e9fb0f1c062494259ce630607cfc87/notebooks.ipynb > notebooks.ipynb
+<conda> [flight@gateway1 (mycluster1) ~]$ curl -L https://jupyterbook.org/en/stable/_downloads/12e9fb0f1c062494259ce630607cfc87/notebooks.ipynb > notebooks.ipynb
 ```
 
 - Launch the notebook:
 
 ```bash
-<conda> [flight@gateway1 (scooby) ~]$ jupyter notebook notebooks.ipynb
+<conda> [flight@gateway1 (mycluster1) ~]$ jupyter notebook notebooks.ipynb
 ```
 
 - A web browser will launch with the notebook displayed
