@@ -9,10 +9,9 @@ An OpenFlight Compute research environment may contain any number of compute nod
 Users can find the names of their compute nodes by using the `nodeattr` command; e.g.
 
 - `nodeattr -s nodes`
-    - shows a space-separated list of current compute node hostnames
+    - shows a space-separated list of current compute node hostnames<br><br>
 - `nodeattr -c nodes`
-    - shows a comma-separated list of current compute node hostnames
-
+    - shows a comma-separated list of current compute node hostnames<br><br>
 - `nodeattr -n nodes`
     - shows a new-line-separated list of current compute node hostnames
 
