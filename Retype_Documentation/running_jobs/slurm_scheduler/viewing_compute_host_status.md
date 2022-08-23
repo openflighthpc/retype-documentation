@@ -4,7 +4,7 @@ label: Viewing compute host status
 icon: dot
 ---
 
-Users can use the `sinfo -Nl` command to view the status of compute node hosts in your Flight Compute research environment.
+Users can use the `sinfo -Nl` command to view the status of compute node hosts in your research environment.
 
 ```bash
 [centos@gateway1 (mycluster1) ~]$ sinfo -Nl

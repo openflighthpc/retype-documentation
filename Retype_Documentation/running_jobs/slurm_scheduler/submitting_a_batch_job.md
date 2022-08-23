@@ -26,7 +26,7 @@ Started running on host gateway1
 Finished running - goodbye from gateway1
 ```
 
-To submit your job script to the research environment job scheduler, use the command `sbatch simplejobscript.sh`. The job scheduler should immediately report the job-ID for your job; your job-ID is unique for your current OpenFlight Flight Compute research environment - it will never be repeated once used.
+To submit your job script to the research environment job scheduler, use the command `sbatch simplejobscript.sh`. The job scheduler should immediately report the job-ID for your job; your job-ID is unique for your current research environment - it will never be repeated once used.
 
 ```bash
 [centos@gateway1 (mycluster1) ~]$ sbatch simplejobscript.sh

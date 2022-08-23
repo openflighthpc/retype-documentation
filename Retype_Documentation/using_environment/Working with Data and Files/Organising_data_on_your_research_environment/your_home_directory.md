@@ -4,7 +4,7 @@ label: Your home directory
 icon: dot-fill
 ---
 
-The shared filesystem includes the home-directory area for the `flight` user which is created when your research environment is launched. Linux automatically places users in their home-directory when they login to a node. By default, Flight Compute will create your home-directory under the `/users/` directory, named `flight` (`/users/flight`).
+The shared filesystem includes the home-directory area for the `flight` user which is created when your research environment is launched. Linux automatically places users in their home-directory when they login to a node. By default, the research environment will create your home-directory under the `/users/` directory, named `flight` (`/users/flight`).
 
 The Linux command line will accept the `~` (tilde) symbol as a substitute for the currently logged-in users’ home-directory. The environment variable `$HOME` is also set to this value by default. Hence, the following three commands are all equivalent when logged in as the user flight:
 

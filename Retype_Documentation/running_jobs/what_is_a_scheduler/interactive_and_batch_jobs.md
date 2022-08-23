@@ -4,7 +4,7 @@ label: Interactive and batch jobs
 icon: dot
 ---
 
-Users typically interact with compute research environments by running either interactive or batch (also known as non-interactive) jobs.
+Users typically interact with research environments by running either interactive or batch (also known as non-interactive) jobs.
 
 - An interactive job is one that the user directly controls, either via a graphical interface or by typing at the command-prompt.
 - A batch job is run by writing a list of instructions that are passed to compute nodes to run at some point in the future.
