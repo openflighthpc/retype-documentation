@@ -4,11 +4,9 @@ label: Why use a job-scheduler on a personal research environment?
 icon: dot
 ---
 
-Good question. On shared multi-user research environments, a job-scheduler is often used as a control mechanism to make sure that users don’t unfairly monopolise the valuable compute resources. In extreme cases, the scheduler may be wielded by system administrators to force “good behaviour” in a shared environment, and can feel like an imposition to research environment users.
+Good question. A job-scheduler is often used as a control mechanism to make sure that users don’t unfairly monopolise the valuable compute resources. In extreme cases, the scheduler may be wielded by system administrators to force “good behaviour” in a shared environment, and can feel like an imposition to research environment users.
 
-With your own personal research environment, you have the ability to directly control the resources available for your job - you don’t need a job-scheduler to limit your usage.
-
-However - there are a number of reasons why your own job-scheduler can still be a useful tool in your research environment:
+However, a job-scheduler can still be a useful tool for a research environment rather than just a control mechanism:
 
 1. It can help you organise multi-stage work flows, with batch jobs launching subsequent jobs in a defined process.
 2. It can automate launching of MPI jobs, finding available nodes to run applications on.
