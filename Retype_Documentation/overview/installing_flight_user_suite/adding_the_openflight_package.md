@@ -33,7 +33,7 @@ Some tools require packages available in the EPEL repository, this can be instal
 - Add the PowerTools repository:
 
 ```bash
-[flight@gateway1 ~]$ yum config-manager --set-enabled powertools
+[flight@gateway1 ~]$ sudo yum config-manager --set-enabled powertools
 ```
 
 - Most tools require packages available in the EPEL repository:
