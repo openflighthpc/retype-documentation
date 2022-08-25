@@ -29,13 +29,23 @@ Some tools require packages available in the EPEL repository, this can be instal
 ```bash
 [flight@gateway1 ~]$ sudo dnf install https://repo.openflighthpc.org/openflight/centos/8/x86_64/openflighthpc-release-3-1.noarch.rpm
 ```
-- Rebuild the yum cache:
+
+- Add the PowerTools repository:
+
 ```bash
-[flight@gateway1 ~]$ sudo dnf makecache
+[flight@gateway1 ~]$ yum config-manager --set-enabled powertools
 ```
-!!!
-Some tools require packages available in the EPEL repository, this can be installed with `sudo yum install epel-release`. Additionally the PowerTools repository is needed, this can be enabled with ``yum config-manager --set-enabled powertools``
-!!!
+
+- Most tools require packages available in the EPEL repository:
+
+```bash
+[flight@gateway1 ~]$ sudo yum install epel-release
+```
+
+- Finally, rebuild the yum cache:
+```bash
+[flight@gateway1 ~]$ sudo yum makecache
+```
 
 +++ Ubuntu 18.04
 
