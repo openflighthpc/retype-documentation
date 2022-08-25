@@ -8,9 +8,13 @@ Most research environment operations, including starting applications and runnin
 
 `sudo yum install screen`
 
-For security reasons, SSH login as the root user is not permitted to a research environment. To get a Linux shell with root privileges, please login as your standard user then execute the command `sudo -s`.
+To get a Linux shell with root privileges, please login as your standard user then execute the command `sudo -s`.
 
 
 !!!warning
 Users must exercise caution when running commands as root, as they have the potential to disrupt research environment operations.
+!!!
+
+!!!
+Some users may **not** have root priviledges. This is at the discretion of your admin or system configuration.
 !!!
