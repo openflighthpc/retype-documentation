@@ -4,6 +4,8 @@ label: Installing nodeattr and pdsh
 icon: dot
 ---
 
+A combination of genders and pdsh can allow for management and monitoring of multiple nodes at a time. OpenFlight provides a build of PDSH that integrates with the rest of the User Suite.
+
 Nodeattr and pdsh can be installed using the yum package manager, simply:
 
 ```bash
