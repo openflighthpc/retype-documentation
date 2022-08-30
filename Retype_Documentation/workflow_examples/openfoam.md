@@ -97,7 +97,7 @@ EOF
 ### Viewing the Results
 
 Once the cavity job has finished running, the results can be visualised through a desktop session.
-- Connect to VNC desktop (For more information on launching desktops, see the [Flight Desktop section](/flight_desktop/install_flight_desktop_types/#install-flight-desktop-types)).
+- Connect to VNC desktop (For more information on launching desktops, see the [Flight Desktop section](/hpc_environment_usage/flight_desktop/install_flight_desktop_types/#install-flight-desktop-types)).
 - In a terminal on the desktop session, ensure that the OpenFOAM module is loaded:
 
 ```bash

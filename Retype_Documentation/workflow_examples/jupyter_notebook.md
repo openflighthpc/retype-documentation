@@ -41,7 +41,7 @@ The flight environment will need to be activated before the environments can be 
 ### Launch a Jupyter Notebook
 
 !!!
-These commands will need to be run from a graphical desktop session as it will launch a web browser. For more information on launching desktops, see the [Flight Desktop section](/flight_desktop/install_flight_desktop_types/#install-flight-desktop-types)
+These commands will need to be run from a graphical desktop session as it will launch a web browser. For more information on launching desktops, see the [Flight Desktop section](/hpc_environment_usage/flight_desktop/install_flight_desktop_types/#install-flight-desktop-types)
 !!!
 
 - Download the example notebook:
