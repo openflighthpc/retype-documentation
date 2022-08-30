@@ -18,7 +18,7 @@ Linux and Mac users can use in-built SSH support to copy files. To copy file myd
 
 +++ Windows
 
-Windows users can download and install the [pscp](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) command to perform the same operation (for this you will need your .pem key in .ppk format, see [connecting from Windows with Putty](/using_environment/cli-basics/logging_in/#logging-in)):
+Windows users can download and install the [pscp](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) command to perform the same operation (for this you will need your .pem key in .ppk format, see [connecting from Windows with Putty](/general_environment_usage/cli_basics/logging_in/#logging-in)):
 
 `pscp -i mykeyfile.ppk mydata.zip flight@52.48.62.34:/users/flight/.`
 +++

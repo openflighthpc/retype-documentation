@@ -38,7 +38,7 @@ Flight Env provides quick setup methods to create a conda software ecosystem.
 
 To install and use conda:
 
-- [Activate the flight system.](/using_environment/cli-basics/flight_system/#flight-system)
+- [Activate the flight system.](/hpc_environment_usage/flight_overview/flight_system/#flight-system)
 - Create the conda installation for the user:
 
 ```bash
@@ -166,7 +166,7 @@ Flight Env provides quick setup methods to create an easybuild software ecosyste
 
 To install and use easybuild:
 
-- [Activate the flight system.](/using_environment/cli-basics/flight_system/#flight-system)
+- [Activate the flight system.](/hpc_environment_usage/flight_overview/flight_system/#flight-system)
 - Create the easybuild installation for the user:
 
 ```bash
@@ -279,7 +279,7 @@ Flight Env provides quick setup methods to create a gridware software ecosystem.
 
 To install and use gridware:
 
-- [Activate the flight system.](/using_environment/cli-basics/flight_system/#flight-system)
+- [Activate the flight system.](/hpc_environment_usage/flight_overview/flight_system/#flight-system)
 - Create the gridware installation for the user:
 ```bash
     [flight@gateway1 ~]$ flight env create gridware
@@ -397,7 +397,7 @@ Flight Env provides quick setup methods to create a modules software ecosystem.
 
 To install and use modules:
 
-- [Activate the flight system.](/using_environment/cli-basics/flight_system/#flight-system)
+- [Activate the flight system.](/hpc_environment_usage/flight_overview/flight_system/#flight-system)
 - Create the modules installation for the user:
 ```bash
     [flight@gateway1 ~]$ flight env create modules
@@ -424,12 +424,12 @@ To install and use modules:
 ## Installing Software - General Overview
 
 
-Unlike the other [package ecosystems](/ecosystems/package_ecosystems/#package-ecosystems), Modules provides the ecosystem management tool but not any package management tools. Therefore, with the Modules ecosystem, you are free to compile and install software in a Module compatible manner.
+Unlike the other [package ecosystems](/hpc_environment_usage/ecosystems/package_ecosystems/#package-ecosystems), Modules provides the ecosystem management tool but not any package management tools. Therefore, with the Modules ecosystem, you are free to compile and install software in a Module compatible manner.
 
 Module files can be installed to `~/.local/share/flight/env/modules+default/modulefiles` (for local Modules ecosystems) or to `/opt/apps/flight/env/modules+global/modulefiles` (for global modules ecosystems).
 
 !!!
-If the Modules ecosystem has been installed with a [custom ecosystem name](/USE/working_with_user_suite/flight_environment/#custom-ecosystem-names) then the path will not be `modules+default`/`modules+global` but instead `modules+mycustomname`
+If the Modules ecosystem has been installed with a [custom ecosystem name](/hpc_environment_usage/ecosystems/flight_environment/#custom-ecosystem-names) then the path will not be `modules+default`/`modules+global` but instead `modules+mycustomname`
 !!!
 
 For more information on building software for Modules, see the `modulefile reference <https://modules.readthedocs.io/en/latest/modulefile.html>`_ and build documentation for the chosen software.
@@ -523,7 +523,7 @@ To install and use singularity:
 If installing singularity for a user then there are a number of restrictions and additional steps to consider in configuring the environment. See the `Personal Environment` section of `flight env info singularity`. 
 !!!
 
-- [Activate the flight system.](/using_environment/cli-basics/flight_system/#flight-system)
+- [Activate the flight system.](/hpc_environment_usage/flight_overview/flight_system/#flight-system)
 - Create the singularity installation for the user:
 ```bash
     [flight@gateway1 ~]$ flight env create singularity
@@ -630,7 +630,7 @@ Flight Env provides quick setup methods to create a spack software ecosystem.
 
 To install and use spack:
 
-- [Activate the flight system.](/using_environment/cli-basics/flight_system/#flight-system)
+- [Activate the flight system.](/hpc_environment_usage/flight_overview/flight_system/#flight-system)
 - Create the spack installation for the user:
 ```bash
     [flight@gateway1 ~]$ flight env create spack

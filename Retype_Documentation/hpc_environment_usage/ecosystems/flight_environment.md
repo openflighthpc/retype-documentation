@@ -10,7 +10,7 @@ icon: dot
 
 ## Viewing Available Ecosystems
 
-Various [package-ecosystems](/ecosystems/package_ecosystems/#package-ecosystems) are available for managing software on your research environment. These can be viewed by using the `env` subcommand:
+Various [package-ecosystems](/hpc_environment_usage/ecosystems/package_ecosystems/#package-ecosystems) are available for managing software on your research environment. These can be viewed by using the `env` subcommand:
 
 
 
