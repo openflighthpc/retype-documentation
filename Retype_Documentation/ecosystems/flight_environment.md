@@ -22,20 +22,20 @@ Various [package-ecosystems](/ecosystems/package_ecosystems/#package-ecosystems)
 
 A local ecosystem is only available to the user that creates it. All of the packages and libraries are installed to the users home directory.
 
-To install a package ecosystem, use the create command as follows (replacing gridware with your desired package ecosystem):
+To install a package ecosystem, use the create command as follows (replacing easybuild with your desired package ecosystem):
 
 ```bash
-[flight@gateway1 (mycluster1) ~]$ flight env create gridware
+[flight@gateway1 (mycluster1) ~]$ flight env create easybuild
 ```
 
 Once a package ecosystem has been installed, it needs to be activated for the session to be able to manage software with it:
 
 ```bash
-[flight@gateway1 (mycluster1) ~]$ flight env activate gridware
-<gridware> [flight@gateway1 (mycluster1) ~]$
+[flight@gateway1 (mycluster1) ~]$ flight env activate easybuild
+<easybuild> [flight@gateway1 (mycluster1) ~]$
 ```
 !!!
-Your preferred software ecosystem can be set to automatically activate for your user within the flight system by running `flight env set-default gridware`, replacing gridware with your chosen software ecosystem
+Your preferred software ecosystem can be set to automatically activate for your user within the flight system by running `flight env set-default easybuild`, replacing easybuild with your chosen software ecosystem
 !!!
 
 ## Creating a Global Ecosystem
@@ -49,14 +49,14 @@ The user requires suitable write permissions to the configured global depot path
 To install a global package ecosystem, use the create command with the global option flag:
 
 ```bash
-[root@gateway1 (mycluster1) ~]$ flight env create -g gridware
+[root@gateway1 (mycluster1) ~]$ flight env create -g easybuild
 ```
 
 Once the global ecosystem has been installed, it needs to be activated for the session to be able to monitor software with it:
 
 ```bash
-[root@gateway1 (mycluster1) ~]$ flight env activate gridware@global
-<gridware@global> [flight@gateway1 (mycluster1) ~]$
+[root@gateway1 (mycluster1) ~]$ flight env activate easybuild@global
+<easybuild@global> [flight@gateway1 (mycluster1) ~]$
 ```
 
 ## Custom Ecosystem Names
@@ -65,12 +65,12 @@ Once the global ecosystem has been installed, it needs to be activated for the s
 When installing an ecosystem, a custom alias can be added by appending ``@mycustomname`` to the end of creation command. For example, to create a local gridware installation with the alias `test`:
 
 ```bash
-[flight@gateway1 (mycluster1) ~]$ flight env create gridware@test
+[flight@gateway1 (mycluster1) ~]$ flight env create easybuild@test
 ```
 
 To activate this environment, the alias will need to be specified in the activation command:
 
 ```bash
-[flight@gateway1 (mycluster1) ~]$ flight env activate gridware@test
-<gridware@test> [flight@gateway1 (mycluster1) ~]$
+[flight@gateway1 (mycluster1) ~]$ flight env activate easybuild@test
+<easybuild@test> [flight@gateway1 (mycluster1) ~]$
 ```
