@@ -4,46 +4,6 @@ label: Installation
 icon: dot
 ---
 
-+++ Centos 7
-
-To install the flight web suite:
-
-```bash
-sudo yum install flight-web-suite
-```
-+++ Centos 8
-To install the flight web suite:
-
-```bash
-sudo yum install flight-web-suite
-```
-+++ Ubuntu 18.04
-To install the flight web suite:
-
-```bash
-sudo apt install flight-web-suite
-```
-
-+++ Ubuntu 20.04
-
-To install the flight web suite:
-
-```bash
-sudo apt install flight-web-suite
-```
-+++
-
-Once installed, enable all web services:
-
-```
-flight web-suite enable
-```
-
-And then start:
-
-```bash
-flight web-suite start
-```
 
 ## Connecting to Web Suite
 
@@ -55,17 +15,15 @@ If the http page works, but https doesn't, you may need to enable https:
 flight www enable-https
 ```
 
-## Logging in
+
+
 
 Log in with the same user details used for accessing the cluster from a CLI. If you find yourself being logged out when changing pages, you may need to add 
 
 
 
 
-
-2.5 Flight Web Suite
-
-2.5.1 What is Flight Web Suite?
+## What is Flight Web Suite?
 
 The Flight Web Suite is a collection of web applications that provide users with easy and intuitive ways to interact with
 their research environment. The purpose of these tools is to get researchers started with HPC as quickly as possible
@@ -83,7 +41,7 @@ Flight Web Suite is made up of the following tools:
 - Job Script WebApp/API: The API & web application for templating, creating, submitting & managing job
 scripts via a browser
 
-2.5.2 Installing Flight Web Suite
+## Installing Flight Web Suite
 
 The OpenFlight project packages tools as both RPMs and debs that are hosted in package repositories which can be
 quickly installed with a couple of commands.
@@ -96,8 +54,6 @@ tools. This will ensure that compatible versions of all the tools are installed.
 
 
 
-
-
 +++ CentOS 7
 - Install the web suite:
 ```bash
@@ -106,7 +62,7 @@ tools. This will ensure that compatible versions of all the tools are installed.
 - Set the domain name (for use with certificate generation, this can be either a hostname or IP. A publicly acces-
 sible value should be used if intending to use Lets Encrypt certificates):
 ```bash
-[flight@gateway1 ~]$ flight web-suite set-domain gateway1.scooby.example.com
+[flight@gateway1 ~]$ flight web-suite set-domain gateway1.mycluster1.example.com
 ```
 - Install extra packages (note: the EPEL repository is required for the websockify package):
 ```bash
@@ -186,20 +142,19 @@ HTTP communication.
 A self-signed certificate is automatically created when installing the packages from the repo.
 To generate and install the self-signed certificates, simply:
 ```bash
-[flight@gateway1(scooby) ~]$ flight www cert-gen --cert-type self-signed --domain
-˓→$(hostname -f)
+flight www cert-gen --cert-type self-signed --domain $(hostname -f)
 ```
 After this has run, changes are applied on a service restart:
 ```bash
-[flight@gateway1(scooby) ~]$ flight web-suite restart
+[flight@gateway1(mycluster1) ~]$ flight web-suite restart
 ```
 Lets Encrypt
 
 To generate and install a Lets Encrypt certificate, run the following (replacing the domain and email with appropriate
 values):
 ```bash
-[flight@gateway1(scooby) ~]$ flight www cert-gen --cert-type lets-encrypt --domain
-˓→gateway1.scooby.example.com --email user@example.com
+[flight@gateway1(mycluster1) ~]$ flight www cert-gen --cert-type lets-encrypt --domain
+˓→gateway1.mycluster1.example.com --email user@example.com
 ```
 
 !!!
@@ -208,7 +163,7 @@ Ensure that the domain/IP is publicly accessible in order for certificate genera
 
 After this has run, changes are applied on a service restart:
 ```bash
-[flight@gateway1(scooby) ~]$ flight web-suite restart
+[flight@gateway1(mycluster1) ~]$ flight web-suite restart
 ```
 External Certificate
 Externally generated certificates can be used by placing them in /opt/flight/etc/www/ssl/, the files that
@@ -218,5 +173,5 @@ should be in there are:
 After placing the certificates in place, the HTTPS server can be enabled with:
 
 ```bash
-[flight@gateway1(scooby) ~]$ flight web-suite restart
+[flight@gateway1(mycluster1) ~]$ flight web-suite restart
 ```
