@@ -13,7 +13,7 @@ OpenFOAM is a popular engineering application toolbox. It's open source and is u
 ### Installing OpenFOAM with Gridware
 
 !!!
-The flight environment will need to be activated before the environments can be created so be sure to run `flight start` or [setup your environment to automatically activate the flight environment](/using_environment/cli-basics/flight_system/#activating-the-flight-system).
+The flight environment will need to be activated before the environments can be created so be sure to run `flight start` or [setup your environment to automatically activate the flight environment](/hpc_environment_usage/flight_overview/flight_system/#activating-the-flight-system).
 !!!
 
 - Create a gridware software environment:
