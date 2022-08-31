@@ -4,7 +4,7 @@ label: Viewing and terminating running sessions
 icon: dot
 ---
 
-Users can view a list of the currently running sessions by using the command `flight desktop list`. One standard Flight Compute login node supports up to 10 sessions running at the same time.
+Users can view a list of the currently running sessions by using the command `flight desktop list`.
 
 ```bash
 [flight@chead1 (mycluster1) ~]$ flight desktop list
