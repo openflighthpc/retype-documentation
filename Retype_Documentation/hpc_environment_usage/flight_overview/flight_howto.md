@@ -35,13 +35,13 @@ A guide can be viewed by requesting either the index or name of the desired guid
 To view the get started guide by name:
 
 ```bash
-[flight@gateway1 (mycluster1) ~]$ flight howto show 'Get Started'
+flight howto show 'Get Started'
 ```
 
 To view the get started guide by index:
 
 ```bash
-    [flight@gateway1 (mycluster1) ~]$ flight howto show 1
+flight howto show 1
 ```
 
 When finished with the guide, simply escape the `less` session with `q`. Alternatively, the optional argument `--no-pager` will prevent any sort of view manager, instead the contents of the guide will be output straight to the terminal.

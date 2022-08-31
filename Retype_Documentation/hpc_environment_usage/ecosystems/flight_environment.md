@@ -15,7 +15,7 @@ Various [package-ecosystems](/hpc_environment_usage/ecosystems/package_ecosystem
 
 
 ```bash
-[flight@gateway1 (mycluster1) ~]$ flight env avail
+flight env avail
 ```
 
 ## Creating a Local Ecosystem
@@ -25,7 +25,7 @@ A local ecosystem is only available to the user that creates it. All of the pack
 To install a package ecosystem, use the create command as follows (replacing easybuild with your desired package ecosystem):
 
 ```bash
-[flight@gateway1 (mycluster1) ~]$ flight env create easybuild
+flight env create easybuild
 ```
 
 Once a package ecosystem has been installed, it needs to be activated for the session to be able to manage software with it:
@@ -49,7 +49,7 @@ The user requires suitable write permissions to the configured global depot path
 To install a global package ecosystem, use the create command with the global option flag:
 
 ```bash
-[root@gateway1 (mycluster1) ~]$ flight env create -g easybuild
+flight env create -g easybuild
 ```
 
 Once the global ecosystem has been installed, it needs to be activated for the session to be able to monitor software with it:
@@ -65,7 +65,7 @@ Once the global ecosystem has been installed, it needs to be activated for the s
 When installing an ecosystem, a custom alias can be added by appending ``@mycustomname`` to the end of creation command. For example, to create a local gridware installation with the alias `test`:
 
 ```bash
-[flight@gateway1 (mycluster1) ~]$ flight env create easybuild@test
+flight env create easybuild@test
 ```
 
 To activate this environment, the alias will need to be specified in the activation command:

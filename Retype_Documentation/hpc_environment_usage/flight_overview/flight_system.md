@@ -35,7 +35,7 @@ To identify the research environment that's being worked on, a cluster name can 
 A cluster name can be specified as follows:
 
 ```bash
-[flight@gateway1 ~]$ flight config set cluster.name mycluster1
+flight config set cluster.name mycluster1
 ```
 
 Note that for the name change to take effect you must start a new terminal session or stop/start Flight.

@@ -11,25 +11,25 @@ The quickest and simplest way to get up and running with the user suite is to si
 
 - Install the user suite RPM:
 ```bash
-[flight@gateway1 ~]$ sudo yum install flight-user-suite
+sudo yum install flight-user-suite
 ```
 +++ CentOS 8
 
 - Install the user suite RPM:
 ```bash
-[flight@gateway1 ~]$ sudo dnf install flight-user-suite
+sudo dnf install flight-user-suite
 ```
 +++ Ubuntu 18.04
 
 - Install the user suite deb:
 ```bash
-flight@gateway1:~$ sudo apt-get install flight-user-suite
+sudo apt-get install flight-user-suite
 ```
 +++ Ubuntu 20.04
 
 - Install the user suite deb:
 ```bash
-flight@gateway1:~$ sudo apt-get install flight-user-suite
+sudo apt-get install flight-user-suite
 ```
 +++
 
