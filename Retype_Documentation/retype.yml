@@ -4,7 +4,7 @@ url: https://docs.staging.openflighthpc.org/
 branding:
   title: OpenFlightHPC Knowledgebase
 #  label: Docs
-  logo: /images/logo6.png
+  logo: /images/logo.png
 #  logoDark: /images/logo6.png
   logoAlign: left
 favicon: /images/favicon.png
