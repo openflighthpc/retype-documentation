@@ -29,13 +29,13 @@ Finished running - goodbye from chead1
 To submit your job script to the research environment job scheduler, use the command `sbatch simplejobscript.sh`. The job scheduler should immediately report the job-ID for your job; your job-ID is unique for your current research environment - it will never be repeated once used.
 
 ```bash
-[centos@chead1 (mycluster1) ~]$ sbatch simplejobscript.sh
+[flight@chead1 (mycluster1) ~]$ sbatch simplejobscript.sh
 Submitted batch job 21
 
-[centos@chead1 (mycluster1) ~]$ ls
+[flight@chead1 (mycluster1) ~]$ ls
 simplejobscript.sh  slurm-21.out
 
-[centos@chead1 (mycluster1) ~]$ cat slurm-21.out
+[flight@chead1 (mycluster1) ~]$ cat slurm-21.out
 Starting running on host node01
 Finished running - goodbye from node01
 ```

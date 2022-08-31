@@ -19,9 +19,9 @@ echo "I am $SLURM_ARRAY_TASK_ID from job $SLURM_ARRAY_JOB_ID"
 
 
 ```bash
-[centos@chead1 (mycluster1) ~]$ sbatch arrayjob.sh
+[flight@chead1 (mycluster1) ~]$ sbatch arrayjob.sh
 Submitted batch job 77
-[centos@chead1 (mycluster1) ~]$ squeue
+[flight@chead1 (mycluster1) ~]$ squeue
            JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
     77_[85-1000]       all    array    centos PD       0:00      1 (Resources)
            77_71       all    array    centos  R       0:00      1 node03
