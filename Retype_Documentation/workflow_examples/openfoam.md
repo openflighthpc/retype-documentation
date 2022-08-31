@@ -19,25 +19,25 @@ The flight environment will need to be activated before the environments can be 
 - Create a gridware software environment:
 
 ```bash
-[flight@gateway1 (mycluster1) ~]$ flight env create gridware
+[flight@chead1 (mycluster1) ~]$ flight env create gridware
 ```
 
 - Activate the environment:
 
 ```bash
-[flight@gateway1 (mycluster1) ~]$ flight env activate gridware
+[flight@chead1 (mycluster1) ~]$ flight env activate gridware
 ```
 
 - Locate available OpenFOAM versions:
 
 ```bash
-<gridware> [flight@gateway1 (mycluster1) ~]$ gridware search openfoam
+<gridware> [flight@chead1 (mycluster1) ~]$ gridware search openfoam
 ```
 
 - Install OpenFOAM 4.1:
 
 ```bash
-<gridware> [flight@gateway1 (mycluster1) ~]$ gridware install apps/openfoam/4.1
+<gridware> [flight@chead1 (mycluster1) ~]$ gridware install apps/openfoam/4.1
 ```
 
 !!!
@@ -49,13 +49,13 @@ After pressing 'y' to accept the installation. Gridware will install various dep
 - Load the OpenFOAM module:
 
 ```bash
-<gridware> [flight@gateway1 (mycluster1) ~]$ module load apps/openfoam
+<gridware> [flight@chead1 (mycluster1) ~]$ module load apps/openfoam
 ```
 
 - Check an OpenFOAM command can be seen by viewing the help page:
 
 ```bash
-<gridware> [flight@gateway1 (mycluster1) ~]$ icoFoam -help
+<gridware> [flight@chead1 (mycluster1) ~]$ icoFoam -help
 ```
 
 ### Running a Simple OpenFOAM Job
@@ -63,7 +63,7 @@ After pressing 'y' to accept the installation. Gridware will install various dep
 - Create a job script in the current working directory:
 
 ```bash
-<gridware> [flight@gateway1 (mycluster1) ~]$ cat << 'EOF' > myfoamjob.sh
+<gridware> [flight@chead1 (mycluster1) ~]$ cat << 'EOF' > myfoamjob.sh
 #!/bin/bash
 #SBATCH -N 1
 
@@ -85,13 +85,13 @@ EOF
 - Submit the job to the queue system:
 
 ```bash
-<gridware> [flight@gateway1 (mycluster1) ~]$ sbatch myfoamjob.sh
+<gridware> [flight@chead1 (mycluster1) ~]$ sbatch myfoamjob.sh
 ```
 
 - Check that the job is running (iit will take 1-2 minutes to complete):
 
 ```bash
-<gridware> [flight@gateway1 (mycluster1) ~]$ squeue
+<gridware> [flight@chead1 (mycluster1) ~]$ squeue
 ```
 
 ### Viewing the Results
@@ -101,15 +101,15 @@ Once the cavity job has finished running, the results can be visualised through 
 - In a terminal on the desktop session, ensure that the OpenFOAM module is loaded:
 
 ```bash
-[flight@gateway1 (mycluster1) ~]$ flight env activate gridware
-<gridware> [flight@gateway1 (mycluster1) ~]$ module load apps/openfoam
+[flight@chead1 (mycluster1) ~]$ flight env activate gridware
+<gridware> [flight@chead1 (mycluster1) ~]$ module load apps/openfoam
 ```
 
 - Navigate to the cavity directory and launch the paraFoam viewer:
 
 ```bash
-<gridware> [flight@gateway1 (mycluster1) ~]$ cd cavity
-<gridware> [flight@gateway1 (mycluster1) cavity]$ paraFoam
+<gridware> [flight@chead1 (mycluster1) ~]$ cd cavity
+<gridware> [flight@chead1 (mycluster1) cavity]$ paraFoam
 ```
 
 - In the window that opens, scroll down to "Mesh parts" and select all the boxes, then click apply

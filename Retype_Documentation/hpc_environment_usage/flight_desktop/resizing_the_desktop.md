@@ -23,7 +23,7 @@ To view the available screen resolutions, start a terminal session on your graph
 The ``xrandr`` command will display a list of available resolutions supported by your desktop:
 
 ```bash
-[flight@gateway1(mycluster1) ~]$ xrandr
+[flight@chead1(mycluster1) ~]$ xrandr
 Screen 0: minimum 32 x 32, current 1024 x 768, maximum 32768 x 32768
 VNC-0 connected primary 1024x768+0+0 0mm x 0mm
    1920x1200     60.00

@@ -42,7 +42,7 @@ To install and use conda:
 - Create the conda installation for the user:
 
 ```bash
-[flight@gateway1 ~]$ flight env create conda
+[flight@chead1 ~]$ flight env create conda
 Creating environment conda@default
    > ✅ Verifying prerequisites
    > ✅ Fetching prerequisite (miniconda)
@@ -53,13 +53,13 @@ Environment conda@default has been created
 - Activate the conda ecosystem:
 
 ```bash
-[flight@gateway1 ~]$ flight env activate conda
-(base) <conda> [flight@gateway1 ~]$
+[flight@chead1 ~]$ flight env activate conda
+(base) <conda> [flight@chead1 ~]$
 ```
 
 - Check that conda can be run:
 ```bash
-(base) <conda> [flight@gateway1 ~]$ conda --version
+(base) <conda> [flight@chead1 ~]$ conda --version
 conda 4.7.10
 ```
 
@@ -70,7 +70,7 @@ An example workflow using perl is demonstrated below.
 - View available versions:
 
 ```bash
-(base) <conda> [flight@gateway1 ~]$ conda search perl
+(base) <conda> [flight@chead1 ~]$ conda search perl
 Loading channels: done
 # Name                       Version           Build  Channel
 perl                          5.26.0      hae598fd_0  pkgs/main
@@ -79,7 +79,7 @@ perl                          5.26.2      h14c3975_0  pkgs/main
 
 - Install specific version:
 ```bash
-(base) <conda> [flight@gateway1 ~]$ conda install perl=5.26.2
+(base) <conda> [flight@chead1 ~]$ conda install perl=5.26.2
 Collecting package metadata (current_repodata.json): done
 Solving environment: done
 
@@ -128,14 +128,14 @@ Verifying transaction: done
 
 - Check installation location:
 ```bash
-(base) <conda> [flight@gateway1 ~]$ which perl
+(base) <conda> [flight@chead1 ~]$ which perl
 ~/.local/share/flight/env/conda+default/bin/perl
 ```
 
 - Install perl library (this may prompt for initial `cpan` configuration, once configuration is complete then the library will be installed):
 
 ```bash
-    (base) <conda> [flight@gateway1 ~]$ cpan File::Slurp
+    (base) <conda> [flight@chead1 ~]$ cpan File::Slurp
     Loading internal null logger. Install Log::Log4perl for logging messages
     Reading '/home/flight/.cpan/Metadata'
       Database was generated on Mon, 09 Sep 2019 15:17:03 GMT
@@ -146,7 +146,7 @@ Verifying transaction: done
 - Check installation worked:
 ```bash
 
-    (base) <conda> [flight@gateway1 ~]$ cpan File::Slurp
+    (base) <conda> [flight@chead1 ~]$ cpan File::Slurp
     Loading internal null logger. Install Log::Log4perl for logging messages
     Reading '/home/flight/.cpan/Metadata'
       Database was generated on Mon, 09 Sep 2019 15:17:03 GMT
@@ -170,7 +170,7 @@ To install and use easybuild:
 - Create the easybuild installation for the user:
 
 ```bash
-[flight@gateway1 ~]$ flight env create easybuild
+[flight@chead1 ~]$ flight env create easybuild
 Creating environment easybuild@default
    > ✅ Verifying prerequisites
    > ✅ Fetching prerequisite (lua)
@@ -192,14 +192,14 @@ Environment easybuild@default has been created
 
 - Activate the easybuild ecosystem:
 ```bash
-    [flight@gateway1 ~]$ flight env activate easybuild
-    <easybuild> [flight@gateway1 ~]$
+    [flight@chead1 ~]$ flight env activate easybuild
+    <easybuild> [flight@chead1 ~]$
 ```
 - Check that easybuild can be run:
 ```bash
-    <easybuild> [flight@gateway1 ~]$ module load EasyBuild
-    <easybuild> [flight@gateway1 ~]$ eb --version
-    This is EasyBuild 3.9.4 (framework: 3.9.4, easyblocks: 3.9.4) on host gateway1.pri.basic.cluster.local.
+    <easybuild> [flight@chead1 ~]$ module load EasyBuild
+    <easybuild> [flight@chead1 ~]$ eb --version
+    This is EasyBuild 3.9.4 (framework: 3.9.4, easyblocks: 3.9.4) on host chead1.pri.basic.cluster.local.
 ```
 
 ## Installing and Running Perl
@@ -208,7 +208,7 @@ An example workflow using perl is demonstrated below.
 
 - View available versions:
 ```bash
-    <easybuild> [flight@gateway1 ~]$ eb -S perl
+    <easybuild> [flight@chead1 ~]$ eb -S perl
     CFGS1=/home/flight/.local/share/flight/env/easybuild+default/software/EasyBuild/3.9.4/lib/python2.7/site-packages/easybuild_easyconfigs-3.9.4-py2.7.egg/easybuild/easyconfigs
      * $CFGS1/a/annovar/annovar-2016Feb01-foss-2016a-Perl-5.22.1.eb
      * $CFGS1/b/Bio-DB-HTS/Bio-DB-HTS-2.11-foss-2017b-Perl-5.26.0.eb
@@ -228,7 +228,7 @@ An example workflow using perl is demonstrated below.
 ```
 - Install specific version:
 ```bash
-    <easybuild> [flight@gateway1 ~]$ eb Perl-5.28.1-GCCcore-8.2.0.eb --robot
+    <easybuild> [flight@chead1 ~]$ eb Perl-5.28.1-GCCcore-8.2.0.eb --robot
     == temporary log file in case of crash /tmp/eb-MdohD2/easybuild-J6tjhZ.log
     == resolving dependencies ...
     == processing EasyBuild easyconfig /home/flight/.local/share/flight/env/easybuild+default/software/EasyBuild/3.9.4/lib/python2.7/site-packages/easybuild_easyconfigs-3.9.4-py2.7.egg/easybuild/easyconfigs/m/M4/M4-1.4.18.eb
@@ -245,11 +245,11 @@ An example workflow using perl is demonstrated below.
 
 - Check installation location:
 ```bash
-    <easybuild> [flight@gateway1 ~]$ which perl
+    <easybuild> [flight@chead1 ~]$ which perl
 ```
 - Install perl library (this may prompt for initial ``cpan`` configuration, once configuration is complete then the library will be installed):
 ```bash
-    <easybuild> [flight@gateway1 ~]$ cpan File::Slurp
+    <easybuild> [flight@chead1 ~]$ cpan File::Slurp
     Loading internal null logger. Install Log::Log4perl for logging messages
     Reading '/home/flight/.cpan/Metadata'
       Database was generated on Mon, 09 Sep 2019 15:47:03 GMT
@@ -258,7 +258,7 @@ An example workflow using perl is demonstrated below.
 ```
 - Check installation worked:
 ```bash
-    <easybuild> [flight@gateway1 ~]$ cpan File::Slurp
+    <easybuild> [flight@chead1 ~]$ cpan File::Slurp
     Loading internal null logger. Install Log::Log4perl for logging messages
     Reading '/home/flight/.cpan/Metadata'
       Database was generated on Mon, 09 Sep 2019 15:47:03 GMT
@@ -282,7 +282,7 @@ To install and use gridware:
 - [Activate the flight system.](/hpc_environment_usage/flight_overview/flight_system/#flight-system)
 - Create the gridware installation for the user:
 ```bash
-    [flight@gateway1 ~]$ flight env create gridware
+    [flight@chead1 ~]$ flight env create gridware
     Creating environment gridware@default
        > ✅ Verifying prerequisites
        > ✅ Fetching prerequisite (modules)
@@ -299,12 +299,12 @@ To install and use gridware:
 ```
 - Activate the gridware ecosystem:
 ```bash
-    [flight@gateway1 ~]$ flight env activate gridware
-    <gridware> [flight@gateway1 ~]$
+    [flight@chead1 ~]$ flight env activate gridware
+    <gridware> [flight@chead1 ~]$
 ```
 - Check that gridware can be run:
 ```bash
-    <gridware> [flight@gateway1 ~]$ gridware --version
+    <gridware> [flight@chead1 ~]$ gridware --version
     gridware 1.5.1
 ```
 
@@ -315,7 +315,7 @@ An example workflow using perl is demonstrated below.
 
 - View available versions:
 ```bash
-    <gridware> [flight@gateway1 ~]$ gridware search perl
+    <gridware> [flight@chead1 ~]$ gridware search perl
     2 repositories need to update ...
     Updating repository: main
               Update ... OK (At: 55916fd)
@@ -331,7 +331,7 @@ An example workflow using perl is demonstrated below.
 ```
 - Install specific version:
 ```bash
-    <gridware> [flight@gateway1 ~]$ gridware install main/apps/perl/5.20.2
+    <gridware> [flight@chead1 ~]$ gridware install main/apps/perl/5.20.2
     Preparing to install main/apps/perl/5.20.2
     Installing main/apps/perl/5.20.2
 
@@ -356,18 +356,18 @@ An example workflow using perl is demonstrated below.
 
 - Check installation location:
 ```bash
-    <gridware> [flight@gateway1 ~]$ module load apps/perl
+    <gridware> [flight@chead1 ~]$ module load apps/perl
     apps/perl/5.20.2/gcc-4.8.5
      | -- libs/gcc/system
      |    * --> OK
      |
      OK
-    <gridware> [flight@gateway1 ~]$ which perl
+    <gridware> [flight@chead1 ~]$ which perl
     ~/.local/share/flight/env/gridware+default/depots/23cd1570/el7/pkg/apps/perl/5.20.2/gcc-4.8.5/bin/perl
 ```
 - Install perl library (this may prompt for initial ``cpan`` configuration, once configuration is complete then the library will be installed):
 ```bash
-    <gridware> [flight@gateway1 ~]$ cpan File::Slurp
+    <gridware> [flight@chead1 ~]$ cpan File::Slurp
     Reading '/home/flight/gridware/share/perl/5.20.2/cpan/Metadata'
       Database was generated on Tue, 10 Sep 2019 01:17:03 GMT
     Running install for module 'File::Slurp'
@@ -378,7 +378,7 @@ An example workflow using perl is demonstrated below.
 ```
 - Check installation worked:
 ```bash
-    <gridware> [flight@gateway1 ~]$ cpan File::Slurp
+    <gridware> [flight@chead1 ~]$ cpan File::Slurp
     Reading '/home/flight/gridware/share/perl/5.20.2/cpan/Metadata'
       Database was generated on Tue, 10 Sep 2019 01:17:03 GMT
     File::Slurp is up to date (9999.27).
@@ -400,7 +400,7 @@ To install and use modules:
 - [Activate the flight system.](/hpc_environment_usage/flight_overview/flight_system/#flight-system)
 - Create the modules installation for the user:
 ```bash
-    [flight@gateway1 ~]$ flight env create modules
+    [flight@chead1 ~]$ flight env create modules
     Creating environment modules@default
        > ✅ Verifying prerequisites
        > ✅ Fetching prerequisite (modules)
@@ -412,12 +412,12 @@ To install and use modules:
 ```
 - Activate the modules ecosystem:
 ```bash
-    [flight@gateway1 ~]$ flight env activate modules
-    <modules> [flight@gateway1 ~]$
+    [flight@chead1 ~]$ flight env activate modules
+    <modules> [flight@chead1 ~]$
 ```
 - Check that modules can be run:
 ```bash
-    <modules> [flight@gateway1 ~]$ module --version
+    <modules> [flight@chead1 ~]$ module --version
     Modules Release 4.3.0 (2019-07-26)
 ```
 
@@ -443,28 +443,28 @@ For more information on building software for Modules, see the `modulefile refer
 
 - Download perl 5.30.1 source:
 ```bash
-    <modules> [flight@gateway1 ~]$ wget https://www.cpan.org/src/5.0/perl-5.30.1.tar.gz
+    <modules> [flight@chead1 ~]$ wget https://www.cpan.org/src/5.0/perl-5.30.1.tar.gz
 ```
 - Decompress the source files:
 ```bash
-    <modules> [flight@gateway1 ~]$ tar -xzf perl-5.30.1.tar.gz
+    <modules> [flight@chead1 ~]$ tar -xzf perl-5.30.1.tar.gz
 ```
 - Configure the software to install to a localperl directory:
 ```bash
-    <modules> [flight@gateway1 ~]$ cd perl-5.30.1
-    <modules> [flight@gateway1 ~]$ ./Configure -des -Dprefix=$HOME/localperl
+    <modules> [flight@chead1 ~]$ cd perl-5.30.1
+    <modules> [flight@chead1 ~]$ ./Configure -des -Dprefix=$HOME/localperl
 ```
 - Compile and install perl:
 ```bash
-    <modules> [flight@gateway1 ~]$ make
-    <modules> [flight@gateway1 ~]$ make install
+    <modules> [flight@chead1 ~]$ make
+    <modules> [flight@chead1 ~]$ make install
 ```
 ### Create Modulefile and Test
 
 
 - Create the perl modulefile:
 ```bash
-    <modules> [flight@gateway1 ~]$ cat << EOF > ~/.local/share/flight/env/modules+default/modulefiles/perl-5.30.1
+    <modules> [flight@chead1 ~]$ cat << EOF > ~/.local/share/flight/env/modules+default/modulefiles/perl-5.30.1
     #%Module1.0
     proc ModulesHelp { } {
     global dotversion
@@ -482,13 +482,13 @@ For more information on building software for Modules, see the `modulefile refer
 ```
 - Check install location:
 ```bash
-    <modules> [flight@gateway1 ~]$ module load perl-5.30.1
-    <modules> [flight@gateway1 ~]$ which perl
+    <modules> [flight@chead1 ~]$ module load perl-5.30.1
+    <modules> [flight@chead1 ~]$ which perl
     ~/localperl/bin/perl
 ```
 - Install perl library (this may prompt for initial `cpan` configuration, once configuration is complete then the library will be installed):
 ```bash
-    <modules> [flight@gateway1 ~]$ cpan File::Slurp
+    <modules> [flight@chead1 ~]$ cpan File::Slurp
     Loading internal logger. Log::Log4perl recommended for better logging
     Reading '/home/flight/.cpan/Metadata'
       Database was generated on Wed, 11 Mar 2020 15:29:03 GMT
@@ -499,7 +499,7 @@ For more information on building software for Modules, see the `modulefile refer
 ```
 - Check installation worked:
 ```bash
-    <modules> [flight@gateway1 ~]$ cpan File::Slurp
+    <modules> [flight@chead1 ~]$ cpan File::Slurp
     Loading internal logger. Log::Log4perl recommended for better logging
     Reading '/home/flight/.cpan/Metadata'
       Database was generated on Wed, 11 Mar 2020 15:29:03 GMT
@@ -526,7 +526,7 @@ If installing singularity for a user then there are a number of restrictions and
 - [Activate the flight system.](/hpc_environment_usage/flight_overview/flight_system/#flight-system)
 - Create the singularity installation for the user:
 ```bash
-    [flight@gateway1 ~]$ flight env create singularity
+    [flight@chead1 ~]$ flight env create singularity
     Creating environment singularity@default
        > ✅ Verifying prerequisites
        > ✅ Fetching prerequisite (squashfs)
@@ -544,12 +544,12 @@ If installing singularity for a user then there are a number of restrictions and
 ```
 - Activate the singularity ecosystem:
 ```bash
-    [flight@gateway1 ~]$ flight env activate singularity
-    <singularity> [flight@gateway1 ~]$
+    [flight@chead1 ~]$ flight env activate singularity
+    <singularity> [flight@chead1 ~]$
 ```
 - Check that singularity can be run:
 ```bash
-    <singularity> [flight@gateway1 ~]$ singularity --version
+    <singularity> [flight@chead1 ~]$ singularity --version
     singularity version 3.2.1
 ```
 
@@ -564,7 +564,7 @@ The perl container is built from a docker container which can be searched for in
 
 - Install specific version:
 ```bash
-    <singularity> [flight@gateway1 ~]$ singularity build --sandbox perl_5.30.simg docker://perl:5.30
+    <singularity> [flight@chead1 ~]$ singularity build --sandbox perl_5.30.simg docker://perl:5.30
     INFO:    Starting build...
     Getting image source signatures
     Copying blob sha256:4ae16bd4778367b46064f39554128dd2fda2803a5747fddeff74059f353391c9
@@ -579,12 +579,12 @@ The perl container is built from a docker container which can be searched for in
 ```
 - Check installation location:
 ```bash
-    <singularity> [flight@gateway1 ~]$ singularity exec perl_5.30.simg which perl
+    <singularity> [flight@chead1 ~]$ singularity exec perl_5.30.simg which perl
     /usr/local/bin/perl
 ```
 - Install perl library (this may prompt for initial ``cpan`` configuration, once configuration is complete then the library will be installed):
 ```bash
-    <singularity> [flight@gateway1 ~]$ singularity exec -w perl_5.30.simg cpan File::Slurp
+    <singularity> [flight@chead1 ~]$ singularity exec -w perl_5.30.simg cpan File::Slurp
     INFO:    Convert SIF file to sandbox...
     perl: warning: Setting locale failed.
     perl: warning: Please check that your locale settings:
@@ -602,7 +602,7 @@ The perl container is built from a docker container which can be searched for in
 ```
 - Check installation worked:
 ```bash
-    <singularity> [flight@gateway1 ~]$ singularity exec perl_5.30.simg cpan File::Slurp
+    <singularity> [flight@chead1 ~]$ singularity exec perl_5.30.simg cpan File::Slurp
     perl: warning: Setting locale failed.
     perl: warning: Please check that your locale settings:
         LANGUAGE = (unset),
@@ -633,7 +633,7 @@ To install and use spack:
 - [Activate the flight system.](/hpc_environment_usage/flight_overview/flight_system/#flight-system)
 - Create the spack installation for the user:
 ```bash
-    [flight@gateway1 ~]$ flight env create spack
+    [flight@chead1 ~]$ flight env create spack
     Creating environment spack@default
        > ✅ Verifying prerequisites
        > ✅ Fetching prerequisite (spack)
@@ -643,12 +643,12 @@ To install and use spack:
 ```
 - Activate the spack ecosystem:
 ```bash
-    [flight@gateway1 ~]$ flight env activate spack
-    <spack> [flight@gateway1 ~]$
+    [flight@chead1 ~]$ flight env activate spack
+    <spack> [flight@chead1 ~]$
 ```
 - Check that spack can be run:
 ```bash
-    <spack> [flight@gateway1 ~]$ spack --version
+    <spack> [flight@chead1 ~]$ spack --version
     spack 0.12.1
 ```
 
@@ -659,7 +659,7 @@ An example workflow using perl is demonstrated below.
 
 - View available versions:
 ```bash
-    <spack> [flight@gateway1 ~]$ spack list perl
+    <spack> [flight@chead1 ~]$ spack list perl
     ==> 148 packages.
     perl                          perl-extutils-pkgconfig     perl-math-cdf                    perl-sub-uplevel
     perl-algorithm-diff           perl-file-copy-recursive    perl-math-cephes                 perl-svg
@@ -668,7 +668,7 @@ An example workflow using perl is demonstrated below.
     perl-b-hooks-endofscope       perl-file-sharedir-install  perl-module-implementation       perl-term-readkey
     <-- snip -->
 
-    <spack> [flight@gateway1 ~]$ spack info perl
+    <spack> [flight@chead1 ~]$ spack info perl
     Package:   perl
 
     Description:
@@ -689,7 +689,7 @@ An example workflow using perl is demonstrated below.
 ```
 - Install specific version:
 ```bash
-    <spack> [flight@gateway1 ~]$ spack install perl@5.26.2
+    <spack> [flight@chead1 ~]$ spack install perl@5.26.2
     ==> Installing pkgconf
     ==> Searching for binary cache of pkgconf
     ==> Warning: No Spack mirrors are currently configured
@@ -702,13 +702,13 @@ An example workflow using perl is demonstrated below.
 ```
 - Check installation location:
 ```bash
-    <spack> [flight@gateway1 ~]$ module load perl-5.26.2-gcc-4.8.5-wavwojl
-    <spack> [flight@gateway1 ~]$ which perl
+    <spack> [flight@chead1 ~]$ module load perl-5.26.2-gcc-4.8.5-wavwojl
+    <spack> [flight@chead1 ~]$ which perl
     ~/.local/share/flight/env/spack+default/opt/spack/linux-centos7-x86_64/gcc-4.8.5/perl-5.26.2-wavwojlef7lshvx2awf4zze2lrx5l7l4/bin/perl
 ```
 - Install perl library (this may prompt for initial `cpan` configuration, once configuration is complete then the library will be installed):
 ```bash
-    <spack> [flight@gateway1 ~]$ cpan File::Slurp
+    <spack> [flight@chead1 ~]$ cpan File::Slurp
     Loading internal null logger. Install Log::Log4perl for logging messages
     Reading '/home/flight/.cpan/Metadata'
       Database was generated on Wed, 11 Sep 2019 14:41:02 GMT
@@ -717,7 +717,7 @@ An example workflow using perl is demonstrated below.
 ```
 - Check installation worked:
 ```bash
-    <spack> [flight@gateway1 ~]$ cpan File::Slurp
+    <spack> [flight@chead1 ~]$ cpan File::Slurp
     Loading internal null logger. Install Log::Log4perl for logging messages
     Reading '/home/flight/.cpan/Metadata'
       Database was generated on Wed, 11 Sep 2019 14:41:02 GMT

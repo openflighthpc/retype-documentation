@@ -23,6 +23,7 @@ Local job scripts can be written in any language supported within the research e
 
 In the event that a job script is executable, contains a shebang(#!) specifying the launch language, and is in the current directory, it’s as simple to run as:
 
-`[flight@gateway1 ~]$ ./myjob.sh`
-
+```bash
+[flight@chead1 ~]$ ./myjob.sh
+```
    

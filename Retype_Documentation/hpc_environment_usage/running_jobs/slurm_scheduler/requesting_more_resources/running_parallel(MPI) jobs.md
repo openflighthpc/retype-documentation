@@ -40,12 +40,12 @@ mpirun --prefix $MPI_HOME \
 We can then submit the IMB job script to the scheduler, which will automatically determine which nodes to use:
 
 ```bash
-[centos@gateway1 (mycluster1) ~]$ sbatch imb.sh
+[centos@chead1 (mycluster1) ~]$ sbatch imb.sh
 Submitted batch job 1162
-[centos@gateway1 (mycluster1) ~]$ squeue
+[centos@chead1 (mycluster1) ~]$ squeue
              JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
                            1162       all      imb    centos  R       0:01      8 ip-10-75-1-[42,45,62,67,105,178,233,250]
-[centos@gateway1 (mycluster1) ~]$ cat imb.out.1162
+[centos@chead1 (mycluster1) ~]$ cat imb.out.1162
 #------------------------------------------------------------
 #    Intel (R) MPI Benchmarks 4.0, MPI-1 part
 #------------------------------------------------------------

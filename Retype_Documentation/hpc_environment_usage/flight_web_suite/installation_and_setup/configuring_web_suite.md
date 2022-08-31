@@ -40,7 +40,7 @@ flight web-suite restart
 To generate and install a Lets Encrypt certificate, run the following (replacing the domain and email with appropriate
 values):
 ```bash
-flight www cert-gen --cert-type lets-encrypt --domain gateway1.mycluster1.example.com --email user@example.com
+flight www cert-gen --cert-type lets-encrypt --domain chead1.mycluster1.example.com --email user@example.com
 ```
 
 !!!

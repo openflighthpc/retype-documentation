@@ -7,7 +7,7 @@ icon: dot-fill
 Users can use the `sinfo -Nl` command to view the status of compute node hosts in your research environment.
 
 ```bash
-[centos@gateway1 (mycluster1) ~]$ sinfo -Nl
+[centos@chead1 (mycluster1) ~]$ sinfo -Nl
 Fri Aug 26 14:46:34 2016
 NODELIST        NODES PARTITION       STATE CPUS    S:C:T MEMORY TMP_DISK WEIGHT AVAIL_FE REASON
 node01       1      all*        idle    2    2:1:1   3602    20462      1   (null) none

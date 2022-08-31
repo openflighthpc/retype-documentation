@@ -22,20 +22,20 @@ We use the `-l` option to bash on the first line of the script to request a logi
 We can execute that script directly on the login node by using the command `bash simplejobscript.sh` - after a couple of minutes, we get the following output:
 
 ```bash
-Started running on host gateway1
-Finished running - goodbye from gateway1
+Started running on host chead1
+Finished running - goodbye from chead1
 ```
 
 To submit your job script to the research environment job scheduler, use the command `sbatch simplejobscript.sh`. The job scheduler should immediately report the job-ID for your job; your job-ID is unique for your current research environment - it will never be repeated once used.
 
 ```bash
-[centos@gateway1 (mycluster1) ~]$ sbatch simplejobscript.sh
+[centos@chead1 (mycluster1) ~]$ sbatch simplejobscript.sh
 Submitted batch job 21
 
-[centos@gateway1 (mycluster1) ~]$ ls
+[centos@chead1 (mycluster1) ~]$ ls
 simplejobscript.sh  slurm-21.out
 
-[centos@gateway1 (mycluster1) ~]$ cat slurm-21.out
+[centos@chead1 (mycluster1) ~]$ cat slurm-21.out
 Starting running on host node01
 Finished running - goodbye from node01
 ```

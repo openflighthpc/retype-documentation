@@ -22,7 +22,7 @@ sudo yum install flight-web-suite
 ```
 - Set the domain name (for use with certificate generation, this can be either a hostname or IP. A publicly accessible value should be used if intending to use Lets Encrypt certificates):
 ```bash
-flight web-suite set-domain gateway1.mycluster1.example.com
+flight web-suite set-domain chead1.mycluster1.example.com
 ```
 - Install extra packages (note: the EPEL repository is required for the websockify package):
 ```bash

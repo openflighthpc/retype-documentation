@@ -17,7 +17,7 @@ sleep 7200
 You can then see any time limits assigned to running jobs using the command `squeue --long`:
 
 ```bash
-[centos@gateway1 (mycluster1) ~]$ squeue --long
+[centos@chead1 (mycluster1) ~]$ squeue --long
 Tue Aug 30 10:55:55 2016
              JOBID PARTITION     NAME     USER    STATE       TIME TIME_LIMI  NODES NODELIST(REASON)
               1163       all    sleep    centos  RUNNING       0:07   2:00:00      1 ip-10-75-1-42

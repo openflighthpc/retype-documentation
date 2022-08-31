@@ -31,8 +31,8 @@ flight env create easybuild
 Once a package ecosystem has been installed, it needs to be activated for the session to be able to manage software with it:
 
 ```bash
-[flight@gateway1 (mycluster1) ~]$ flight env activate easybuild
-<easybuild> [flight@gateway1 (mycluster1) ~]$
+[flight@chead1 (mycluster1) ~]$ flight env activate easybuild
+<easybuild> [flight@chead1 (mycluster1) ~]$
 ```
 !!!
 Your preferred software ecosystem can be set to automatically activate for your user within the flight system by running `flight env set-default easybuild`, replacing easybuild with your chosen software ecosystem
@@ -55,8 +55,8 @@ flight env create -g easybuild
 Once the global ecosystem has been installed, it needs to be activated for the session to be able to monitor software with it:
 
 ```bash
-[root@gateway1 (mycluster1) ~]$ flight env activate easybuild@global
-<easybuild@global> [flight@gateway1 (mycluster1) ~]$
+[root@chead1 (mycluster1) ~]$ flight env activate easybuild@global
+<easybuild@global> [flight@chead1 (mycluster1) ~]$
 ```
 
 ## Custom Ecosystem Names
@@ -71,6 +71,6 @@ flight env create easybuild@test
 To activate this environment, the alias will need to be specified in the activation command:
 
 ```bash
-[flight@gateway1 (mycluster1) ~]$ flight env activate easybuild@test
-<easybuild@test> [flight@gateway1 (mycluster1) ~]$
+[flight@chead1 (mycluster1) ~]$ flight env activate easybuild@test
+<easybuild@test> [flight@chead1 (mycluster1) ~]$
 ```

@@ -14,7 +14,7 @@ If using a single node research environment with a scheduler then interactive jo
 You can start a new interactive job on your research environment by using the `srun` command; the scheduler will search for an available compute node, and provide you with an interactive login shell on the node if one is available.
 
 ```bash
-[centos@gateway1 (mycluster1) ~]$ srun --pty /bin/bash
+[centos@chead1 (mycluster1) ~]$ srun --pty /bin/bash
 [centos@node01 (mycluster1) ~]$
 [centos@node01 (mycluster1) ~]$ squeue
            JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
@@ -29,7 +29,7 @@ Alternatively, the `srun` command can also be executed from an interactive deskt
 
 
 !!!
-The Slurm scheduler does not automatically set up your session to allow you to run graphical applications inside an interactive session. Once your interactive session has started, you must run the following command before running a graphical application: `export DISPLAY=gateway1$DISPLAY`
+The Slurm scheduler does not automatically set up your session to allow you to run graphical applications inside an interactive session. Once your interactive session has started, you must run the following command before running a graphical application: `export DISPLAY=chead1$DISPLAY`
 !!!
 
 !!!warning
@@ -41,7 +41,7 @@ When you’ve finished running your application in your interactive session, sim
 If the job-scheduler could not satisfy the resource you’ve requested for your interactive job (e.g. all your available compute nodes are busy running other jobs), it will report back after a few seconds with an error:
 
 ```bash
-[centos@gateway1 (mycluster1) ~]$ srun --pty /bin/bash
+[centos@chead1 (mycluster1) ~]$ srun --pty /bin/bash
 srun: job 20 queued and waiting for resources
 ```
 
