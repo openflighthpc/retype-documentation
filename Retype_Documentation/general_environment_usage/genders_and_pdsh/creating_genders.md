@@ -4,7 +4,7 @@ label: Creating genders
 icon: dot
 ---
 
-As mentioned on the previous page, the nodes group is created automatically. The process to create a group is as follows:
+The process to create a group is as follows:
 
 First navigate to the genders file at `/opt/flight/etc/genders`, and open it with the editor of your choice
 
