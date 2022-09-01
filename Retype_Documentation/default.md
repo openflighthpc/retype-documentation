@@ -6,7 +6,7 @@ icon: home
 
 # Welcome to the OpenFlightHPC Knowledgebase
 
-It provides details for accessing the research environment, exploring the various features of the research environment and examples of common workflows with the research environment.
+This documentation provides details for accessing the research environment, exploring the various features of the research environment and examples of common workflows with the research environment.
 
 ## Acknowledgements
 
