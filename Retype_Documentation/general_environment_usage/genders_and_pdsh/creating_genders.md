@@ -1,5 +1,5 @@
 ---
-order: 45
+order: 50
 label: Creating genders
 icon: dot
 ---
@@ -25,8 +25,8 @@ nodei,nodej,node0,node1,node2:         nodei,nodej,node[0-2]
 For example:
 
 ```
-node[01-05] gendername
-nodeA,nodeB,node[1,2,3,10-20],nodeC gendername
+node[01-05] genders
+nodeA,nodeB,node[1,2,3,10-20],nodeC nodes
 ```
 
 After adding the desired gender(s), save and close the file.
