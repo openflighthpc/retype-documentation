@@ -1,6 +1,6 @@
 ---
 order: 40
-label: 
+label: Install Flight Web-Suite
 icon: dot-fill
 ---
 

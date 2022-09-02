@@ -1,6 +1,6 @@
 ---
 order: 30
-label: 
+label: Setup SLURM Server
 icon: dot-fill
 ---
 

@@ -1,6 +1,6 @@
 ---
 order: 60
-label: 
+label: Setup NFS Clients
 icon: dot-fill
 ---
 

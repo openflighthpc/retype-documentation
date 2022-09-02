@@ -1,6 +1,6 @@
 ---
 order: 90
-label: 
+label: SSH Keys for Root
 icon: dot-fill
 ---
 

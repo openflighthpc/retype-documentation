@@ -1,6 +1,6 @@
 ---
 order: 100
-label:
+label: Introduction
 icon: dot-fill
 ---
 

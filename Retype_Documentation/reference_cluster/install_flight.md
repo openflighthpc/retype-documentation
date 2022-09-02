@@ -1,6 +1,6 @@
 ---
 order: 50
-label: 
+label: Install Flight
 icon: dot-fill
 ---
 

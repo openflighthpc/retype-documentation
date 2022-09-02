@@ -1,6 +1,6 @@
 ---
 order: 20
-label: 
+label: Setup SLURM Clients
 icon: dot-fill
 ---
 

@@ -1,6 +1,6 @@
 ---
 order: 80
-label: 
+label: Install Repositories
 icon: dot-fill
 ---
 

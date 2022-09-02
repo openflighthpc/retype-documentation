@@ -1,6 +1,6 @@
 ---
 order: 70
-label: 
+label: Setup NFS Server
 icon: dot-fill
 ---
 
