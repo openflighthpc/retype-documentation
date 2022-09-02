@@ -1,7 +1,7 @@
 ---
 order: 50
 label: 
-icon: 
+icon: dot-fill
 ---
 
 step 5 install flight

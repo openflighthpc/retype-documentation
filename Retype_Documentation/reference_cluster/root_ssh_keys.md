@@ -1,7 +1,7 @@
 ---
 order: 90
 label: 
-icon: 
+icon: dot-fill
 ---
 
 During setup and installation, the user will need to swap nodes. Adding ssh keys to root allows the user to ssh to all nodes without typing a password, thereby making installation easier.

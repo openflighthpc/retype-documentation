@@ -1,7 +1,7 @@
 ---
 order: 20
 label: 
-icon: 
+icon: dot-fill
 ---
 
 step 8 SLURM CLIENT

@@ -1,7 +1,7 @@
 ---
 order: 30
 label: 
-icon: 
+icon: dot-fill
 ---
 
 step 7 SLURM

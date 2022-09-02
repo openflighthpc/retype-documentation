@@ -1,7 +1,7 @@
 ---
 order: 60
 label: 
-icon: 
+icon: dot-fill
 ---
 
 4 setup nfs client

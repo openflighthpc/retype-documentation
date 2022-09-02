@@ -1,7 +1,7 @@
 ---
 order: 10
 label: 
-icon: 
+icon: dot-fill
 ---
 
 step 9 create shared user

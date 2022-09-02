@@ -1,7 +1,7 @@
 ---
 order: 70
 label: 
-icon: 
+icon: dot-fill
 ---
 
 3 - setup nfs

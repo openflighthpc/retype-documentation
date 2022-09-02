@@ -1,7 +1,7 @@
 ---
 order: 40
 label: 
-icon: 
+icon: dot-fill
 ---
 
 step 6 setup web-suite

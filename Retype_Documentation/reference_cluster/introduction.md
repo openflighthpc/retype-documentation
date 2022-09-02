@@ -1,7 +1,7 @@
 ---
 order: 100
-label: 
-icon: 
+label:
+icon: dot-fill
 ---
 
 This documentation will describe the process of setting up a cluster with all the capabilities shown in the other parts of the documentation.
