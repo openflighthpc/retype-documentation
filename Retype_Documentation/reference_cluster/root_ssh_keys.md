@@ -4,17 +4,38 @@ label:
 icon: 
 ---
 
-1
-adding root ssh keys
-a way to passwordlessly move around
+During setup and installation, the user will need to swap nodes. Adding ssh keys to root allows the user to ssh to all nodes without typing a password, thereby making installation easier.
 
-from head node: 
+First, become the root user:
+
+```bash
+sudo su -
+```
+
+On the head node do:
+
+```bash
 ssh-keygen
+```
 
+This command creates a public and private key in the directory `~/.ssh` 
 
-that creates a public and private key in the .ssh directory
+Copy the public key and go to one of your other nodes:
 
+```bash
+ssh cnode01
+```
 
-take the public key and copy it to both our compute nodes in the authorised keys directory for root user
+!!!
+Your other node may be named something else.
+!!!
 
-now as root user we can log into other nodes with no password
+Go to the authorised key file:
+
+```bash
+vim ~/.ssh/authorized_keys
+```
+
+On a new line paste the public key. Now as root user we can log into this node without typing a password.
+
+Copy and paste the public key into the authorised keys file of every node. Now root user can ssh into any node without typing a password.
