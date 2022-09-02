@@ -30,11 +30,8 @@ ssh cnode01
 Your other node may be named something else.
 !!!
 
-Go to the authorised key file:
+Go to the file `~/.ssh/authorized_keys`
 
-```bash
-vim ~/.ssh/authorized_keys
-```
 
 On a new line paste the public key. Now as root user we can log into this node without typing a password.
 
