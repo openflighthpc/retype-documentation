@@ -15,3 +15,5 @@ Users can run a command across all compute nodes at once using the pdsh command.
 - `pdsh -w node01,node03 which ldconfig`
     - runs the `which ldconfig` command on two named nodes only
 
+
+To learn more about genders, read the [tutorial](https://github.com/chaos/genders/blob/master/TUTORIAL).

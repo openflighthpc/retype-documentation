@@ -124,10 +124,6 @@ On Windows, the desktop environment can still be connected like so:
 12. Click "Connect", and if prompted enter the password you noted down.
 +++ Linux/Mac
 
-Open your VNC client and set it to VNC if necessary.
-
-Type in the ip address:port number. 
-
-Connect. You may be asked for a password, which will be the one shown when starting the desktop session.
+The steps for connecting with Linux/Mac are outlined in the output of the `flight desktop show` command above.
 
 +++

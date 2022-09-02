@@ -13,7 +13,7 @@ Hello World!
 
 - `flight` is the name of the user.
 - `chead1` is the node the user is currently on.
-- `(ivan1)` is the name of the cluster being used.
+- `(mycluster1)` is the name of the cluster being used.
 - `folder` is the directory the user is currently in. If this is a `~` then that means you are in your home directory.
 - `$` indicates whether the user is a root user or normal user (root users see a `#`).
 - `echo Hello World!` is a command that prints out "Hello World!". This is where commands you type will go.
