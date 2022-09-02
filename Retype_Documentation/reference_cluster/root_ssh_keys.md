@@ -12,6 +12,8 @@ First, become the root user:
 sudo su -
 ```
 
+Unless said otherwise, everything is done as the root user.
+
 On the head node do:
 
 ```bash

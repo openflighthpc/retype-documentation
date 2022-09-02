@@ -1,48 +1,69 @@
 ---
 order: 40
-label: Install Flight Web-Suite
+label: Install Flight Web Suite
 icon: dot-fill
 ---
 
-step 6 setup web-suite
-
-just for head node
-
-setup flight web suite
-
-yum install -y flight-web-suite
+Flight web suite only needs to be installed on the head node. Swap to the head node (unless already on it).
 
 
-find our ip
+Install the web suite:
 
+```bash
+sudo yum install flight-web-suite -y
+```
+
+Install extra packages:
+```bash
+sudo yum install python-websockify xorg-x11-apps netpbm-progs -y
+```
+
+Find your ip:
+
+```bash
 curl ifconfig.co
+```
 
-flight web-suite set-domain <public ip>
+Set the domain name. This is for use with certificate generation.
 
-flight web suite restart
+```bash
+flight web-suite set-domain 18.170.36.50
+```
 
-yum install python-websockify xorg-x11-apps…
+Go to the file `/opt/flight/opt/www/landing-page/default/content/data/environment.yaml` and change name to mycluster1. It will look something like this:
+```
+environment:
+#   # Optional cluster (aka environment) name.  Defaults to an empty string if
+#   # not provided.
+  name: "mycluster1"
 
-self signed certificate
+```
 
-go online, copy ip address into browser
+Create a self-signed certificate to secure the connection.
 
-accept risk of browser unsafe website
+```bash
+flight www cert-gen --cert-type self-signed --domain $(hostname -f)
+```
+
+Restart web suite to apply changes:
+```bash
+flight web-suite restart
+```
+
+Go to your browser, and copy the hostname (in this case `18.170.36.50`) into the search bar.
+
+You may be warned about the security risk of proceeeding to the website like this:
+
+![](/images/security_risk.png)
 
 
-back to console
-
-vim /opt/flight/opt/www/landing-page/default/content/data/environment.yaml
-
-change name to mycluster1
-
-flight web restart to apply changes
-
-??? this work?
+Continue through it to reach the flight web suite.
 
 
+
+Back on the console, you may want to enable flight web suite:
+```bash
 flight web-suite enable
+```
+This means that flight web suite will start on boot
 
-enable means run this on boot, start means start this now
-
-web and user suite installed

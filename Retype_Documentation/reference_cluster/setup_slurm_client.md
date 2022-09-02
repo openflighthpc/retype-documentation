@@ -4,34 +4,56 @@ label: Setup SLURM Clients
 icon: dot-fill
 ---
 
-step 8 SLURM CLIENT
+The SLURM server was set up on the head node so now the SLURM clients need to be set up on the other nodes. Do **not** follow these instructions on the head node, only the other nodes.
 
-on node 1
+For example, swap to cnode01 (or what one of the nodes on your system is called).
+
+Install munge:
+```bash
 yum install -y munge munge-libs perl-Switch numactl
+```
 
+Install the SLURM packages:
+```bash
 yum install -y flight-slurm flight-slurm-devel flight-slurm-perlapi flight-slurm-torque flight-slurm-slurmd flight-slurm-example-configs flight-slurm-libpmi
+```
 
+Take the contents of the file `/opt/flight/opt/slurm/etc/slurm.conf` on the head node and copy it to the same location on the current node.
 
-what is in slurm.conf in the server needs to be on the clients
+Create new directories for SLURM:
 
-
+```bash
 mkdir -p /opt/flight/opt/slurm/var/{log,run,spool}
+```
 
+Set the owner of the new directories:
+```bash
 chown -R nobody: /opt/flight/opt/slurm/var/{log,run,spool}
+```
 
-make the munge.key from the head node into the other nodes
+Take the munge key from the file `/etc/munge/munge.key` on the head node and make a munge key in the same location on the current node.
 
-make sure the munge user owns it
+Set the owner of the munge key:
+```bash
+chown munge: /etc/munge/munge.key
+```
+Then lock the munge key so that it cannot be changed again:
+```bash
+chmod 400 /etc/munge/munge.key
+```
 
-and locked in persm
+Finally start everything to begin SLURM:
+```bash
+systemctl start munge
+```
+```bash
+systemctl enable munge
+```
+```bash
+systemctl start flight-slurmctld
+```
+```bash
+systemctl enable flight-slurmctld
+```
 
-start and enable munge with systemctl
-
-systemctl start flight-slurmd
-
-systemctl enable flight-slurmd
-
-
-
-
-now do it on all other nodes
+Repeat these steps on every node (other than the head node).
