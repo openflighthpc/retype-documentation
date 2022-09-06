@@ -18,6 +18,8 @@ Install the SLURM packages:
 yum install -y flight-slurm flight-slurm-devel flight-slurm-perlapi flight-slurm-torque flight-slurm-slurmd flight-slurm-example-configs flight-slurm-libpmi
 ```
 
+
+
 Take the contents of the file `/opt/flight/opt/slurm/etc/slurm.conf` on the head node and copy it to the same location on the current node.
 
 Create new directories for SLURM:
@@ -50,10 +52,10 @@ systemctl start munge
 systemctl enable munge
 ```
 ```bash
-systemctl start flight-slurmctld
+systemctl start flight-slurmd
 ```
 ```bash
-systemctl enable flight-slurmctld
+systemctl enable flight-slurmd
 ```
 
 Repeat these steps on every node (other than the head node).
