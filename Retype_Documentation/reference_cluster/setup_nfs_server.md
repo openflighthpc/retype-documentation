@@ -7,7 +7,7 @@ icon: dot-fill
 On the head node, do:
 
 ```bash
-yum install nfs-utils
+yum install -y nfs-utils
 ```
 
 Stay on the head node, and make a directory for everything that we may want to share.
@@ -29,11 +29,11 @@ Go to `/etc/exports` and add this:
 
 
 ```
-/export/apps    10.10.0.0/16(rw,no_root_squash,sync)
-/export/data    10.10.0.0/16(rw,no_root_squash,sync)
-/export/service 10.10.0.0/16(rw,no_root_squash,sync)
-/export/site    10.10.0.0/16(rw,no_root_squash,sync)
-/home           10.10.0.0/16(rw,no_root_squash,sync)
+/export/apps 10.50.0.0/16(rw,no_root_squash,sync)
+/export/data 10.50.0.0/16(rw,no_root_squash,sync)
+/export/service 10.50.0.0/16(rw,no_root_squash,sync)
+/export/site 10.50.0.0/16(rw,no_root_squash,sync)
+/home 10.50.0.0/16(rw,no_root_squash,sync)
 ```
 
 Now we need to bind mounts for the NFS server.
@@ -43,9 +43,10 @@ Open the the file `/etc/fstab` and add this:
 
 ```
 /export/apps /opt/apps none defaults,bind 0 0
-/export/data /opt/apps none defaults,bind 0 0
-/export/service /opt/apps none defaults,bind 0 0
-/export/site /opt/apps none defaults,bind 0 0
+/export/data /opt/data none defaults,bind 0 0
+/export/service /opt/service none defaults,bind 0 0
+/export/site /opt/site none defaults,bind 0 0
+/home /home none defaults,bind 0 0
 ```
 
 Save and close the file.
