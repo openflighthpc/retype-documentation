@@ -20,21 +20,14 @@ On the head node do:
 ssh-keygen
 ```
 
+If asked for a name or password, leave it blank so that it is the default.
+
 This command creates a public and private key in the directory `~/.ssh` 
 
-Copy the public key and go to one of your other nodes:
+Copy the public key `id_rsa.pub` and go to one of your other nodes.
 
-```bash
-ssh cnode01
-```
-
-!!!
-Your other node may be named something else.
-!!!
-
-Go to the file `~/.ssh/authorized_keys`
-
+Become the root user, and go to the file `~/.ssh/authorized_keys`.
 
 On a new line paste the public key. Now as root user we can log into this node without typing a password.
 
-Copy and paste the public key into the authorised keys file of every node. Now root user can ssh into any node without typing a password.
+Copy and paste the public key into the authorised keys file of the root user of every node. Now root user can ssh into any node without typing a password.
