@@ -10,21 +10,16 @@ Flight web suite only needs to be installed on the head node. Swap to the head n
 Install the web suite:
 
 ```bash
-sudo yum install flight-web-suite -y
+sudo yum install -y flight-web-suite 
 ```
 
 Install extra packages:
 ```bash
-sudo yum install python-websockify xorg-x11-apps netpbm-progs -y
+sudo yum install -y python-websockify xorg-x11-apps netpbm-progs 
 ```
 
-Find your ip:
 
-```bash
-curl ifconfig.co
-```
-
-Set the domain name. This is for use with certificate generation.
+Set the domain name. This is for use with certificate generation. Setting the domain name as the ip address of the head node means that changing pages doesn't log the user out.
 
 ```bash
 flight web-suite set-domain 18.170.36.50
