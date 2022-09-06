@@ -12,7 +12,7 @@ First, a demonstration of the setup process on one node.
 
 Begin by installing:
 ```bash
-yum install -y -nfs-utils
+yum install -y nfs-utils
 ```
 
 Then open the file `/etc/fstab` and add:
@@ -45,6 +45,7 @@ Lastly, mount NFS.
 ```bash
 mount -a
 ```
+Check to make sure it has mounted properly:
 ```bash
 df -h
 ```

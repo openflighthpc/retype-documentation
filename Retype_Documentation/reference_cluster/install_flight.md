@@ -10,7 +10,7 @@ On the head node install Flight.
 
 Add the flight package:
 ```bash
-sudo yum install https://repo.openflighthpc.org/pub/centos/7/openflighthpc-release-latest.noarch.rpm
+sudo yum install -y https://repo.openflighthpc.org/pub/centos/7/openflighthpc-release-latest.noarch.rpm
 ```
 
 Rebuild the yum cache:
@@ -19,7 +19,7 @@ sudo yum makecache
 ```
 Then install the flight packages:
 ```bash
-sudo yum install flight-user-suite flight-plugin-systemd-service
+sudo yum install -y flight-user-suite flight-plugin-systemd-service
 ```
 
 Now start and enable flight:

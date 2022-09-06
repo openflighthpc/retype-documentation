@@ -10,7 +10,7 @@ Some repositories will be needed later to install Flight tools.
 On **all** nodes do:
 
 ```bash
-yum install epel-release -y
+yum install -y epel-release
 ```
 
 !!!
