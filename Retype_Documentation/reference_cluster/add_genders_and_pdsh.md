@@ -7,21 +7,18 @@ icon: dot-fill
 A combination of genders and pdsh can allow for management and monitoring of multiple nodes at a time. 
 
 
-This only needs to be done on the head node.
+This **only** needs to be done on the **head** node.
 
-```bash
-sudo yum -y install flight-pdsh
-```
+1. Swap to the head node (unless already on it).
 
-Next create a gender for all the nodes.
+2. Install flight-pdsh.
+	```bash
+	sudo yum -y install flight-pdsh
+	```
 
-Navigate to the genders file at `/opt/flight/etc/genders`, and open it
+3. Navigate to the genders file at `/opt/flight/etc/genders`, and open it.
 
-Add a gender in the following format:
-
-```
-cnode01,cnode02 nodes
-```
-
-Save and close the file.
-
+4. Add a gender in the following format to the genders file. Then save and close the file.
+	```
+	cnode01,cnode02 nodes
+	```
