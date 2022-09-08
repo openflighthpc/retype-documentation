@@ -34,18 +34,18 @@ sudo dnf install https://repo.openflighthpc.org/openflight/centos/8/x86_64/openf
 - Add the Power Tools repository:
 
 ```bash
-sudo yum config-manager --set-enabled powertools
+sudo dnf config-manager --set-enabled powertools
 ```
 
 - Most tools require packages available in the EPEL repository, installing it is recommended:
 
 ```bash
-sudo yum install epel-release
+sudo dnf install epel-release
 ```
 
 - Finally, rebuild the yum cache:
 ```bash
-sudo yum makecache
+sudo dnf makecache
 ```
 
 +++ Ubuntu 18.04
