@@ -30,7 +30,7 @@ To show the available guides, list them with:
 
 ## Viewing a Guide
 
-A guide can be viewed by requesting either the index or name of the desired guide. When viewing a guide, the content will open inside a ``less`` session. 
+A guide can be viewed by requesting either the index or name of the desired guide. When viewing a guide, the content will open inside a `less` session. 
 
 To view the get started guide by name:
 
