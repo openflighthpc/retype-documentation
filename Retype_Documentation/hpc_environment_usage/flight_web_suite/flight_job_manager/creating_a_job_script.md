@@ -15,5 +15,5 @@ To create a job script, select "Browse script templates" from the management pag
 ![](/images/flight_web_jobmanager_creation_question.png)
 
 !!!
-Each question comes with an explanation, but if uncertain, there is always a default answer.
+Each question comes with an explanation, but if uncertain, leave it blank for the default answer.
 !!!
