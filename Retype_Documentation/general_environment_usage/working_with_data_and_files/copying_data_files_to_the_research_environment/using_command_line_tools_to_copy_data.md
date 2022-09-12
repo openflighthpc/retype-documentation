@@ -31,5 +31,6 @@ To retrieve files from the research environment, simply specify the location of 
 
 To copy file myresults.zip from your research environment on IP address 52.48.62.34 to your local Linux or Mac client:
 
-    scp -i mykeyfile.pem flight@52.48.62.34:/users/flight/myresults.zip .
-
+```bash
+scp -i mykeyfile.pem flight@52.48.62.34:/users/flight/myresults.zip .
+```
