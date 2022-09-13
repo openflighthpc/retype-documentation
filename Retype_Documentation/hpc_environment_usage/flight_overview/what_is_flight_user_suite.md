@@ -4,7 +4,6 @@ label: What is the Flight User Suite?
 icon: dot
 ---
 
-# What is the Flight User Suite?
 
 The Flight User Suite is a collection of environment tools that provide users with easy and intuitive ways to manage the software and desktop sessions in a research environment. The purpose of these tools is to get researchers started with HPC as quickly as possible without needing to worry about their environment, leaving them to do what they do best - research!
 

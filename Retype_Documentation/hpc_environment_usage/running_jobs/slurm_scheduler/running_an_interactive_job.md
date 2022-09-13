@@ -6,11 +6,6 @@ icon: dot-fill
 
 
 
-
-!!!
-If using a single node research environment with a scheduler then interactive jobs are unnecessary as the only available resources will be local
-!!!
-
 You can start a new interactive job on your research environment by using the `srun` command; the scheduler will search for an available compute node, and provide you with an interactive login shell on the node if one is available.
 
 ```bash
