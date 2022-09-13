@@ -1,7 +1,7 @@
 ---
 order: 40
 label: Install Flight Web Suite
-icon: dot-fill
+icon: dot
 ---
 
 Flight web suite only needs to be installed on the head node. 

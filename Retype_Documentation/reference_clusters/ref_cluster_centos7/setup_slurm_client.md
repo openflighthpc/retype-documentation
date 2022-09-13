@@ -1,7 +1,7 @@
 ---
 order: 20
 label: Setup SLURM Clients
-icon: dot-fill
+icon: dot
 ---
 
 The SLURM server was set up on the head node so now the SLURM clients need to be set up on the other nodes. Do **not** follow these instructions on the head node, only the other nodes.

@@ -1,7 +1,7 @@
 ---
 order: 70
 label: Setup NFS Server
-icon: dot-fill
+icon: dot
 ---
 
 The instructions on this page are done entirely on the head node.

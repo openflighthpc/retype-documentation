@@ -1,7 +1,7 @@
 ---
 order: 30
 label: Setup SLURM Server
-icon: dot-fill
+icon: dot
 ---
 
 The following section has to be done on the **head** node. 

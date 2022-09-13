@@ -1,7 +1,7 @@
 ---
 order: 0
 label: Install Genders and PDSH
-icon: dot-fill
+icon: dot
 ---
 
 A combination of genders and pdsh can allow for management and monitoring of multiple nodes at a time. 

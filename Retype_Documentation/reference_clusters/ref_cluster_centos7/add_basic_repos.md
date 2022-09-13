@@ -1,7 +1,7 @@
 ---
 order: 80
 label: Install Repositories
-icon: dot-fill
+icon: dot
 ---
 
 Some repositories will be needed later to install Flight tools.

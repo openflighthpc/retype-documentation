@@ -1,11 +1,11 @@
 ---
 order: 50
 label: Install Flight
-icon: dot-fill
+icon: dot
 ---
 
 
-Install flight on a node.
+On **every** node:
 
 
 

@@ -1,11 +1,13 @@
 ---
 order: 10
 label: Create Shared User
-icon: dot-fill
+icon: dot
 ---
 
-We will create a shared user by making the exact same user on every node.
+We will create a shared user by making the exact same user on every node, follow the instructions on the tabs from left to right.
 
+
++++ Head node
 ### On the head node
 
 1. Add a user named `flight`
@@ -18,6 +20,7 @@ We will create a shared user by making the exact same user on every node.
 	passwd flight
 	```
 
++++ Compute nodes
 ### On the compute nodes
 
 1. Add a user named `flight`
@@ -33,4 +36,5 @@ We will create a shared user by making the exact same user on every node.
 	passwd flight
 	```
 
-Repeat the "On the compute nodes" step on all compute nodes.
+Repeat these steps on all compute nodes.
++++

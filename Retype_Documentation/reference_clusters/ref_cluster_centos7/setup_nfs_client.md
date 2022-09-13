@@ -1,7 +1,7 @@
 ---
 order: 60
 label: Setup NFS Clients
-icon: dot-fill
+icon: dot
 ---
 
 The NFS server has been setup on the head node, now every other node must be set up as an NFS client.
