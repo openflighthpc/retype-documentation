@@ -5,7 +5,7 @@ icon: dot-fill
 ---
 
 
-Install flight on a node.
+On **every** node:
 
 
 
