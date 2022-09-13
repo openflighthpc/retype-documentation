@@ -1,0 +1,21 @@
+---
+order: 80
+label: Install Repositories
+icon: dot
+---
+
+Some repositories will be needed later to install Flight tools.
+
+
+1. On **all** nodes do:
+
+	```bash
+	yum install -y epel-release
+	```
+
+    !!!
+    `-y` is an option for the install command that answers yes to install confirmation messages. 
+    !!!
+
+
+Once this command has been run on **every** node, the cluster is ready for the next step.
