@@ -9,9 +9,9 @@ The following section has to be done on the **head** node.
 1. Swap to the head node (unless already on it).
 
 2. Install munge.
-	```bash
-	dnf install -y munge munge-libs perl-Switch numactl
-	```
+    ```bash
+    dnf install -y munge munge-libs perl-Switch numactl
+    ```
 
 3. Install the SLURM packages.
 	```bash
@@ -74,7 +74,7 @@ The following section has to be done on the **head** node.
 	chown munge: /etc/munge/munge.key
 	```
 
-10. Lock the munge key so that it cannot be changed again.
+10. Set permissions on the munge key
 	```bash
 	chmod 400 /etc/munge/munge.key
 	```

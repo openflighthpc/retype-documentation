@@ -9,6 +9,7 @@ The SLURM server was set up on the head node so now the SLURM clients need to be
 1. Swap to a compute node
 
 2. Install munge:
+
 	```bash
 	dnf install -y munge munge-libs perl-Switch numactl
 	```
@@ -36,7 +37,7 @@ The SLURM server was set up on the head node so now the SLURM clients need to be
 	```bash
 	chown munge: /etc/munge/munge.key
 	```
-9. Lock the munge key so that it cannot be changed again:
+9. Set permissions on the munge key.
 	```bash
 	chmod 400 /etc/munge/munge.key
 	```
