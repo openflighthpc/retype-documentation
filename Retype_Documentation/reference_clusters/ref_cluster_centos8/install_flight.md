@@ -9,17 +9,17 @@ Install flight on a node.
 
 1. Install the OpenFlight release RPM:
     ```bash
-    sudo dnf install -y https://repo.openflighthpc.org/openflight/centos/8/x86_64/openflighthpc-release-3-1.noarch.rpm
+    dnf install -y https://repo.openflighthpc.org/openflight/centos/8/x86_64/openflighthpc-release-3-1.noarch.rpm
     ```
 
 2. Add the Power Tools repository:
     ```bash
-    sudo dnf config-manager --set-enabled powertools
+    dnf config-manager --set-enabled powertools
     ```
 
 3. Rebuild the yum cache:
     ```bash
-    sudo dnf makecache
+    dnf makecache
     ```
 
 
@@ -27,7 +27,7 @@ Install flight on a node.
 
 3. Install the flight packages:
 	```bash
-	sudo dnf install -y flight-user-suite flight-plugin-system-systemd-service
+	dnf install -y flight-user-suite flight-plugin-system-systemd-service
 	```
 
 4. Start and enable flight:

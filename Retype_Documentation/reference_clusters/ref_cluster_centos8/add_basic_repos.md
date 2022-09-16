@@ -10,7 +10,7 @@ Some repositories will be needed later to install Flight tools.
 1. On **all** nodes do:
 
 	```bash
-	yum install -y epel-release
+	dnf install -y epel-release
 	```
 
     !!!

@@ -10,12 +10,12 @@ The SLURM server was set up on the head node so now the SLURM clients need to be
 
 2. Install munge:
 	```bash
-	yum install -y munge munge-libs perl-Switch numactl
+	dnf install -y munge munge-libs perl-Switch numactl
 	```
 
 3. Install the SLURM packages:
 	```bash
-	yum install -y flight-slurm flight-slurm-devel flight-slurm-perlapi flight-slurm-torque flight-slurm-slurmd flight-slurm-example-configs flight-slurm-libpmi
+	dnf install -y flight-slurm flight-slurm-devel flight-slurm-perlapi flight-slurm-torque flight-slurm-slurmd flight-slurm-example-configs flight-slurm-libpmi
 	```
 
 4. Take the contents of the file `/opt/flight/opt/slurm/etc/slurm.conf` on the head node and copy it to the same location on the current node.

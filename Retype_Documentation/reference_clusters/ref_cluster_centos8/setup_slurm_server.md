@@ -10,12 +10,12 @@ The following section has to be done on the **head** node.
 
 2. Install munge.
 	```bash
-	yum install -y munge munge-libs perl-Switch numactl
+	dnf install -y munge munge-libs perl-Switch numactl
 	```
 
 3. Install the SLURM packages.
 	```bash
-	yum install -y flight-slurm flight-slurm-slurmctld flight-slurm-devel flight-slurm-perlapi flight-slurm-torque flight-slurm-slurmd flight-slurm-example-configs flight-slurm-libpmi
+	dnf install -y flight-slurm flight-slurm-slurmctld flight-slurm-devel flight-slurm-perlapi flight-slurm-torque flight-slurm-slurmd flight-slurm-example-configs flight-slurm-libpmi
 	```
 
 4. Open the file `/opt/flight/opt/slurm/etc/slurm.conf` and add this information:

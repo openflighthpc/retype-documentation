@@ -13,7 +13,7 @@ This **only** needs to be done on the **head** node.
 
 2. Install flight-pdsh.
 	```bash
-	sudo yum -y install flight-pdsh
+	dnf -y install flight-pdsh
 	```
 
 3. Navigate to the genders file at `/opt/flight/etc/genders`, and open it.
