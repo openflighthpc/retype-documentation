@@ -4,12 +4,12 @@ label: Setup NFS Clients
 icon: dot
 ---
 
-The NFS server has been setup on the head node, now every other node must be set up as an NFS client.
+The NFS server has been setup on the head node, now every compute node must be set up as an NFS client.
 
 
 1. Install NFS
 	```bash
-	yum install -y nfs-utils
+	dnf install -y nfs-utils
 	```
 
 2. Open the file `/etc/fstab` and add the following text, then save and exit.
@@ -38,6 +38,6 @@ The NFS server has been setup on the head node, now every other node must be set
 	mount -a
 	```
 
-At this point, this node is fully setup to be an NFS client. Repeat these steps on every other node (except the head node), and then NFS will be completely set up.
+At this point, this node is fully setup to be an NFS client. Repeat these steps on every compute node, and then NFS will be completely set up.
 
 

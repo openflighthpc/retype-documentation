@@ -4,7 +4,9 @@ label: SSH Keys for Root
 icon: dot
 ---
 
-During setup and installation, the user will need to swap nodes. Adding ssh keys to root allows the user to ssh to all nodes without typing a password, thereby making installation easier.
+During setup and installation, the user will need to swap nodes. Adding ssh keys to root allows the user to ssh to all nodes without typing a password, thereby making installation easier. 
+
+Follow the instructions on each of the tabs going from leftmost tab to rightmost tab.
 
 +++ Head node
 ### On the head node
@@ -26,7 +28,7 @@ During setup and installation, the user will need to swap nodes. Adding ssh keys
     !!!
 
 
-3. Copy the public key found in `~/.ssh/id_rsa.pub`.
+3. Copy the public key found in `~/.ssh/id_rsa.pub` to your clipboard, it will be used on the compute nodes.
 
 
 +++ Compute nodes
@@ -51,3 +53,5 @@ Repeat these steps on every node other than the head node. Doing this allows us 
 !!!warning
 Unless stated otherwise, everything is done as the root user.
 !!!
+
+Proceed to the next page after completing the instructions in each tab.

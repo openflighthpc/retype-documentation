@@ -12,13 +12,13 @@ Flight web suite only needs to be installed on the head node.
 
 2. Install the web suite:
   ```bash
-  sudo yum install -y flight-web-suite 
+  dnf install -y flight-web-suite 
   ```
 
 
 4. Set the domain name. This is for use with certificate generation. Setting the domain name as the ip address of the head node means that changing pages doesn't log the user out.
   ```bash
-  flight web-suite set-domain 18.170.36.50
+  flight web-suite set-domain your-name
   ```
 
 5. Go to the file `/opt/flight/opt/www/landing-page/default/content/data/environment.yaml` and change `name` to mycluster1. It will look something like this:

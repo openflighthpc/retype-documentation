@@ -9,7 +9,7 @@ The instructions on this page are done entirely on the head node.
 1. On the head node, do:
 
 	```bash
-    yum install -y nfs-utils
+    dnf install -y nfs-utils
 	```
 
 2. Make a directory for everything that we may want to share.
@@ -26,7 +26,6 @@ The instructions on this page are done entirely on the head node.
 
 4. Go to `/etc/exports` and add this:
 
-
 	```
     /export/apps 10.50.0.0/16(rw,no_root_squash,sync)
     /export/data 10.50.0.0/16(rw,no_root_squash,sync)
@@ -34,6 +33,9 @@ The instructions on this page are done entirely on the head node.
     /export/site 10.50.0.0/16(rw,no_root_squash,sync)
     /home 10.50.0.0/16(rw,no_root_squash,sync)
 	```
+    !!!
+    The IP addresses you should use will be different. 
+    !!!
 
 5. Bind mounts for the NFS server. Open the the file `/etc/fstab` and add this, then save and close the file.
 
@@ -67,7 +69,8 @@ The instructions on this page are done entirely on the head node.
     mount -a
 	```
 	!!!
-	the v option shows more information and the a option exports/mounts all.
+	the `v` option shows more information and the `a` option exports/mounts all.
 	!!!
+
 
 The NFS server has now been setup. 
