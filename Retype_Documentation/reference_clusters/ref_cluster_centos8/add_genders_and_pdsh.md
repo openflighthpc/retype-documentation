@@ -22,3 +22,19 @@ This **only** needs to be done on the **head** node.
 	```
 	cnode01,cnode02 nodes
 	```
+
+5. Log out and log back in for the environment to load.
+
+## Testing
+
+If all was successful, then the following should be the case on the head node:
+
+1. The following commands should run without errors:
+    ```
+    nodeattr -s nodes
+    ```
+    ```
+    pdsh -g nodes uptime
+    ```
+
+2. The file `/opt/flight/etc/genders` should contain genders for use with the installed commands.

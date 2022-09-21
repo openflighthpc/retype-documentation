@@ -38,6 +38,36 @@ The NFS server has been setup on the head node, now every compute node must be s
 	mount -a
 	```
 
-At this point, this node is fully setup to be an NFS client. Repeat these steps on every compute node, and then NFS will be completely set up.
+At this point, this node is fully setup to be an NFS client. Repeat these steps on every other compute node, and then NFS will be completely set up.
 
 
+## Testing
+
+If all was successful, then the following should be the case on all compute nodes:
+
+1. The file `/etc/fstab` should contain the information from the instructions.
+
+2. The `opt` directory exists, and contains these four directories:
+    ```
+    [root@cnode01 ~]# ls /opt
+    apps  data  service  site
+    ```
+
+3. The command `systemctl status nfs-client.target` shows the service as active with no errors.
+
+4. The command `df -h` shows that NFS has been successfully mounted. E.g.
+	```
+	[root@cnode01 ~]# df -h
+	Filesystem              Size  Used Avail Use% Mounted on
+	devtmpfs                872M     0  872M   0% /dev
+	tmpfs                   907M     0  907M   0% /dev/shm
+	tmpfs                   907M  8.5M  898M   1% /run
+	tmpfs                   907M     0  907M   0% /sys/fs/cgroup
+	/dev/vda1                10G  1.6G  8.5G  16% /
+	tmpfs                   182M     0  182M   0% /run/user/0
+	chead1:/export/apps      10G  1.6G  8.5G  16% /opt/apps
+	chead1:/export/data      10G  1.6G  8.5G  16% /opt/data
+	chead1:/export/service   10G  1.6G  8.5G  16% /opt/service
+	chead1:/export/site      10G  1.6G  8.5G  16% /opt/site
+	chead1:/home             10G  1.6G  8.5G  16% /home
+	```

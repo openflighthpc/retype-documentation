@@ -17,37 +17,64 @@ Install flight on a node.
     dnf config-manager --set-enabled powertools
     ```
 
-3. Rebuild the yum cache:
+3. Rebuild the dnf cache:
     ```bash
     dnf makecache
     ```
 
-
-
-
-3. Install the flight packages:
+4. Install the flight packages:
 	```bash
 	dnf install -y flight-user-suite flight-plugin-system-systemd-service
 	```
 
-4. Start and enable flight:
+5. Start and enable flight:
 	```bash
 	systemctl start flight-service
 	systemctl enable flight-service
 	```
 
-5. Log out of and then back into the current node.
+6. Log out and log back in for the environment to load.
 
-6. Start flight, and enable it on start up:
+7. Start flight, and enable it on start up:
 	```bash
 	flight start
 	flight set always on
 	```
 
-7. Change the name of the cluster:
+8. Change the name of the cluster:
 	```bash
 	flight config set cluster.name mycluster1
 	```
 
+9. Log out and log back in for the environment to reload.
+
 
 Flight has been installed on this node. Follow the instructions on each node until they all have Flight.
+
+## Testing
+
+If all was successful, then the following should be the case on all nodes:
+
+1. The command `dnf repolist` should display the openflight and powertools packages. E.g. on head node:
+
+	```
+	[root@chead1 ~]# dnf repolist
+	repo id            repo name
+	appstream          CentOS Stream 8 - AppStream
+	baseos             CentOS Stream 8 - BaseOS
+	epel               Extra Packages for Enterprise Linux 8 - x86_64
+	epel-modular       Extra Packages for Enterprise Linux Modular 8 - x86_64
+	extras             CentOS Stream 8 - Extras
+	openflight         OpenFlight - Base
+	powertools         CentOS Stream 8 - PowerTools
+	```
+
+2. The command `systemctl status flight-service` shows the service as active with no errors.
+
+3. The flight environment should be started (`flight start`).
+
+3. The command prompt should display the cluster name. E.g.
+
+    ```
+    [root@chead1 (mycluster1) ~]# 
+    ```

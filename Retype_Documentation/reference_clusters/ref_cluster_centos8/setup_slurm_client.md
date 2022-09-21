@@ -4,7 +4,7 @@ label: Setup SLURM Clients
 icon: dot
 ---
 
-The SLURM server was set up on the head node so now the SLURM clients need to be set up on the other nodes. Do **not** follow these instructions on the head node, only the other nodes.
+The SLURM server was set up on the head node so now the SLURM clients need to be set up on the compute nodes. Do **not** follow these instructions on the head node, only the compute nodes.
 
 1. Swap to a compute node
 
@@ -50,4 +50,42 @@ The SLURM server was set up on the head node so now the SLURM clients need to be
 	systemctl enable flight-slurmd
 	```
 
-Repeat these steps on every node (other than the head node).
+Repeat these steps on every other compute node.
+
+
+## Testing
+
+If all was successful, then the following should be the case on the compute nodes:
+
+1. The command `systemctl status munge` shows the service as active with no errors.
+
+2. The command `systemctl status flight-slurmd` shows the service as active with no errors.
+
+3. The file `/opt/flight/opt/slurm/etc/slurm.conf` has all the necessary options set. An example file is given in the instructions for SLURM server setup.
+
+4. The `/opt/flight/opt/slurm/var` directory exists, and contains these three directories:
+
+	```
+	[root@chead1 (mycluster1) ~]# ls /opt/flight/opt/slurm/var/
+	log  run  spool
+	```
+
+5. The `/opt/flight/opt/slurm/var` directory has these permissions:
+
+	```
+	[root@cnode01 (mycluster1) ~]# ls -l /opt/flight/opt/slurm/var/
+	total 0
+	drwxr-xr-x. 2 nobody nobody 6 Sep 20 14:54 log
+	drwxr-xr-x. 2 nobody nobody 6 Sep 20 14:54 run
+	drwxr-xr-x. 2 nobody nobody 6 Sep 20 14:54 spool
+	```
+
+
+6. The munge key (`/etc/munge/munge.key`) should be the same on all nodes.
+
+7. The munge key (`/etc/munge/munge.key`) should have these permissions:
+
+	```
+	[root@cnode01 (mycluster1) ~]# ls -l /etc/munge/munge.key
+	-r--------. 1 munge munge 65 Sep 20 14:56 /etc/munge/munge.key
+	```
