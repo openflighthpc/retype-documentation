@@ -55,3 +55,22 @@ Unless stated otherwise, everything is done as the root user.
 !!!
 
 Proceed to the next page after completing the instructions in each tab.
+
+
+## Testing
+
+If all was successful, then it should be possible to ssh from root on headnode into both of the compute nodes. E.g.
+
+```
+[root@chead1 ~]# ssh cnode01
+Activate the web console with: systemctl enable --now cockpit.socket
+
+Last login: Tue Sep 20 09:00:11 2022 from 10.50.0.13
+[root@cnode01 ~]# logout
+Connection to cnode01 closed.
+[root@chead1 ~]# ssh cnode02
+Activate the web console with: systemctl enable --now cockpit.socket
+
+Last login: Tue Sep 20 09:00:18 2022 from 10.50.0.13
+[root@cnode02 ~]# 
+```

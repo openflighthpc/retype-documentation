@@ -176,4 +176,24 @@ Assuming that your nodes have already been created, and you have access to them,
 
 Proceed to the next page after completing the instructions in each tab.
 
+## Testing
 
+If all was successful, then it should be possible to ping the other nodes from root on the headnode and vice versa, with just the node name. E.g.
+
+```
+[root@chead1 ~]# ping cnode01
+PING cnode01.pri.mycluster1.cluster.local (10.50.0.31) 56(84) bytes of data.
+64 bytes from cnode01.pri.mycluster1.cluster.local (10.50.0.31): icmp_seq=1 ttl=64 time=0.737 ms
+^C
+--- cnode01.pri.mycluster1.cluster.local ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.737/0.737/0.737/0.000 ms
+[root@chead1 ~]# ping cnode02
+PING cnode02.pri.mycluster1.cluster.local (10.50.0.26) 56(84) bytes of data.
+64 bytes from cnode02.pri.mycluster1.cluster.local (10.50.0.26): icmp_seq=1 ttl=64 time=0.755 ms
+^C
+--- cnode02.pri.mycluster1.cluster.local ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.755/0.755/0.755/0.000 ms
+[root@chead1 ~]# 
+```
