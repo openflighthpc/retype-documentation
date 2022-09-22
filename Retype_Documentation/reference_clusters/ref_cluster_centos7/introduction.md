@@ -11,7 +11,7 @@ This is also **not** a guide, simply an example of an installation process that 
 - The cluster has 3 nodes.
 - Every node on the cluster has an operating system installed, specifically [Centos 7](https://www.centos.org/download/).
 - Every node is on the network 10.50.0.0
-- The nodes described are instances created with OpenStack.
+- The nodes described are instances created with OpenStack and can connect to upstream repositories.
 
 
 ![A diagram of the cluster used.](/images/cluster_diagram.png)
