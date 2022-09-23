@@ -53,3 +53,22 @@ This means that flight web suite will start on boot
 !!!
 Using Flight Web Suite is explained [elsewhere in the documentation.](/hpc_environment_usage/flight_web_suite/what_is_web_suite/)
 !!!
+
+## Testing
+
+If all was successful, then the following should be the case on the head node:
+
+1. The command `flight web-suite` runs without errors
+
+2. The domain is what it was set to during the instructions. E.g.
+    ```
+    [root@chead1 (mycluster1) ~]# flight web-suite get-domain
+    my-domain-name
+    ```
+
+3. The Web-suite is active, this can be checked with the following command:
+    ```
+    flight service avail
+    ```
+
+4. The Web-Suite should function as described in [its documentation](/hpc_environment_usage/flight_web_suite/what_is_web_suite/).
