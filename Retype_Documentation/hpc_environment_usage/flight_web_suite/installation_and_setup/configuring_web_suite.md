@@ -15,21 +15,33 @@ group)
 - SSH password authentication must be enabled (can be set in `/etc/ssh/sshd_config` in CentOS or through
 other access management software that is setup on the system)
 
+## Setting domain name
+
+The domain name is what the Web-Suite will be accessed through, either a hostname or ip address. It is also used for certificate generation, and a publicly accessible value should be used if intending to use Lets Encrypt certificates.
+
+Set the domain name:
+```bash
+flight web-suite set-domain chead1.mycluster1.example.com
+```
+
+Restart the web-suite to apply changes:
+```bash
+flight web-suite restart
+```
+
 ## Certificate Preparation
 
 To secure the server connections, it is recommended to generate a certificate to be used by the web suite. The Flight
 Web Suite comes with tools that can generate either a “self-signed” or LetsEncrypt certificate. Alternatively, a certificate that has been created outside of the web suite can be used to secure the server.
 
-
- 
 +++ Self-Signed
 
 A self-signed certificate, whilst not usually trusted by browsers, does still provide extra security to the web server over
 HTTP communication.
-A self-signed certificate is automatically created when installing the packages from the repo.
+A self-signed certificate is automatically created when setting the domain name.
 To generate and install the self-signed certificates, simply:
 ```bash
-flight www cert-gen --cert-type self-signed --domain $(hostname -f)
+flight www cert-gen --cert-type self-signed --domain $(flight web-suite get-domain)
 ```
 After this has run, changes are applied on a service restart:
 ```bash
@@ -40,7 +52,7 @@ flight web-suite restart
 To generate and install a Lets Encrypt certificate, run the following (replacing the domain and email with appropriate
 values):
 ```bash
-flight www cert-gen --cert-type lets-encrypt --domain chead1.mycluster1.example.com --email user@example.com
+flight www cert-gen --cert-type lets-encrypt --domain <chead1.mycluster1.example.com> --email <user@example.com>
 ```
 
 !!!
@@ -55,8 +67,8 @@ flight web-suite restart
 
 Externally generated certificates can be used by placing them in `/opt/flight/etc/www/ssl/`, the files that
 should be in there are:
-- `fullchain.pem`: The full certificate (recommended permissions are 644 root:root)
-- `key.pem`: The private key for the certificate (recommended permissions are 644 root:root)
+- `fullchain.pem`: The full certificate (recommended permissions are `644 root:root`)
+- `key.pem`: The private key for the certificate (recommended permissions are `644 root:root`)
 After placing the certificates in place, the HTTPS server can be enabled with:
 
 ```bash
