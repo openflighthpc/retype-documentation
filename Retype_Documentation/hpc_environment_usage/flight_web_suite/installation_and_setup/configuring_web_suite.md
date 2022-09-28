@@ -43,10 +43,19 @@ To generate and install the self-signed certificates, simply:
 ```bash
 flight www cert-gen --cert-type self-signed --domain $(flight web-suite get-domain)
 ```
+!!!
+If `--domain` is omitted, a sensible default is selected. The default is taken from either the last `--domain` value given to `flight www cert-gen` or the last value given to `flight web-suite set-domain`. If neither of those have been given, the command will complain, and the domain will need to be specified.
+!!!
+
+!!!
+If `--cert-type` is omitted a sensible default is selected. The default is taken from the last `--cert-type` value given to `flight www cert-gen` or `self-signed` if none has been given before.
+!!!
+
 After this has run, changes are applied on a service restart:
 ```bash
 flight web-suite restart
 ```
+
 +++ Lets Encrypt
 
 To generate and install a Lets Encrypt certificate, run the following (replacing the domain and email with appropriate
@@ -56,8 +65,25 @@ flight www cert-gen --cert-type lets-encrypt --domain <chead1.mycluster1.example
 ```
 
 !!!
+If `--domain` is omitted, a sensible default is selected. The default is taken from either the last `--domain` value given to `flight www cert-gen` or the last value given to `flight web-suite set-domain`. If neither of those have been given, the command will complain, and the domain will need to be specified.
+!!!
+
+!!!warning
 Ensure that the domain/IP is publicly accessible in order for certificate generation to work
 !!!
+
+The Let's Encrypt certificate is only valid for a limited time. Depending on how long a cluster is intended to live for, it may be useful to install a cron job to automate renewing the certificate.
+
+```bash
+flight www cron-renewal
+```
+
+The cronjob can be removed by running:
+
+```bash
+flight www cron-renewal --disable
+```
+
 
 After this has run, changes are applied on a service restart:
 ```bash
