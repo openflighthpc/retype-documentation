@@ -11,43 +11,38 @@ Flight web suite only needs to be installed on the head node.
 
 
 2. Install the web suite:
-  ```bash
-  sudo yum install -y flight-web-suite 
-  ```
+    ```bash
+    sudo yum install -y flight-web-suite 
+    ```
 
 3. Install extra packages:
-  ```bash
-  sudo yum install -y python-websockify xorg-x11-apps netpbm-progs 
-  ```
+    ```bash
+    sudo yum install -y python-websockify xorg-x11-apps netpbm-progs 
+    ```
 
 
-4. Set the domain name. This is for use with certificate generation. Setting the domain name as the ip address of the head node means that changing pages doesn't log the user out.
-  ```bash
-  flight web-suite set-domain 18.170.36.50
-  ```
+4. Set the domain name to the hostname or ip address that Web-Suite will be accessed through. This also creates a self-certified certificate.
+    ```bash
+    flight web-suite set-domain <name/IP>
+    ```
 
 5. Go to the file `/opt/flight/opt/www/landing-page/default/content/data/environment.yaml` and change `name` to mycluster1. It will look something like this:
-  ```
-  environment:
-  #   # Optional cluster (aka environment) name.  Defaults to an empty string if
-  #   # not provided.
+    ```
+    environment:
+    #   # Optional cluster (aka environment) name.  Defaults to an empty string if
+    #   # not provided.
     name: "mycluster1"
-  ```
+    ```
 
-6. Create a self-signed certificate to secure the connection.
-  ```bash
-  flight www cert-gen --cert-type self-signed --domain $(hostname -f)
-  ```
+6. Restart web suite to apply changes:
+    ```bash
+    flight web-suite restart
+    ```
 
-7. Restart web suite to apply changes:
-  ```bash
-  flight web-suite restart
-  ```
-
-8. Enable flight web suite:
-  ```bash
-  flight web-suite enable
-  ```
+7. Enable flight web suite:
+    ```bash
+    flight web-suite enable
+    ```
 This means that flight web suite will start on boot
 
 !!!

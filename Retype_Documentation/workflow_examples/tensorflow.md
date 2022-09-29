@@ -38,8 +38,7 @@ The flight environment will need to be activated before the environments can be 
 - Launch the tensorflow docker container with singularity to run the job:
 
 ```bash
-<singularity> [flight@chead1 (mycluster1) ~]$ singularity exec docker://tensorflow/```
-tensorflow:1.15.0 python ./models/tutorials/image/mnist/convolutional.py
+<singularity> [flight@chead1 (mycluster1) ~]$ singularity exec docker://tensorflow/tensorflow:1.15.0 python ./models/tutorials/image/mnist/convolutional.py
 ```
 
 +++ Conda
@@ -66,19 +65,19 @@ The flight environment will need to be activated before the environments can be 
 - Create a Python environment for tensorflow:
 
 ```bash
-<conda> [flight@chead1 (mycluster1) ~]$ conda create -n tensorflow python=3.6
+(base) <conda> [flight@chead1 (mycluster1) ~]$ conda create -n tensorflow python=3.6
 ```
 
 - Activate the Python environment:
 
 ```bash
-<conda> [flight@chead1 (mycluster1) ~]$ source activate tensorflow
+(base) <conda> [flight@chead1 (mycluster1) ~]$ source activate tensorflow
 ```
 
 - Install the tensorflow package:
 
 ```bash
-<conda> [flight@chead1 (mycluster1) ~]$ pip install tensorflow==1.15
+(tensorflow) <conda> [flight@chead1 (mycluster1) ~]$ pip install tensorflow==1.15
 ```
 
 ### Running the Job
@@ -86,13 +85,11 @@ The flight environment will need to be activated before the environments can be 
 - Download the example job models:
 
 ```bash
-<conda> [flight@chead1 (mycluster1) ~]$ git clone -b v1.13.0 https://github.com/
-tensorflow/models.git
+(tensorflow) <conda> [flight@chead1 (mycluster1) ~]$ git clone -b v1.13.0 https://github.com/tensorflow/models.git
 ```
 - Execute the job with python:
 
 ```bash
-<conda> [flight@chead1 (mycluster1) ~]$ python ./models/tutorials/image/mnist/
-convolutional.py
+(tensorflow) <conda> [flight@chead1 (mycluster1) ~]$ python ./models/tutorials/image/mnist/convolutional.py
 ```
 +++
