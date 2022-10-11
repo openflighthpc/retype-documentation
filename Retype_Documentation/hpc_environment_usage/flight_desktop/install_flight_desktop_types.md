@@ -14,41 +14,29 @@ Your research environment supports many types of graphical session designed to p
 
 ```bash
 [flight@chead1 (mycluster1) ~]$ flight desktop avail
-┌──────────┬──────────────────────────────────────────────────┬────────────┐
-│ Name     │ Summary                                          │ State      │
-├──────────┼──────────────────────────────────────────────────┼────────────┤
-│ chrome   │ Full-screen Google Chrome browser session.       │ Unverified │
-│          │                                                  │            │
-│          │  > https://www.google.com/chrome/                │            │
-│          │                                                  │            │
-│ gnome    │ GNOME v3, a free and open-source desktop         │ Verified   │
-│          │ environment for Unix-like operating systems.     │            │
-│          │                                                  │            │
-│          │  > https://www.gnome.org/                        │            │
-│          │                                                  │            │
-│ kde      │ KDE Plasma Desktop (KDE 4). Plasma is KDE's      │ Unverified │
-│          │ desktop environment. Simple by default, powerful │            │
-│          │ when needed.                                     │            │
-│          │                                                  │            │
-│          │  > https://kde.org/                              │            │
-│          │                                                  │            │
-│ terminal │ Preconfigured terminal for Flight HPC            │ Verified   │
-│          │ environments.                                    │            │
-│          │                                                  │            │
-│ xfce     │ Xfce is a lightweight desktop environment for    │ Unverified │
-│          │ UNIX-like operating systems. It aims to be fast  │            │
-│          │ and low on system resources, while still being   │            │
-│          │ visually appealing and user friendly.            │            │
-│          │                                                  │            │
-│          │  > https://xfce.org/                             │            │
-│          │                                                  │            │
-│ xterm    │ Minimal desktop environment with an xterm        │ Verified   │
-│          │ terminal window.                                 │            │
-│          │                                                  │            │
-│          │ >                                                │            │
-│          │ https://invisible-island.net/xterm/xterm.html    │            │
-│          │                                                  │            │
-└──────────┴──────────────────────────────────────────────────┴────────────┘
+┌───────┬──────────────────────────────────────────────────┬────────────┐
+│ Name  │ Summary                                          │ State      │
+├───────┼──────────────────────────────────────────────────┼────────────┤
+│ gnome │ GNOME v3, a free and open-source desktop         │ Unverified │
+│       │ environment for Unix-like operating systems.     │            │
+│       │                                                  │            │
+│       │  > https://www.gnome.org/                        │            │
+│       │                                                  │            │
+│ kde   │ KDE Plasma Desktop (KDE 4). Plasma is KDE's      │ Unverified │
+│       │ desktop environment. Simple by default, powerful │            │
+│       │ when needed.                                     │            │
+│       │                                                  │            │
+│       │  > https://kde.org/                              │            │
+│       │                                                  │            │
+│ xfce  │ Xfce is a lightweight desktop environment        │ Unverified │
+│       │ for UNIX-like operating systems. It aims to be   │            │
+│       │ fast and low on system resources, while still    │            │
+│       │ being visually appealing and user friendly.      │            │
+│       │                                                  │            │
+│       │  > https://xfce.org/                             │            │
+│       │                                                  │            │
+└───────┴──────────────────────────────────────────────────┴────────────┘
+[flight@chead1 (mycluster1) ~]$ 
 ```
 
 Application types that are `unverified` need to be prepared before they can be started. This is covered in greater detail on the next page.
