@@ -13,17 +13,9 @@ Before proceeding, ensure that the Flight User Suite is installed.
 ```bash
 sudo yum install flight-web-suite
 ```
-- Set the domain name (for use with certificate generation, this can be either a hostname or IP. A publicly accessible value should be used if intending to use Lets Encrypt certificates):
-```bash
-flight web-suite set-domain chead1.mycluster1.example.com
-```
 - Install extra packages (note: the EPEL repository is required for the websockify package):
 ```bash
 sudo yum install python-websockify xorg-x11-apps netpbm-progs
-```
-- Restart the web-suite to apply changes:
-```bash
-flight web-suite restart
 ```
 
 +++ CentOS 8
@@ -35,6 +27,7 @@ sudo dnf install flight-web-suite
 ```bash
 sudo dnf install python3-websockify xorg-x11-apps netpbm-progs
 ```
+
 +++ Ubuntu 18.04
 
 - Install the web suite deb:
@@ -58,3 +51,15 @@ sudo apt-get install netpbm x11-apps websockify
 ```
 
 +++
+
+
+
+- Set the domain name (for use with certificate generation, this can be either a hostname or IP. A publicly accessible value should be used if intending to use Lets Encrypt certificates):
+```bash
+flight web-suite set-domain chead1.mycluster1.example.com
+```
+
+- Restart the web-suite to apply changes:
+```bash
+flight web-suite restart
+```
