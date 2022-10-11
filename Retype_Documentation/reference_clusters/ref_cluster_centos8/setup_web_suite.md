@@ -22,10 +22,10 @@ Flight web suite only needs to be installed on the head node.
 
 4. Go to the file `/opt/flight/opt/www/landing-page/default/content/data/environment.yaml`, change `name` to mycluster1 and uncomment `enviroment` and `name:`. It should look like this:
     ```
-    environment:
+     environment:
     #   # Optional cluster (aka environment) name.  Defaults to an empty string if
     #   # not provided.
-    name: "mycluster1"
+      name: ""
     ```
 
 5. Recompile the landing page.
