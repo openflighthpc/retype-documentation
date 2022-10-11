@@ -15,12 +15,12 @@ The directory used to store your job output file must exist and be writable by y
 The following example uses the `--output=[file_name]` instruction to set the output file location:
 
 ```bash
-    #!/bin/bash -l
-    #SBATCH --job-name=myjob --output=output.%j
+#!/bin/bash -l
+#SBATCH --job-name=myjob --output=output.%j
 
-    echo "Starting running on host $HOSTNAME"
-    sleep 120
-    echo "Finished running - goodbye from $HOSTNAME"
+echo "Starting running on host $HOSTNAME"
+sleep 120
+echo "Finished running - goodbye from $HOSTNAME"
 ```
 
 In the above example, assuming the job was submitted as the `centos` user and was given the job-ID number `24`, the scheduler will save the output data from the job in the filename `/home/centos/output.24`.
