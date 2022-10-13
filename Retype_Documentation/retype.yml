@@ -1,6 +1,6 @@
 input: .
 output: .retype
-url: https://docs.staging.openflighthpc.org/
+url: https://docs.openflighthpc.org/
 branding:
   title: OpenFlightHPC Knowledgebase
 #  label: Docs
