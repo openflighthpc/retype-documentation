@@ -4,9 +4,9 @@ label: Setup Solo
 icon: dot-fill
 ---
 
-Several different cloud hosting services can use the downloaded Flight Solo image.
+Several different cloud hosting services can use the downloaded Flight Solo image. This page shall describe how to do it with Openstack.
 
-+++ OpenStack
+
 ## Setting up on OpenStack
 
 First, go to the Images section of OpenStack, and press the create image button.
@@ -26,11 +26,4 @@ Fill out the other parts of the form as necessary, these will be individual to y
 The image may take some time to load.
 !!!
 
-+++ AWS
-## Setting up on Amazon Web Services (AWS)
 
-
-+++ Azure
-## Setting up on Microsoft Azure
-
-+++
