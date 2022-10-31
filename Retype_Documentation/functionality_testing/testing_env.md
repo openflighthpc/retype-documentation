@@ -49,7 +49,7 @@ Flight grants access to package ecosystems via the env command. To test its func
     Upon successful activation, the command prompt should change to show the currently activated environment. E.g.
     ```
     [flight@chead1 (mycluster1) ~]$ flight env activate conda
-    (base) <conda> [flight@chead1 (mycluster1) ~]$ flight env deactivate
+    (base) <conda> [flight@chead1 (mycluster1) ~]$ 
     ```
 
 5. Deactivate the environment activated in step 4:
@@ -59,7 +59,10 @@ Flight grants access to package ecosystems via the env command. To test its func
     Upon successful deactivation, the command prompt should return to how it looks with just flight enabled.
 
 
-
+6. Purge the environment created:
+    ```
+    flight env purge <environment>
+    ```
 
 ### More Information
 
