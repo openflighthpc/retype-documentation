@@ -70,3 +70,9 @@ Via Flight, SLURM schedules interactive and batch jobs. To test its functionalit
     cnode01        1      all*        idle 1       1:1:1      1        0      1   (null) none                
     ```
 
+
+If all of the above steps have occured without issue, then SLURM is functioning.
+
+### More Information
+
+All information about Flight SLURM can be found in [its documentation section](/hpc_environment_usage/running_jobs/slurm_scheduler/what_is_slurm/).
