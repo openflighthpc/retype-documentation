@@ -10,9 +10,9 @@ branding:
 favicon: /images/favicon.png
 links:
 - text: Welcome to the OpenFlightHPC Knowledgebase!
-  link: https://openflighthpc.org/docs/
+  link: https://openflighthpc.org
 edit:
-  repo: "https://github.com/openflighthpc/retype-documentation/Retype_Documentation"
+  repo: "https://github.com/openflighthpc/retype-documentation"
 footer:
   copyright: "&copy; Copyright OpenFlightHPC {{ year }}. All rights reserved."
   links:

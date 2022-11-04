@@ -14,7 +14,7 @@ First, go to the Images section of OpenStack, and press the create image button.
 ![](/images/openstack_images.png)
 
 
-A window with image details will appear. Select the format `Raw`, and upload the flight solo [file](/flight_solo/download_solo/#download-solo).
+A window with image details will appear. Select the format `Raw`, and upload the flight solo [file](/flight_solo/what_is_flight_solo/#where-can-i-download-flight-solo).
 
 
 ![](/images/image_create_details.png)
