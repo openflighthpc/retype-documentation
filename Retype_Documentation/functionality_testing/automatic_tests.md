@@ -7,7 +7,7 @@ icon: dot-fill
 By performing the tests on the previous pages, it is possible to determine whether a cluster is functioning properly or not. However, there is also a set of automated tests that can determine the functionality of a system. 
 
 
-The functionality test script can be found [here](https://github.com/openflighthpc/reference-evaluation/blob/main/function_tests.sh). It contains a series of automatic tests that run through a system and check the services evaluated in this section of the documentation except for Web Suite. Upon finding an issue, a message will be sent to the console with a rough description of the error, and what flight service is at fault. Depending on the error, the program may cease testing until the issue is fixed. 
+The functionality test script can be found [here](https://github.com/openflighthpc/reference-evaluation/blob/main/function_tests.sh). It contains a series of automatic tests that run through a system and check every service evaluated in this section of the documentation except for Web Suite. Upon finding an issue, a message will be sent to the console with a rough description of the error, and what flight service is at fault. Depending on the error, the program may cease testing until the issue is fixed. 
 
 ### Usage Guide
 
