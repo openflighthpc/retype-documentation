@@ -130,7 +130,17 @@ The image, along with this documentation is open-source, and freely available to
 	    ssh_authorized_keys:
 	      - <Content of ~/.ssh/id_alcescluster.pub from root user on login node>
     ```
+    
+16. To get the information necessary for the cloud init script. Go to the [EC2 console](https://eu-west-2.console.aws.amazon.com/ec2/v2/home?region=eu-west-2#Instances:). Make sure your region is set to the one used for login and compute nodes.
 
-16. Click "Launch Instance"
+17. Select the created login node to see more details about it, including the private ip.
+
+![](/images/aws_ec2_console.png)
+
+18. [Log in](/general_environment_usage/cli_basics/logging_in/) to the login node.
+
+19. [Become the root user](/general_environment_usage/cli_basics/becoming_the_root_user/)  and open the file `~/.ssh/id_alcescluster.pub`, copy the contents to the cloud init script.
+
+20. Back on the compute node creation page, click "Launch Instance".
 
 +++
