@@ -1,8 +1,9 @@
 ---
 order: 70
-label: Setting Up with AWS Marketplace
-icon: dot-fill
+label: (AWS) Setting Up a Compute Node
+icon: dot
 ---
+
 
 The Flight Solo image can also be found on AWS Marketplace. This allows for users of Amazon Web Services to get started without downloading anything.
 
@@ -30,49 +31,6 @@ The image, along with this documentation is open-source, and freely available to
 ![](/images/aws_launch_usage.png)
 
 
-+++ Launch a login node
-
-## For a login node
-
-6. Select the "Launch from Website" action.
-
-![](/images/aws_launch_action.png)
-
-
-7. Choose an instance type to use.
-
-![](/images/aws_instance_type.png)
-
-
-8. Choose VPC settings. Remember what VPC was used to create this instance, as it should also be used for any associated compute nodes.
-
-![](/images/aws_vpc_settings.png)
-
-
-9. Choose a subnet. Remember what subnet was used to create this instance, as it should also be used for any associated compute nodes.
-
-![](/images/aws_subnet_settings.png)
-
-10. It is recommended to use the seller's settings for a security group. If you have already created on these, use it again. Otherwise click "Create New Based On Seller Settings".
-
-![](/images/aws_security_group.png)
-
-11. Give your security group a name, and description, then configure the allowed IPs as necessary.
-
-![](/images/aws_seller_settings.png)
-
-
-12. Choose what key pair to use. It is good practice for this to be the same on all nodes in a cluster.
-
-![](/images/aws_keypair_settings.png)
-
-13. Click Launch
-
-![](/images/aws_login_launched.png)
-
-
-
-+++ Launch a compute node
 
 ## For compute nodes
 
@@ -142,5 +100,3 @@ The image, along with this documentation is open-source, and freely available to
 19. [Become the root user](/general_environment_usage/cli_basics/becoming_the_root_user/)  and open the file `~/.ssh/id_alcescluster.pub`, copy the contents to the cloud init script.
 
 20. Back on the compute node creation page, click "Launch Instance".
-
-+++
