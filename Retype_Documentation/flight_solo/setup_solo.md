@@ -1,6 +1,6 @@
 ---
 order: 80
-label: Setup Solo
+label: Seting Up with .raw image
 icon: dot-fill
 ---
 
