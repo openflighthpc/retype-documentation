@@ -2,6 +2,7 @@
 order: 50
 label: (AWS) Adding a compute node to a cluster
 icon: dot
+visibility: hidden
 ---
 
 If a cluster has already been started up and configured, it's still possible to add on more compute nodes to it.
