@@ -32,8 +32,6 @@ The image, along with this documentation is open-source, and freely available to
 
 
 
-## For compute nodes
-
 6. Select the "Launch from EC2" action
 
 ![](/images/aws_launch_action_ec2.png)

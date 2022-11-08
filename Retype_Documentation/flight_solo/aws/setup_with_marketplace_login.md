@@ -32,9 +32,6 @@ The image, along with this documentation is open-source, and freely available to
 ![](/images/aws_launch_usage.png)
 
 
-
-## For a login node
-
 6. Select the "Launch from Website" action.
 
 ![](/images/aws_launch_action.png)
