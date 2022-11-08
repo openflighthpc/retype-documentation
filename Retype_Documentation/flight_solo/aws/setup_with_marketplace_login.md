@@ -23,7 +23,7 @@ The image, along with this documentation is open-source, and freely available to
 
 ![](/images/aws_continue_configure.png)
 
-4. Configure region, software version (if unsure use the latest), and fulfillment option (if unsure use the default). Then click "Continue to Launch". Make sure the region is the same for all nodes to be used in a cluster.
+4. Configure region, software version (if unsure use the latest), and fulfillment option (if unsure use the default). Then click "Continue to Launch". **Make sure the region is the same for all nodes to be used in a cluster.**
 
 ![](/images/aws_continue_launch.png)
 
@@ -42,12 +42,12 @@ The image, along with this documentation is open-source, and freely available to
 ![](/images/aws_instance_type.png)
 
 
-8. Choose VPC settings. Remember what VPC was used to create this instance, as it should also be used for any associated compute nodes.
+8. Choose VPC settings. **Remember what VPC was used to create this instance**, as it should also be used for any associated compute nodes.
 
 ![](/images/aws_vpc_settings.png)
 
 
-9. Choose a subnet. Remember what subnet was used to create this instance, as it should also be used for any associated compute nodes.
+9. Choose a subnet. **Remember what subnet was used to create this instance**, as it should also be used for any associated compute nodes.
 
 ![](/images/aws_subnet_settings.png)
 
@@ -60,7 +60,7 @@ The image, along with this documentation is open-source, and freely available to
 ![](/images/aws_seller_settings.png)
 
 
-12. Choose what key pair to use. It is good practice for this to be the same on all nodes in a cluster.
+12. Choose what key pair to use. *It is good practice for this to be the same on all nodes in a cluster.*
 
 ![](/images/aws_keypair_settings.png)
 

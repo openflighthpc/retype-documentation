@@ -22,7 +22,7 @@ The image, along with this documentation is open-source, and freely available to
 
 ![](/images/aws_continue_configure.png)
 
-4. Configure region, software version (if unsure use the latest), and fulfillment option (if unsure use the default). Then click "Continue to Launch". Make sure the region is the same for all nodes to be used in a cluster.
+4. Configure region, software version (if unsure use the latest), and fulfillment option (if unsure use the default). Then click "Continue to Launch". **Make sure the region is the same for all nodes to be used in a cluster.**
 
 ![](/images/aws_continue_launch.png)
 
@@ -42,7 +42,7 @@ The image, along with this documentation is open-source, and freely available to
 
 8. Set the instance name and number of instances.
 
-9. Confirm that the region(top right, next to username) is the same as the region the login node was created in. 
+9. Confirm that the region(top right, next to username) **is the same as the region the login node was created in.** 
 
 ![](/images/aws_region.png)
 
@@ -55,11 +55,11 @@ The image, along with this documentation is open-source, and freely available to
 
 ![](/images/aws_ec2_instance_type.png)
 
-12. In the "Keypair" section, select a keypair to use. It is good practice to use the same keypair for the login and compute nodes.
+12. In the "Keypair" section, select a keypair to use. *It is good practice to use the same keypair for the login and compute nodes.*
 
 ![](/images/aws_ec2_keypair.png)
 
-13. In the "Network settings" section, select the same security group that was used for the login node. Note that you will need to click "Edit" to change the subnet and/or VPC.
+13. In the "Network settings" section, select **the same security group that was used for the login node.** Note that you will need to click "Edit" to change the subnet and/or VPC.
 
 ![](/images/aws_ec2_security.png)
 
