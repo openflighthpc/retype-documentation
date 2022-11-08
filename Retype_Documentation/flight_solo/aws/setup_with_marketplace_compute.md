@@ -1,6 +1,6 @@
 ---
 order: 70
-label: (AWS) Setting Up a Compute Node
+label: (AWS) Setting Up Compute Nodes
 icon: dot
 ---
 
