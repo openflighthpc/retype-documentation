@@ -51,7 +51,7 @@ The image, along with this documentation is open-source, and freely available to
 
 ![](/images/aws_subnet_settings.png)
 
-10. A security group is needed to associate with all nodes on the cluster. It is recommended to create a security group with rules limiting traffic through:
+10. A security group is needed to associate with all nodes on the cluster. It is recommended to use a security group with rules limiting traffic through:
     - HTTP
     - HTTPS
     - SSH
@@ -59,9 +59,8 @@ The image, along with this documentation is open-source, and freely available to
     - Ports 5900 - 5903
     - All traffic from within the security group should be allowed.
 
-    A security group can be made from the launch page, or through the [security groups page](https://eu-west-2.console.aws.amazon.com/ec2/home?region=eu-west-2#SecurityGroups:)
+    If you already have a security group which does this, use it here and **make sure to use it again for the compute nodes.** Otherwise, a security group can be made from the launch page, or through the [security groups page](https://eu-west-2.console.aws.amazon.com/ec2/home?region=eu-west-2#SecurityGroups:)
 
-    ![](/images/aws_security_group.png)
     
     The seller's settings (shown below) can be used as a reference for creating a security group.
 
@@ -71,7 +70,9 @@ The image, along with this documentation is open-source, and freely available to
 
     ![](/images/aws_security_group_example.png)
 
+    After a security group has been made, select it from the drop down menu.
 
+    ![](/images/aws_security_group.png)
 
 
 
