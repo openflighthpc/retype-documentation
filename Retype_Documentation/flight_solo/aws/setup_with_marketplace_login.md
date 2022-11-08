@@ -1,6 +1,6 @@
 ---
 order: 75
-label: (AWS) Setting Up a Login Node
+label: Setting Up a Login Node
 icon: dot
 ---
 

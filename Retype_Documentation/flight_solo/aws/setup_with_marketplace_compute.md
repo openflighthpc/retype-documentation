@@ -1,6 +1,6 @@
 ---
 order: 70
-label: (AWS) Setting Up Compute Nodes
+label: Setting Up Compute Nodes
 icon: dot
 ---
 
@@ -98,3 +98,7 @@ The image, along with this documentation is open-source, and freely available to
 19. [Become the root user](/general_environment_usage/cli_basics/becoming_the_root_user/)  and open the file `~/.ssh/id_alcescluster.pub`, copy the contents to the cloud init script.
 
 20. Back on the compute node creation page, click "Launch Instance".
+
+!!!
+Repeat this process for any other types of nodes that need to be added to the cluster.
+!!!

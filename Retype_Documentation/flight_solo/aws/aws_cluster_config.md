@@ -1,6 +1,6 @@
 ---
 order: 60
-label: (AWS) Configuring a Multinode Cluster With Flight Solo
+label: Configuring a Multinode Cluster With Flight Solo
 icon: dot
 ---
 
