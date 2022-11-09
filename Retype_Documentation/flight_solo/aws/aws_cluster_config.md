@@ -27,7 +27,7 @@ Now that a login node and one or more compute nodes have been launched according
       ⬡ ip-172-31-27-136.eu-west-2.compute.internal (172.31.27.136)
       ⬡ ip-172-31-34-31.eu-west-2.compute.internal (172.31.34.31)
     ```
-    Select all the nodes that need to be set as a login node, they can be identified by their name or ip address. *In most cases this will be just the local node.*
+    Select the node that needs to be set as a login node, it can be identified by the name or ip address. *This should be the local node.*
     !!!
     Scroll the list with the up and down arrow keys, select a node by pressing space, and confirm with the enter key.
     !!!
