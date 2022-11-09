@@ -1,5 +1,5 @@
 ---
-order: 75
+order: 100
 label: Setting Up a Login Node
 icon: dot
 ---
@@ -65,15 +65,17 @@ The image, along with this documentation is open-source, and freely available to
     
     The seller's settings (shown below) can be used as a reference for creating a security group.
 
-    ![](/images/aws_seller_settings.png)
+![](/images/aws_seller_settings.png)
 
-    Describing exactly how to create a security group is out of scope for this documentation, but covered by the [AWS documentation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-security-groups.html?icmpid=docs_ec2_console#creating-security-group). However, here is an example security group that might be used for a Flight Solo cluster.
+&ensp;&ensp;&ensp;&ensp;Describing exactly how to create a security group is out of scope for this documentation, but covered by the [AWS documentation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-security-groups.html?icmpid=docs_ec2_console#creating-security-group). 
 
-    ![](/images/aws_security_group_example.png)
+&ensp;&ensp;&ensp;&ensp;However, here is an example security group that might be used for a Flight Solo cluster:
 
-    After a security group has been made, select it from the drop down menu.
+![](/images/aws_security_group_example.png)
 
-    ![](/images/aws_security_group.png)
+&ensp;&ensp;&ensp;&ensp;After a security group has been made, select it from the drop down menu.
+
+![](/images/aws_security_group.png)
 
 
 

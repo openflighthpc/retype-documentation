@@ -1,5 +1,5 @@
 ---
-order: 70
+order: 90
 label: Setting Up Compute Nodes
 icon: dot
 ---
@@ -28,7 +28,6 @@ The image, along with this documentation is open-source, and freely available to
 5. Click on "Usage Instructions" to see some instructions on how to get started, and a link to this documentation.
 
 ![](/images/aws_launch_usage.png)
-
 
 
 6. Select the "Launch from EC2" action
@@ -63,11 +62,11 @@ The image, along with this documentation is open-source, and freely available to
 
 13. In the "Network settings" section, **select the same network, subnet, and security group as the login node.**
 
-    ![](/images/aws_ec2_security.png)
+![](/images/aws_ec2_security.png)
 
-    To change the network and subnet, click the "Edit" button, and then use the drop downs to find the correct network and subnet.
+&ensp;&ensp;&ensp;&ensp;a. To change the network and subnet, click the "Edit" button, and then use the drop downs to find the correct network and subnet.
 
-    ![](/images/aws_ec2_security_edit.png)
+![](/images/aws_ec2_security_edit.png)
 
 
 14. In the "Configure Storage" section, allocate as much memory as needed. 8GB is the minimum required for Flight Solo, so it is likely the compute nodes will not need much more than that, as the login node hosts most data.
@@ -76,9 +75,12 @@ The image, along with this documentation is open-source, and freely available to
 
 15. In the "Advanced details" section there are many settings, but at the bottom is a text box labeled "User data". 
 
-    ![](/images/aws_ec2_userdata.png)
+![](/images/aws_ec2_userdata.png)
 
-    Copy this cloud init script into the user data section, making sure the change the parts in <> brackets:
+
+&ensp;&ensp;&ensp;&ensp;a. Copy this cloud init script into the user data section, making sure the change the parts in <> brackets:
+
+
     ```
 	#cloud-config
 	write_files:
@@ -93,15 +95,16 @@ The image, along with this documentation is open-source, and freely available to
 	      - <Content of ~/.ssh/id_alcescluster.pub from root user on login node>
     ```
     
-    a. To get the information necessary for the cloud init script. Go to the [EC2 console](https://eu-west-2.console.aws.amazon.com/ec2/v2/home?region=eu-west-2#Instances:). Make sure your region is set to the one used for login and compute nodes.
+&ensp;&ensp;&ensp;&ensp;b. To get the information necessary for the cloud init script. Go to the [EC2 console](https://eu-west-2.console.aws.amazon.com/ec2/v2/home?region=eu-west-2#Instances:). 
+Make sure your region is set to the one used for login and compute nodes.
 
-    b. Select the created login node to see more details about it, including the private ip.
+&ensp;&ensp;&ensp;&ensp;c. Select the created login node to see more details about it, including the private ip.
 
-    ![](/images/aws_ec2_console.png)
+![](/images/aws_ec2_console.png)
 
-    c. [Log in](/general_environment_usage/cli_basics/logging_in/) to the login node.
+&ensp;&ensp;&ensp;&ensp;d. [Log in](/general_environment_usage/cli_basics/logging_in/) to the login node.
 
-    d. [Become the root user](/general_environment_usage/cli_basics/becoming_the_root_user/)  and open the file `~/.ssh/id_alcescluster.pub`, copy the contents to the cloud init script.
+&ensp;&ensp;&ensp;&ensp;e. [Become the root user](/general_environment_usage/cli_basics/becoming_the_root_user/) and open the file `~/.ssh/id_alcescluster.pub`, copy the contents to the cloud init script.
 
 16. Back on the compute node creation page, click "Launch Instance".
 
