@@ -1,6 +1,6 @@
 ---
 order: 60
-label: (AWS) Configuring a Multinode Cluster With Flight Solo
+label: Configuring a Multinode Cluster With Flight Solo
 icon: dot
 ---
 
@@ -8,6 +8,8 @@ Now that a login node and one or more compute nodes have been launched according
 
 
 1. [Log in](/general_environment_usage/cli_basics/logging_in/) to the login node.
+
+## Parse Nodes
 
 2. Parse the login node with the command `flight hunter parse`. 
     - Add the option `--prefix <name>` to set a name for every selected login node.
@@ -25,7 +27,7 @@ Now that a login node and one or more compute nodes have been launched according
       ⬡ ip-172-31-27-136.eu-west-2.compute.internal (172.31.27.136)
       ⬡ ip-172-31-34-31.eu-west-2.compute.internal (172.31.34.31)
     ```
-    Select all the nodes that need to be set as a login node, they can be identified by their name or ip address. In most cases this will be just the local node. 
+    Select all the nodes that need to be set as a login node, they can be identified by their name or ip address. *In most cases this will be just the local node.*
     !!!
     Scroll the list with the up and down arrow keys, select a node by pressing space, and confirm with the enter key.
     !!!
@@ -46,11 +48,13 @@ Now that a login node and one or more compute nodes have been launched according
     ‣ ⬡ ip-172-31-27-136.eu-west-2.compute.internal (172.31.27.136)
       ⬡ ip-172-31-34-31.eu-west-2.compute.internal (172.31.34.31)
     ```
-    Select all the nodes that need to be set as a compute node, they can be identified by their name or ip address. Note that the login node is no longer visible since it was selected earlier.
+    Select all the nodes that need to be set as a compute node, they can be identified by their name or ip address. *Note that the login node is no longer visible since it was selected earlier.*
 
     !!!
     Scroll the list with the up and down arrow keys, select a node by pressing space, and confirm with the enter key.
     !!!
+
+## Add genders
 
 4. (OPTIONALLY) Optionally, you may add genders to the newly parsed nodes. For example, in the case that the login node should have the gender `login` and `all` then I would run the command:
     ```

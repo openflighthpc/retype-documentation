@@ -1,6 +1,6 @@
 ---
 order: 75
-label: (AWS) Setting Up a Login Node
+label: Setting Up a Login Node
 icon: dot
 ---
 
@@ -8,7 +8,7 @@ icon: dot
 
 The Flight Solo image can also be found on AWS Marketplace. This allows for users of Amazon Web Services to get started without downloading anything.
 
-1. Find the Flight Solo image [here](https://aws.amazon.com/marketplace/pp/prodview-q5u533n6b34oc) or by searching the marketplace for "Flight Solo".
+1. Find the Flight Solo image [here](https://alces-flight.com/solo/aws) or by searching the marketplace for "Flight Solo".
 
 !!!
 The image, along with this documentation is open-source, and freely available to use. However if more help is needed, the developers of Flight Solo offer paid additional support.
@@ -23,7 +23,7 @@ The image, along with this documentation is open-source, and freely available to
 
 ![](/images/aws_continue_configure.png)
 
-4. Configure region, software version (if unsure use the latest), and fulfillment option (if unsure use the default). Then click "Continue to Launch". Make sure the region is the same for all nodes to be used in a cluster.
+4. Configure region, software version (if unsure use the latest), and fulfillment option (if unsure use the default). Then click "Continue to Launch". **Make sure the region is the same for all nodes to be used in a cluster.**
 
 ![](/images/aws_continue_launch.png)
 
@@ -31,9 +31,6 @@ The image, along with this documentation is open-source, and freely available to
 
 ![](/images/aws_launch_usage.png)
 
-
-
-## For a login node
 
 6. Select the "Launch from Website" action.
 
@@ -45,25 +42,41 @@ The image, along with this documentation is open-source, and freely available to
 ![](/images/aws_instance_type.png)
 
 
-8. Choose VPC settings. Remember what VPC was used to create this instance, as it should also be used for any associated compute nodes.
+8. Choose VPC settings. **Remember what VPC was used to create this instance**, as it should also be used for any associated compute nodes.
 
 ![](/images/aws_vpc_settings.png)
 
 
-9. Choose a subnet. Remember what subnet was used to create this instance, as it should also be used for any associated compute nodes.
+9. Choose a subnet. **Remember what subnet was used to create this instance**, as it should also be used for any associated compute nodes.
 
 ![](/images/aws_subnet_settings.png)
 
-10. It is recommended to use the seller's settings for a security group. If you have already created on these, use it again. Otherwise click "Create New Based On Seller Settings".
+10. A security group is needed to associate with all nodes on the cluster. It is recommended to use a security group with rules limiting traffic through:
+    - HTTP
+    - HTTPS
+    - SSH
+    - Port 8888
+    - Ports 5900 - 5903
+    - All traffic from within the security group should be allowed.
 
-![](/images/aws_security_group.png)
+    If you already have a security group which does this, use it here and **make sure to use it again for the compute nodes.** Otherwise, a security group can be made from the launch page, or through the [security groups page](https://eu-west-2.console.aws.amazon.com/ec2/home?region=eu-west-2#SecurityGroups:)
 
-11. Give your security group a name, and description, then configure the allowed IPs as necessary.
+    
+    The seller's settings (shown below) can be used as a reference for creating a security group.
 
-![](/images/aws_seller_settings.png)
+    ![](/images/aws_seller_settings.png)
+
+    Describing exactly how to create a security group is out of scope for this documentation, but covered by the [AWS documentation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-security-groups.html?icmpid=docs_ec2_console#creating-security-group). However, here is an example security group that might be used for a Flight Solo cluster.
+
+    ![](/images/aws_security_group_example.png)
+
+    After a security group has been made, select it from the drop down menu.
+
+    ![](/images/aws_security_group.png)
 
 
-12. Choose what key pair to use. It is good practice for this to be the same on all nodes in a cluster.
+
+12. Choose what key pair to use. *It is good practice for this to be the same on all nodes in a cluster.*
 
 ![](/images/aws_keypair_settings.png)
 
