@@ -41,6 +41,8 @@ The image, along with this documentation is open-source, and freely available to
 
 8. Set the instance name and number of instances.
 
+![](/images/aws_ec2_num_instances.png)
+
 9. Confirm that the region(top right, next to username) **is the same as the region the login node was created in.** 
 
 ![](/images/aws_region.png)
