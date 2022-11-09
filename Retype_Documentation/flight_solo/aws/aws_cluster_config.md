@@ -1,5 +1,5 @@
 ---
-order: 60
+order: 80
 label: Configuring a Multinode Cluster With Flight Solo
 icon: dot
 ---
@@ -23,7 +23,7 @@ Now that a login node and one or more compute nodes have been launched according
     ```
     [flight@ip-172-31-19-83 ~]$ flight hunter parse --prefix login --start 1
     Select the nodes that you wish to save: (Scroll for more nodes)
-    ‣ ⬡ ip-172-31-19-83.eu-west-2.compute.internal (127.0.0.1)
+    ‣ ⬡ ip-172-31-19-83.eu-west-2.compute.internal (172.31.19.83)
       ⬡ ip-172-31-27-136.eu-west-2.compute.internal (172.31.27.136)
       ⬡ ip-172-31-34-31.eu-west-2.compute.internal (172.31.34.31)
     ```
@@ -85,9 +85,13 @@ Now that a login node and one or more compute nodes have been launched according
     - Create hosts entries from Flight Hunter data: Flight profile can create /etc/hosts file entries based on the data it automatically collects on connected nodes.
     
 6. Build profiles by running the command `flight profile apply`
-    E.g. applying the login profile to a login node, and the compute profile to compute nodes
+    a. First apply a profile to the login node. E.g. 
     ```
     flight profile apply login1 login
+    ```
+    b. Wait for the login node profile to finish applying. You can check the status of all nodes with `flight profile list`.
+    c. Apply a profile to the compute nodes.  E.g.
+    ```
     flight profile apply node01,node02 compute
     ```
 
