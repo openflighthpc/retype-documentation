@@ -2,6 +2,7 @@
 order: 60
 label: Import solo to AWS
 icon: dot-fill
+visibility: hidden
 ---
 
 
