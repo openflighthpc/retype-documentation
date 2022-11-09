@@ -8,7 +8,7 @@ icon: dot
 
 The Flight Solo image can also be found on AWS Marketplace. This allows for users of Amazon Web Services to get started without downloading anything.
 
-1. Find the Flight Solo image [here](https://aws.amazon.com/marketplace/pp/prodview-q5u533n6b34oc) or by searching the marketplace for "Flight Solo".
+1. Find the Flight Solo image [here](https://alces-flight.com/solo/aws) or by searching the marketplace for "Flight Solo".
 
 !!!
 The image, along with this documentation is open-source, and freely available to use. However if more help is needed, the developers of Flight Solo offer paid additional support.
