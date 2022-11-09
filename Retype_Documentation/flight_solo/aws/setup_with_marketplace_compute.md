@@ -4,8 +4,7 @@ label: Setting Up Compute Nodes
 icon: dot
 ---
 
-
-The Flight Solo image can also be found on AWS Marketplace. This allows for users of Amazon Web Services to get started without downloading anything.
+Setting up computes nodes is done slightly differently than a login node. In this example 2 compute nodes are setup, but it could be any non-zero number of compute nodes.
 
 1. Find the Flight Solo image [here](https://alces-flight.com/solo/aws) or by searching the marketplace for "Flight Solo".
 
@@ -59,9 +58,14 @@ The image, along with this documentation is open-source, and freely available to
 
 ![](/images/aws_ec2_keypair.png)
 
-13. In the "Network settings" section, select **the same security group that was used for the login node.** Note that you will need to click "Edit" to change the subnet and/or VPC.
 
-![](/images/aws_ec2_security.png)
+13. In the "Network settings" section, **select the same network, subnet, and security group as the login node.**
+
+    ![](/images/aws_ec2_security.png)
+
+    To change the network and subnet, click the "Edit" button, and then use the drop downs to find the correct network and subnet.
+
+    ![](/images/aws_ec2_security_edit.png)
 
 
 14. In the "Configure Storage" section, allocate as much memory as needed. 8GB is the minimum required for Flight Solo, so it is likely the compute nodes will not need much more than that, as the login node hosts most data.

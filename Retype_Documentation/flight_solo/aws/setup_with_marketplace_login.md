@@ -42,12 +42,12 @@ The image, along with this documentation is open-source, and freely available to
 ![](/images/aws_instance_type.png)
 
 
-8. Choose VPC settings. **Remember what VPC was used to create this instance**, as it should also be used for any associated compute nodes.
+8. Choose VPC settings. **Remember what VPC was used to create this instance**, as it should also **be used for any associated compute nodes.**
 
 ![](/images/aws_vpc_settings.png)
 
 
-9. Choose a subnet. **Remember what subnet was used to create this instance**, as it should also be used for any associated compute nodes.
+9. Choose a subnet. **Remember what subnet was used to create this instance**, as it should also **be used for any associated compute nodes.**
 
 ![](/images/aws_subnet_settings.png)
 
@@ -57,7 +57,8 @@ The image, along with this documentation is open-source, and freely available to
     - SSH
     - Port 8888
     - Ports 5900 - 5903
-    - All traffic from within the security group should be allowed.
+    - All traffic from within the security group should be allowed. (This rule can only be added after creation)
+
 
     If you already have a security group which does this, use it here and **make sure to use it again for the compute nodes.** Otherwise, a security group can be made from the launch page, or through the [security groups page](https://eu-west-2.console.aws.amazon.com/ec2/home?region=eu-west-2#SecurityGroups:)
 
