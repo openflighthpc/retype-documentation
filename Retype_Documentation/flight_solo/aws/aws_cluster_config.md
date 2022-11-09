@@ -56,7 +56,7 @@ Now that a login node and one or more compute nodes have been launched according
 
 ## Add genders
 
-4. (OPTIONALLY) Optionally, you may add genders to the newly parsed nodes. For example, in the case that the login node should have the gender `login` and `all` then I would run the command:
+4. **Optionally**, you may add genders to the newly parsed nodes. For example, in the case that the login node should have the gender `login` and `all` then I would run the command:
     ```
     flight hunter modify-groups --add login,all login1
     ```
