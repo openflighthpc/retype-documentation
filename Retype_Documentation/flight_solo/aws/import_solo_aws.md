@@ -176,7 +176,7 @@ Make sure that your region is set correctly.
 
 ![](/images/aws_ec2_createfromsnapshot_name.png)
 
-17. Set the Size to at least 16 GB.
+17. Set the Size to at least 8 GB.
 
 ![](/images/aws_ec2_createfromsnapshot_size.png)
 
