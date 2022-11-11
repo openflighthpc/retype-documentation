@@ -1,13 +1,13 @@
 ---
-order: 80
-label: Seting Up with .raw image
-icon: dot-fill
+order: 100
+label: Import Flight Solo Image to Openstack
+icon: dot
 ---
 
 Several different cloud hosting services can use the downloaded Flight Solo image. This page shall describe how to do it with Openstack.
 
 
-## Setting up on OpenStack
+
 
 First, go to the Images section of OpenStack, and press the create image button.
 

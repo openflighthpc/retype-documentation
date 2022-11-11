@@ -1,7 +1,7 @@
 ---
-order: 50
-label: (AWS) Adding a compute node to a cluster
-icon: dot
+order: 0
+label: Adding a compute node to a cluster
+icon: dot-fill
 visibility: hidden
 ---
 

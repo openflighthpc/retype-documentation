@@ -1,7 +1,7 @@
 ---
-order: 80
-label: Configuring a Multinode Cluster With Flight Solo
-icon: dot
+order: 50
+label: Configuring a SLURM Multinode Cluster With Flight Profile
+icon: dot-fill
 ---
 
 Now that a login node and one or more compute nodes have been launched according the the instructions of the previous page, the cluster is ready to be configured.
@@ -74,7 +74,7 @@ Now that a login node and one or more compute nodes have been launched according
     flight profile configure
     ```
     This brings up a UI, where several options need to be set. Use up and down arrow keys to scroll through options and enter to move to the next option. Options in brackets coloured yellow are the default options that will be applied if nothing is entered.
-    - Cluster type: The type of cluster setup needed.
+    - Cluster type: The type of cluster setup needed, in this case select `Slurm Multinode`
     - Cluster name: The name of the cluster.
     - NFS server: The hostname or flight-hunter label of the node that will act as the NFS server.
     - SLURM server: The hostname or flight-hunter label of the node that will act as the SLURM server.
@@ -84,16 +84,19 @@ Now that a login node and one or more compute nodes have been launched according
     - IP range of compute nodes: The IP range of the compute nodes used, remember to add the netmask. E.g. `172.31.16.0/20`
     - Create hosts entries from Flight Hunter data: Flight profile can create /etc/hosts file entries based on the data it automatically collects on connected nodes.
     
-6. Build profiles by running the command `flight profile apply`
-    a. First apply a profile to the login node. E.g. 
+6. Apply identities by running the command `flight profile apply`
+    a. First apply an identity to the login node. E.g. 
     ```
     flight profile apply login1 login
     ```
-    b. Wait for the login node profile to finish applying. You can check the status of all nodes with `flight profile list`.
-    c. Apply a profile to the compute nodes.  E.g.
+    b. Wait for the login node identity to finish applying. You can check the status of all nodes with `flight profile list`.
+    c. Apply an identity to the each of the compute nodes.  E.g.
     ```
     flight profile apply node01,node02 compute
     ```
+    !!! 
+    You can check all available identities for the current profile with `flight profile identities`
+    !!!
 
-7. Once the profiles have been applied, the cluster is ready to go. Check the status of profile application with the command `flight profile list`.
+7. Once the identities have been applied, the cluster is ready to go.
 

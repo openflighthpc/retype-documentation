@@ -1,8 +1,7 @@
 ---
-order: 60
-label: Import solo to AWS
-icon: dot-fill
-visibility: hidden
+order: 100
+label: Import Flight Solo Image to AWS
+icon: dot
 ---
 
 
@@ -155,7 +154,7 @@ aws iam put-role-policy --role-name vmimport --policy-name vmimport --policy-doc
 "Format": "raw",
 "UserBucket": {
     "S3Bucket": "<bucketname>",
-    "S3Key": "SOLO2-2022.2-0211221545_aws.raw"
+    "S3Key": "images/SOLO2-2022.2-0211221545_aws.raw"
 }
 }
 ```
