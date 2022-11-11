@@ -18,21 +18,17 @@ Several different cloud hosting services can use the downloaded Flight Solo imag
 
 4. Download the Flight Solo AWS image [here](https://repo.openflighthpc.org/images/SOLO2-2022.2-0211221545_aws.raw).
 
-5. Create a bucket, directory in the bucket and upload the Flight Solo image either on the CLI or on the Web Interface.
+5. You will need to create a bucket, this is covered by the [AWS documentation](https://docs.aws.amazon.com/AmazonS3/latest/userguide/create-bucket-overview.html)
+
+6. Create a directory in the bucket and upload the Flight Solo image either on the CLI or on the Web Interface.
 
 +++ AWS Command Line Interface
-a. Create an S3 bucket, and set a name of your choosing. !HOWTOMAKEWORK?!?
-
-```
-aws s3 create-bucket --bucket <bucketname>
-```
-
-b. Upload the downloaded Flight Solo image to a directory called `images` in the S3 bucket with this command:
+a. Upload the downloaded Flight Solo image to a directory called `images` in the S3 bucket with this command:
 ```
 aws s3 cp SOLO2-2022.2-0211221545_aws.raw s3://<bucketname>/images/
 ```
 
-c. Wait until it has finished uploaded before proceeding.
+b. Wait until it has finished uploaded before proceeding.
 
 +++ AWS Web Interface
 a. Go to the [AWS S3 Web Interface for buckets](https://s3.console.aws.amazon.com/s3/buckets). It should look like this:
@@ -43,37 +39,29 @@ a. Go to the [AWS S3 Web Interface for buckets](https://s3.console.aws.amazon.co
 Make sure that your region is set correctly.
 !!!
 
-b. Click "Create Bucket". 
-
-c. On the bucket creation page, set the bucket name, and any other desired settings.
-
-![](/images/aws_s3_bucket_name.png)
-
-d. Scroll down to the bottom and click "Create Bucket". A success message should appear at the top of the screen and you will return to the bucket overview.
-
-e. Click on the newly created bucket to view it.
+b. Click on your bucket to view it.
 
 ![](/images/aws_s3_click_bucket.png)
 
-f. This is what it should look like:
+c. This is what it should look like:
 
 ![](/images/aws_s3_bucket_view.png)
 
-g. Make a folder by clicking "Make Folder" and name it `images`.
+d. Make a folder by clicking "Make Folder" and name it `images`.
 
 ![](/images/aws_s3_bucket_makedir.png)
 
-h. Click "Create Folder" to finish creation.
+e. Click "Create Folder" to finish creation.
 
-i. Enter the `images` folder by clicking on its name.
+f. Enter the `images` folder by clicking on its name.
 
 ![](/images/aws_s3_showdir.png)
 
-j. Click on "Upload" to open the upload screen. Click on "Add Files", and select the downloaded Flight Solo image.
+g. Click on "Upload" to open the upload screen. Click on "Add Files", and select the downloaded Flight Solo image.
 
 ![](/images/aws_s3_upload.png)
 
-k. Click "Upload" to begin uploading, and wait for it to complete before proceeding.
+h. Click "Upload" to begin uploading, and wait for it to complete before proceeding.
 
 ![](/images/aws_s3_upload_status.png)
 
@@ -84,10 +72,9 @@ k. Click "Upload" to begin uploading, and wait for it to complete before proceed
 
 6. Create a vmimport policy file to enable vm import operations. Make a file called `trust-policy.json` with these contents:
 
-!!UHH VERSION?? !!
 ```
 {
-"Version": "2012-10-17",
+"Version": "2022-11-03",
 "Statement": [
   {
      "Effect": "Allow",
@@ -111,7 +98,7 @@ aws iam create-role --role-name vmimport --assume-role-policy-document "file://t
 8. Create a bucket association with the vmimport role in a file called `role-policy.json`, replacing `<bucketname>` with the name of your S3 bucket.
 ```
 {
-"Version": "2012-10-17",
+"Version": "2022-11-03",
 "Statement": [
     {
         "Effect": "Allow",
