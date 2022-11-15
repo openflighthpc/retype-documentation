@@ -14,8 +14,16 @@ OpenFlight HPC recommends using Flight Solo and Flight Profile for a streamlined
 
 ## Where to run?
 
-AWS is silly, but for Openstack you need your own machines.
+Amazon Web Services, Openstack and Microsoft Azure are all tried and tested cloud platforms that support OpenflightHPC. Any cloud computing platforms not mentioned in this documentation would likely work, but figuring that out will be up to you.
 
 ## What type of cluster to run?
 
 This depends on the research you intend to do, there is more information about SLURM [in the running jobs section of this documentation](/hpc_environment_usage/running_jobs/slurm_scheduler/what_is_slurm/), more information about Jupyter [on the Jupyter website](https://jupyter.org/) and more about Kubernetes on the [Kubernetes website](https://kubernetes.io/docs/concepts/overview/).
+
+## How to configure a cluster?
+
+Generally, two ways to configure a cluster are offered: with Flight Profile, or manually. Flight Profile is a tool that simplifies multinode and standalone cluster configurations, **and OpenflightHPC highly recommends using it**. However, some people prefer to make their own way, and for those there are instructions on manually configuring a cluster. 
+
+## What size of cluster?
+
+There are two possible sizes: standalone and multinode. Standalone is just a single node, but depending on what it is hosted by it may be quite powerful. Multinode is a more traditional cluster, as it is made up of multiple instances joined together.
