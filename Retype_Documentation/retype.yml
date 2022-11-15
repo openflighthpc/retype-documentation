@@ -19,3 +19,9 @@ footer:
     - text: License
       link: https://creativecommons.org/licenses/by-sa/4.0/
 poweredByRetype: false
+templating:
+  enabled: true
+  liquid: true
+data:
+  variable: "success2"
+  custom-variant: "success"
