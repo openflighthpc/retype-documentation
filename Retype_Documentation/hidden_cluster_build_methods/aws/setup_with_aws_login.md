@@ -1,10 +1,10 @@
 ---
 order: 100
-label: Setting Up a Login Node
+label: '1\. Setting Up a Login Node'
 icon: dot-fill
 ---
 
-To set up a cluster, you will need a Flight Solo Image, which can either be from Amazon Marketplace, or imported as a file.
+To set up a cluster, you will need a Flight Solo Image, which can either be from Amazon Marketplace, or [imported as a file](/cluster_build_methods/aws/import_solo_aws/).
 
 +++ Marketplace
 

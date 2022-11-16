@@ -1,6 +1,6 @@
 ---
 order: 50
-label: Configuring a SLURM Multinode Cluster With Flight Profile
+label: '3\. Configuring a SLURM Multinode Cluster With Flight Profile'
 icon: dot-fill
 ---
 

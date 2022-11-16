@@ -1,5 +1,11 @@
 ---
 order: 80
-label: Manually Configuring a SLURM Multinode Cluster
+label: '3\. Manually Configuring a SLURM Multinode Cluster'
 icon: dot-fill
 ---
+
+
+Will need to configure:
+node hostnames
+slurm
+nfs

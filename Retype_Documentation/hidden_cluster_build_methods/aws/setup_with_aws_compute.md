@@ -1,6 +1,6 @@
 ---
 order: 90
-label: Setting Up Compute Nodes
+label: '2\. Setting Up Compute Nodes'
 icon: dot-fill
 ---
 
