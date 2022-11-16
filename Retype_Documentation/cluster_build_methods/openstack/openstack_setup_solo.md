@@ -1,0 +1,1 @@
+/home/ijk/Git/retype-documentation/Retype_Documentation/hidden_cluster_build_methods/openstack/openstack_setup_solo.md
