@@ -1,5 +1,5 @@
 ---
-order: 100
+order: 110
 label: Import Flight Solo Image to AWS
 icon: dot
 ---
