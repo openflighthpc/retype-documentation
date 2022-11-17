@@ -1,1 +1,1 @@
-/home/ijk/Git/retype-documentation/Retype_Documentation/hidden_cluster_build_methods/ref_cluster_centos8/node_setup.md
+../../../hidden_cluster_build_methods/ref_cluster_centos8/node_setup.md
