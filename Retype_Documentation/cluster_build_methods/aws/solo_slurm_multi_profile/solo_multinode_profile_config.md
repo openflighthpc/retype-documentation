@@ -1,1 +1,1 @@
-/home/ijk/Git/retype-documentation/Retype_Documentation/hidden_cluster_build_methods/profile/solo_multinode_profile_config.md
+../../../hidden_cluster_build_methods/profile/solo_multinode_profile_config.md

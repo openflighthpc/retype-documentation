@@ -1,1 +1,1 @@
-/home/ijk/Git/retype-documentation/Retype_Documentation/hidden_cluster_build_methods/ref_cluster_centos7/add_genders_and_pdsh.md
+../../../hidden_cluster_build_methods/ref_cluster_centos7/add_genders_and_pdsh.md
