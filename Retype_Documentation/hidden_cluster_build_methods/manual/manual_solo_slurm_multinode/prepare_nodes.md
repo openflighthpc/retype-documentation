@@ -4,7 +4,8 @@ label: 'a\. Prepare Nodes'
 icon: dot
 ---
 
-This is going to be a login node and 2 copute nodes. The instructions are fairly simple to modify to allow for any number of compute nodes. Make sure to do all the instructions on a tab, then proceed the next tab and repeat.
+This example instruction cluster consists of a login node and two compute nodes, but it is possible to use more.
+Make sure to do all the instructions on a tab, then proceed the next tab and repeat.
 
 1. Log into the login node
 
