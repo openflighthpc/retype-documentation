@@ -1,0 +1,1 @@
+../../../hidden_cluster_build_methods/ref_cluster_centos8/setup_nfs_client.md

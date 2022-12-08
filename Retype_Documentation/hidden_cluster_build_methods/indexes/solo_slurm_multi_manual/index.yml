@@ -1,0 +1,4 @@
+order: 50
+icon: dot
+label: Manually setup a Flight Solo multinode Slurm cluster
+visibility: hidden

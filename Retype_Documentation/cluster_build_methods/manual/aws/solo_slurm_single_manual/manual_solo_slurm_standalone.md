@@ -1,0 +1,1 @@
+../../../../hidden_cluster_build_methods/manual/manual_solo_slurm_standalone.md

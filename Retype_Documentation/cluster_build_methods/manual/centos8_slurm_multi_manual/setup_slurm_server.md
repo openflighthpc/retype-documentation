@@ -1,0 +1,1 @@
+../../../hidden_cluster_build_methods/ref_cluster_centos8/setup_slurm_server.md
