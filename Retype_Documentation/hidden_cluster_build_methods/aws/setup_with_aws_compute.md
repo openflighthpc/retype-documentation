@@ -101,7 +101,7 @@ a. Click "Launch Instance" to go to the EC2 instance setup page.
 ![](/images/aws_ec2_userdata.png)
 
 
-&ensp;&ensp;&ensp;&ensp;a. Copy this cloud init script into the user data section, making sure the change the parts in <> brackets:
+&ensp;&ensp;&ensp;&ensp;a. Copy this cloud init script into the user data section, making sure to change the parts in <> brackets:
 
 
     
