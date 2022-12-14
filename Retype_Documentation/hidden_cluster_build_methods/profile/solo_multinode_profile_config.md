@@ -23,11 +23,11 @@ Now that a login node and one or more compute nodes have been launched according
 
     This will generate a list, for example:
     ```
-    [root@ip-172-31-19-83 ~]# flight hunter parse --prefix login --start 1
+    [root@chead1 ~]# flight hunter parse --prefix login --start 1
     Select the nodes that you wish to save: (Scroll for more nodes)
-    ‣ ⬡ ip-172-31-19-83.eu-west-2.compute.internal (172.31.19.83)
-      ⬡ ip-172-31-27-136.eu-west-2.compute.internal (172.31.27.136)
-      ⬡ ip-172-31-34-31.eu-west-2.compute.internal (172.31.34.31)
+    ‣ ⬡ chead1.novalocal (10.50.0.13)
+      ⬡ cnode01.novalocal (10.50.0.31)
+      ⬡ cnode02.novalocal (10.50.0.26)
     ```
     Select the node that needs to be set as a login node, it can be identified by the name or ip address. *This should be the local node.*
     !!!
@@ -45,10 +45,10 @@ Now that a login node and one or more compute nodes have been launched according
 
     This will generate a list, for example:
     ```
-    [root@ip-172-31-19-83 ~]# flight hunter parse --prefix node --start 01
+    [root@chead1 ~]# flight hunter parse --prefix node --start 01
     Select the nodes that you wish to save: (Scroll for more nodes)
-    ‣ ⬡ ip-172-31-27-136.eu-west-2.compute.internal (172.31.27.136)
-      ⬡ ip-172-31-34-31.eu-west-2.compute.internal (172.31.34.31)
+    ‣ ⬡ cnode01.novalocal (10.50.0.31)
+      ⬡ cnode02.novalocal (10.50.0.26)
     ```
     Select all the nodes that need to be set as a compute node, they can be identified by their name or ip address. *Note that the login node is no longer visible since it was selected earlier.*
 

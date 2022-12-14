@@ -24,9 +24,9 @@ A standalone cluster runs on just one instance, create one before going through 
 
     This will generate a list, for example:
     ```
-    [root@ip-172-31-19-83 ~]# flight hunter parse --prefix standalone --start 1
+    [root@chead1 ~]# flight hunter parse --prefix standalone --start 1
     Select the nodes that you wish to save: (Scroll for more nodes)
-    ‣ ⬡ ip-172-31-42-232.eu-west-2.compute.internal (172.31.42.232)
+    ‣ ⬡ chead1.novalocal (10.50.0.13)
     ```
     Since this is a standalone cluster, there should only be one node in the list. 
     !!!
