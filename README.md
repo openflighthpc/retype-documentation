@@ -1,22 +1,14 @@
-# Alces-Retype-Documentation
+# OpenFlightHPC-Retype-Documentation
 
-An overhaul and update of Alces Flight documentation using Retype. 
+An overhaul and update of OpenflightHPC documentation using Retype. 
 
 ## Overview
 
-What is it?
-
-## Installation
-
-How is it installed?
-
-## Configuration
-
-Any required or optional configuration?
+The documentation describes how to use certain tools in the flight user suite, some basic examples of how to use linux, and workflows and walkthroughs to help guide users.
 
 ## Operation
 
-How do you use it?
+See the [Retype documentation](https://retype.com/) for information on how to create an editable local copy of the documentation.
 
 # Contributing
 
