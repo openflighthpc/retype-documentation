@@ -10,9 +10,11 @@ A standalone cluster runs on just one instance, create one before going through 
 
 1. [Log in](/general_environment_usage/cli_basics/logging_in/) to the node.
 
+2. [Become the root user](/general_environment_usage/cli_basics/becoming_the_root_user/).
+
 ## Parse Node
 
-2. Parse the node with the command `flight hunter parse`. 
+3. Parse the node with the command `flight hunter parse`. 
     - Add the option `--prefix <name>` to set a name for every selected node.
     - Add the option `--start <number>` to add a number to every node name, that increments with each one.
     - For example:
@@ -22,9 +24,9 @@ A standalone cluster runs on just one instance, create one before going through 
 
     This will generate a list, for example:
     ```
-    [flight@ip-172-31-19-83 ~]$ flight hunter parse --prefix standalone --start 1
+    [root@chead1 ~]# flight hunter parse --prefix standalone --start 1
     Select the nodes that you wish to save: (Scroll for more nodes)
-    ‣ ⬡ ip-172-31-42-232.eu-west-2.compute.internal (172.31.42.232)
+    ‣ ⬡ chead1.novalocal (10.50.0.13)
     ```
     Since this is a standalone cluster, there should only be one node in the list. 
     !!!
@@ -33,14 +35,14 @@ A standalone cluster runs on just one instance, create one before going through 
 
 ## Add genders
 
-3. **Optionally**, you may add genders to the newly parsed node. For example, in the case that the node should have the gender `standalone` and `all` then I would run the command:
+4. **Optionally**, you may add genders to the newly parsed node. For example, in the case that the node should have the gender `standalone` and `all` then I would run the command:
     ```
     flight hunter modify-groups --add standalone,all standalone1
     ```
 
 ## Apply Profile
 
-4. Configure profile
+5. Configure profile
 
     ```
     flight profile configure
@@ -53,13 +55,13 @@ A standalone cluster runs on just one instance, create one before going through 
     - Set user password: Set a password to be used for the chosen default user.
     - IP or FQDN for Web Access: As described [here](/hpc_environment_usage/flight_web_suite/installation_and_setup/configuring_web_suite/#setting-domain-name), this could be the public IP or public hostname.
     
-5. Apply an identity by running the command `flight profile apply`, E.g. 
+6. Apply an identity by running the command `flight profile apply`, E.g. 
     ```
     flight profile apply standalone1 all-in-one
     ```
     !!! 
     You can check all available identities for the current profile with `flight profile identities`
     !!!
-6. Wait for the identity to finish applying. You can check the status of all nodes with `flight profile list`.
+7. Wait for the identity to finish applying. You can check the status of all nodes with `flight profile list`.
 
 

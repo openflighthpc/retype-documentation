@@ -1,0 +1,1 @@
+../../../hidden_cluster_build_methods/profile/solo_multinode_profile_config.md

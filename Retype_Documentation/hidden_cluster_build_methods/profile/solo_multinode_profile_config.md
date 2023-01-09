@@ -9,9 +9,11 @@ Now that a login node and one or more compute nodes have been launched according
 
 1. [Log in](/general_environment_usage/cli_basics/logging_in/) to the login node.
 
+2. [Become the root user](/general_environment_usage/cli_basics/becoming_the_root_user/).
+
 ## Parse Nodes
 
-2. Parse the login node with the command `flight hunter parse`. 
+3. Parse the login node with the command `flight hunter parse`. 
     - Add the option `--prefix <name>` to set a name for every selected login node.
     - Add the option `--start <number>` to add a number to every login node name, that increments with each one.
     - For example:
@@ -21,11 +23,11 @@ Now that a login node and one or more compute nodes have been launched according
 
     This will generate a list, for example:
     ```
-    [flight@ip-172-31-19-83 ~]$ flight hunter parse --prefix login --start 1
+    [root@chead1 ~]# flight hunter parse --prefix login --start 1
     Select the nodes that you wish to save: (Scroll for more nodes)
-    ‣ ⬡ ip-172-31-19-83.eu-west-2.compute.internal (172.31.19.83)
-      ⬡ ip-172-31-27-136.eu-west-2.compute.internal (172.31.27.136)
-      ⬡ ip-172-31-34-31.eu-west-2.compute.internal (172.31.34.31)
+    ‣ ⬡ chead1.novalocal (10.50.0.13)
+      ⬡ cnode01.novalocal (10.50.0.31)
+      ⬡ cnode02.novalocal (10.50.0.26)
     ```
     Select the node that needs to be set as a login node, it can be identified by the name or ip address. *This should be the local node.*
     !!!
@@ -33,7 +35,7 @@ Now that a login node and one or more compute nodes have been launched according
     !!!
 
 
-3. Parse the compute nodes with the command `flight hunter parse`.
+4. Parse the compute nodes with the command `flight hunter parse`.
     - Add the option `--prefix <name>` to set a name for every selected compute node.
     - Add the option `--start <number>` to add a number to every compute node name, that increments with each one.
     - For example:
@@ -43,10 +45,10 @@ Now that a login node and one or more compute nodes have been launched according
 
     This will generate a list, for example:
     ```
-    [flight@ip-172-31-19-83 ~]$ flight hunter parse --prefix node --start 01
+    [root@chead1 ~]# flight hunter parse --prefix node --start 01
     Select the nodes that you wish to save: (Scroll for more nodes)
-    ‣ ⬡ ip-172-31-27-136.eu-west-2.compute.internal (172.31.27.136)
-      ⬡ ip-172-31-34-31.eu-west-2.compute.internal (172.31.34.31)
+    ‣ ⬡ cnode01.novalocal (10.50.0.31)
+      ⬡ cnode02.novalocal (10.50.0.26)
     ```
     Select all the nodes that need to be set as a compute node, they can be identified by their name or ip address. *Note that the login node is no longer visible since it was selected earlier.*
 
@@ -56,7 +58,7 @@ Now that a login node and one or more compute nodes have been launched according
 
 ## Add genders
 
-4. **Optionally**, you may add genders to the newly parsed nodes. For example, in the case that the login node should have the gender `login` and `all` then I would run the command:
+5. **Optionally**, you may add genders to the newly parsed nodes. For example, in the case that the login node should have the gender `login` and `all` then I would run the command:
     ```
     flight hunter modify-groups --add login,all login1
     ```
@@ -68,7 +70,7 @@ Now that a login node and one or more compute nodes have been launched according
 
 ## Apply Profiles
 
-5. Configure profile
+6. Configure profile
 
     ```
     flight profile configure
@@ -84,7 +86,7 @@ Now that a login node and one or more compute nodes have been launched according
     - IP range of compute nodes: The IP range of the compute nodes used, remember to add the netmask. E.g. `172.31.16.0/20`
     - Create hosts entries from Flight Hunter data: Flight profile can create /etc/hosts file entries based on the data it automatically collects on connected nodes.
     
-6. Apply identities by running the command `flight profile apply`
+7. Apply identities by running the command `flight profile apply`
     a. First apply an identity to the login node. E.g. 
     ```
     flight profile apply login1 login
@@ -98,5 +100,5 @@ Now that a login node and one or more compute nodes have been launched according
     You can check all available identities for the current profile with `flight profile identities`
     !!!
 
-7. Once the identities have been applied, the cluster is ready to go.
+8. Once the identities have been applied, the cluster is ready to go.
 
