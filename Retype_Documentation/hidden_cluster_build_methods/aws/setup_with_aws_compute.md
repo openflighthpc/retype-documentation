@@ -113,6 +113,7 @@ a. Click "Launch Instance" to go to the EC2 instance setup page.
 	    permissions: '0644'
 	    owner: root:root
 	users:
+	  - default    
 	  - name: root
 	    ssh_authorized_keys:
 	      - <Content of ~/.ssh/id_alcescluster.pub from root user on login node>
