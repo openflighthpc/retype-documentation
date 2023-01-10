@@ -1,5 +1,5 @@
 ---
 order:
 label:
-icon:
+icon: dot-fill
 ---
