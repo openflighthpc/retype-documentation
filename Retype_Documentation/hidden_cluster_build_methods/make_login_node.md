@@ -4,10 +4,10 @@ label:
 icon: dot
 ---
 
++++ AWS Marketplace
 
 To set up a cluster, you will need a Flight Solo Image, which can either be from Amazon Marketplace, or [imported as a file](/cluster_build_methods/aws/import_solo_aws/).
 
-+++ Marketplace
 
 1. Find the Flight Solo image [here](https://alces-flight.com/solo/aws) or by searching the marketplace for "Flight Solo".
 
@@ -86,7 +86,14 @@ The image, along with this documentation is open-source, and freely available to
 
 ![](/images/aws_login_launched.png)
 
-+++ Imported
+
+
+
+
+
++++ AWS Imported
+
+To set up a cluster, you will need a Flight Solo Image, which can either be from Amazon Marketplace, or [imported as a file](/cluster_build_methods/aws/import_solo_aws/).
 
 
 1. Go the EC2 instance [console](https://eu-west-2.console.aws.amazon.com/ec2/home?region=eu-west-2#Instances:v=3;$case=tags:true%5C,client:false;$regex=tags:false%5C,client:false)
@@ -159,8 +166,7 @@ The image, along with this documentation is open-source, and freely available to
 
 
 
-
-+++
++++ Openstack
 
 
 
@@ -225,7 +231,7 @@ To set up a cluster:
 
 13. Associate a floating IP, either by using an existing one or allocating a new one.
 
-+++ Use Existing
+To Use Existing
 
 14. Open the IP Address drop down menu.
 
@@ -233,7 +239,7 @@ To set up a cluster:
 
 15. Select one of the IP Addresses.
 
-+++ Allocate New
+To Allocate New
 
 14. Click the "+" next to the dropdown arrow to open the allocation menu.
 
@@ -245,8 +251,8 @@ To set up a cluster:
 If all available IPs have already been allocated, use an existing one instead.
 !!!
 
-+++
+
 
 16. Click "Associate" to finish associating an IP.
 
-
++++
