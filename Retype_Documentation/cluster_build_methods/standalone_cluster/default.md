@@ -1,6 +1,6 @@
 ---
 order: 90
-label: Slurm Standalone
+label: Standalone Cluster
 icon: dot-fill
 ---
 
