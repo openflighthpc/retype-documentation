@@ -1,7 +1,7 @@
 ---
 order: 100
 label: 'a\. Prepare Nodes'
-icon: dot
+icon: dot-fill
 ---
 
 This example instruction cluster consists of a login node and two compute nodes, but it is possible to use more.

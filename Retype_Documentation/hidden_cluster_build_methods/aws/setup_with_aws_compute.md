@@ -1,7 +1,7 @@
 ---
 order: 90
 label: '2\. Setting Up Compute Nodes'
-icon: dot-fill
+icon: dot
 ---
 
 Setting up computes nodes is done slightly differently than a login node. In this example 2 compute nodes are setup, but it could be any non-zero number of compute nodes.

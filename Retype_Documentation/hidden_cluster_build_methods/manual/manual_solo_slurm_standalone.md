@@ -1,7 +1,7 @@
 ---
 order: 80
 label: '2\. Manually Configuring a SLURM Standalone Cluster'
-icon: dot-fill
+icon: dot
 ---
 
 Once all the node needed for a cluster have been created, they need to be configured. This page covers how to manually configure a standalone cluster, but OpenflightHPC recommends using the automatic configuration outlined in the [AWS section](/cluster_build_methods/aws/solo_slurm_single_profile/solo_standalone_profile_config/).
