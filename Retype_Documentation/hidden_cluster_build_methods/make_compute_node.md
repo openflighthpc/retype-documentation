@@ -5,7 +5,7 @@ icon: dot
 ---
 
 
-Setting up computes nodes is done slightly differently than a login node. In this example 2 compute nodes are setup, but it could be any non-zero number of compute nodes.
+Setting up compute nodes is done slightly differently than a login node. In this example 2 compute nodes are setup, but it could be any non-zero number of compute nodes.
 
 +++ AWS Marketplace
 
@@ -218,8 +218,6 @@ Repeat this process for any other types of nodes that need to be added to the cl
 
 +++ Openstack
 
-
-Setting up computes nodes is done slightly differently than a login node. In this example 2 compute nodes are setup, but it could be any non-zero number of compute nodes.
 
 1. Go to the Openstack instances page.
 
