@@ -8,7 +8,7 @@ This section details various ways to setup a cluster. The variations of cluster 
 
 - Platform: AWS, Openstack or Azure[^1].
 - Operating System: Flight Solo (Based on EL8), CentOS 8 or CentOS 7(this one is not recommended).
-- Cluster Type: SLURM, Jupyter or Kubernetes[^1].
+- Cluster Type: SLURM, Jupyter[^1] or Kubernetes[^1].
 - Cluster Size: Standalone (single node research environment) or Multinode.
 - Configuration Method: Manual or Flight Profile.
 
