@@ -12,7 +12,7 @@ Before setting up a cluster, there are several required prerequisites:
 	- A router
 	- A security group that allows traffic through ports 22, 80, 8888, 443 and 5900-5903
 
-This documentation includes instructions for [importing an image to Openstack](/cluster_build_methods/openstack/openstack_setup_solo/), and guides for setting up the other prerequisites can be found in the [Openstack documentation](https://docs.openstack.org/zed/)
+This documentation includes instructions for [importing an image to Openstack](/cluster_build_methods/get_flight_solo/openstack_setup_solo/), and guides for setting up the other prerequisites can be found in the [Openstack documentation](https://docs.openstack.org/zed/)
 
 
 To set up a cluster:
