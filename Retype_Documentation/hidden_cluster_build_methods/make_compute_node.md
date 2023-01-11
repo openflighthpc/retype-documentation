@@ -1,6 +1,6 @@
 ---
-order:
-label:
+order: 90
+label: '2\. Make a Compute Node'
 icon: dot
 ---
 

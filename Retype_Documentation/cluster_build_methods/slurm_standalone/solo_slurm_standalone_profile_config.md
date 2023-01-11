@@ -1,7 +1,7 @@
 ---
 order: 40
 label: '2\. Configuring a SLURM Standalone Cluster with Flight Profile'
-icon: dot-fill
+icon: dot
 ---
 
 

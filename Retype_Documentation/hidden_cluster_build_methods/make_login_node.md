@@ -1,6 +1,6 @@
 ---
-order:
-label:
+order: 100
+label: '1\. Make a Login Node'
 icon: dot
 ---
 

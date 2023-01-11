@@ -1,7 +1,7 @@
 ---
 order: 50
 label: '3\. Configuring a SLURM Multinode Cluster With Flight Profile'
-icon: dot-fill
+icon: dot
 ---
 
 Now that a login node and one or more compute nodes have been launched according the the instructions of the previous page, the cluster is ready to be configured.
