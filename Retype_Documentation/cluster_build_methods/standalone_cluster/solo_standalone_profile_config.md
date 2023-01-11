@@ -42,6 +42,8 @@ A standalone cluster runs on just one instance, create one before going through 
 
 ## Apply Profile
 
++++ Slurm
+
 5. Configure profile
 
     ```
@@ -64,4 +66,4 @@ A standalone cluster runs on just one instance, create one before going through 
     !!!
 7. Wait for the identity to finish applying. You can check the status of all nodes with `flight profile list`.
 
-
++++
