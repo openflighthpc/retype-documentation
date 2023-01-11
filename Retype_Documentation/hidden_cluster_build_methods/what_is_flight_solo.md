@@ -1,5 +1,5 @@
 ---
-order: 100
+order: 110
 label: What is Flight Solo?
 icon: dot-fill
 ---
