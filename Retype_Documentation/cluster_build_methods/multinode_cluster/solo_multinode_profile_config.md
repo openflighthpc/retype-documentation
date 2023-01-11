@@ -70,13 +70,15 @@ Now that a login node and one or more compute nodes have been launched according
 
 ## Apply Profiles
 
++++ Slurm
+
 6. Configure profile
 
     ```
     flight profile configure
     ```
     This brings up a UI, where several options need to be set. Use up and down arrow keys to scroll through options and enter to move to the next option. Options in brackets coloured yellow are the default options that will be applied if nothing is entered.
-    - Cluster type: The type of cluster setup needed, in this case select one of the `Multinode` options, e.g. `Slurm Multinode` or `Kubernetes Multinode`.
+    - Cluster type: The type of cluster setup needed, in this case `Slurm Multinode`.
     - Cluster name: The name of the cluster.
     - NFS server: The hostname or flight-hunter label of the node that will act as the NFS server.
     - SLURM server: The hostname or flight-hunter label of the node that will act as the SLURM server.
@@ -100,5 +102,6 @@ Now that a login node and one or more compute nodes have been launched according
     You can check all available identities for the current profile with `flight profile identities`
     !!!
 
-8. Once the identities have been applied, the cluster is ready to go.
+8. Once all the identities have been applied, the cluster is ready to go.
 
++++
