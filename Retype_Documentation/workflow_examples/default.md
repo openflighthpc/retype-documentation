@@ -1,3 +1,5 @@
+---
 order: 50
 label: Workflow Examples
 icon: graph
+---
