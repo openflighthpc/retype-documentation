@@ -1,6 +1,6 @@
 ---
 order: 95
-label: Slurm Multinode
+label: Multinode Cluster
 icon: dot-fill
 ---
 

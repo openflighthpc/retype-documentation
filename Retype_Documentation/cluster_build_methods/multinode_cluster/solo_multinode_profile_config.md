@@ -1,6 +1,6 @@
 ---
 order: 50
-label: '3\. Configuring a Kubernetes Multinode Cluster With Flight Profile'
+label: '3\. Configuring a Multinode Cluster With Flight Profile'
 icon: dot
 ---
 
@@ -76,7 +76,7 @@ Now that a login node and one or more compute nodes have been launched according
     flight profile configure
     ```
     This brings up a UI, where several options need to be set. Use up and down arrow keys to scroll through options and enter to move to the next option. Options in brackets coloured yellow are the default options that will be applied if nothing is entered.
-    - Cluster type: The type of cluster setup needed, in this case select `Kubernetes Multinode`
+    - Cluster type: The type of cluster setup needed, in this case select one of the `Multinode` options, e.g. `Slurm Multinode` or `Kubernetes Multinode`.
     - Cluster name: The name of the cluster.
     - NFS server: The hostname or flight-hunter label of the node that will act as the NFS server.
     - SLURM server: The hostname or flight-hunter label of the node that will act as the SLURM server.

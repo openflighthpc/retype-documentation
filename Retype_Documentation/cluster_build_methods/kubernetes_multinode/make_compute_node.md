@@ -1,1 +1,0 @@
-/home/ijk/Git/retype-documentation/Retype_Documentation/hidden_cluster_build_methods/make_compute_node.md
