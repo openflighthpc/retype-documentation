@@ -4,10 +4,9 @@ label: '1\. Make a Login Node'
 icon: dot
 ---
 
+Whether creating a standalone or multinode cluster, you will need a login node. Choose the platform you want to use and go through the instructions.
+
 +++ AWS Marketplace
-
-To set up a cluster, you will need a Flight Solo Image, which can either be from Amazon Marketplace, or [imported as a file](/cluster_build_methods/aws/import_solo_aws/).
-
 
 1. Find the Flight Solo image [here](https://alces-flight.com/solo/aws) or by searching the marketplace for "Flight Solo".
 
@@ -93,7 +92,7 @@ The image, along with this documentation is open-source, and freely available to
 
 +++ AWS Imported
 
-To set up a cluster, you will need a Flight Solo Image, which can either be from Amazon Marketplace, or [imported as a file](/cluster_build_methods/aws/import_solo_aws/).
+To set up a cluster, you will need to [import a Flight Solo image](/cluster_build_methods/get_flight_solo/import_solo_aws/).
 
 
 1. Go the EC2 instance [console](https://eu-west-2.console.aws.amazon.com/ec2/home?region=eu-west-2#Instances:v=3;$case=tags:true%5C,client:false;$regex=tags:false%5C,client:false)
@@ -170,7 +169,7 @@ To set up a cluster, you will need a Flight Solo Image, which can either be from
 
 
 
-Before setting up a cluster, there are several required prerequisites:
+Before setting up a cluster on Openstack, there are several required prerequisites:
 - A flight solo image imported to openstack
 - The following set up on Openstack:
 	- Your own keypair
@@ -178,7 +177,7 @@ Before setting up a cluster, there are several required prerequisites:
 	- A router
 	- A security group that allows traffic through ports 22, 80, 8888, 443 and 5900-5903
 
-This documentation includes instructions for [importing an image to Openstack](/cluster_build_methods/openstack/openstack_setup_solo/), and guides for setting up the other prerequisites can be found in the [Openstack documentation](https://docs.openstack.org/zed/)
+This documentation includes instructions for [importing an image to Openstack](/cluster_build_methods/get_flight_solo/openstack_setup_solo/), and guides for setting up the other prerequisites can be found in the [Openstack documentation](https://docs.openstack.org/zed/)
 
 
 To set up a cluster:
@@ -231,7 +230,7 @@ To set up a cluster:
 
 13. Associate a floating IP, either by using an existing one or allocating a new one.
 
-To Use Existing
+### To use an existing floating IP:
 
 14. Open the IP Address drop down menu.
 
@@ -239,7 +238,9 @@ To Use Existing
 
 15. Select one of the IP Addresses.
 
-To Allocate New
+16. Click "Associate" to finish associating an IP.
+
+### To allocate a new floating IP:
 
 14. Click the "+" next to the dropdown arrow to open the allocation menu.
 
@@ -250,8 +251,6 @@ To Allocate New
 !!!
 If all available IPs have already been allocated, use an existing one instead.
 !!!
-
-
 
 16. Click "Associate" to finish associating an IP.
 
