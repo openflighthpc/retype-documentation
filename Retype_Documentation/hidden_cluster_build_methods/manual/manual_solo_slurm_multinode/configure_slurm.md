@@ -1,7 +1,7 @@
 ---
 order: 70
 label: 'd\. Configure SLURM'
-icon: dot
+icon: dot-fill
 ---
 
 

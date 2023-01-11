@@ -1,7 +1,7 @@
 ---
 order: 80
 label: 'c\. Configure Web Suite'
-icon: dot
+icon: dot-fill
 ---
 
 Only on the login node:

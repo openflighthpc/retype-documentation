@@ -1,7 +1,7 @@
 ---
 order: 90
 label: 'b\. Configure NFS'
-icon: dot
+icon: dot-fill
 ---
 
 
