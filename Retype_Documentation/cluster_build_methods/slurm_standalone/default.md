@@ -1,5 +1,5 @@
 ---
 order:
-label:
+label: Slurm Standalone
 icon: dot-fill
 ---

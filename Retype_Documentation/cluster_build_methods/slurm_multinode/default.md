@@ -1,5 +1,5 @@
 ---
 order:
-label:
+label: Slurm Multinode
 icon: dot-fill
 ---
