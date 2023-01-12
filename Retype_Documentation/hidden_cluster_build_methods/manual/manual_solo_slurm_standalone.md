@@ -4,7 +4,7 @@ label: '2\. Manually Configuring a SLURM Standalone Cluster'
 icon: dot
 ---
 
-Once all the nodes needed for a cluster have been created, they need to be configured. This page covers how to manually configure a standalone cluster, but OpenflightHPC recommends using the automatic configuration outlined in the [Slurm standalone setup section](/cluster_build_methods/slurm_standalone/solo_slurm_standalone_profile_config/).
+Once all the nodes needed for a cluster have been created, they need to be configured. This page covers how to manually configure a standalone cluster, but OpenflightHPC recommends using the automatic configuration outlined in the [Slurm standalone setup section](/cluster_build_methods/standalone_cluster/).
 In the case of a standalone cluster, you will only need 1 node, if you haven't already, create it by following the instructions on the previous page
 
 Flight Solo comes with the Flight user suite installed but not configured. There are no other nodes to connect to so setup is simple.
