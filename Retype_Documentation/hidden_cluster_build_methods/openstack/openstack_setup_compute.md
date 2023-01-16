@@ -57,6 +57,7 @@ Setting up computes nodes is done slightly differently than a login node. In thi
 	    permissions: '0644'
 	    owner: root:root
 	users:
+	  - default
 	  - name: root
 	    ssh_authorized_keys:
 	      - <Content of ~/.ssh/id_alcescluster.pub from root user on login node>

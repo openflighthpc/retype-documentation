@@ -1,7 +1,7 @@
 ---
 order: 60
 label: 'e\. Create Shared User'
-icon: dot
+icon: dot-fill
 ---
 
 

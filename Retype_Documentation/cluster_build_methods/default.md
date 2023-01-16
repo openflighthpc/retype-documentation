@@ -1,12 +1,14 @@
 ---
-order: 1000
-icon: dot-fill
+order: 50
+label: Cluster Build Methods
+icon: versions
+
 ---
 This section details various ways to setup a cluster. The variations of cluster setups are:
 
-- Platform: AWS, Openstack or Azure.
+- Platform: AWS, Openstack or Azure[^1].
 - Operating System: Flight Solo (Based on EL8), CentOS 8 or CentOS 7(this one is not recommended).
-- Cluster Type: SLURM, Jupyter or Kubernetes.
+- Cluster Type: SLURM, Jupyter[^1] or Kubernetes[^1].
 - Cluster Size: Standalone (single node research environment) or Multinode.
 - Configuration Method: Manual or Flight Profile.
 
@@ -26,4 +28,7 @@ Generally, two ways to configure a cluster are offered: with Flight Profile, or 
 
 ## What size of cluster?
 
+
 There are two possible sizes: standalone and multinode. Standalone is just a single node, but depending on what it is hosted by it may be quite powerful. Multinode is a more traditional cluster, as it is made up of multiple instances joined together.
+
+[^1]: Coming soon.

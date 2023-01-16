@@ -1,1 +1,0 @@
-../../../hidden_cluster_build_methods/openstack/openstack_setup_compute.md
