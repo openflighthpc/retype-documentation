@@ -16,7 +16,7 @@ Now that a login node and one or more compute nodes have been launched according
 3. Parse your nodes with the command `flight hunter parse`. 
     This will generate a list, for example:
     ```
-    [flight@test-new-hunter-my-standalone-hpnqx23nnudz ~]$ flight hunter parse
+    [flight@login-node.novalocal ~]$ flight hunter parse
     Select nodes: (Scroll for more nodes)
     ‣ ⬡ login-node.novalocal - 127.0.0.1
       ⬡ compute-node-1.novalocal - 10.151.15.194
@@ -25,7 +25,7 @@ Now that a login node and one or more compute nodes have been launched according
     Begin by parsing your login node. Select it from the list with `space`, and you will be taken to the label editor.
 
     ```
-    Choose label: test-new-hunter-my-standalone-hpnqx23nnudz.novalocal
+    Choose label: login-node.novalocal
     ```
     Here, you can edit the label like plain text.
     ```
@@ -33,7 +33,7 @@ Now that a login node and one or more compute nodes have been launched according
     ```
     When done editing, press `enter` to save. The modified node label will appear next to the ip address and original node label.
     ```
-    Select nodes: test-new-hunter-my-standalone-hpnqx23nnudz.novalocal - 127.0.0.1 (login1) (Scroll for more nodes)
+    Select nodes: login-node.novalocal - 127.0.0.1 (login1) (Scroll for more nodes)
     ‣ ⬢ login-node.novalocal - 127.0.0.1 (login1)
       ⬡ compute-node-1.novalocal - 10.151.15.194
       ⬡ compute-node-2.novalocal - 10.151.15.238
@@ -60,7 +60,7 @@ Now that a login node and one or more compute nodes have been launched according
     !!!
     if you have a lot of compute nodes, you can group them all faster with regex, e.g. the above might be:
     ```
-    flight hunter modify-groups --add nodes,all node0* --regex
+    flight hunter modify-groups --add nodes,all --regex node0*
     ```
     !!!
     
