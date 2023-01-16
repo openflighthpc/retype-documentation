@@ -12,26 +12,38 @@ A standalone cluster runs on just one instance, create one before going through 
 
 2. [Become the root user](/general_environment_usage/cli_basics/becoming_the_root_user/).
 
+
 ## Parse Node
 
-3. Parse the node with the command `flight hunter parse`. 
-    - Add the option `--prefix <name>` to set a name for every selected node.
-    - Add the option `--start <number>` to add a number to every node name, that increments with each one.
-    - For example:
-        ```
-        flight hunter parse --prefix standalone --start 1
-        ```
-
+3. Parse your node with the command `flight hunter parse`. 
     This will generate a list, for example:
     ```
-    [root@chead1 ~]# flight hunter parse --prefix standalone --start 1
-    Select the nodes that you wish to save: (Scroll for more nodes)
-    ‣ ⬡ chead1.novalocal (10.50.0.13)
+    [flight@standalone-login-node.novalocal ~]$ flight hunter parse
+    Select nodes: (Scroll for more nodes)
+    ‣ ⬡ standalone-login-node.novalocal - 127.0.0.1
     ```
-    Since this is a standalone cluster, there should only be one node in the list. 
+    The standalone node will likely be the only one on the list. Select it with `space`, and you will be taken to the label editor.
+
+    ```
+    Choose label: standalone-login-node.novalocal
+    ```
+    Here, you can edit the label like plain text.
+    ```
+    Choose label: standalone1
+    ```
+    When done editing, press `enter` to save. The modified node label will appear next to the ip address and original node label.
+    ```
+    Select nodes: standalone-login-node.novalocal - 127.0.0.1 (standalone1) (Scroll for more nodes)
+    ‣ ⬢ standalone-login-node.novalocal - 127.0.0.1 (standalone1)
+    ```
+    From this point, you can either hit `enter` to finish parsing and process the selected nodes, or continue changing nodes. Either way, you can return to this list by running `flight hunter parse`. 
+
+    Save the standalone node before moving on to the next step.
+
     !!!
-    Scroll the list with the up and down arrow keys, select a node by pressing space, and confirm with the enter key.
+    See `flight hunter parse -h` for more ways to parse nodes.
     !!!
+
 
 ## Add genders
 
