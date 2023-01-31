@@ -24,7 +24,7 @@ After the creation and configuration of nodes has been complete, everything shou
 
 ## Check Nodes Running/Ready
 
-- As the `default_username` check nodes are "Ready" 
+- As the `default_username` (unless this was changed, it will be `flight`) check nodes are "Ready" 
     ```shell
 	kubectl get nodes
 	```
@@ -51,12 +51,14 @@ spec:
   restartPolicy: Never
 EOF
 ```
-- Launch pod (this will create an ubuntu VM that sleeps for 10 minutes then exits)
+- Launch a pod (this will create an ubuntu VM that sleeps for 10 minutes then exits)
 ```shell
 kubectl apply -f test.yaml
 ```
-- Check pod running
+- Check that the pod is running
 ```shell
 kubectl get pods -o wide
 ```
+
+- The pod should be running without issues.
 +++
