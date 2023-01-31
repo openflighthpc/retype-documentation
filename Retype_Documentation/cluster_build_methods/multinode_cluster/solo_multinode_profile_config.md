@@ -121,12 +121,12 @@ Now that a login node and one or more compute nodes have been launched according
 7. Apply identities by running the command `flight profile apply`
     a. First apply an identity to the login node. E.g. 
     ```
-    flight profile apply login1 login
+    flight profile apply login1 master
     ```
     b. Wait for the login node identity to finish applying. You can check the status of all nodes with `flight profile list`.
     c. Apply an identity to the each of the compute nodes.  E.g.
     ```
-    flight profile apply node01,node02 compute
+    flight profile apply node01,node02 worker
     ```
     !!! 
     You can check all available identities for the current profile with `flight profile identities`
