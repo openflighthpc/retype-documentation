@@ -17,7 +17,7 @@ A window with image details will appear. Select the format `Raw`, and upload the
 ![](/images/image_create_details.png)
 
 
-Fill out the other parts of the form as necessary, these will be individual to you. When all the information needed to create an image has been written into the form, the `Create image` button will become available, hit it to create the image.
+Fill out the other parts of the form as necessary, these will be individual to you. It is **recommended** that the **minimum disk size is 10GB** and the **minimum RAM is 2048MB**. When all the information needed to create an image has been written into the form, the `Create image` button will become available, hit it to create the image.
 
 !!!
 The image may take some time to load.
