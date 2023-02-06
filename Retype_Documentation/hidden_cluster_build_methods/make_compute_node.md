@@ -260,18 +260,18 @@ Repeat this process for any other types of nodes that need to be added to the cl
 
 
 ```
-	#cloud-config
-	write_files:
-	  - content: |
-          SERVER=<private ip of login node>
-	    path: /opt/flight/cloudinit.in
-	    permissions: '0644'
-	    owner: root:root
-	users:
-	  - default
-	  - name: root
-	    ssh_authorized_keys:
-	      - <Content of ~/.ssh/id_alcescluster.pub from root user on login node>
+#cloud-config
+write_files:
+  - content: |
+        SERVER=<private ip of login node>
+    path: /opt/flight/cloudinit.in
+    permissions: '0644'
+    owner: root:root
+users:
+  - default
+  - name: root
+    ssh_authorized_keys:
+      - <Content of ~/.ssh/id_alcescluster.pub from root user on login node>
 ```
 
 &ensp;&ensp;&ensp;&ensp;b. To get the information necessary for the cloud init script. Go to the "Instances" page in the "Compute" section. The login node created on the previous page should be visible, use its private IP.
