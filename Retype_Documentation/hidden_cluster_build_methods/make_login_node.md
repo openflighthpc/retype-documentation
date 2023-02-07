@@ -254,4 +254,7 @@ If all available IPs have already been allocated, use an existing one instead.
 
 16. Click "Associate" to finish associating an IP.
 
++++ Azure
+
+
 +++

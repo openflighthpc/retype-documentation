@@ -285,4 +285,6 @@ users:
 
 ![](/images/openstack_instance_ready.png)
 
++++ Azure
+
 +++
