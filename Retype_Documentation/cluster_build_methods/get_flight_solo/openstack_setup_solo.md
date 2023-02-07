@@ -1,5 +1,5 @@
 ---
-order: 0
+order: 
 label: Import Flight Solo Image to Openstack
 icon: dot
 ---
