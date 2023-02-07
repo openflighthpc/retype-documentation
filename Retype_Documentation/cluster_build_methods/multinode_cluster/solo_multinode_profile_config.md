@@ -32,7 +32,7 @@ Now that a login node and one or more compute nodes have been launched according
     Choose label: login1
     ```
     !!!
-    You can clear the current node name by pressing down in the label editor.
+    You can clear the current node name by pressing `down` in the label editor.
     !!!
     When done editing, press `enter` to save. The modified node label will appear next to the ip address and original node label.
     ```
