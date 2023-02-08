@@ -1,1 +1,3 @@
-../../../../hidden_cluster_build_methods/indexes/solo_slurm_single_manual/index.yml
+order: 40
+icon: dot-fill
+label: Manually setup a Flight Solo standalone Slurm cluster
