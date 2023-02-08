@@ -17,4 +17,6 @@ Based on Enterprise Linux 8 as the operating system, it comes with many of the t
 
 ## Where can I download Flight Solo?
 
-Use the download button on the [OpenflightHPC website](https://www.openflighthpc.org/), under the images section
+Go to the [OpenflightHPC repo page](https://repo.openflighthpc.org/), click on "images" then "FlightSolo", which will show all the available Flight Solo releases. Go directly there by clicking this [link](https://repo.openflighthpc.org/?prefix=images/FlightSolo/). 
+
+Click on your desired version, and there will be a list of available builds, select one to begin downloading the raw file.
