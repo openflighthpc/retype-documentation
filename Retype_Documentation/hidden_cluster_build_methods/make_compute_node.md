@@ -287,4 +287,51 @@ users:
 
 +++ Azure
 
+
+1. Go to the Microsoft [Azure portal](https://portal.azure.com/#home).
+
+![](/images/azure_portal.png)
+
+2. Go to **Virtual Machines**, and click "Create".
+
+![](/images/azure_vms.png)
+
+3. Select "Azure virtual machine", which will load this page:
+
+![](/images/azure_createvm_basics.png)
+
+4. On the Basics page:
+    - Set *Subscription* to your subscription type.
+    - Set *Resource Group* to your desired resource group (where the vm will be kept after creation).
+    - Set *Virtual machine name* to any suitable name.
+    - Set *Image* to the imported Flight Solo Image
+        It may be necessary to open the dropdown and/or see all images in order to find the imported image.
+![](/images/azure_createvm_image_dropdown.png)
+    Scroll down to see more options
+![](/images/azure_createvm_basics2.png)
+    - Set *Size* to your choice of size.
+    - Set *Authentication type* to `SSH public key`
+    - Set *Username* to the **same username as with the login node.**
+    - Set *SSH public key source* to the **same key that was used for the login node.**
+    - Fill in the *Key pair name/Stored key/Use existing key* as appropriate to the chosen public key source.
+    - Allow traffic to selected ports, and select `SSH(22`, `HTTP(80)` and `HTTPS(443)` as the allowed ports.
+    - Set the most appropriate license type.
+5. Continuing on to the next page, *Disks*, all necessary details should already be filled out, so this page can be skipped (unless you know what you want to change). However, it is recommended to select *Delete with VM*.
+
+![](/images/azure_createvm_disks.png)
+
+6. Go on to the networking tab and fill out the necessary options.
+![](/images/azure_createvm_networking.png)
+    - Set *Virtual Network* to the **same network that was used for the login node.**
+    - Set *Subnet* to the **same subnet that was used for the login node.**
+    - Set *Public IP* to an existing public IP or create a new one by pressing "Create new" and setting a name.
+    - Set *NIC network security group* to "Advanced", and press "Create new" to create a new security group.
+![](/images/azure_createvm_networking_newsg.png)
+        - Click on "Add an inbound rule" to open the inbound rule creator
+![](/images/azure_createvm_networking_newsg_createinbound.png)
+        - Create rules to allow `HTTP`, `HTTPS` and `SSH` traffic from your IP address to the security group.
+        - When complete, press "OK" at the bottom left of the screen to return to image creation.
+
+7. The *Management*, *Monitoring*, *Advanced*, and *Tags* tabs have more options that aren't necessary for setup. Skip to the final tab *Review + create*.
+
 +++
