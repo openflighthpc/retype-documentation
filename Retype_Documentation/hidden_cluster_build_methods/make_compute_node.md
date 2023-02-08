@@ -304,7 +304,7 @@ users:
     - Set *Subscription* to your subscription type.
     - Set *Resource Group* to your desired resource group (where the vm will be kept after creation).
     - Set *Virtual machine name* to any suitable name.
-    - Set *Image* to the imported Flight Solo Image
+    - Set *Image* to the imported Flight Solo Image.
         It may be necessary to open the dropdown and/or see all images in order to find the imported image.
 ![](/images/azure_createvm_image_dropdown.png)
     Scroll down to see more options
@@ -330,7 +330,7 @@ users:
         - Click on "Add an inbound rule" to open the inbound rule creator
 ![](/images/azure_createvm_networking_newsg_createinbound.png)
         - Create rules to allow `HTTP`, `HTTPS` and `SSH` traffic from your IP address to the security group.
-        - When complete, press "OK" at the bottom left of the screen to return to image creation.
+    - When complete, press "OK" at the bottom left of the screen to return to image creation.
 
 7. The *Management* and *Monitoring* tabs have more options that aren't necessary for setup. Skip to the *Advanced* tab.
 
@@ -339,7 +339,7 @@ users:
 8. In the *Custom data and cloud init* section, there is a text box.
 
 ![](/images/azure_createvm_advanced_customdata.png)
-  a. Copy this cloud init script into the user data section, making sure to change the parts in <> brackets:
+  a. Copy this cloud init script into the custom data section, making sure to change the parts in <> brackets:
 ```
 #cloud-config
 write_files:
@@ -356,7 +356,7 @@ users:
 ```    
   b. To get the information necessary for the cloud init script. Go to Virtual Machines.
 ![](/images/azure_vms_link.png)
-  c. Then click on the login node virtual machine to view it.
+  c. Then click on the virtual machine of the login node to view it.
 ![](/images/azure_vms_view.png)
   d. Get the "Private IP" and put that in the cloud init data.
   e. Get the "Public IP" and use it to [log in](/general_environment_usage/cli_basics/logging_in/) to the login node.

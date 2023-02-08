@@ -274,7 +274,7 @@ To set up a cluster, you will need to first [import a Flight Solo image](/cluste
     - Set *Subscription* to your subscription type.
     - Set *Resource Group* to your desired resource group (where the vm will be kept after creation).
     - Set *Virtual machine name* to any suitable name.
-    - Set *Image* to the imported Flight Solo Image
+    - Set *Image* to the imported Flight Solo Image.
         It may be necessary to open the dropdown and/or see all images in order to find the imported image.
 ![](/images/azure_createvm_image_dropdown.png)
     Scroll down to see more options
@@ -284,7 +284,7 @@ To set up a cluster, you will need to first [import a Flight Solo image](/cluste
     - Set *Username* to any suitable username.
     - Set *SSH public key source* to the most suitable option, but remember what key was used if creating compute nodes later.
     - Fill in the *Key pair name/Stored key/Use existing key* as appropriate to the chosen public key source.
-    - Allow traffic to selected ports, and select `SSH(22`, `HTTP(80)` and `HTTPS(443)` as the allowed ports.
+    - Allow traffic to selected ports, and select `SSH(22)`, `HTTP(80)` and `HTTPS(443)` as the allowed ports.
     - Set the most appropriate license type.
 5. Continuing on to the next page, *Disks*, all necessary details should already be filled out, so this page can be skipped (unless you know what you want to change). However, it is recommended to select *Delete with VM*.
 
