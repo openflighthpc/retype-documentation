@@ -6,9 +6,9 @@ icon: dot
 
 Several different cloud hosting services can use the downloaded Flight Solo image. This page shall describe how to do it with Azure. This only needs to be done once, and then the imported image can be used any number of times.
 
-1. Start by installing the [Azure Command Line Interface(CLI)](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli), as using it is the simplest way to import a raw image. Alternatively you can follow these instructions on the [Azure Cloud Shell](https://learn.microsoft.com/en-us/azure/cloud-shell/overview)
+1. Start by installing the [Azure Command Line Interface(CLI)](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli), as using it is the simplest way to import a raw image. Alternatively you can follow these instructions using the [Azure Cloud Shell](https://learn.microsoft.com/en-us/azure/cloud-shell/overview).
 
-2. Get the Flight Solo image from [here](/cluster_build_methods/what_is_flight_solo/#where-can-i-download-flight-solo)
+2. Get the Flight Solo image from [here](/cluster_build_methods/what_is_flight_solo/#where-can-i-download-flight-solo).
 
 
 3. If you don't already have one, create a storage account:
@@ -22,7 +22,7 @@ az storage account create --name "storageAccountName" --resource-group "resource
 az storage container create --name "containerName" --account-name "storageAccountName" --resource-group "resourceGroupName"
 ```
 
-5. Upload a the raw Flight Solo image as a storage blob to the container:
+5. Upload the raw Flight Solo image as a storage blob to the container:
 ```
 az storage blob upload --account-name "storageAccountName" \
                        --container-name "containerName" \
@@ -31,12 +31,12 @@ az storage blob upload --account-name "storageAccountName" \
                        --name FLIGHT-SOLO-IMAGE_azure.vhd
 ```
 
-6. Finally, create an azure image from the storage blob: (Make sure to get the correct source from the uploaded storage blob)
+6. Finally, create an Azure image from the storage blob: (Make sure to get the correct source from the uploaded storage blob)
 ```
 az image create --resource-group "resourceGroupName" \
     --name FLIGHT-SOLO-IMAGE_azure \
     --os-type Linux \
-     --hyper-v-generation V2 \
+    --hyper-v-generation V2 \
     --source  https://clusternameimages.blob.core.windows.net/images/FLIGHT-SOLO-IMAGE_azure.vhd
 ```
 
@@ -44,11 +44,11 @@ az image create --resource-group "resourceGroupName" \
 
 ## Changing regions
 
-The storage blob will be placed in the region of the storage account and container it is placed in, and will need to be created into a resource group with the same region.
+The storage blob will be placed in the region of the storage account and container it is created in, and an image made from it must go into a resource group with the same region.
 
-In case this needs to be changed afterward:
+In case this region is the wrong one, it can be changed after the image is created:
 
-1. Install the Azure CLI image copy extension
+1. Install the Azure CLI image copy extension.
 ```
 az extension add --name image-copy-extension
 ```
@@ -62,4 +62,4 @@ az image copy --source-resource-group "sourceResourceGroup "
               --cleanup
 ```
 
-3. After a short wait, the source image will have the name `sourceImage-region` and be in the target resource group
+3. After a short wait, the source image will have the name `sourceImage-region` and be in the target resource group.
