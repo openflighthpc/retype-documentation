@@ -36,6 +36,7 @@ az storage blob upload --account-name "storageAccountName" \
 az image create --resource-group "resourceGroupName" \
     --name FLIGHT-SOLO-IMAGE_azure \
     --os-type Linux \
+     --hyper-v-generation V2 \
     --source  https://clusternameimages.blob.core.windows.net/images/FLIGHT-SOLO-IMAGE_azure.vhd
 ```
 
