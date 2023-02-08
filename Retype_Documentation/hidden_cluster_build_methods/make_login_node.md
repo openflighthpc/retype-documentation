@@ -304,4 +304,5 @@ To set up a cluster, you will need to first [import a Flight Solo image](/cluste
 
 7. The *Management*, *Monitoring*, *Advanced*, and *Tags* tabs have more options that aren't necessary for setup. Skip to the final tab *Review + create*
 
+8. Azure will take some time to review your settings. If there are no issues click "Create" to finish creation.
 +++
