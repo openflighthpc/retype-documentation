@@ -10,7 +10,7 @@ Flight Desktop allows for an interactive use of a cluster. To test its functiona
     ```
     flight desktop avail
     ```
-    This shows all the available desktops, and whether or not they are verified. More information about desktop verification can be found [here](http://localhost:5000/hpc_environment_usage/flight_desktop/preparing_a_desktop_type/).
+    This shows all the available desktops, and whether or not they are verified. More information about desktop verification can be found [here](https://docs.openflighthpc.org/hpc_environment_usage/flight_desktop/preparing_a_desktop_type/).
 
 2. Launch a desktop session:
     ```
