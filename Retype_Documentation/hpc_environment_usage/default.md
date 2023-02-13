@@ -1,7 +1,7 @@
 ---
 order: 80
 label: HPC Environment Usage
-icon: device-desktop
+icon: cpu
 ---
 
 This section describes how to use some of the Flight and HPC tools that are most used in HPC. This includes:
