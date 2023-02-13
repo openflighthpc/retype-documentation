@@ -258,12 +258,11 @@ Repeat this process for any other types of nodes that need to be added to the cl
 
 &ensp;&ensp;&ensp;&ensp;a. Copy this cloud init script into the text box, making sure to change the parts in <> brackets:
 
-
 ```
 #cloud-config
 write_files:
   - content: |
-        SERVER=<private ip of login node>
+      SERVER=<private ip of login node>
     path: /opt/flight/cloudinit.in
     permissions: '0644'
     owner: root:root
