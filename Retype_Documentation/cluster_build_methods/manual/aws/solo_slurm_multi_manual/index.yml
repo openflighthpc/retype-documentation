@@ -1,1 +1,4 @@
-../../../../hidden_cluster_build_methods/indexes/solo_slurm_multi_manual/index.yml
+order: 50
+icon: dot-fill
+label: Manually setup a Flight Solo multinode Slurm cluster
+visibility: public
