@@ -1,3 +1,5 @@
-order: 70
+---
+order: -20
 label: Flight Job Manager
 icon: dot
+---
