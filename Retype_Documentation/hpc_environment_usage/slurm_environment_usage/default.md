@@ -4,6 +4,4 @@ label: SLURM Environment Usage
 icon: dot-fill
 ---
 
-
-## What is Slurm?
-The [Slurm](https://slurm.schedmd.com/) research environment job-scheduler is an open-source project used by many high performance computing systems around the world - including many of the [TOP 500](https://www.top500.org/lists/) supercomputers.
+This section covers a variety of information from the basics of running jobs to using the Slurm job scheduler and the Flight Job tool.
