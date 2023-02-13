@@ -15,3 +15,15 @@ We recognise the respect the trademarks of all third-party providers referenced 
 ### License
 
 This documentation is released under the [Creative-Commons: Attribution-ShareAlike 4.0 International](http://creativecommons.org/licenses/by-sa/4.0/) license.
+
+## Contents
+
+This documentation is sorted into the following categories:
+
+- **[System Overview](/system_overview/)**: Provides general information on prerequisites and support for the documentation, processes and tools within.
+- **[General Environment Usage](/general_environment_usage)**: Guides on understanding and performing various common Linux user tasks on an HPC cluster.
+- **[HPC Environment Usage](/hpc_environment_usage)**: Documents detailing usage of Flight tools and HPC scheduler applications at the core of any HPC workflow.
+- **[Cluster Build Methods](/cluster_build_methods)**: Detailed guides to deploying HPC clusters on various platforms utilising Flight Solo
+- **[Workflow Examples](/workflow_examples)**: Example workflows utilising the tools and processes outlined earlier in the documentation.
+- **[Functionality Testing](/functionality_testing)**: Various commands and observations to check the basic functionality of an HPC cluster configured similarly to some of the methods described in this documentation.
+

@@ -20,7 +20,7 @@ The flight environment will need to be activated before the environments can be 
 ```
 - Download Hadoop v3.2.1:
 ```bash
-[flight@chead1 (mycluster1) ~]$ wget -O /tmp/hadoop.tgz http://tiny.cc/hadoop321
+[flight@chead1 (mycluster1) ~]$ wget -O /tmp/hadoop.tgz https://archive.apache.org/dist/hadoop/common/hadoop-3.2.1/hadoop-3.2.1.tar.gz
 ```
 - Decompress the Hadoop installation to shared storage:
 ```bash

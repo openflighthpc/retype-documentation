@@ -4,7 +4,6 @@ label: Launch a Desktop Session
 icon: dot
 ---
 
-
 Users can launch a new session by using the `flight desktop start gnome` command. After launching the desktop, a message will be printed with connection details to access the new session:
 
 ```bash
@@ -18,7 +17,7 @@ A 'gnome' desktop session has been started.
       Name:
   Identity: 4549eae1-6f8b-4983-8057-99b378afcdd3
       Type: gnome
-   Host IP: 20.68.202.163
+   Host IP: 51.104.217.61
   Hostname: chead1
       Port: 5901
    Display: :1
@@ -38,7 +37,7 @@ If prompted, you should supply the following password: mkO3Zxjl
 
 Users need a VNC client to connect to the graphical desktop session - for a list of tested clients, see [Prerequisites](/system_overview/prerequisites/#prerequisites).
 
-Users with Mac clients can use the URL provided in the command output to connect to the session; e.g. from the above example, simply enter `vnc://flight:L9Uysvi3@52.151.119.86:5902` into the Safari address bar. Linux and Windows users should enter the IP address and port number shown into their VNC client in the format `IP:port`. For example - for the output above, Linux and Windows client users would enter `52.151.119.86:5902` into their VNC client:
+Users with Mac clients can use the URL provided in the command output to connect to the session; e.g. from the above example, simply enter `vnc://flight:L9Uysvi3@51.104.217.61:5901` into the Safari address bar. Linux and Windows users should enter the IP address and port number shown into their VNC client in the format `IP:port`. For example - for the output above, Linux and Windows client users would enter `51.104.217.61:5901` into their VNC client:
 
 ![](/images/vncclient.png)
 

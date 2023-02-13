@@ -13,47 +13,40 @@ Now that a login node and one or more compute nodes have been launched according
 
 ## Parse Nodes
 
-3. Parse the login node with the command `flight hunter parse`. 
-    - Add the option `--prefix <name>` to set a name for every selected login node.
-    - Add the option `--start <number>` to add a number to every login node name, that increments with each one.
-    - For example:
-        ```
-        flight hunter parse --prefix login --start 1
-        ```
-
+3. Parse your nodes with the command `flight hunter parse`. 
     This will generate a list, for example:
     ```
-    [root@chead1 ~]# flight hunter parse --prefix login --start 1
-    Select the nodes that you wish to save: (Scroll for more nodes)
-    ‣ ⬡ chead1.novalocal (10.50.0.13)
-      ⬡ cnode01.novalocal (10.50.0.31)
-      ⬡ cnode02.novalocal (10.50.0.26)
+    [flight@login-node.novalocal ~]$ flight hunter parse
+    Select nodes: (Scroll for more nodes)
+    ‣ ⬡ login-node.novalocal - 127.0.0.1
+      ⬡ compute-node-1.novalocal - 10.151.15.194
+      ⬡ compute-node-2.novalocal - 10.151.15.238
     ```
-    Select the node that needs to be set as a login node, it can be identified by the name or ip address. *This should be the local node.*
-    !!!
-    Scroll the list with the up and down arrow keys, select a node by pressing space, and confirm with the enter key.
-    !!!
+    Begin by parsing your login node. Select it from the list with `space`, and you will be taken to the label editor.
 
-
-4. Parse the compute nodes with the command `flight hunter parse`.
-    - Add the option `--prefix <name>` to set a name for every selected compute node.
-    - Add the option `--start <number>` to add a number to every compute node name, that increments with each one.
-    - For example:
-        ```
-        flight hunter parse --prefix node --start 01
-        ```
-
-    This will generate a list, for example:
     ```
-    [root@chead1 ~]# flight hunter parse --prefix node --start 01
-    Select the nodes that you wish to save: (Scroll for more nodes)
-    ‣ ⬡ cnode01.novalocal (10.50.0.31)
-      ⬡ cnode02.novalocal (10.50.0.26)
+    Choose label: login-node.novalocal
     ```
-    Select all the nodes that need to be set as a compute node, they can be identified by their name or ip address. *Note that the login node is no longer visible since it was selected earlier.*
+    Here, you can edit the label like plain text.
+    ```
+    Choose label: login1
+    ```
+    !!!
+    You can clear the current node name by pressing `down` in the label editor.
+    !!!
+    When done editing, press `enter` to save. The modified node label will appear next to the ip address and original node label.
+    ```
+    Select nodes: login-node.novalocal - 127.0.0.1 (login1) (Scroll for more nodes)
+    ‣ ⬢ login-node.novalocal - 127.0.0.1 (login1)
+      ⬡ compute-node-1.novalocal - 10.151.15.194
+      ⬡ compute-node-2.novalocal - 10.151.15.238
+    ```
+    From this point, you can either hit `enter` to finish parsing and process the selected nodes, or continue changing nodes. Either way, you can return to this list by running `flight hunter parse`. 
+
+    Parse all the nodes you intend to have in your cluster before moving on to the next step.
 
     !!!
-    Scroll the list with the up and down arrow keys, select a node by pressing space, and confirm with the enter key.
+    See `flight hunter parse -h` for more ways to parse nodes.
     !!!
 
 ## Add genders
@@ -67,6 +60,13 @@ Now that a login node and one or more compute nodes have been launched according
     flight hunter modify-groups --add nodes,all node01
     flight hunter modify-groups --add nodes,all node02
     ```
+    !!!
+    if you have a lot of compute nodes, you can group them all faster with regex, e.g. the above might be:
+    ```
+    flight hunter modify-groups --add nodes,all --regex node0*
+    ```
+    !!!
+    
 
 ## Apply Profiles
 
@@ -86,7 +86,7 @@ Now that a login node and one or more compute nodes have been launched according
     - Set user password: Set a password to be used for the chosen default user.
     - IP or FQDN for Web Access: As described [here](/hpc_environment_usage/flight_web_suite/installation_and_setup/configuring_web_suite/#setting-domain-name), this could be the public IP or public hostname.
     - IP range of compute nodes: The IP range of the compute nodes used, remember to add the netmask. E.g. `172.31.16.0/20`
-    - Create hosts entries from Flight Hunter data: Flight profile can create /etc/hosts file entries based on the data it automatically collects on connected nodes.
+    - Create hosts entries from Flight Hunter data: Flight profie can create /etc/hosts file entries based on the data it automatically collects on connected nodes.
     
 7. Apply identities by running the command `flight profile apply`
     a. First apply an identity to the login node. E.g. 
@@ -104,4 +104,36 @@ Now that a login node and one or more compute nodes have been launched according
 
 8. Once all the identities have been applied, the cluster is ready to go.
 
++++ Kubernetes
+
+6. Configure profile
+
+    ```
+    flight profile configure
+    ```
+    This brings up a UI, where several options need to be set. Use up and down arrow keys to scroll through options and enter to move to the next option. Options in brackets coloured yellow are the default options that will be applied if nothing is entered.
+    - Cluster type: The type of cluster setup needed, in this case `Openflight Kubernetes Multinode`.
+    - Cluster name: The name of the cluster.
+    - Default user: The user that you log in with.
+    - IP range of compute nodes: The IP range of the compute nodes used, remember to add the netmask. E.g. `172.31.16.0/20`
+    - IP range of Kubernetes pods: The IP range that the kubernetes pods should use, make sure this is different from the IP range of the compute nodes, and remember to add the net mask. E.g. `192.168.0.0/16`
+    - Create hosts entries from Flight Hunter data: Flight profile can create /etc/hosts file entries based on the data it automatically collects on connected nodes, this is recommended.
+    
+7. Apply identities by running the command `flight profile apply`
+    a. First apply an identity to the login node. E.g. 
+    ```
+    flight profile apply login1 master
+    ```
+    b. Wait for the login node identity to finish applying. You can check the status of all nodes with `flight profile list`.
+    c. Apply an identity to the each of the compute nodes.  E.g.
+    ```
+    flight profile apply node01,node02 worker
+    ```
+    !!! 
+    You can check all available identities for the current profile with `flight profile identities`
+    !!!
+
+8. Once all the identities have been applied, the cluster is ready to go.
+
 +++
+
