@@ -1,6 +1,6 @@
 ---
 order: -20
-label: Flight Job Manager
+label: Using Flight Job (Web)
 icon: dot
 ---
 
