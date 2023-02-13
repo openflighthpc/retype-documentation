@@ -1,6 +1,6 @@
 ---
 order: 100
-label: System Overview
+label: Documentation Overview
 icon: repo
 ---
 
