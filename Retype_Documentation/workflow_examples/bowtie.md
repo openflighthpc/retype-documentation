@@ -35,7 +35,7 @@ The flight environment will need to be activated before the environments can be 
 - Download example ecoli data:
 
 ```bash
-<spack> [flight@chead1 (mycluster1) ~]$ wget -O ecoli.fq http://tiny.cc/ecoli
+<spack> [flight@chead1 (mycluster1) ~]$ wget -O ecoli.fq https://raw.githubusercontent.com/BenLangmead/bowtie/master/reads/e_coli_1000.fq
 ```
 
 - Create a job script in the current working directory:
