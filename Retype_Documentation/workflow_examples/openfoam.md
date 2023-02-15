@@ -2,6 +2,7 @@
 order: 70
 label: OpenFOAM
 icon: dot-fill
+visibility: hidden
 ---
 
 OpenFOAM is a popular engineering application toolbox. It's open source and is used for simulating fluid flow around objects. 
