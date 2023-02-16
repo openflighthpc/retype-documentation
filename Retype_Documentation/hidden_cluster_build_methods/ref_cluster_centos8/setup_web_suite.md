@@ -45,7 +45,7 @@ Flight web suite only needs to be installed on the head node.
 This means that flight web suite will start on boot
 
 !!!
-Using Flight Web Suite is explained [elsewhere in the documentation.](/hpc_environment_usage/flight_web_suite/what_is_web_suite/)
+Using Flight Web Suite is explained [elsewhere in the documentation.](/flight_environment_usage/flight_web_suite/)
 !!!
 
 ## Testing
@@ -65,4 +65,4 @@ If all was successful, then the following should be the case on the head node:
     flight service avail
     ```
 
-4. The Web-Suite should function as described in [its documentation](/hpc_environment_usage/flight_web_suite/what_is_web_suite/).
+4. The Web-Suite should function as described in [its documentation](/flight_environment_usage/flight_web_suite/).

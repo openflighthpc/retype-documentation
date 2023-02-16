@@ -66,4 +66,4 @@ Flight grants access to package ecosystems via the env command. To test its func
 
 ### More Information
 
-All information about Flight Environment can be found in [its documentation section](/hpc_environment_usage/ecosystems/flight_environment/).
+All information about Flight Environment can be found in [its documentation section](/flight_environment_usage/ecosystems/flight_environment/).

@@ -49,6 +49,6 @@ If all was successful, then the following should be the case on all nodes:
     su - flight
     ```
 
-2. After [starting flight](/hpc_environment_usage/flight_overview/flight_system/) it is possible to ssh to any node from any node as the flight user.
+2. After [starting flight](/flight_environment_usage/flight_overview/flight_system/) it is possible to ssh to any node from any node as the flight user.
 
 3. The flight username and password can be used log in to the flight web-suite.

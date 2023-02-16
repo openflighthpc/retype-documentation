@@ -1,9 +1,19 @@
 ---
-order: 100
-label: What is the Flight User Suite?
-icon: dot
+order: 85
+label: Flight Environment Usage
+icon: device-desktop
 ---
 
+
+
+This section provides information about the general purpose features of the Flight User Suite. This includes:
+- Flight Basics: The basics of using Flight Solo.
+- Flight Desktop: How to use Flight Desktop.
+- Ecosystems: The details of Flight Env and package ecosystems.
+- Flight Web-Suite: Information about using Flight Web-Suite.
+
+
+## What is the Flight User Suite?
 
 The Flight User Suite is a collection of environment tools that provide users with easy and intuitive ways to manage the software and desktop sessions in a research environment. The purpose of these tools is to get researchers started with HPC as quickly as possible without needing to worry about their environment, leaving them to do what they do best - research!
 
@@ -23,5 +33,3 @@ Flight User Suite is made up of the following tools:
 
 
 **The Flight User Suite is designed for use by end-users** - that's the scientists, researchers, engineers and software developers who actually run compute workloads and process data. This documentation is designed to help these people to get the best out this environment, without needing assistance from teams of IT professionals. Flight provides tools which enable users to service themselves - it's very configurable, and can be expanded by individual users to deliver a scalable platform for computational workloads. 
-
-

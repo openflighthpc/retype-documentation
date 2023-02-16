@@ -20,7 +20,7 @@ Amazon Web Services, Openstack and Microsoft Azure are all tried and tested clou
 
 ## What type of cluster to run?
 
-This depends on the research you intend to do, there is more information about SLURM [in the running jobs section of this documentation](/hpc_environment_usage/running_jobs/slurm_scheduler/what_is_slurm/), more information about Jupyter [on the Jupyter website](https://jupyter.org/) and more about Kubernetes on the [Kubernetes website](https://kubernetes.io/docs/concepts/overview/).
+This depends on the research you intend to do, there is more information about SLURM [in the running jobs section of this documentation](/hpc_environment_usage/slurm_environment_usage/slurm_scheduler/), more information about Jupyter [on the Jupyter website](https://jupyter.org/) and more about Kubernetes on the [Kubernetes website](https://kubernetes.io/docs/concepts/overview/).
 
 ## How to configure a cluster?
 

@@ -35,7 +35,7 @@ sudo apt -y install flight-pdsh
 ```
 +++
 
-Once installed, the pdsh command will be available to active [OpenFlight User Suite](/hpc_environment_usage/flight_overview/what_is_flight_user_suite/#what-is-the-flight-user-suite) sessions. The priority of the OpenFlight pdsh command in the path can be configured with:
+Once installed, the pdsh command will be available to active [OpenFlight User Suite](/flight_environment_usage/#what-is-the-flight-user-suite) sessions. The priority of the OpenFlight pdsh command in the path can be configured with:
 
 ```bash
 flight config set pdsh.priority X

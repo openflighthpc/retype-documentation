@@ -5,11 +5,6 @@ icon: dot
 ---
 
 
-## What is a Job?
-
-A job can be loosely defined as an automated research task, for example, a bash script that runs various stages in an OpenFoam simulation on a model.
-
-Jobs vary in size, resource usage and run time. A job could utilise multiple cores through parallel libraries or simply run on a single core.
 
 ## Why Run a Local Job?
 

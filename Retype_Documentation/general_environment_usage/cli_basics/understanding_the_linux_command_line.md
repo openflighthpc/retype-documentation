@@ -22,7 +22,7 @@ Hello World!
 [username@node (clustername) folder]$ command
 ```
 
-If some things that you see here are missing from your command line, you may not have activated [Flight](/hpc_environment_usage/flight_overview/flight_system/#activating-the-flight-system).
+If some things that you see here are missing from your command line, you may not have activated [Flight](/flight_environment_usage/flight_overview/flight_system/#activating-the-flight-system).
 
 Here is an example of a Linux Command Line Interface (CLI) without Flight enabled:
 

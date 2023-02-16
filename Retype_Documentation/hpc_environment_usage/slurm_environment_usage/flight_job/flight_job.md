@@ -1,14 +1,10 @@
 ---
 order: -10
-label: Flight Job
+label: Using Flight Job (CLI)
 icon: dot
 ---
 
 
-# Flight Job
-
-
-The Flight User Suite comes with a utility to jumpstart running jobs on the research environment. This tool provides preconfigured script templates. 
 
 ## Showing Available Job Scripts
 

@@ -82,7 +82,7 @@ Now that a login node and one or more compute nodes have been launched according
     - SLURM server: The hostname or flight-hunter label of the node that will act as the SLURM server.
     - Default user: The user that you log in with.
     - Set user password: Set a password to be used for the chosen default user.
-    - IP or FQDN for Web Access: As described [here](/hpc_environment_usage/flight_web_suite/installation_and_setup/configuring_web_suite/#setting-domain-name), this could be the public IP or public hostname.
+    - IP or FQDN for Web Access: As described [here](/flight_environment_usage/flight_web_suite/installation_and_setup/configuring_web_suite/#setting-domain-name), this could be the public IP or public hostname.
     - IP range of compute nodes: The IP range of the compute nodes used, remember to add the netmask. E.g. `172.31.16.0/20`
     - Create hosts entries from Flight Hunter data: Flight profile can create /etc/hosts file entries based on the data it automatically collects on connected nodes.
     
