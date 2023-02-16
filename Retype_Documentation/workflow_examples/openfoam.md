@@ -2,7 +2,6 @@
 order: 70
 label: OpenFOAM
 icon: dot-fill
-visibility: hidden
 ---
 
 OpenFOAM is a popular engineering application toolbox. It's open source and is used for simulating fluid flow around objects. 
@@ -11,52 +10,43 @@ OpenFOAM is a popular engineering application toolbox. It's open source and is u
 
 ## Workflow
 
-### Installing OpenFOAM with Gridware
+### Installing OpenFOAM
 
 !!!
-The flight environment will need to be activated before the environments can be created so be sure to run `flight start` or [setup your environment to automatically activate the flight environment](/flight_environment_usage/flight_overview/flight_system/#activating-the-flight-system).
+Your environment will need to have a job scheduler such as [Slurm](/hpc_environment_usage/slurm_environment_usage/slurm_scheduler/), which can be set up by following the instructions for a [standalone cluster](/cluster_build_methods/standalone_cluster/).
 !!!
 
-- Create a gridware software environment:
 
-```bash
-[flight@chead1 (mycluster1) ~]$ flight env create gridware
+Enable copr for OpenFOAM.
+```
+sudo dnf -y copr enable openfoam/openfoam
 ```
 
-- Activate the environment:
-
-```bash
-[flight@chead1 (mycluster1) ~]$ flight env activate gridware
+Install OpenFOAM, the OpenFOAM version selector, the additional sub-packages and paraview.
 ```
-
-- Locate available OpenFOAM versions:
-
-```bash
-<gridware> [flight@chead1 (mycluster1) ~]$ gridware search openfoam
-```
-
-- Install OpenFOAM 4.1:
-
-```bash
-<gridware> [flight@chead1 (mycluster1) ~]$ gridware install apps/openfoam/4.1
+sudo dnf install -y openfoam-selector
+sudo dnf install -y openfoam
+sudo dnf install -y openfoam2212-default
+sudo dnf install -y paraview
 ```
 
 !!!
-After pressing 'y' to accept the installation. Gridware will install various dependencies for OpenFOAM to ensure it runs
+Make sure to do all the installation steps on **all** nodes in the cluster
 !!!
+
+Ensure that the correct version will be used with:
+```
+openfoam-selector --set openfoam2212
+```
+
+Refresh the shell by logging out and back in to make openfoam commands accessible.
 
 ### Checking OpenFOAM is Working
-
-- Load the OpenFOAM module:
-
-```bash
-<gridware> [flight@chead1 (mycluster1) ~]$ module load apps/openfoam
-```
 
 - Check an OpenFOAM command can be seen by viewing the help page:
 
 ```bash
-<gridware> [flight@chead1 (mycluster1) ~]$ icoFoam -help
+icoFoam -help
 ```
 
 ### Running a Simple OpenFOAM Job
@@ -64,13 +54,9 @@ After pressing 'y' to accept the installation. Gridware will install various dep
 - Create a job script in the current working directory:
 
 ```bash
-<gridware> [flight@chead1 (mycluster1) ~]$ cat << 'EOF' > myfoamjob.sh
+cat << 'EOF' > myfoamjob.sh
 #!/bin/bash
 #SBATCH -N 1
-
-# Activate environment and load OpenFOAM module
-flight env activate gridware
-module load apps/openfoam
 
 # Create job directory from example job
 cp -r $FOAM_TUTORIALS/incompressible/icoFoam/cavity/cavity $HOME/.
@@ -86,31 +72,31 @@ EOF
 - Submit the job to the queue system:
 
 ```bash
-<gridware> [flight@chead1 (mycluster1) ~]$ sbatch myfoamjob.sh
+sbatch myfoamjob.sh
 ```
 
-- Check that the job is running (iit will take 1-2 minutes to complete):
+- Check that the job is running (it may take 1-2 minutes to complete):
 
 ```bash
-<gridware> [flight@chead1 (mycluster1) ~]$ squeue
+squeue
 ```
 
 ### Viewing the Results
 
 Once the cavity job has finished running, the results can be visualised through a desktop session.
-- Connect to VNC desktop (For more information on launching desktops, see the [Flight Desktop section](/flight_environment_usage/flight_desktop/install_flight_desktop_types/#install-flight-desktop-types)).
+- Connect to VNC or web-suite desktop (For more information on launching desktops, see the [Flight Desktop section](/flight_environment_usage/flight_desktop/launch_a_desktop_session/)).
 - In a terminal on the desktop session, ensure that the OpenFOAM module is loaded:
 
 ```bash
-[flight@chead1 (mycluster1) ~]$ flight env activate gridware
-<gridware> [flight@chead1 (mycluster1) ~]$ module load apps/openfoam
+flight env activate gridware
+module load apps/openfoam
 ```
 
 - Navigate to the cavity directory and launch the paraFoam viewer:
 
 ```bash
-<gridware> [flight@chead1 (mycluster1) ~]$ cd cavity
-<gridware> [flight@chead1 (mycluster1) cavity]$ paraFoam
+cd cavity
+paraFoam 
 ```
 
 - In the window that opens, scroll down to "Mesh parts" and select all the boxes, then click apply
