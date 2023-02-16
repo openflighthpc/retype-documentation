@@ -2,7 +2,6 @@
 order: 100
 label: Bowtie
 icon: dot-fill
-visibility: hidden
 ---
 
 Bowtie is a sequencing toolset for aligning sets of DNA into large genomes.
