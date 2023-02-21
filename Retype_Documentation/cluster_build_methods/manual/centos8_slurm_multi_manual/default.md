@@ -1,6 +1,6 @@
 ---
-order: 100
-label: Introduction
+order: 0
+label: Centos 8
 icon: dot
 ---
 
