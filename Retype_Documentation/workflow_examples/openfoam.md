@@ -13,7 +13,7 @@ OpenFOAM is a popular engineering application toolbox. It's open source and is u
 ### Installing OpenFOAM
 
 !!!
-Your environment will need to have a job scheduler such as [Slurm](/hpc_environment_usage/slurm_environment_usage/slurm_scheduler/), which can be set up by following the instructions for a [standalone cluster](/cluster_build_methods/standalone_cluster/).
+Your environment will need to have a job scheduler such as [Slurm](/hpc_environment_usage/slurm_environment_usage/slurm_scheduler/), which can be set up by following the instructions for a [standalone](/cluster_build_methods/standalone_cluster/) or [multinode]() cluster.
 !!!
 
 
@@ -30,9 +30,6 @@ sudo dnf install -y openfoam2212-default
 sudo dnf install -y paraview
 ```
 
-!!!
-Make sure to do all the installation steps on **all** nodes in the cluster
-!!!
 
 Ensure that the correct version will be used with:
 ```
@@ -41,7 +38,13 @@ openfoam-selector --set openfoam2212
 
 Refresh the shell by logging out and back in to make openfoam commands accessible.
 
+!!!
+Make sure to do the above installation steps on **all** nodes in the cluster.
+!!!
+
+
 ### Checking OpenFOAM is Working
+
 
 - Check an OpenFOAM command can be seen by viewing the help page:
 
@@ -49,7 +52,13 @@ Refresh the shell by logging out and back in to make openfoam commands accessibl
 icoFoam -help
 ```
 
+!!!
+From here on out, all steps **only** need to be done on the **login** node.
+!!!
+
 ### Running a Simple OpenFOAM Job
+
+
 
 - Create a job script in the current working directory:
 
@@ -85,12 +94,7 @@ squeue
 
 Once the cavity job has finished running, the results can be visualised through a desktop session.
 - Connect to VNC or web-suite desktop (For more information on launching desktops, see the [Flight Desktop section](/flight_environment_usage/flight_desktop/launch_a_desktop_session/)).
-- In a terminal on the desktop session, ensure that the OpenFOAM module is loaded:
 
-```bash
-flight env activate gridware
-module load apps/openfoam
-```
 
 - Navigate to the cavity directory and launch the paraFoam viewer:
 
