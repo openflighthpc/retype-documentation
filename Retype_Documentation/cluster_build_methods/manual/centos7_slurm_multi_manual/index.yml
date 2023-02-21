@@ -1,1 +1,3 @@
-../../../hidden_cluster_build_methods/ref_cluster_centos7/index.yml
+order: 100
+label: Centos 7
+icon: dot
