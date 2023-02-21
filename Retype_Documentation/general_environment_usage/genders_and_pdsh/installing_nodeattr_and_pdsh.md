@@ -4,7 +4,7 @@ label: Installing nodeattr and pdsh
 icon: dot
 ---
 
-A combination of genders and pdsh can allow for management and monitoring of multiple nodes at a time. OpenFlight provides a build of PDSH that integrates with the rest of the User Suite.
+Flight Solo comes pre-installed with the Openflight build of pdsh, so installation won't be necessary if using it.
 
 ### Installing
 
