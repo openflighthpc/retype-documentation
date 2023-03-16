@@ -4,7 +4,7 @@ label: Installing nodeattr and pdsh
 icon: dot
 ---
 
-A combination of genders and pdsh can allow for management and monitoring of multiple nodes at a time. OpenFlight provides a build of PDSH that integrates with the rest of the User Suite.
+Flight Solo comes pre-installed with the Openflight build of pdsh, so installation won't be necessary if using it.
 
 ### Installing
 
@@ -35,7 +35,7 @@ sudo apt -y install flight-pdsh
 ```
 +++
 
-Once installed, the pdsh command will be available to active [OpenFlight User Suite](/hpc_environment_usage/flight_overview/what_is_flight_user_suite/#what-is-the-flight-user-suite) sessions. The priority of the OpenFlight pdsh command in the path can be configured with:
+Once installed, the pdsh command will be available to active [OpenFlight User Suite](/flight_environment_usage/#what-is-the-flight-user-suite) sessions. The priority of the OpenFlight pdsh command in the path can be configured with:
 
 ```bash
 flight config set pdsh.priority X

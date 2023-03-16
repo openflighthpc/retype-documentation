@@ -1,6 +1,6 @@
 ---
 order: 100
-label: Introduction
+label: Centos 7
 icon: dot
 ---
 

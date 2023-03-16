@@ -2,6 +2,7 @@
 order: 90
 label: Hadoop
 icon: dot-fill
+
 ---
 
 Hadoop is a scalable, distributed computing solution provided by Apache. Similar to queuing systems, Hadoop allows for distributed processing of large data sets.
@@ -11,7 +12,7 @@ Hadoop is a scalable, distributed computing solution provided by Apache. Similar
 ### Installing Hadoop Manually to Shared Filesystem
 
 !!!
-The flight environment will need to be activated before the environments can be created so be sure to run `flight start` or [setup your environment to automatically activate the flight environment](/hpc_environment_usage/flight_overview/flight_system/#activating-the-flight-system).
+The flight environment will need to be activated before the environments can be created so be sure to run `flight start` or [setup your environment to automatically activate the flight environment](/flight_environment_usage/flight_overview/flight_system/#activating-the-flight-system).
 !!!
 
 - Install dependencies for Hadoop (press 'y' to confirm the installation when prompted):
@@ -24,13 +25,20 @@ The flight environment will need to be activated before the environments can be 
 ```
 - Decompress the Hadoop installation to shared storage:
 ```bash
-[flight@chead1 (mycluster1) ~]$ cd /opt/apps
-[flight@chead1 (mycluster1) ~]$ tar xzf /tmp/hadoop.tgz
+[flight@chead1 (mycluster1) ~]$ mkdir apps
+[flight@chead1 (mycluster1) ~]$ cd apps
+[flight@chead1 (mycluster1) apps]$ tar xzf /tmp/hadoop.tgz
 ```
 - Edit line 54 in `/opt/apps/hadoop-3.2.1/etc/hadoop/hadoop-env.sh` to point to the Java installation as follows:
 ```bash
-export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.242.b08-0.el7_7.x86_64/jre
+export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.362.b09-2.el8_7.x86_64/jre
 ```
+
+Return to the home directory for the next steps
+```
+[flight@chead1 (mycluster1) ~]$ cd ~
+```
+
 ### Downloading the Hadoop Job
 
 These steps help setup the Hadoop environment and download a spreadsheet of data which will Hadoop will sort into sales units per region.

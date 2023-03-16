@@ -61,4 +61,46 @@ kubectl get pods -o wide
 ```
 
 - The pod should be running without issues.
+
+## Perform Network Test
+
+
+- Create yaml file for a php-apache service
+```shell
+curl -L https://k8s.io/examples/application/php-apache.yaml > php-apache.yaml
+```
+- Launch pod service
+```shell
+kubectl apply -f php-apache.yaml
+```
+- Create yaml file for VM to verify connection from (replace SERVICE_IP with the IP outputted above)
+```shell
+cat << EOF > busybox-wget.yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: busybox-wget
+  labels:
+    app: busybox-wget
+spec:
+  containers:
+  - image: busybox:1.28.4
+    command:
+      - "wget"
+      - "-q"
+      - "-O-"
+      - "http://php-apache"
+    imagePullPolicy: IfNotPresent
+    name: busybox-wget
+  restartPolicy: Never
+EOF
+```
+- Launch pod
+```shell
+kubectl apply -f busybox-wget.yaml
+```
+- View output of wget pod (this should show `OK!`)
+```shell
+kubectl logs busybox-wget
+```
 +++

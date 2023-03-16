@@ -4,7 +4,7 @@ label: Using a Job Script
 icon: dot-fill
 ---
 
-To use a job script, select "Browse scripts" from the management page. If the user currently has no created job scripts, they will be given the option to go to [Create a Job Script](/hpc_environment_usage/flight_web_suite/flight_job_manager/creating_a_job_script/#creating-a-job-script). 
+To use a job script, select "Browse scripts" from the management page. If the user currently has no created job scripts, they will be given the option to go to [Create a Job Script](/hpc_environment_usage/slurm_environment_usage/flight_job/flight_job_manager/creating_a_job_script/). 
 
 If the user already has at least one job script, they are shown all of their job scripts. 
 
@@ -24,8 +24,8 @@ While viewing a script, the user can:
 - View the contents of the script in the code block on the left.
 - Edit the script notes on the right by pressing the "edit" button near the notes. 
 - Edit the script itself by pressing the "edit" button above the script text.
-- [Submit the job script](/hpc_environment_usage/flight_web_suite/flight_job_manager/using_a_job_script/#submitting-a-job-script)
-- [Delete the job script](/hpc_environment_usage/flight_web_suite/flight_job_manager/using_a_job_script/#deleting-a-job-script)
+- [Submit the job script](/hpc_environment_usage/slurm_environment_usage/flight_job/flight_job_manager/using_a_job_script/#submitting-a-job-script)
+- [Delete the job script](/hpc_environment_usage/slurm_environment_usage/flight_job/flight_job_manager/using_a_job_script/#deleting-a-job-script)
 
 ### Submitting a Job Script
 
