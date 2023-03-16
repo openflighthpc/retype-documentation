@@ -10,7 +10,7 @@ Tensorflow is an open-source machine learning platform. It provides an ecosystem
 ## Workflow 1: Singularity
 
 !!!
-The flight environment will need to be activated before the environments can be created so be sure to run `flight start` or [setup your environment to automatically activate the flight environment](/hpc_environment_usage/flight_overview/flight_system/#activating-the-flight-system).
+The flight environment will need to be activated before the environments can be created so be sure to run `flight start` or [setup your environment to automatically activate the flight environment](/flight_environment_usage/flight_overview/flight_system/#activating-the-flight-system).
 !!!
 
 ### Installing Tensorflow with Singularity
@@ -45,7 +45,7 @@ The flight environment will need to be activated before the environments can be 
 ## Workflow 2: Conda
 
 !!!
-The flight environment will need to be activated before the environments can be created so be sure to run `flight start` or [setup your environment to automatically activate the flight environment](/hpc_environment_usage/flight_overview/flight_system/#activating-the-flight-system).
+The flight environment will need to be activated before the environments can be created so be sure to run `flight start` or [setup your environment to automatically activate the flight environment](/flight_environment_usage/flight_overview/flight_system/#activating-the-flight-system).
 !!!
 
 ### Installing TensorFlow with Conda

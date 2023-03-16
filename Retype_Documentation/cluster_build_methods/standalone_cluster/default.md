@@ -8,7 +8,7 @@ A standalone cluster contains 1 login node and no additional compute nodes. Ther
 
 ### Slurm
 
-A Slurm standalone cluster comes with the slurm job scheduler. More information on slurm can be found [here](/hpc_environment_usage/running_jobs/slurm_scheduler/what_is_slurm/).
+A Slurm standalone cluster comes with the slurm job scheduler. More information on slurm can be found [here](/hpc_environment_usage/slurm_environment_usage/slurm_scheduler/).
 
 !!!
 A standalone cluster can be set up on Openstack, AWS or Azure.

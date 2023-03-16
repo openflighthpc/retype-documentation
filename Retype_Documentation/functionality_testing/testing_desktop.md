@@ -47,7 +47,7 @@ Flight Desktop allows for an interactive use of a cluster. To test its functiona
 
     ```
 
-3. Connect to the desktop session. The instructions for connecting to a desktop session can be found [here](/hpc_environment_usage/flight_desktop/launch_a_desktop_session/)
+3. Connect to the desktop session. The instructions for connecting to a desktop session can be found [here](/flight_environment_usage/flight_desktop/launch_a_desktop_session/)
 
 4. Check the list of desktops:
     ```
@@ -88,4 +88,4 @@ If all of the steps have occured without issue, then the desktop is functioning.
 
 ### More Information
 
-All information about Flight Desktop can be found in [its documentation section](/hpc_environment_usage/flight_desktop/install_flight_desktop_types/).
+All information about Flight Desktop can be found in [its documentation section](/flight_environment_usage/flight_desktop/install_flight_desktop_types/).
