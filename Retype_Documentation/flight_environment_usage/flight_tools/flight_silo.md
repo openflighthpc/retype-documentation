@@ -16,14 +16,14 @@ Use `flight silo type avail` to list available types. e.g.
 │ aws  │ Amazon Simple Storage Service │ false    │
 └──────┴───────────────────────────────┴──────────┘
 ```
-
-Note that types are not prepared by default. To prepare a type you must [become a root user](/general_environment_usage/cli_basics/becoming_the_root_user/), and then do `flight silo type prepare <type>`. e.g.
+!!! 
+Types are not prepared by default. To prepare a type you must [become a root user](/general_environment_usage/cli_basics/becoming_the_root_user/), and then do `flight silo type prepare <type>`. e.g.
 ```
 [root@chead1 ~]# flight silo type prepare aws
 Preparing...
 Type aws prepared for use
 ```
-
+!!!
 Types are the backend providers of storage, each type can hold multiple silos. These can be listed with the command `flight silo repo list`. e.g.
 ```
 [flight@chead1 ~]$ flight silo repo list
