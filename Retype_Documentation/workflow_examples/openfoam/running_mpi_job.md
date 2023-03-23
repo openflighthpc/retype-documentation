@@ -7,7 +7,7 @@ icon: dot
 
 1. Start by downloading this job directory in a location of your choice.
     ```
-    flight silo file pull openflight:motorBike.tar.gz
+    flight silo file pull openflight:openfoam/motorBike.tar.gz
     ```
 
 

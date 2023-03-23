@@ -25,7 +25,7 @@ Your environment will need to have a job scheduler such as [Slurm](/hpc_environm
 
 3. Download OpenFlight OpenFOAM build using [Flight Silo](/flight_environment_usage/flight_tools/flight_silo/)
     ```
-    flight silo file pull openflight:OpenFOAM-v2212.tar.gz
+    flight silo file pull openflight:openfoam/OpenFOAM-v2212.tar.gz
     ```
 
 4. Install it to `/opt/apps`.

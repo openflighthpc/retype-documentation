@@ -98,7 +98,7 @@ aws iam create-role --role-name vmimport --assume-role-policy-document "file://t
 8. Create a bucket association with the vmimport role in a file called `role-policy.json`, replacing `<bucketname>` with the name of your S3 bucket.
 ```
 {
-"Version": "2022-11-03",
+"Version": "2012-10-17",
 "Statement": [
     {
         "Effect": "Allow",
