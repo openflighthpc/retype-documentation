@@ -29,7 +29,7 @@ The flight environment will need to be activated before the environments can be 
 [flight@chead1 (mycluster1) ~]$ cd apps
 [flight@chead1 (mycluster1) apps]$ tar xzf /tmp/hadoop.tgz
 ```
-- Edit line 54 in `/opt/apps/hadoop-3.2.1/etc/hadoop/hadoop-env.sh` to point to the Java installation as follows:
+- Edit line 54 in `apps/hadoop-3.2.1/etc/hadoop/hadoop-env.sh` to point to the Java installation as follows:
 ```bash
 export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.362.b09-2.el8_7.x86_64/jre
 ```
@@ -45,9 +45,14 @@ These steps help setup the Hadoop environment and download a spreadsheet of data
 
 - Download and source Hadoop environment variables:
 ```bash
-[flight@chead1 (mycluster1) ~]$ wget https://tinyurl.com/hadoopenv
+[flight@chead1 (mycluster1) ~]$ flight silo file pull openflight:hadoop/hadoopenv
 [flight@chead1 (mycluster1) ~]$ source hadoopenv
 ```
+
+!!!
+Be sure to update line 1 in `hadoopenv` if you are setting this up in a different location.
+!!!
+
 - Create job directory:
 ```bash
 [flight@chead1 (mycluster1) ~]$ mkdir MapReduceTutorial
@@ -56,7 +61,7 @@ These steps help setup the Hadoop environment and download a spreadsheet of data
 - Download job data:
 ```bash
 [flight@chead1 (mycluster1) ~]$ cd MapReduceTutorial
-[flight@chead1 (mycluster1) MapReduceTutorial]$ wget -O hdfiles.zip https://tinyurl.com/hdinput1
+[flight@chead1 (mycluster1) MapReduceTutorial]$ flight silo file pull openflight:hadoop/hdfiles.zip
 [flight@chead1 (mycluster1) MapReduceTutorial]$ unzip -j hdfiles.zip
 ```
 - Check that job data files are present:

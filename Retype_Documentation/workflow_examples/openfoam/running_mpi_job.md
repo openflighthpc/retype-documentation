@@ -7,8 +7,9 @@ icon: dot
 
 1. Start by downloading this job directory in a location of your choice.
     ```
-    wget https://openflight-public-test-bucket.s3.eu-west-1.amazonaws.com/motorBike.tar.gz
+    flight silo file pull openflight:openfoam/motorBike.tar.gz
     ```
+
 
 2. Decompress it, which will make a directory called `motorBike`.
     ```
