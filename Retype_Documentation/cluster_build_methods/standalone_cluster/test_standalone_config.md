@@ -22,4 +22,29 @@ After the creation and configuration of nodes has been complete, everything shou
 2. Run the script with `sbatch simplejobscript.sh`.
 
 3. The job should start and complete without issues.
+
++++ Jupyter
+
+Put the IP/FQDN used in configuration into your browser to access the [Flight Web Suite](/flight_environment_usage/flight_web_suite/). It should look something like this:
+![](/images/websuite_home_jupyter.png)
+
+Under "Quick Access" click on "Jupyter" and enter the password set during configuration when requested; it will only need to be entered the first time you connect.
+![](/images/websuite_jupyter_password.png)
+
+On the Jupyter home page, under the "Notebook" section, click on "Python3" to open a new notebook.
+
+![](/images/websuite_jupyter_newpython.png)
+
+Enter this code, which will print out a message, wait for a bit, then print again.
+```
+import time
+print("Starting running on Jupyter")
+time.sleep(3)
+print("Finished running - goodbye from Jupyter")
+```
+![](/images/websuite_jupyter_code.png)
+
+Click the play button to run the cell, and wait for the result.
+
+Assuming everything has been configured correctly, it will run without issues.
 +++

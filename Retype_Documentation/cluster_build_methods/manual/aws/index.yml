@@ -1,3 +1,4 @@
 order: 100
 label: AWS with manual configuration
 icon: dot
+visibility: hidden

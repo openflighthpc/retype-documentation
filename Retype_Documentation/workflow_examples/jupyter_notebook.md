@@ -12,7 +12,7 @@ Jupyter Notebooks are a web-based development and visualisation environment. It 
 ### Installing Jupyter with Conda
 
 !!!
-The flight environment will need to be activated before the environments can be created so be sure to run `flight start` or [setup your environment to automatically activate the flight environment](/hpc_environment_usage/flight_overview/flight_system/#activating-the-flight-system).
+The flight environment will need to be activated before the environments can be created so be sure to run `flight start` or [setup your environment to automatically activate the flight environment](/flight_environment_usage/flight_overview/flight_system/#activating-the-flight-system).
 !!!
 
 - Create a conda software environment:
@@ -41,7 +41,7 @@ The flight environment will need to be activated before the environments can be 
 ### Launch a Jupyter Notebook
 
 !!!
-These commands will need to be run from a graphical desktop session as it will launch a web browser. For more information on launching desktops, see the [Flight Desktop section](/hpc_environment_usage/flight_desktop/install_flight_desktop_types/#install-flight-desktop-types)
+These commands will need to be run from a graphical desktop session as it will launch a web browser. For more information on launching desktops, see the [Flight Desktop section](/flight_environment_usage/flight_desktop/install_flight_desktop_types/#install-flight-desktop-types)
 !!!
 
 - Download the example notebook:

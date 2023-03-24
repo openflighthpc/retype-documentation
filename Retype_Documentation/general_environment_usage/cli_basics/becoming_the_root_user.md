@@ -18,3 +18,5 @@ Users must exercise caution when running commands as root, as they have the pote
 !!!
 Some users may **not** have root priviledges. This is at the discretion of your admin or system configuration.
 !!!
+
+You can log out of the root user by running the command `exit`, `logout`, or by pressing **Ctrl** + **D**.
