@@ -94,7 +94,7 @@ A standalone cluster runs on just one instance, create one before going through 
     - Cluster name: The name of the cluster.
     - Default user: The user that you log in with.
     - Set user password: Set a password to be used for the chosen default user.
-    - IP or FQDN for Web Access: As described [here](/hpc_environment_usage/flight_web_suite/installation_and_setup/configuring_web_suite/#setting-domain-name), this could be the public IP or public hostname.
+    - IP or FQDN for Web Access: As described [here](/flight_environment_usage/flight_web_suite/installation_and_setup/configuring_web_suite/#setting-domain-name), this could be the public IP or public hostname.
     
 6. Apply an identity by running the command `flight profile apply`, E.g. 
     ```
