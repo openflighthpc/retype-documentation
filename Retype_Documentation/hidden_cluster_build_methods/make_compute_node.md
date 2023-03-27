@@ -5,7 +5,60 @@ icon: dot
 ---
 
 
-Setting up compute nodes is done slightly differently than a login node. In this example 2 compute nodes are setup, but it could be any non-zero number of compute nodes.
+Setting up compute nodes is done slightly differently than a login node. The basic steps are the same with just two differences:
+- Subnets, networks, security groups need to match the login node.
+- Compute nodes are given cloud init data before launch to connect them to the login node.
+
+## Cloud init data
+
+### Minimum required
+This is the smallest amount of cloud init data necessary. It allows the login node to find the compute nodes as long as they are on the same network, and ssh into them from the root user (which is necessary for setup).
+```
+#cloud-config
+users:
+  - default    
+  - name: root
+    ssh_authorized_keys:
+      - <Content of ~/.ssh/id_alcescluster.pub from root user on login node>
+```
+
+One thing to note is that all nodes on the network will pick up the compute node being launched, so other users could hijack your compute node.
+
+### Write changes
+
+There are several options that can be added to change how a compute node will contact nodes on startup.
+- Sending to a specific server:
+    - Instead of broadcasting across a range, add the line `SERVER=<private server IP>` to send to specifically that node, which would be your login node.
+- Broadcasting to a different range:
+    - Add the line `BROADCAST_ADDRESS=<ip range>`, and set it to a particular range.
+- Add an auth key:
+    - Add the line `AUTH_KEY=<string>`. This means that the compute node will only be available to machines expecting that auth code. By default a login node will not expect an auth code, but this can be changed by running `flight hunter hunt --auth <key>` or by putting this line into the cloudinit data of the login node.
+
+
+``` An example of all mentioned lines in a single cloud init script. 
+#cloud-config
+write_files:
+  - content: |
+      SERVER=10.50.0.43
+      BROADCAST_ADDRESS=10.50.255.255
+      AUTH_KEY=banana
+    path: /opt/flight/cloudinit.in
+    permissions: '0644'
+    owner: root:root
+users:
+  - default    
+  - name: root
+    ssh_authorized_keys:
+      - <Content of ~/.ssh/id_alcescluster.pub from root user on login node>
+```
+
+!!!
+Note that in the above example `SERVER` and `BROADCAST_ADDRESS` are both present to display correct formatting. Only the first of these lines will have an effect because they are mutually exclusive. 
+!!!
+
+
+## Example
+In this example 2 compute nodes are setup, but it could be any non-zero number of compute nodes.
 
 +++ AWS Marketplace
 
@@ -88,23 +141,8 @@ g. Click "Launch" to go to the EC2 instance setup page.
 ![](/images/aws_ec2_userdata.png)
 
 
-&ensp;&ensp;&ensp;&ensp;a. Copy this cloud init script into the user data section, making sure to change the parts in <> brackets:
+&ensp;&ensp;&ensp;&ensp;a. Write a cloud init script in the user data section, see [here](/cluster_build_methods/multinode_cluster/make_compute_node/#cloud-init-data) for details:
 
-
-    
-	#cloud-config
-	write_files:
-	  - content: |
-          SERVER=<private ip of login node>
-	    path: /opt/flight/cloudinit.in
-	    permissions: '0644'
-	    owner: root:root
-	users:
-	  - default    
-	  - name: root
-	    ssh_authorized_keys:
-	      - <Content of ~/.ssh/id_alcescluster.pub from root user on login node>
-    
     
 &ensp;&ensp;&ensp;&ensp;b. To get the information necessary for the cloud init script. Go to the [EC2 console](https://eu-west-2.console.aws.amazon.com/ec2/v2/home?region=eu-west-2#Instances:). 
 Make sure your region is set to the one used for login and compute nodes.
@@ -180,22 +218,7 @@ a. Click "Launch Instance" to go to the EC2 instance setup page.
 ![](/images/aws_ec2_userdata.png)
 
 
-&ensp;&ensp;&ensp;&ensp;a. Copy this cloud init script into the user data section, making sure to change the parts in <> brackets:
-
-
-    
-	#cloud-config
-	write_files:
-	  - content: |
-          SERVER=<private ip of login node>
-	    path: /opt/flight/cloudinit.in
-	    permissions: '0644'
-	    owner: root:root
-	users:
-	  - default    
-	  - name: root
-	    ssh_authorized_keys:
-	      - <Content of ~/.ssh/id_alcescluster.pub from root user on login node>
+&ensp;&ensp;&ensp;&ensp;a. Write a cloud init script in the user data section, see [here](/cluster_build_methods/multinode_cluster/make_compute_node/#cloud-init-data) for details:
     
     
 &ensp;&ensp;&ensp;&ensp;b. To get the information necessary for the cloud init script. Go to the [EC2 console](https://eu-west-2.console.aws.amazon.com/ec2/v2/home?region=eu-west-2#Instances:). 
@@ -256,22 +279,8 @@ Repeat this process for any other types of nodes that need to be added to the cl
 ![](/images/openstack_instance_configuration.png)
 
 
-&ensp;&ensp;&ensp;&ensp;a. Copy this cloud init script into the text box, making sure to change the parts in <> brackets:
+&ensp;&ensp;&ensp;&ensp;a. Write a cloud init script in the text box, see [here](/cluster_build_methods/multinode_cluster/make_compute_node/#cloud-init-data) for details:
 
-```
-#cloud-config
-write_files:
-  - content: |
-      SERVER=<private ip of login node>
-    path: /opt/flight/cloudinit.in
-    permissions: '0644'
-    owner: root:root
-users:
-  - default
-  - name: root
-    ssh_authorized_keys:
-      - <Content of ~/.ssh/id_alcescluster.pub from root user on login node>
-```
 
 &ensp;&ensp;&ensp;&ensp;b. To get the information necessary for the cloud init script. Go to the "Instances" page in the "Compute" section. The login node created on the previous page should be visible, use its private IP.
 
@@ -338,21 +347,8 @@ users:
 8. In the *Custom data and cloud init* section, there is a text box.
 
 ![](/images/azure_createvm_advanced_customdata.png)
-  a. Copy this cloud init script into the custom data section, making sure to change the parts in <> brackets:
-```
-#cloud-config
-write_files:
-  - content: |
-        SERVER=<private ip of login node>
-    path: /opt/flight/cloudinit.in
-    permissions: '0644'
-    owner: root:root
-users:
-  - default    
-  - name: root
-    ssh_authorized_keys:
-      - <Content of ~/.ssh/id_alcescluster.pub from root user on login node>
-```    
+  a. Write a cloud init script in the custom data section, see [here](/cluster_build_methods/multinode_cluster/make_compute_node/#cloud-init-data) for details:
+
   b. To get the information necessary for the cloud init script. Go to Virtual Machines.
 ![](/images/azure_vms_link.png)
   c. Then click on the virtual machine of the login node to view it.
