@@ -1,5 +1,5 @@
 ---
-order: 100
+order: 80
 label: Flight Silo
 icon: dot
 ---
