@@ -9,21 +9,38 @@ Flight hunter is a MAC collection tool that is used within the flight user suite
 
 ## Hunting and Sending
 
-Flight hunter's namesake feature is the ability to discover nodes on the local network by hunting, and to send information from nodes other nodes in a cluster.
+Flight hunter's namesake feature is the ability to discover nodes on the local network by hunting. It can also send information  between nodes, and can send on startup to a designated server node.
 
-This process can be started with the command `flight hunter hunt`. e.g.
+#### Hunt
+
+Hunting can be started with the command `flight hunter hunt`. e.g.
 ```
 [flight@chead1 (mycluster1) [login1] ~]$ flight hunter hunt
 Hunter running on port 8888 - Ctrl+C to stop
 ```
 
+There are several options that change how `hunt` works:
+
+#### Hunt Options
+- `--allow-existing` - Duplicate entries will replace existing ones rather than being rejected.
+- `--port <port>` - Overrides the default port to accept on.
+- `--include-self` - Sends itself to hunter.
+- `--auth <auth>` - Defines a password to use as an authentication key, only incoming senders with the correct auth will be accepted.
+- `--auto-parse <regex>` - Automatically parses nodes matching this regex when they are added.
+
+Hunter also has the ability to automatically apply a profile identity to nodes as soon as they are parsed. This is called `auto-apply` - it is not a command line option, it must be configured through hunter config files or cloud init data passed to the node on creation.
+
+#### Send
+
+Connecting to the hunter node can be done with the command `flight hunter send`. And a message will be displayed on a successful transmission. e.g.
+```
+[flight@chead1 ~]$ flight hunter send
+Successful transmission
+```
 
 
-Connecting to the hunter node can be done with the command `flight hunter send`.
 
-Both of these commands have multiple options that make building a cluster more streamlined.
-
-### Send Options
+#### Send Options
 - `--port <port number>` - Overrides the default port to send to.
 - `--server <ip address>` - Overrides the default server name, useful if the default is not set.
 - `--auth <auth>` - Defines a password to use as an authentication key.
@@ -34,14 +51,6 @@ Both of these commands have multiple options that make building a cluster more s
 - `--prefix <prefix>` - Defines a prefix, which will be numbered, and used as a label.
 - `--command <command>` - Runs the given console command and sends the output as the payload of the send.
 
-
-### Hunt Options
-- `--allow-existing` - Duplicate entries will replace existing ones rather than being rejected.
-- `--port <port>` - Overrides the default port to accept on.
-- `--include-self` - Sends itself to hunter.
-- `--auth <auth>` - Defines a password to use as an authentication key, only incoming senders with the correct auth will be accepted.
-- `--auto-parse <regex>` - Automatically parses nodes matching this regex when they are added.
-- `--auto-apply <regex>` - Automatically applies a profile identity to parsed nodes.
 
 
 
@@ -86,16 +95,16 @@ From this point, you can either hit the `enter` key to finish parsing and proces
 
 There are some additional options that can be used with parse.
 
-- `prefix <prefix>` - Defines a prefix, which will be numbered, and used as a label.
-- `start <number>` - Defines the start value for the numbering of prefixes.
-- `auto` - Automatically parses everything in the buffer list.
-- `allow-existing` - Duplicate entries will replace existing ones rather than being rejected.
-- `skip-used-index` - If there is already a node with particular label, then entering the a different node with the same label will increase the index to the next available one instead of throwing an error.
+- `--prefix <prefix>` - Defines a prefix, which will be numbered, and used as a label.
+- `--start <number>` - Defines the start value for the numbering of prefixes.
+- `--auto` - Automatically parses everything in the buffer list.
+- `--allow-existing` - Duplicate entries will replace existing ones rather than being rejected.
+- `--skip-used-index` - If there is already a node with particular label, then entering the a different node with the same label will increase the index to the next available one instead of throwing an error.
 
 
 ## Other hunter commands
 
-These other hunter commands are not as complex as the earlier ones.
+Hunter has more commands that aren't as big as the three mentioned earlier.
 
 ---
 
@@ -117,19 +126,19 @@ Drops all nodes in the buffer list.
 #### `list`
 
 Shows all nodes in the parsed list of nodes, and has several additional options:
-- `plain` - Displays in a plain format
-- `by-group` - Displays by group.
-- `buffer` - Shows the buffer list instead.
+- `--plain` - Displays in a plain format
+- `--by-group` - Displays by group.
+- `--buffer` - Shows the buffer list instead.
 
 ---
 
 #### `modify-groups <node>`
 
 Allows for adding or removing of groups to a node.
-- `add <groups>` - Adds a group or comma separated list of groups.
-- `remove <groups>` - Removes a group or comma separated list of groups.
-- `buffer` - Modifies groups in the buffer list instead.
-- `regex` - The nodename is parsed as regex instead, and group changes are made to all nodes that match.
+- `--add <groups>` - Adds a group or comma separated list of groups.
+- `--remove <groups>` - Removes a group or comma separated list of groups.
+- `--buffer` - Modifies groups in the buffer list instead.
+- `--regex` - The nodename is parsed as regex instead, and group changes are made to all nodes that match.
 
 ---
 
@@ -142,19 +151,19 @@ Allows for adding or removing of groups to a node.
 #### `remove-node <label>`
 
 Remove a node from the parsed list.
-- `buffer` - Remove from the buffer list, and used the node id instead.
-- `name` - Specify the node by regex matching the hostname instead.
+- `--buffer` - Remove from the buffer list, and used the node id instead.
+- `--name` - Specify the node by regex matching the hostname instead.
 
 ---
 
 #### `rename-group <group> <new name>`
 
 Renames a group, keeping all the nodes it contains.
-- `buffer` - Uses the buffer list instead.
+- `--buffer` - Uses the buffer list instead.
 
 ---
 
 #### `show <label>`
 Shows the details of a node, identifying it by label
-- `buffer` - View a node in the buffer list instead, identifying it by id.
-- `plain` - Print in a plain format, more easily machine readable.
+- `--buffer` - View a node in the buffer list instead, identifying it by id.
+- `--plain` - Print in a plain format, more easily machine readable.
