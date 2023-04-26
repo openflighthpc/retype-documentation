@@ -1,5 +1,5 @@
 ---
-order: 95
+order: 80
 label: Multinode Cluster
 icon: dot-fill
 ---
