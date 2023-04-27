@@ -73,7 +73,7 @@ curl -L https://k8s.io/examples/application/php-apache.yaml > php-apache.yaml
 ```shell
 kubectl apply -f php-apache.yaml
 ```
-- Create yaml file for VM to verify connection from (replace SERVICE_IP with the IP outputted above)
+- Create yaml file for VM to verify connection from
 ```shell
 cat << EOF > busybox-wget.yaml
 apiVersion: v1
