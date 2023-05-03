@@ -1,11 +1,11 @@
 ---
 order: 0
-label: 'Cluster Build Workflow: Kubernetes on AWS' 
+label: 'Kubernetes on AWS' 
 icon: dot-fill
 ---
 
 
-(with Automatic Worker Node Building)
+*with Automatic Worker Node Building*
 
 
 ### Overview
