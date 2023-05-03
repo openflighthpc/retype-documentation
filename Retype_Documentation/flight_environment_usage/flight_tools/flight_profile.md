@@ -77,4 +77,35 @@ Shows the setup/removal progress of a node and its current status
 - `--raw` - Shows the entire ansible log output.
 
 
+---
+
+## Auto-apply
+
+Profile can automatically apply an identity to a node with the auto-apply configuration. This is done by configuring `flight hunter hunt` to automatically apply identities whenever a node is parsed with `auto-parse`.
+
+!!!warning
+You must have already configured flight profile with the `configure` command or else auto-applying will not work.
+!!!
+
+#### Setup Auto-apply
+
+1. Open the file `/opt/flight/opt/hunter/etc/config.yml`
+
+!!!
+You will need to have root user permissions to edit this config file.
+!!!
+
+2. Add these lines: ()
+    ```
+    auto_apply:
+    <regex>: <identity>
+    ```
+    - You can add extra lines of `<regex>: <identity>` to catch more identities. e.g.
+    ```
+    auto_apply:
+    cnode: compute
+    chead: login
+    ```
+3. Restart the hunter service with `flight service restart hunter`.
+    - Alternatively, you can stop the hunter service with `flight service stop hunter` and then run `flight hunter hunt`.
 

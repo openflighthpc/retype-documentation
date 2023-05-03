@@ -38,8 +38,6 @@ Connecting to the hunter node can be done with the command `flight hunter send`.
 Successful transmission
 ```
 
-
-
 #### Send Options
 - `--port <port number>` - Overrides the default port to send to.
 - `--server <ip address>` - Overrides the default server name, useful if the default is not set.
@@ -50,8 +48,6 @@ Successful transmission
 - `--label <label>` - Defines a label to use when parsing this node.
 - `--prefix <prefix>` - Defines a prefix, which will be numbered, and used as a label.
 - `--command <command>` - Runs the given console command and sends the output as the payload of the send.
-
-
 
 
 ## Parse
