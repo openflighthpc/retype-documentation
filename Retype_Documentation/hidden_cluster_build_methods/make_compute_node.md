@@ -141,7 +141,7 @@ g. Click "Launch" to go to the EC2 instance setup page.
 ![](/images/aws_ec2_userdata.png)
 
 
-&ensp;&ensp;&ensp;&ensp;a. Write a cloud init script in the user data section, see [here](/cluster_build_methods/multinode_cluster/make_compute_node/#cloud-init-data) for details:
+&ensp;&ensp;&ensp;&ensp;a. Write a cloud init script in the user data section, see [here](/cluster_build_methods/user_data/) for details:
 
     
 &ensp;&ensp;&ensp;&ensp;b. To get the information necessary for the cloud init script. Go to the [EC2 console](https://eu-west-2.console.aws.amazon.com/ec2/v2/home?region=eu-west-2#Instances:). 
@@ -218,7 +218,7 @@ a. Click "Launch Instance" to go to the EC2 instance setup page.
 ![](/images/aws_ec2_userdata.png)
 
 
-&ensp;&ensp;&ensp;&ensp;a. Write a cloud init script in the user data section, see [here](/cluster_build_methods/multinode_cluster/make_compute_node/#cloud-init-data) for details:
+&ensp;&ensp;&ensp;&ensp;a. Write a cloud init script in the user data section, see [here](/cluster_build_methods/user_data/) for details:
     
     
 &ensp;&ensp;&ensp;&ensp;b. To get the information necessary for the cloud init script. Go to the [EC2 console](https://eu-west-2.console.aws.amazon.com/ec2/v2/home?region=eu-west-2#Instances:). 
@@ -279,7 +279,7 @@ Repeat this process for any other types of nodes that need to be added to the cl
 ![](/images/openstack_instance_configuration.png)
 
 
-&ensp;&ensp;&ensp;&ensp;a. Write a cloud init script in the text box, see [here](/cluster_build_methods/multinode_cluster/make_compute_node/#cloud-init-data) for details:
+&ensp;&ensp;&ensp;&ensp;a. Write a cloud init script in the text box, see [here](/cluster_build_methods/user_data/) for details:
 
 
 &ensp;&ensp;&ensp;&ensp;b. To get the information necessary for the cloud init script. Go to the "Instances" page in the "Compute" section. The login node created on the previous page should be visible, use its private IP.
@@ -347,7 +347,7 @@ Repeat this process for any other types of nodes that need to be added to the cl
 8. In the *Custom data and cloud init* section, there is a text box.
 
 ![](/images/azure_createvm_advanced_customdata.png)
-  a. Write a cloud init script in the custom data section, see [here](/cluster_build_methods/multinode_cluster/make_compute_node/#cloud-init-data) for details:
+  a. Write a cloud init script in the custom data section, see [here](/cluster_build_methods/user_data/) for details:
 
   b. To get the information necessary for the cloud init script. Go to Virtual Machines.
 ![](/images/azure_vms_link.png)
