@@ -1,5 +1,5 @@
 ---
-order: 10
+order: 0
 label: Manual Config Clusters
 icon: dot-fill
 ---

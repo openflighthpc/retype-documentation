@@ -81,7 +81,7 @@ sudo su -
 
 3. Obtain OpenFOAM Source.
     ```
-    wget https://dl.openfoam.com/source/v2212/OpenFOAM-v2212.tgz
+    flight silo file pull openflight:openfoam/OpenFOAM-v2212.tar.gz
     tar xf OpenFOAM-v2212.tgz
     ```
 

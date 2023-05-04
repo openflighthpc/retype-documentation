@@ -47,13 +47,13 @@ These commands will need to be run from a graphical desktop session as it will l
 - Download the example notebook:
 
 ```bash
-<conda> [flight@chead1 (mycluster1) ~]$ curl -L https://jupyterbook.org/en/stable/_downloads/12e9fb0f1c062494259ce630607cfc87/notebooks.ipynb > notebooks.ipynb
+<conda> [flight@chead1 (mycluster1) ~]$ flight silo file pull openflight:jupyter/example_notebook.ipynb
 ```
 
 - Launch the notebook:
 
 ```bash
-<conda> [flight@chead1 (mycluster1) ~]$ jupyter notebook notebooks.ipynb
+<conda> [flight@chead1 (mycluster1) ~]$ jupyter notebook example_notebook.ipynb
 ```
 
 - A web browser will launch with the notebook displayed
