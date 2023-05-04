@@ -35,25 +35,19 @@ The flight environment will need to be activated before the environments can be 
 - Download example ecoli data:
 
 ```bash
-<spack> [flight@chead1 (mycluster1) ~]$ wget -O ecoli.fq https://raw.githubusercontent.com/BenLangmead/bowtie/master/reads/e_coli_1000.fq
+<spack> [flight@chead1 (mycluster1) ~]$ flight silo file pull openflight:bowtie/ecoli.fq
 ```
 
-- Create a job script in the current working directory:
+- Download an example job script to run in the current working directory:
 
-```bash
-<spack> [flight@chead1 (mycluster1) ~]$ cat << EOF > mybowtiejob.sh
-#!/bin/bash -l
-#SBATCH -N 1
-flight env activate spack
-spack load bowtie
-bowtie-build ecoli.fq e_coli
-EOF
+```
+<spack> [flight@chead1 (mycluster1) ~]$ flight silo file pull openflight:bowtie/ecoli-job.sh
 ```
 
 - Submit the job to the queue:
 
 ```bash
-<spack> [flight@chead1 (mycluster1) ~]$ sbatch mybowtiejob.sh
+<spack> [flight@chead1 (mycluster1) ~]$ sbatch ecoli-job.sh
 ```
 
 The results can then be reviewed from the slurm output file for the job in the current working directory. 
