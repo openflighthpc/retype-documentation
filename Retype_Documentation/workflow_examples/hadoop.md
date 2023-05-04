@@ -21,13 +21,13 @@ The flight environment will need to be activated before the environments can be 
 ```
 - Download Hadoop v3.2.1:
 ```bash
-[flight@chead1 (mycluster1) ~]$ wget -O /tmp/hadoop.tgz https://archive.apache.org/dist/hadoop/common/hadoop-3.2.1/hadoop-3.2.1.tar.gz
+[flight@chead1 (mycluster1) ~]$ flight silo file pull openflight:hadoop/hadoop-3.2.1.tar.gz /tmp/
 ```
 - Decompress the Hadoop installation to shared storage:
 ```bash
 [flight@chead1 (mycluster1) ~]$ mkdir apps
 [flight@chead1 (mycluster1) ~]$ cd apps
-[flight@chead1 (mycluster1) apps]$ tar xzf /tmp/hadoop.tgz
+[flight@chead1 (mycluster1) apps]$ tar xzf /tmp/hadoop-3.2.1.tar.gz
 ```
 - Edit line 54 in `apps/hadoop-3.2.1/etc/hadoop/hadoop-env.sh` to point to the Java installation as follows:
 ```bash
