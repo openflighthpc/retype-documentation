@@ -13,11 +13,10 @@ This workflow demonstrates the creation of a multinode Kubernetes cluster on AWS
 
 ### Prepare Network
 
-#### Create a VPC with:
+Create a VPC with:
 - Name: kubecluster1
 
 In "VPC and More":
-
 - IPv4 Subnet Block: 10.10.0.0/16
 - Number of Availability Zones: 1
 - Public Subnets: 1
@@ -25,13 +24,12 @@ In "VPC and More":
 - VPC Endpoints: None
 
 
-#### Create a Security Group with:
+Create a Security Group with:
 - Name: kubecluster1-sg
 - Description: "Security group for kubecluster1 cluster"
 - VPC: <the kubecluster1 VPC just created>
 
 Inbound Rules:
-
 - "SSH" from "Anywhere-IPv4"
 - "HTTP" from "Anywhere-IPv4"
 - "HTTPS" from "Anywhere-IPv4"
