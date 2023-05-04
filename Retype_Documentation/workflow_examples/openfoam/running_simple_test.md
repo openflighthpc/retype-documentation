@@ -6,25 +6,10 @@ icon: dot
 
 
 
-1. Create a job script in the working directory. This script assumes that it is being launched from the home directory, change it if that is not the case. It also cannot be run as the root user.
+1. Download a job script to the working directory. This script assumes that it is being launched from the home directory, change it if that is not the case. It also cannot be run as the root user.
 
     ```bash
-    cat << 'EOF' > cavity-example.sh
-    #!/bin/bash -l
-    #SBATCH -N 1
-
-    module load mpi
-    source /opt/apps/OpenFOAM/OpenFOAM-v2212/etc/bashrc
-
-    # Create job directory from example job
-    cp -r $FOAM_TUTORIALS/incompressible/icoFoam/cavity/cavity $HOME/.
-    cd $HOME/cavity
-
-    # Calculate fluid pressure with OpenFOAM tools
-    blockMesh
-    checkMesh
-    icoFoam
-    EOF
+    flight silo file pull openflight:openfoam/cavity-example.sh
     ```
 
 2. Submit the job to the queue system:
