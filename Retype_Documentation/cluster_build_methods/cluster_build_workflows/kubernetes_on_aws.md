@@ -51,13 +51,13 @@ Launch the Flight Solo image in AWS marketplace
     ```
     #cloud-config
     write_files:
-    - content: |
-    SHAREPUBKEY="true"
-    AUTOPARSEMATCH=".*"
-    AUTH_KEY=kubecluster1
-    path: /opt/flight/cloudinit.in
-    permissions: '0644'
-    owner: root:root
+      - content: |
+          SHAREPUBKEY="true"
+          AUTOPARSEMATCH=".*"
+          AUTH_KEY=kubecluster1
+      path: /opt/flight/cloudinit.in
+      permissions: '0644'
+      owner: root:root
     ```
 !!!
 The above data will enable sharing the public key to clients, automatically add any nodes that
@@ -95,7 +95,7 @@ Wait for flight profile list to show the status of login1 as completed
 Add the following lines to `/opt/flight/opt/hunter/etc/config.yml` to automatically apply the worker profile to hunter nodes with labels containing `node`.
 ```
 auto_apply:
-node: worker
+  node: worker
 ```
 !!!
 You will need to use sudo to have permissions to edit this config file.
@@ -124,13 +124,13 @@ the IP of the login node, this can be found with ip addr on that system):
 
     #cloud-config
     write_files:
-    - content: |
-    SERVER="LOGIN_SERVER_IPV4_PRIVATE_ADDRESS"
-    LABEL="node01"
-    AUTH_KEY=kubecluster1
-    path: /opt/flight/cloudinit.in
-    permissions: '0644'
-    owner: root:root
+      - content: |
+          SERVER="LOGIN_SERVER_IPV4_PRIVATE_ADDRESS"
+          LABEL="node01"
+          AUTH_KEY=kubecluster1
+      path: /opt/flight/cloudinit.in
+      permissions: '0644'
+      owner: root:root
 
 Repeat the above to create more nodes, changing the `LABEL=` field in the cloud-init data to be a
 unique label.
