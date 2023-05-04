@@ -1,11 +1,11 @@
 ---
 order: 0
-label: 'Cluster Build Workflow: Kubernetes on AWS' 
+label: 'Kubernetes on AWS' 
 icon: dot-fill
 ---
 
 
-(with Automatic Worker Node Building)
+*with Automatic Worker Node Building*
 
 
 ### Overview
@@ -51,13 +51,13 @@ Launch the Flight Solo image in AWS marketplace
     ```
     #cloud-config
     write_files:
-    - content: |
-    SHAREPUBKEY="true"
-    AUTOPARSEMATCH=".*"
-    AUTH_KEY=kubecluster1
-    path: /opt/flight/cloudinit.in
-    permissions: '0644'
-    owner: root:root
+      - content: |
+          SHAREPUBKEY="true"
+          AUTOPARSEMATCH=".*"
+          AUTH_KEY=kubecluster1
+      path: /opt/flight/cloudinit.in
+      permissions: '0644'
+      owner: root:root
     ```
 !!!
 The above data will enable sharing the public key to clients, automatically add any nodes that
@@ -92,13 +92,15 @@ Apply the master profile to login1 with `flight profile apply login1 master`
 Wait for flight profile list to show the status of login1 as completed
 
 ### Setup Automatic Application of Hunter Nodes
-Add the following lines to `/opt/flight/opt/hunter/etc/config.yml` to automatically apply the
-worker profile to hunter nodes with labels containing node (Note: you will need to use sudo to
-have permissions to edit this config file)
+Add the following lines to `/opt/flight/opt/hunter/etc/config.yml` to automatically apply the worker profile to hunter nodes with labels containing `node`.
 ```
 auto_apply:
-node: worker
+  node: worker
 ```
+!!!
+You will need to use sudo to have permissions to edit this config file.
+!!!
+
 Restart hunter service
 `flight service restart hunter`
 
@@ -116,21 +118,21 @@ Click "Edit" on Network Settings and select:
 
 Set root volume size to at least 20GB
 
-Under Advanced Details -> User Data (replace LOGIN_SERVER_IPV4_PRIVATE_ADDRESS with
+Under Advanced Details -> User Data (replace `LOGIN_SERVER_IPV4_PRIVATE_ADDRESS` with
 the IP of the login node, this can be found with ip addr on that system):
-    ```
+
+
     #cloud-config
     write_files:
-    - content: |
-    SERVER="LOGIN_SERVER_IPV4_PRIVATE_ADDRESS"
-    LABEL="node01"
-    AUTH_KEY=kubecluster1
-    path: /opt/flight/cloudinit.in
-    permissions: '0644'
-    owner: root:root
-    ```
+      - content: |
+          SERVER="LOGIN_SERVER_IPV4_PRIVATE_ADDRESS"
+          LABEL="node01"
+          AUTH_KEY=kubecluster1
+      path: /opt/flight/cloudinit.in
+      permissions: '0644'
+      owner: root:root
 
-Repeat the above to create more nodes, changing the LABEL= field in the cloud-init data to be a
+Repeat the above to create more nodes, changing the `LABEL=` field in the cloud-init data to be a
 unique label.
 
 ### Checking it Works
@@ -141,8 +143,7 @@ the cluster (see `flight hunter list` ) and will have the Kubernetes worker prof
 automatically (see `flight profile list` ).
 
 What you can do next is:
-- Seamlessly access the cluster via the Flight Web Suite in a web browser by visiting the Public IPv4
-DNS from AWS EC2 Console for the login node
+- Seamlessly access the cluster via the Flight Web Suite in a web browser by visiting the Public IPv4 DNS from AWS EC2 Console for the login node
 - Run some kubernetes pods
-- Add more nodes as described in the "Launch a Compute Node" section
+- Add more nodes as described in the [Launch a Compute Node](/cluster_build_methods/cluster_build_workflows/kubernetes_on_aws/#launch-a-compute-node) section
 - Remove unused nodes from the cluster before deleting them from AWS
