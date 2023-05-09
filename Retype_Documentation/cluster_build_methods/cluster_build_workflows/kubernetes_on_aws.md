@@ -1,5 +1,5 @@
 ---
-order: 0
+order: 100
 label: 'Kubernetes on AWS' 
 icon: dot-fill
 ---
@@ -53,9 +53,9 @@ Launch the Flight Solo image in AWS marketplace
           SHAREPUBKEY="true"
           AUTOPARSEMATCH=".*"
           AUTH_KEY=kubecluster1
-      path: /opt/flight/cloudinit.in
-      permissions: '0644'
-      owner: root:root
+        path: /opt/flight/cloudinit.in
+        permissions: '0644'
+        owner: root:root
     ```
 !!!
 The above data will enable sharing the public key to clients, automatically add any nodes that
@@ -123,12 +123,12 @@ the IP of the login node, this can be found with ip addr on that system):
     #cloud-config
     write_files:
       - content: |
-          SERVER="LOGIN_SERVER_IPV4_PRIVATE_ADDRESS"
-          LABEL="node01"
+          SERVER=<LOGIN_SERVER_IPV4_PRIVATE_ADDRESS>
+          LABEL=node01
           AUTH_KEY=kubecluster1
-      path: /opt/flight/cloudinit.in
-      permissions: '0644'
-      owner: root:root
+        path: /opt/flight/cloudinit.in
+        permissions: '0644'
+        owner: root:root
 
 Repeat the above to create more nodes, changing the `LABEL=` field in the cloud-init data to be a
 unique label.
