@@ -273,7 +273,7 @@ To set up a cluster, you will need to first [import a Flight Solo image](/cluste
 4. On the Basics page:
     - Set *Subscription* to your subscription type.
     - Set *Resource Group* to your desired resource group (where the vm will be kept after creation).
-    - Set *Virtual machine name* to any suitable name.
+    - Set *Virtual machine name* to any suitable name. (`-` does not work in a name)
     - Set *Image* to the imported Flight Solo Image.
         It may be necessary to open the dropdown and/or see all images in order to find the imported image.
 ![](/images/azure_createvm_image_dropdown.png)
