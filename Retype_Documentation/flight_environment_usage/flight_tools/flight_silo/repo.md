@@ -4,7 +4,7 @@ label: Silos
 icon: dot-fill
 ---
 
-A silo is a storage space that is the same regardless of platform used. Despite appearing to be a directory, silos should only be managed by the command line tool. 
+A silo is a storage space that is the same regardless of platform used. Even though a silo may appear as a directory in your cloud storage, it is highly recommended that a silo should **only** be managed by the command line tool.
 
 
 ### Creating and Adding Silos
@@ -20,7 +20,7 @@ To create a silo use the command `flight silo repo create`. This will take you t
    - Access key ID - The ID for a valid aws access key.
    - Secret access key - The secret key for a valid aws access key.
    
-   More information about AWS access keys can be found [in the aws documentation](https://docs.aws.amazon.com/powershell/latest/userguide/pstools-appendix-sign-up.html).
+   More information about AWS access keys can be found [in the AWS documentation](https://docs.aws.amazon.com/powershell/latest/userguide/pstools-appendix-sign-up.html).
 +++
 
 You can add an already existing silo with the command `flight silo repo add`. All questions asked will be the same as for creation, except that the answers will be used to find an existing silo.
