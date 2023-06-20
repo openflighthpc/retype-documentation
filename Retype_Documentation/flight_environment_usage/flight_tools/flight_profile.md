@@ -8,7 +8,7 @@ data:
 ---
 
 
-Flight profile is a tool that manages the profiles of cluster nodes. In this context, a profile is a cluster type, and the different types of nodes are identities. For example, a profile might be `slurm multinode`, and the identities would be `login` and `compute`.
+Flight profile is a tool that manages the profiles of cluster nodes. In this context, a profile is a cluster type, and the different types of nodes are identities. For example, a profile might be `slurm multinode`, and the identities would be `login` and `compute`. This page covers the sub-commands of `flight profile`, which are run in the format `flight profile <sub-command> --<option>`
 
 #### `configure`
 
