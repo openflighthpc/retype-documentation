@@ -12,7 +12,7 @@ Software are made to appear less like files in a directory and more like a list 
 
 ---
 
-#### `software delete <name> <version>`
+### `software delete <name> <version>`
 
 Delete a software binary from the default silo.
     - `--repo <silo>` - Instead of using the default silo, specify which one to delete from.
@@ -26,7 +26,7 @@ Deleted software 'exampl' version '0.0'.
 
 ---
 
-#### `software pull <name> <version>`
+### `software pull <name> <version>`
 
 Download and extract a software binary from the default silo.
     - `--repo <silo>` - Instead of using the default silo, specify which one to delete from.
@@ -42,7 +42,7 @@ Extracted software 'exampl' version '0.0 to '/home/flight/.local/share/flight/si
 
 ---
 
-#### `software push`
+### `software push`
 
 Upload a software binary to the default silo.
     - `--repo <silo>` - Instead of using the default silo, specify which one to delete from.
@@ -58,7 +58,7 @@ Uploaded software 'exampl' version '0.0'.
 
 ---
 
-#### `software search <name>`
+### `software search <name>`
 
 List the software binaries in the default silo. If no name is given, then all software will be displayed.
     - `--repo <silo>` - Instead of using the default silo, specify which one to delete from.

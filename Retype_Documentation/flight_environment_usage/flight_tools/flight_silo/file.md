@@ -8,7 +8,7 @@ Files can be stored on silos, and use a normal file structure with directories a
 
 ---
 
-#### `file list <silo>:`
+### `file list <silo>:`
 
 List the files in a silo. If no silo is specified then the default will be used. 
 e.g.
@@ -24,7 +24,7 @@ file.sh
 
 ---
 
-#### `file pull <silo>:<filepath>`
+### `file pull <silo>:<filepath>`
 
 Download a file from a silo. If no silo is specified then the default will be used. 
 
@@ -46,7 +46,7 @@ File(s) downloaded to /home/flight/file2.sh
 
 ---
 
-#### `file push <source> <silo>:<destination>`
+### `file push <source> <silo>:<destination>`
 
 Upload a file to a silo.If no silo is specified then the default will be used. 
    - `--recursive` - Uploads a whole directory and all of its contents. You must specify a directory rather than a file.
@@ -65,7 +65,7 @@ Local file '/home/flight/example.sh' copied to remote '/dir/subdir/example.sh'
 
 ---
 
-#### `file delete <silo>:<destination>`
+### `file delete <silo>:<destination>`
 
 Delete a file in a silo. If no silo is specified then the default will be used. 
 
