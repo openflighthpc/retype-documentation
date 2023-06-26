@@ -30,7 +30,7 @@ One thing to note is that with this data all nodes on the network will pick up t
 - `PREFIX=<nodeprefix>` - Sets prefix for flight hunter send.
 - `AUTOPARSEMATCH=<node>` - Sets the regex for auto-parse rules in the hunter server. It also makes the hunter server automatically parse hunted nodes. *(must be passed to your login node)*
 - `SHAREPUBKEY=true` - If set to true then this node will share the root user’s pub ssh key over network on port 1234. This means that any solo images with `SERVER` set to this node will attempt to grab its public key.
-- `PROFILE_ANSWERS=<json string>` - Set to json text which is used to answer [profile configure](/flight_environment_usage/flight_tools/flight_profile/#configure) questions, the format should be the same as for the profile configure sub-option [`--answers`](/flight_environment_usage/flight_tools/flight_profile/#configure).
+- `PROFILE_ANSWERS=<json string>` - Set to json text which is used to answer [profile configure](/flight_environment_usage/flight_tools/flight_profile/#configure) questions, the format should be the same as for the profile configure sub-option [`--answers`](/flight_environment_usage/flight_tools/flight_profile/#configure). Any answers not supplied will be set to their default values.
 - `AUTOAPPLY="<regex>: <identity>, <regex>: <identity>"` - Set automatic application of identities to nodes. When a node connects with hunter, if it matches one of the regular expressions then the corresponding identity will be applied. 
 !!!
 `AUTOAPPLY` can only start if a cluster type has already been configured on this node.
