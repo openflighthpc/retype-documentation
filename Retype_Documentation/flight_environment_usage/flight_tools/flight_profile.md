@@ -78,6 +78,8 @@ When setting up a cluster's profile, this is the first command that needs to be 
     flight profile configure --answer '{  "cluster_type": "openflight-slurm-standalone",  "cluster_name": "my-cluster",  "default_username": "flight",  "default_password": "0penfl1ght",  "access_host": "{{ access_host }}"}'
     ```
 
+- `--accept-defaults` - When using `--answers`, take the default values for any answers not given.
+
 ---
 
 ### `apply <node,node2...> <identity>`
