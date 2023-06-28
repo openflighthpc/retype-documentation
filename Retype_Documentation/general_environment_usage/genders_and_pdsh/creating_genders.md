@@ -18,7 +18,7 @@ There are alternate formats that make writing a gender easier:
 
 ```
 node01,node02,node03,node04,node05:    node[01-05]
-node3,node7,node9,node11:              node[3,7,9-11]
+node3,node7,node9,node10,node11:       node[3,7,9-11]
 nodei,nodej,node0,node1,node2:         nodei,nodej,node[0-2]
 ```
 
