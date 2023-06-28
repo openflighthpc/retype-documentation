@@ -29,7 +29,16 @@ One thing to note is that with this data all nodes on the network will pick up t
 - `LABEL=<nodename>` - Sets label to be sent with flight hunter.
 - `PREFIX=<nodeprefix>` - Sets prefix for flight hunter send.
 - `AUTOPARSEMATCH=<node>` - Sets the regex for auto-parse rules in the hunter server. It also makes the hunter server automatically parse hunted nodes. *(must be passed to your login node)*
+!!!
+Note that `AUTOPARSEMATCH` looks at the hostname of a node, even if the node was passed with a `LABEL`.
+!!!
 - `SHAREPUBKEY=true` - If set to true then this node will share the root user’s pub ssh key over network on port 1234. This means that any solo images with `SERVER` set to this node will attempt to grab its public key.
+- `PROFILE_ANSWERS=<json string>` - Set to json text which is used to answer [profile configure](/flight_environment_usage/flight_tools/flight_profile/#configure) questions, the format should be the same as for the profile configure sub-option [`--answers`](/flight_environment_usage/flight_tools/flight_profile/#configure). Any answers not supplied will be set to their default values.
+- `AUTOAPPLY="<regex>: <identity>, <regex>: <identity>"` - Set automatic application of identities to nodes. When a node connects with hunter, if it matches one of the regular expressions then the corresponding identity will be applied. 
+!!!
+`AUTOAPPLY` can only start if a cluster type has already been configured on this node.
+!!!
+- `PREFIX_STARTS="<regex>: '<start number>', <regex>: '<start number>'"` - Set prefix start numbers based on node name. When a node connects with hunter, if it matches one of the regular expressions then it will be given a number, starting with the start number and incrementing until there is an unused number.
 
 !!!
 Many of these relate to command line options that are explained in more detail in the [hunter documentation](/flight_environment_usage/flight_tools/flight_hunter/).
@@ -47,6 +56,9 @@ write_files:
       PREFIX=<nodeprefix>
       AUTOPARSEMATCH=<node>
       SHAREPUBKEY=true
+      PROFILE_ANSWERS='{"cluster_type": "openflight-slurm-standalone",  "cluster_name": "my-cluster",  "default_username": "flight",  "default_password": "0penfl1ght",  "access_host": "10.151.15.51"}''
+      AUTOAPPLY="node: compute, controller: login" 
+      PREFIX_STARTS="node: '01', gpu: '1'"
     path: /opt/flight/cloudinit.in
     permissions: '0644'
     owner: root:root

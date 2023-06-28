@@ -19,11 +19,11 @@ This documentation is released under the [Creative-Commons: Attribution-ShareAli
 ## Contents
 
 This documentation is sorted into the following categories:
-
-- **[System Overview](/system_overview/)**: Provides general information on prerequisites and support for the documentation, processes and tools within.
+- **[Documentation Overview](/system_overview/)**: Provides general information on prerequisites and support for the documentation, processes and tools within.
 - **[General Environment Usage](/general_environment_usage)**: Guides on understanding and performing various common Linux user tasks on an HPC cluster.
-- **[HPC Environment Usage](/hpc_environment_usage)**: Documents detailing usage of Flight tools and HPC scheduler applications at the core of any HPC workflow.
-- **[Cluster Build Methods](/cluster_build_methods)**: Detailed guides to deploying HPC clusters on various platforms utilising Flight Solo
+- **[Flight Environment Usage](/hpc_environment_usage)**: Documents detailing usage of Flight tools and the Flight environment.
+- **[HPC Environment Usage](/hpc_environment_usage)**: Documents detailing usage of HPC scheduler applications and container orchestrators at the core of any HPC workflow.
+- **[Cluster Build Methods](/cluster_build_methods)**: Detailed guides to and workflows to demonstrate deploying HPC clusters on various platforms utilising Flight Solo.
 - **[Workflow Examples](/workflow_examples)**: Example workflows utilising the tools and processes outlined earlier in the documentation.
 - **[Functionality Testing](/functionality_testing)**: Various commands and observations to check the basic functionality of an HPC cluster configured similarly to some of the methods described in this documentation.
 
