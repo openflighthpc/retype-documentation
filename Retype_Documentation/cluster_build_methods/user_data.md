@@ -56,7 +56,7 @@ write_files:
       PREFIX=<nodeprefix>
       AUTOPARSEMATCH=<node>
       SHAREPUBKEY=true
-      PROFILE_ANSWERS='{"cluster_type": "openflight-slurm-standalone",  "cluster_name": "my-cluster",  "default_username": "flight",  "default_password": "0penfl1ght",  "access_host": "10.151.15.51"}''
+      PROFILE_ANSWERS='{"cluster_type": "openflight-slurm-standalone",  "cluster_name": "my-cluster",  "default_username": "flight",  "default_password": "0penfl1ght",  "access_host": "10.151.15.51"}'
       AUTOAPPLY="node: compute, controller: login" 
       PREFIX_STARTS="node: '01', gpu: '1'"
     path: /opt/flight/cloudinit.in

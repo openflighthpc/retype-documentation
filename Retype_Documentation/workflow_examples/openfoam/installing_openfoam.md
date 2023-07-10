@@ -15,35 +15,19 @@ Your environment will need to have a job scheduler such as [Slurm](/hpc_environm
 +++ Basic  :icon-star-fill::icon-star::icon-star:
 
 
-1. Download the OpenFOAM software to your desired application location. With a multinode cluster this should be a shared filesystem. 
-
-
-2. Become the root user, the added permissions are necessary for setup.
+1. Download and install OpenFlight OpenFOAM software using [Flight Silo](/flight_environment_usage/flight_tools/flight_silo/)
     ```
-    sudo su -
+    flight silo software pull OpenFOAM 22.12 --repo openflight 
     ```
 
-3. Download OpenFlight OpenFOAM build using [Flight Silo](/flight_environment_usage/flight_tools/flight_silo/)
+2. Install dependencies for visualisation.
     ```
-    flight silo file pull openflight:openfoam/OpenFOAM-v2212.tar.gz
-    ```
-
-4. Install it to `/opt/apps`.
-    ```
-    mkdir /opt/apps/OpenFOAM
-    cd /opt/apps/OpenFOAM/
-    tar xf <download location>/OpenFOAM-v2212.tar.gz
-    ```
-
-
-5. Install dependencies for visualisation.
-    ```
-    dnf install -y paraview
+    sudo dnf install -y paraview
     ```
 
 6. Install dependencies on all nodes.
     ```
-    pdsh -g all 'dnf install -y openmpi'
+    pdsh -g all 'sudo dnf install -y openmpi'
     ```
 
 ### Test Installation
@@ -51,13 +35,9 @@ Your environment will need to have a job scheduler such as [Slurm](/hpc_environm
 Source the OpenFOAM environment and run a basic test. Make sure to change the source file path to the location of your installation.
 ```
 module load mpi
-source /opt/apps/OpenFOAM/OpenFOAM-v2212/etc/bashrc
+source apps/OpenFOAM/22.12/etc/bashrc
 foamTestTutorial -full incompressible/simpleFoam/pitzDaily
 ```
-!!!
-From this point being the root user is no longer necessary.
-!!!
-
 
 +++ Advanced :icon-star-fill::icon-star-fill::icon-star:
 
