@@ -70,7 +70,7 @@ users:
 ```
 
 !!!
-Note that in the above example `SERVER` and `BROADCAST_ADDRESS` are both present to display correct formatting. Only the first of these lines will have an effect because they are mutually exclusive. 
+Note that in the above example `SERVER` and `BROADCAST_ADDRESS` are both present to display correct formatting. `SERVER` will always take priority over `BROADCAST_ADDRESS`, so only the desired line should be used.
 !!!
 
 
