@@ -42,7 +42,8 @@ Launch the Flight Solo image in AWS marketplace
 - Select "Launch from EC2"
 - Instance Type: t2.2xlarge
 - Click "Edit" on Network Settings and
-- VPC: kubecluster1Auto-assign public IP: Enable
+- VPC: kubecluster1
+- Auto-assign public IP: Enable
 - Select existing security group: kubecluster1-sg
 - Set root volume size to at least 20GB
 - Under Advanced Details -> User Data, add this:
