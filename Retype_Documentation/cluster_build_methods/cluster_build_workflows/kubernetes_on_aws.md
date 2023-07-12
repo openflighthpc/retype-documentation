@@ -137,9 +137,7 @@ unique label.
 ### Checking it Works
 Congratulations! You now have an automatically expanding Kubernetes cluster!
 
-Once the compute node has come up it will be automatically added to the accepted list of hosts for
-the cluster (see `flight hunter list` ) and will have the Kubernetes worker profile applied to it
-automatically (see `flight profile list` ).
+Once the compute node has come up it will be automatically added to the accepted list of hosts for the cluster (see `flight hunter list` ) and will have the Kubernetes worker profile applied to it automatically (see `flight profile list` ).
 
 What you can do next is:
 - Seamlessly access the cluster via the Flight Web Suite in a web browser by visiting the Public IPv4 DNS from AWS EC2 Console for the login node
