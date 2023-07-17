@@ -66,7 +66,7 @@ Select nodes: (Scroll for more nodes)
   ⬡ compute-node-1.novalocal - 10.151.15.194
   ⬡ compute-node-2.novalocal - 10.151.15.238
 ```
-To parse, select a from the list with the `space` key, and you will be taken to the label editor.
+To parse, select a node from the list with the `space` key, and you will be taken to the label editor.
 
 ```
 Choose label: login-node.novalocal
