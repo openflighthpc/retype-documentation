@@ -24,6 +24,11 @@ The flight environment will need to be activated before the environments can be 
 [flight@chead1 (mycluster1) ~]$ flight silo software pull --repo openflight hadoop 3.2.1
 ```
 
+!!!
+If you are using a different version of java, the version may be changed on line 54 in `hadoop-3.2.1/etc/hadoop/hadoop-env.sh`
+!!!
+
+
 ### Downloading the Hadoop Job
 
 These steps help setup the Hadoop environment and download a spreadsheet of data which will Hadoop will sort into sales units per region.
@@ -36,6 +41,7 @@ These steps help setup the Hadoop environment and download a spreadsheet of data
 
 !!!
 Be sure to update line 1 in `hadoopenv` if you are setting this up in a different location.
+If using a different version of java, update line 3.
 !!!
 
 - Create job directory:
