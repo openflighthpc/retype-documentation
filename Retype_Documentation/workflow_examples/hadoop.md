@@ -15,29 +15,19 @@ Hadoop is a scalable, distributed computing solution provided by Apache. Similar
 The flight environment will need to be activated before the environments can be created so be sure to run `flight start` or [setup your environment to automatically activate the flight environment](/flight_environment_usage/flight_overview/flight_system/#activating-the-flight-system).
 !!!
 
-- Install dependencies for Hadoop (press 'y' to confirm the installation when prompted):
+- Install dependencies for Hadoop:
 ```bash
-[flight@chead1 (mycluster1) ~]$ sudo yum install java-1.8.0-openjdk.x86_64 java-1.8.0-openjdk-devel.x86_64
+[flight@chead1 (mycluster1) ~]$ sudo yum install -y java-1.8.0-openjdk.x86_64 java-1.8.0-openjdk-devel.x86_64
 ```
 - Download Hadoop v3.2.1:
 ```bash
-[flight@chead1 (mycluster1) ~]$ flight silo file pull openflight:hadoop/hadoop-3.2.1.tar.gz /tmp/
-```
-- Decompress the Hadoop installation to shared storage:
-```bash
-[flight@chead1 (mycluster1) ~]$ mkdir apps
-[flight@chead1 (mycluster1) ~]$ cd apps
-[flight@chead1 (mycluster1) apps]$ tar xzf /tmp/hadoop-3.2.1.tar.gz
-```
-- Edit line 54 in `apps/hadoop-3.2.1/etc/hadoop/hadoop-env.sh` to point to the Java installation as follows:
-```bash
-export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.362.b09-2.el8_7.x86_64/jre
+[flight@chead1 (mycluster1) ~]$ flight silo software pull --repo openflight hadoop 3.2.1
 ```
 
-Return to the home directory for the next steps
-```
-[flight@chead1 (mycluster1) ~]$ cd ~
-```
+!!!
+If you are using a different version of java, the version may be changed on line 54 in `hadoop-3.2.1/etc/hadoop/hadoop-env.sh`
+!!!
+
 
 ### Downloading the Hadoop Job
 
@@ -51,6 +41,7 @@ These steps help setup the Hadoop environment and download a spreadsheet of data
 
 !!!
 Be sure to update line 1 in `hadoopenv` if you are setting this up in a different location.
+If using a different version of java, update line 3.
 !!!
 
 - Create job directory:
